@@ -451,7 +451,7 @@
     }
   });
 
-  /* ---------- Welcome pop-up: once per visitor, after a short delay ---------- */
+  /* ---------- Welcome pop-up: once per visitor, after a short delay and the cookie banner ---------- */
   const welcome = $('[data-welcome]');
   if (welcome) {
     const KEY = 'kd-welcome';
@@ -459,16 +459,77 @@
     let seen = 0;
     try { seen = parseInt(localStorage.getItem(KEY), 10) || 0; } catch (_) { /* storage blocked */ }
     const remember = (ms = Date.now()) => { try { localStorage.setItem(KEY, String(ms)); } catch (_) { /* storage blocked */ } };
-    const due = Date.now() - seen > days * 864e5;
     const show = () => {
       // Never interrupt an open menu, cart or picker; try again shortly.
       if (activeDrawer) { setTimeout(show, 4000); return; }
       openDrawer('welcome', document.activeElement);
       remember();
     };
-    if (due && !document.body.classList.contains('template-cart')) {
-      setTimeout(show, (parseFloat(welcome.dataset.delay) || 3) * 1000);
+    // Shopify's cookie banner comes first; the pop-up waits until the visitor has answered it.
+    const afterConsent = (cb) => {
+      let done = false;
+      const go = () => { if (!done) { done = true; cb(); } };
+      const check = () => {
+        const privacy = window.Shopify && window.Shopify.customerPrivacy;
+        if (privacy && typeof privacy.shouldShowBanner === 'function' && privacy.shouldShowBanner()) {
+          document.addEventListener('visitorConsentCollected', go, { once: true });
+        } else go();
+      };
+      if (window.Shopify && typeof window.Shopify.loadFeatures === 'function') {
+        window.Shopify.loadFeatures([{ name: 'consent-tracking-api', version: '0.1' }], (err) => (err ? go() : check()));
+        setTimeout(() => { if (!done && !(window.Shopify.customerPrivacy)) go(); }, 4000);
+      } else check();
+    };
+
+    const state = $('[data-welcome-state]', welcome);
+    if (state) {
+      // Back from a sign-up without JavaScript (or after the spam check): show the result right away.
+      openDrawer('welcome');
+      if (state.dataset.welcomeState === 'success') remember(Date.now() + 3650 * 864e5);
+    } else if (Date.now() - seen > days * 864e5 && !document.body.classList.contains('template-cart')) {
+      afterConsent(() => setTimeout(show, (parseFloat(welcome.dataset.delay) || 3) * 1000));
     }
+
+    const form = $('[data-welcome-form]', welcome);
+    if (form) form.addEventListener('submit', async (e) => {
+      const email = $('input[type="email"]', form);
+      const error = $('[data-welcome-error]', form);
+      const button = $('[type="submit"]', form);
+      const fail = (msg) => {
+        error.textContent = msg || error.dataset.message;
+        error.hidden = false;
+        email.setAttribute('aria-invalid', 'true');
+        email.setAttribute('aria-describedby', error.id);
+        email.focus();
+      };
+      e.preventDefault();
+      if (!email.value.trim() || !email.checkValidity()) { fail(); return; }
+      error.hidden = true;
+      email.removeAttribute('aria-invalid');
+      button.classList.add('is-loading');
+      try {
+        const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'text/html' } });
+        if (res.url.includes('/challenge')) { form.submit(); return; }
+        const html = await res.text();
+        const ok = res.url.includes('customer_posted=true') || html.includes('data-welcome-state="success"');
+        if (!ok) {
+          const doc = new DOMParser().parseFromString(html, 'text/html');
+          const msg = doc.querySelector('[data-welcome-error]');
+          fail(msg && msg.textContent.trim());
+          return;
+        }
+        $('[data-welcome-step="form"]', form).hidden = true;
+        const done = $('[data-welcome-step="success"]', form);
+        done.hidden = false;
+        $('button', done).focus();
+        remember(Date.now() + 3650 * 864e5);
+      } catch (_) {
+        form.submit();
+      } finally {
+        button.classList.remove('is-loading');
+      }
+    });
+
     const apply = $('[data-welcome-apply]', welcome);
     if (apply) apply.addEventListener('click', async (e) => {
       e.preventDefault();

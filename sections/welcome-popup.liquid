@@ -1,12 +1,14 @@
 {%- comment -%}
-  Welcome discount pop-up. Opens once per visitor after a short delay (remembered in the browser),
-  darkens the page, offers copy + "apply in cart" (Shopify /discount/<code> link).
+  Welcome discount pop-up. Opens once per visitor after a short delay (remembered in the browser)
+  and only after the cookie banner has been answered; darkens the page.
+  mode "email": newsletter sign-up (customer form); Shopify Email sends the code after double opt-in.
+  mode "code": shows the code to copy, "apply in cart" uses Shopify's /discount/<code> link.
 {%- endcomment -%}
 {%- liquid
   assign code = section.settings.code | strip
   assign apply_url = routes.root_url | append: 'discount/' | append: code | replace: '//', '/'
 -%}
-{%- if section.settings.enabled and code != blank -%}
+{%- if section.settings.enabled and section.settings.mode == 'email' or section.settings.enabled and code != blank -%}
   <div class="drawer drawer--modal welcome" id="Welcome" data-drawer="welcome" data-welcome data-delay="{{ section.settings.delay }}" data-days="{{ section.settings.days }}" aria-hidden="true">
     <button type="button" class="drawer__backdrop" data-drawer-close tabindex="-1" aria-label="{{ 'general.close' | t }}"></button>
     <div class="drawer__panel welcome__panel" role="dialog" aria-modal="true" aria-labelledby="WelcomeTitle" aria-describedby="WelcomeText" tabindex="-1">
@@ -22,22 +24,68 @@
           <span class="welcome__big display">{{ section.settings.highlight | escape }}</span>
           <span class="welcome__sub">{{ section.settings.heading | escape }}</span>
         </p>
-        {%- if section.settings.text != blank -%}
-          <p class="welcome__text" id="WelcomeText">{{ section.settings.text | escape }}</p>
+        {%- if section.settings.mode == 'email' -%}
+          {%- form 'customer', id: 'WelcomeForm', class: 'welcome__form', novalidate: 'novalidate', data-welcome-form: '' -%}
+            {%- liquid
+              assign state = ''
+              if form.posted_successfully?
+                assign state = 'success'
+              elsif form.errors
+                assign state = 'error'
+              endif
+            -%}
+            <div class="welcome__step" data-welcome-step="form"{% if state == 'success' %} hidden{% endif %}>
+              {%- if section.settings.text != blank -%}
+                <p class="welcome__text" id="WelcomeText">{{ section.settings.text | escape }}</p>
+              {%- endif -%}
+              <input type="hidden" name="contact[tags]" value="newsletter,willkommen-popup">
+              <div class="welcome__field">
+                <label class="visually-hidden" for="WelcomeEmail">{{ 'welcome.email' | t }}</label>
+                <input type="email" id="WelcomeEmail" name="contact[email]" autocomplete="email" inputmode="email" required
+                  placeholder="{{ 'welcome.email' | t }}"{% if state == 'error' %} aria-invalid="true" aria-describedby="WelcomeError"{% endif %}>
+              </div>
+              <p class="welcome__error" id="WelcomeError" role="alert" data-welcome-error data-message="{{ 'welcome.error' | t }}"{% unless state == 'error' %} hidden{% endunless %}>
+                {%- if state == 'error' -%}{{ form.errors | default_errors }}{%- endif -%}
+              </p>
+              <button type="submit" class="btn btn--full">
+                {%- assign submit_label = section.settings.submit_label -%}
+                {%- if submit_label == blank -%}{%- assign submit_label = 'welcome.submit' | t -%}{%- endif -%}
+                <span class="btn__label">{{ submit_label | escape }}</span>
+                <span class="spinner" aria-hidden="true"></span>
+              </button>
+              <button type="button" class="welcome__later" data-drawer-close>{{ 'welcome.later' | t }}</button>
+              {%- if section.settings.consent != blank -%}
+                <p class="welcome__note">
+                  {{ section.settings.consent | escape }}
+                  {%- if shop.privacy_policy %} <a href="{{ shop.privacy_policy.url }}">{{ 'welcome.privacy' | t }}</a>{%- endif -%}
+                </p>
+              {%- endif -%}
+            </div>
+            <div class="welcome__step welcome__done" data-welcome-step="success" role="status"{% unless state == 'success' %} hidden{% endunless %}>
+              <p class="welcome__done-title">{% render 'icon', name: 'mail' %}{{ 'welcome.success_title' | t }}</p>
+              <p class="welcome__text">{{ section.settings.success_text | escape }}</p>
+              <button type="button" class="btn btn--full" data-drawer-close>{{ 'welcome.continue' | t }}</button>
+            </div>
+            {%- if state != blank -%}<span hidden data-welcome-state="{{ state }}"></span>{%- endif -%}
+          {%- endform -%}
+        {%- else -%}
+          {%- if section.settings.text_code != blank -%}
+            <p class="welcome__text" id="WelcomeText">{{ section.settings.text_code | escape }}</p>
+          {%- endif -%}
+
+          <button type="button" class="welcome__code" data-copy="{{ code | escape }}" data-copied="{{ 'hero.copied' | t }}">
+            <span class="visually-hidden">{{ 'hero.code_label' | t }}: </span><strong>{{ code | escape }}</strong>
+            <span class="welcome__copy" data-copy-hint>{{ 'hero.copy' | t }}</span>
+          </button>
+
+          <div class="welcome__actions">
+            <a class="btn btn--full" href="{{ apply_url }}?redirect={{ routes.cart_url }}" data-welcome-apply data-applied="{{ 'welcome.applied' | t: code: code }}">
+              <span class="btn__label">{{ 'welcome.apply' | t }}</span>
+              <span class="spinner" aria-hidden="true"></span>
+            </a>
+            <button type="button" class="welcome__later" data-drawer-close>{{ 'welcome.later' | t }}</button>
+          </div>
         {%- endif -%}
-
-        <button type="button" class="welcome__code" data-copy="{{ code | escape }}" data-copied="{{ 'hero.copied' | t }}">
-          <span class="visually-hidden">{{ 'hero.code_label' | t }}: </span><strong>{{ code | escape }}</strong>
-          <span class="welcome__copy" data-copy-hint>{{ 'hero.copy' | t }}</span>
-        </button>
-
-        <div class="welcome__actions">
-          <a class="btn btn--full" href="{{ apply_url }}?redirect={{ routes.cart_url }}" data-welcome-apply data-applied="{{ 'welcome.applied' | t: code: code }}">
-            <span class="btn__label">{{ 'welcome.apply' | t }}</span>
-            <span class="spinner" aria-hidden="true"></span>
-          </a>
-          <button type="button" class="welcome__later" data-drawer-close>{{ 'welcome.later' | t }}</button>
-        </div>
         {%- if section.settings.note != blank -%}
           <p class="welcome__note">{{ section.settings.note | escape }}</p>
         {%- endif -%}
@@ -51,10 +99,21 @@
   "name": "Willkommens-Pop-up",
   "settings": [
     { "type": "checkbox", "id": "enabled", "label": "Pop-up anzeigen", "default": true },
-    { "type": "text", "id": "code", "label": "Rabattcode", "info": "Muss unter Rabatte in Shopify angelegt sein.", "default": "WILLKOMMEN10" },
+    { "type": "select", "id": "mode", "label": "Rabattcode", "options": [
+      { "value": "email", "label": "Per E-Mail nach Newsletter-Anmeldung" },
+      { "value": "code", "label": "Direkt im Pop-up zeigen" }
+    ], "default": "email", "info": "Per E-Mail: in Shopify Double-Opt-in einschalten und unter Shopify Email eine Willkommens-Automation mit dem Code anlegen." },
     { "type": "text", "id": "highlight", "label": "Große Zeile", "default": "10 % Rabatt" },
     { "type": "text", "id": "heading", "label": "Überschrift", "default": "auf deine erste Bestellung" },
-    { "type": "textarea", "id": "text", "label": "Text", "default": "Schön, dass du da bist. Code kopieren oder direkt im Warenkorb hinterlegen." },
+    { "type": "header", "content": "Per E-Mail" },
+    { "type": "textarea", "id": "text", "label": "Text", "default": "Melde dich für unseren Newsletter an, dann schicken wir dir deinen Code per E-Mail." },
+    { "type": "text", "id": "submit_label", "label": "Button", "default": "10 % sichern" },
+    { "type": "textarea", "id": "consent", "label": "Hinweis unter dem Feld", "info": "Bitte mit euren Rechtstexten abstimmen. Der Link zur Datenschutzerklärung wird automatisch angehängt.", "default": "Mit der Anmeldung erhältst du unseren Newsletter zu Ködern, Neuheiten und Aktionen. Abmeldung jederzeit über den Link in jeder E-Mail." },
+    { "type": "textarea", "id": "success_text", "label": "Text nach der Anmeldung", "default": "Bitte bestätige deine Anmeldung über den Link in der E-Mail, die wir dir gerade geschickt haben. Danach schicken wir dir deinen Rabattcode." },
+    { "type": "header", "content": "Direkt im Pop-up" },
+    { "type": "text", "id": "code", "label": "Rabattcode", "info": "Muss unter Rabatte in Shopify angelegt sein.", "default": "WILLKOMMEN10" },
+    { "type": "textarea", "id": "text_code", "label": "Text", "default": "Schön, dass du da bist. Code kopieren oder direkt im Warenkorb hinterlegen." },
+    { "type": "header", "content": "Anzeige" },
     { "type": "text", "id": "note", "label": "Kleingedrucktes", "info": "Z. B. Bedingungen des Rabatts. Leer lassen, wenn es keine gibt." },
     { "type": "range", "id": "delay", "label": "Erscheint nach", "min": 1, "max": 20, "step": 1, "unit": "s", "default": 3 },
     { "type": "range", "id": "days", "label": "Nach dem Schließen wieder zeigen nach", "min": 1, "max": 90, "step": 1, "unit": "d", "default": 30 }

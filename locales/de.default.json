@@ -35,12 +35,19 @@
     "play": "Automatischen Wechsel fortsetzen",
     "code_label": "Code",
     "copy": "Kopieren",
-    "copied": "Kopiert"
+    "copied": "Kopiert",
+    "signup": "10 % sichern"
   },
   "welcome": {
     "apply": "Im Warenkorb anwenden",
     "applied": "{{ code }} ist hinterlegt. Der Rabatt wird im Warenkorb und an der Kasse abgezogen.",
-    "later": "Nein danke"
+    "later": "Nein danke",
+    "email": "Deine E-Mail-Adresse",
+    "submit": "10 % sichern",
+    "privacy": "Datenschutzerklärung",
+    "error": "Bitte gib eine gültige E-Mail-Adresse ein.",
+    "success_title": "Fast geschafft",
+    "continue": "Weiter stöbern"
   },
   "footer": {
     "payment": "Zahlungsarten"

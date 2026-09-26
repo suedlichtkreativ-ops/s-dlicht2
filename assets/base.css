@@ -1107,9 +1107,24 @@ input, textarea { caret-color: var(--ink); }
 .welcome__code strong { font-size: 1.25rem; font-weight: 800; letter-spacing: 0.08em; font-variant-numeric: tabular-nums; }
 .welcome__copy { font-size: 0.8125rem; font-weight: 700; color: var(--signal); text-transform: uppercase; letter-spacing: 0.06em; }
 .welcome__actions { display: grid; gap: 0.25rem; }
-.welcome__later { min-height: 2.75rem; background: none; border: 0; color: #c9c9c3; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.welcome__later { justify-self: center; min-height: 2.75rem; background: none; border: 0; color: #c9c9c3; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 .welcome__later:hover { color: var(--paper); }
 .welcome__note { color: #a3a39d; font-size: 0.8125rem; }
+.welcome__form, .welcome__step { display: grid; gap: 0.875rem; }
+.welcome__step[hidden] { display: none; }
+.welcome__field input {
+  width: 100%; min-height: 3.25rem; padding: 0.75rem 1rem; font-size: 1rem;
+  background: rgb(244 244 241 / 0.06); color: var(--paper); border: 2px solid rgb(244 244 241 / 0.35); border-radius: 0;
+  transition: border-color var(--dur-fast) var(--ease-out), background-color var(--dur-fast) var(--ease-out);
+}
+.welcome__field input::placeholder { color: #a3a39d; }
+.welcome__field input:hover { border-color: rgb(244 244 241 / 0.6); }
+.welcome__field input:focus { border-color: var(--signal); background: rgb(244 244 241 / 0.1); outline: none; }
+.welcome__field input[aria-invalid='true'] { border-color: #ff8a73; }
+.welcome__error { color: #ffb0a1; font-size: 0.875rem; font-weight: 600; }
+.welcome__error ul { list-style: none; padding: 0; margin: 0; }
+.welcome__note a { color: inherit; text-decoration: underline; text-underline-offset: 2px; }
+.welcome__done-title { display: flex; align-items: center; gap: 0.5rem; font-size: 1.3125rem; font-weight: 750; font-stretch: 80%; color: var(--signal); }
 .welcome :focus-visible { outline-color: var(--signal); }
 .welcome__panel:focus-visible { outline: none; }
 @media (max-width: 749px) {

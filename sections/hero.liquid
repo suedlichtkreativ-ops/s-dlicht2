@@ -110,7 +110,14 @@
             <div class="hero__text">{{ block.settings.text }}</div>
           {%- endif -%}
 
-          {%- if block.settings.code != blank -%}
+          {%- if block.settings.signup -%}
+            {%- comment -%} Code comes by e-mail after the newsletter sign-up in the welcome pop-up. {%- endcomment -%}
+            {%- assign signup_label = block.settings.signup_label | default: '' -%}
+            {%- if signup_label == blank -%}{%- assign signup_label = 'hero.signup' | t -%}{%- endif -%}
+            <p class="hero__code">
+              <button type="button" class="btn btn--slant hero__signup" data-drawer-open="welcome" aria-haspopup="dialog" aria-controls="Welcome">{{ signup_label | escape }}</button>
+            </p>
+          {%- elsif block.settings.code != blank -%}
             <p class="hero__code">
               <span>{{ 'hero.code_label' | t }}</span>
               <button type="button" class="hero__code-btn" data-copy="{{ block.settings.code | escape }}" data-copied="{{ 'hero.copied' | t }}">
@@ -187,6 +194,8 @@
         { "type": "textarea", "id": "heading", "label": "Überschrift", "info": "Jede Zeile wird eine eigene Zeile. Kurze Wörter wirken am besten.", "default": "Köder.\nRuten.\nRat vom Lech." },
         { "type": "richtext", "id": "text", "label": "Text" },
         { "type": "text", "id": "code", "label": "Rabattcode (optional)", "info": "Wird als Feld zum Kopieren gezeigt. Der Code muss unter Rabatte in Shopify angelegt sein." },
+        { "type": "checkbox", "id": "signup", "label": "Code per Newsletter-Anmeldung", "info": "Statt des Codes erscheint ein Button, der das Willkommens-Pop-up mit E-Mail-Feld öffnet.", "default": false },
+        { "type": "text", "id": "signup_label", "label": "Button-Text Anmeldung", "default": "10 % sichern" },
         { "type": "text", "id": "button_label", "label": "Button 1", "default": "Sortiment ansehen" },
         { "type": "url", "id": "button_link", "label": "Link Button 1" },
         { "type": "text", "id": "button2_label", "label": "Button 2" },

@@ -14,7 +14,13 @@ Stand 26.09.2026, nach dem Auslesen des Shopify-Stores „Köderdepot neu“. Am
 
 ## Dringend (betrifft auch den alten Shop)
 
-- **Rabattcode WILLKOMMEN10 existiert nicht.** Der alte Shop wirbt im Slider und in der Kollektion „Willkommen bei Köderdepot“ mit „10 % auf die erste Bestellung, Code WILLKOMMEN10“. Unter Rabatte ist aber kein einziger Code angelegt (Abfrage vom 26.09.2026). Kunden bekommen beim Eingeben vermutlich eine Fehlermeldung. Im neuen Shop: Rabatt „WILLKOMMEN10“, 10 %, einmal pro Kunde, anlegen. Der neue Hero zeigt den Code im Slide „10 % Rabatt“. Auch das neue Willkommens-Pop-up (erscheint beim ersten Besuch nach 3 s) bietet den Code zum Kopieren und „Im Warenkorb anwenden“ an. Solange der Code fehlt, im Editor unter „Willkommens-Pop-up“ ausschalten. Bedingungen (z. B. Mindestbestellwert) bitte nennen, dann kommen sie ins Kleingedruckte.
+- **Rabattcode WILLKOMMEN10 existiert nicht.** Der alte Shop wirbt im Slider und in der Kollektion „Willkommen bei Köderdepot“ mit „10 % auf die erste Bestellung, Code WILLKOMMEN10“. Unter Rabatte ist aber kein einziger Code angelegt (Abfrage vom 26.09.2026). Kunden bekommen beim Eingeben vermutlich eine Fehlermeldung. Im neuen Shop: Rabatt „WILLKOMMEN10“, 10 %, einmal pro Kunde, anlegen. Der neue Hero zeigt den Code im Slide „10 % Rabatt“. Das Willkommens-Pop-up steht auf „Code per E-Mail“: Besucher melden sich zum Newsletter an, Shopify schickt den Code nach der Bestätigung. Dafür im neuen Shop einrichten:
+  1. Rabatt „WILLKOMMEN10“ anlegen (10 %, z. B. einmal pro Kunde).
+  2. Einstellungen → Kundenbenachrichtigungen/Marketing: Double-Opt-in für E-Mail-Marketing einschalten.
+  3. Shopify Email → Automatisierungen → „Willkommen neue Abonnenten“ mit dem Code einrichten.
+  4. Einstellungen → Kundendatenschutz: Cookie-Banner aktivieren (das Pop-up wartet, bis er beantwortet ist).
+  5. Hinweistext unter dem E-Mail-Feld und die Datenschutzerklärung mit euren Rechtstexten abstimmen (Newsletter + Cookies).
+  Solange 1–3 fehlen, im Editor unter „Willkommens-Pop-up“ ausschalten oder auf „Direkt im Pop-up zeigen“ stellen. Bedingungen des Rabatts bitte nennen, dann kommen sie ins Kleingedruckte.
 
 ## Fehlende Inhalte
 
@@ -27,6 +33,8 @@ Stand 26.09.2026, nach dem Auslesen des Shopify-Stores „Köderdepot neu“. Am
 - **Social Media:** Instagram-Link im Live-Theme ist nur ein Platzhalter „#“. Echte Profile fehlen.
 - **Bundles:** Die Kollektionen „Bundles“, „Starter Bundle“ und „Hecht Bundle“ enthalten 0 Produkte. Es gibt die nicht gelisteten Produkte „Starter Set“ und „Combo Deal“ (siehe `produkte.json`). Welche Produkte gehören in welches Bundle?
 - **Neuheiten:** Kollektion „Neuheiten“ ist leer. Auf der Startseite steht deshalb „Bestseller“ (91 Produkte).
+- **Hero-Bild Topwater ohne Text:** Das alte Banner hatte „TOPWATER HECHT“, die Köderliste und einen Knopf eingebrannt. Die bereinigte Fassung liegt in `inhalte/bilder/hero-topwater-ohne-text.jpg`. Im neuen Shop unter Inhalte → Dateien mit genau diesem Namen hochladen, dann greift der Hero-Slide automatisch darauf zu.
+- **Grundpreis:** Schnüre (Uferleine, Silberleine, Vorratsleine) brauchen nach Preisangabenverordnung einen Preis pro Meter. In Shopify pro Variante unter „Grundpreis“ eintragen.
 - **Bildauflösung (Qualitätsprüfung 26.09.2026):**
   - Hero-Fotos sind auf Retina-Bildschirmen weich. Für volle Schärfe braucht es ≥2880 px Breite. Vorhanden: Angler 1983 px, Topwater 2400 px, 10 %-Motiv 1672 px, Kurzläufer nur 1254 px. Bitte Originale in voller Größe liefern.
   - Das Handy-Motiv des Anglers (`…_99e322a9-….png`) liefert auf dem CDN einen Fehler (404), die Vorschau nutzt eine 1080-px-Version.
