@@ -7,11 +7,17 @@
 -%}
 <section class="hero on-dark" data-hero{% if section.settings.animate %} data-animate{% endif %}>
   {%- if section.settings.image != blank -%}
-    <div class="hero__media">
+    <div class="hero__media{% if section.settings.image_mobile != blank %} hero__media--desktop{% endif %}">
       {% render 'image', image: section.settings.image, sizes: '100vw', loading: 'eager', alt: '' %}
     </div>
+    {%- if section.settings.image_mobile != blank -%}
+      <div class="hero__media hero__media--mobile">
+        {% render 'image', image: section.settings.image_mobile, sizes: '100vw', loading: 'eager', alt: '' %}
+      </div>
+    {%- endif -%}
   {%- endif -%}
 
+  {%- if section.settings.image == blank or section.settings.line_with_image -%}
   <div class="hero__line-art" aria-hidden="true">
     <span class="hero__string"></span>
     <svg class="hero__hook" viewBox="0 0 40 72" width="40" height="72">
@@ -19,6 +25,7 @@
       <path d="M20 12.5 V48 C20 64 3 66 2 52 V44 L9 50"/>
     </svg>
   </div>
+  {%- endif -%}
 
   <div class="page-width hero__inner">
     <{{ heading_tag }} class="hero__title display">
@@ -62,11 +69,13 @@
   "max_blocks": 4,
   "settings": [
     { "type": "image_picker", "id": "image", "label": "Hintergrundbild (optional)", "info": "Stimmungsvolles Wasser- oder Landschaftsfoto, mind. 2400 px breit. Wird links unten abgedunkelt, damit die Schrift lesbar bleibt. Ohne Bild: schwarze Fläche." },
+    { "type": "image_picker", "id": "image_mobile", "label": "Hintergrundbild Handy (optional)", "info": "Hochformat. Ohne Angabe wird das Desktop-Bild verwendet." },
     { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Kunstköder, Ruten und Zubehör für Hecht, Zander, Barsch und Forelle. Ausgesucht von Anglern aus Landsberg am Lech.</p>" },
     { "type": "text", "id": "button_label", "label": "Button 1", "default": "Sortiment ansehen" },
     { "type": "url", "id": "button_link", "label": "Link Button 1" },
     { "type": "text", "id": "button2_label", "label": "Button 2", "default": "Abholung vor Ort" },
     { "type": "url", "id": "button2_link", "label": "Link Button 2", "info": "Leer lassen, um zum Abschnitt „Laden“ zu springen." },
+    { "type": "checkbox", "id": "line_with_image", "label": "Angelschnur auch mit Hintergrundbild zeigen", "info": "Ohne Bild ist die Schnur immer zu sehen.", "default": false },
     { "type": "checkbox", "id": "show_cue", "label": "Scroll-Hinweis anzeigen", "default": true },
     { "type": "checkbox", "id": "animate", "label": "Einstiegsanimation", "default": true }
   ],

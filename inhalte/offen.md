@@ -31,11 +31,17 @@ Stand 26.09.2026, nach dem Auslesen des Shopify-Stores „Köderdepot neu“. Am
 
 ## Bilder
 
-- Das Shopify-CDN ist aus dieser Arbeitsumgebung gesperrt. Ich konnte die Bilder deshalb weder ansehen noch in die Vorschau-Seite einbetten. Die Vorschau zeigt Platzhalter.
-- Im Theme sind die echten Bilder trotzdem eingetragen (`shopify://shop_images/…`): Logo, Favicon, drei Mega-Menü-Bilder für „Köder“ und die Ausrüstungs-Kacheln. Sie erscheinen, sobald das Theme im selben Store installiert wird.
-- Eure Zielfisch-Zeichnungen (`hecht.png`, `zander.png`, `barsch.png`, `forelle.png`) sind in `bilder.md` gelistet, aber noch nicht eingesetzt. Wenn sie auf beigem Kreis gezeichnet sind, passen sie nicht in die schwarzen CI-Kreise. Bitte als weiße Linien auf transparentem Grund bereitstellen, dann ersetzen sie meine Symbole.
+- Das Shopify-CDN ist jetzt freigegeben. Alle Design-Bilder sind gesichtet und zugeordnet:
+  - **Logo und Favicon:** `LOGOKOeDER.png`
+  - **Hero:** `angler-komplettlogo-ohne-werbetext.png` (Desktop) und die Hochformat-Version `…_99e322a9-….png` (Handy)
+  - **Mega-Menü „Köder“:** die drei Fotos `hf_20260413_…`
+  - **Ausrüstungs-Kacheln:** `koederdepot-kategorie-koeder/-angelruten/-angelzubehoer.png` und `rollen_new.png`
+  - **Starter Bundle:** `ChatGPT_Image_16._Juli_2026_13_48_12.png` (Köderbox am See)
+  - **Blog:** die Titelbilder der Beiträge (kommen automatisch aus Shopify)
+- **Zielfisch-Zeichnungen:** `hecht/zander/barsch/forelle.png` sind weiße Linien auf beigem Kreis. Ich habe den Kreis entfernt und sie als Theme-Dateien `assets/fish-*.png` eingebaut. Sie liegen nur in 224 × 224 px vor. Für scharfe Darstellung auf Retina-Bildschirmen wäre eine Version ab 600 px oder als SVG besser.
+- **Nicht verwendet:** Die Slider-Banner (10 % Rabatt, Topwater, Kurzläufer) haben eingebrannten Text und eignen sich nicht als Hero. Sie könnten als Aktionsbanner weiterleben.
+- **Reste einer Theme-Vorlage** in den Dateien, die nichts mit Köderdepot zu tun haben: `banner.png`, `banner1.jpg`, `banner2.jpg`, `homepage1–4.jpg` (Hunde, Autositzbezug, Zoohandlung), `logo.jpg` (fremdes Logo). Können gelöscht werden.
 - 48 Produkte sind Entwürfe (DRAFT), 2 nicht gelistet (UNLISTED), 91 aktiv. 48 Produkte haben kein Bild.
-- Wenn `cdn.shopify.com` in der Umgebung freigegeben wird, kann ich die Bilder herunterladen, sichten und in die Vorschau einbauen.
 
 ## Aufräumen im Sortiment (Empfehlung, nicht umgesetzt)
 

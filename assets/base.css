@@ -901,3 +901,12 @@ input[type='search']::-webkit-search-cancel-button { -webkit-appearance: none; a
 .rte h2 { font-size: clamp(1.375rem, 2.2vw, 1.75rem); }
 .rte h3 { font-size: 1.1875rem; }
 .rte h4 { font-size: 1.0625rem; }
+
+/* The shop's fish drawings are white lines; flip to black on the yellow hover disc */
+.fish--drawing { display: block; width: 100%; height: auto; aspect-ratio: 1; object-fit: contain; transition: transform 600ms var(--ease-out), filter var(--dur-base) var(--ease-out); }
+.target-fish__disc .fish--drawing { width: 92%; }
+.mega__fish .fish--drawing, .mobile-nav__fish .fish--drawing { width: 100%; }
+.target-fish__item:hover .fish--drawing, .target-fish__item:focus-visible .fish--drawing,
+.mega__col-title--fish:hover .fish--drawing, .mega__link--fish:hover .fish--drawing { filter: invert(1); }
+.hero__media--mobile { display: none; }
+@media (max-width: 749px) { .hero__media--desktop { display: none; } .hero__media--mobile { display: block; } }

@@ -5,7 +5,7 @@
     assign has_logo = true
   endif
 -%}
-<header class="header{% if has_logo and section.settings.logo_overhang %} header--overhang{% endif %}" data-header style="--logo-w: {{ settings.logo_width }}px">
+<header class="header{% if has_logo and section.settings.logo_overhang and request.page_type == 'index' %} header--overhang{% endif %}" data-header style="--logo-w: {{ settings.logo_width }}px">
   <div class="page-width header__inner">
     <div class="header__start on-dark">
       <button type="button" class="icon-btn header__menu-toggle" data-drawer-open="menu" aria-controls="MenuDrawer" aria-expanded="false" aria-label="{{ 'header.menu' | t }}">
@@ -206,7 +206,7 @@
       "type": "checkbox",
       "id": "logo_overhang",
       "label": "Logo ragt über den Header (Desktop)",
-      "info": "Wirkt wie ein Aufkleber. Beim Scrollen wird das Logo kleiner.",
+      "info": "Nur auf der Startseite: wirkt wie ein Aufkleber über dem Hero. Beim Scrollen wird das Logo kleiner.",
       "default": true
     }
   ],

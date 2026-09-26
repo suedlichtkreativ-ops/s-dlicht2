@@ -1,4 +1,5 @@
 {%- comment -%}
+  Target fish: the shop's own drawings for Hecht, Zander, Barsch, Forelle; line-art SVG fallback for Karpfen.
   Line-art target fish. Param: name – any title or handle containing hecht, zander, barsch, forelle or karpfen
   (e.g. "Hechtköder"), class.
   Renders nothing for unknown names so callers can pass any handle.
@@ -19,7 +20,11 @@
     assign fish_name = 'karpfen'
   endif
 -%}
-{%- if fish_name != '' -%}
+{%- if fish_name == 'hecht' or fish_name == 'zander' or fish_name == 'barsch' or fish_name == 'forelle' -%}
+  {%- comment -%} Köderdepot's own line drawings (white on transparent), taken from the previous shop. {%- endcomment -%}
+  {%- assign drawing = 'fish-' | append: fish_name | append: '.png' -%}
+  <img class="fish fish--drawing {{ class }}" src="{{ drawing | asset_url }}" width="224" height="224" alt="" aria-hidden="true" loading="lazy">
+{%- elsif fish_name != '' -%}
 <svg class="fish {{ class }}" viewBox="0 0 100 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
   {%- case fish_name -%}
     {%- when 'hecht' -%}

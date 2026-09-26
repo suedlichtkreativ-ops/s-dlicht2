@@ -34,7 +34,9 @@
         "show_cue": true,
         "animate": true,
         "button_link": "shopify://collections/koder",
-        "button2_link": ""
+        "button2_link": "",
+        "image": "shopify://shop_images/angler-komplettlogo-ohne-werbetext.png",
+        "image_mobile": "shopify://shop_images/angler-komplettlogo-ohne-werbetext_99e322a9-9496-4a11-8301-0940ce863032.png"
       }
     },
     "tiles": {
@@ -168,7 +170,8 @@
         "reverse": true,
         "white": false,
         "landscape": true,
-        "button_link": "shopify://collections/bundles"
+        "button_link": "shopify://collections/bundles",
+        "image": "shopify://shop_images/ChatGPT_Image_16._Juli_2026_13_48_12.png"
       }
     },
     "blog": {

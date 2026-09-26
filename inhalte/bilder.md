@@ -1,5 +1,7 @@
 # Bilder
 
+Zuordnung im neuen Theme: siehe `offen.md`, Abschnitt „Bilder“.
+
 Alle Bilder liegen im Shopify-CDN. Im neuen Theme lassen sie sich als `shopify://shop_images/<datei>` einsetzen, sofern sie im selben Store bleiben.
 
 ## Marke
