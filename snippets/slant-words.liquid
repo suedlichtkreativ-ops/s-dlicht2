@@ -1,0 +1,6 @@
+{%- comment -%}
+  Slants each word on its own so multi-line display headings keep a straight left edge.
+  Param: text
+{%- endcomment -%}
+{%- assign slant_words = text | escape | split: ' ' -%}
+{%- for w in slant_words -%}<span class="slant">{{ w }}</span>{%- unless forloop.last %} {% endunless -%}{%- endfor -%}

@@ -5,16 +5,58 @@
     "announcement": {
       "type": "announcement-bar",
       "blocks": {
-        "m1": { "type": "message", "settings": { "text": "Versand in 1–2 Werktagen" } },
-        "m2": { "type": "message", "settings": { "text": "Abholung im Laden in Landsberg möglich" } },
-        "m3": { "type": "message", "settings": { "text": "Beratung vom Angler, nicht vom Callcenter" } }
+        "m1": {
+          "type": "message",
+          "settings": {
+            "text": "Von Anglern für Angler!"
+          }
+        },
+        "m2": {
+          "type": "message",
+          "settings": {
+            "text": "Schnell geliefert mit DHL"
+          }
+        },
+        "m3": {
+          "type": "message",
+          "settings": {
+            "text": "Versandkostenfrei ab 100 € in DE"
+          }
+        },
+        "m4": {
+          "type": "message",
+          "settings": {
+            "text": "Kauf auf Rechnung möglich"
+          }
+        },
+        "m5": {
+          "type": "message",
+          "settings": {
+            "text": "Abholung vor Ort"
+          }
+        }
       },
-      "block_order": ["m1", "m2", "m3"]
+      "block_order": [
+        "m1",
+        "m2",
+        "m3",
+        "m4",
+        "m5"
+      ],
+      "settings": {
+        "show_check": true
+      }
     },
     "header": {
       "type": "header",
-      "settings": { "menu": "main-menu", "logo_overhang": true }
+      "settings": {
+        "menu": "main-menu",
+        "logo_overhang": true
+      }
     }
   },
-  "order": ["announcement", "header"]
+  "order": [
+    "announcement",
+    "header"
+  ]
 }

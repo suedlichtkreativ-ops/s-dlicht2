@@ -3,13 +3,32 @@
     "hero": {
       "type": "hero",
       "blocks": {
-        "l1": { "type": "line", "settings": { "text": "Köder." } },
-        "l2": { "type": "line", "settings": { "text": "Ruten." } },
-        "l3": { "type": "line", "settings": { "text": "Rat vom Lech." } }
+        "l1": {
+          "type": "line",
+          "settings": {
+            "text": "Köder."
+          }
+        },
+        "l2": {
+          "type": "line",
+          "settings": {
+            "text": "Ruten."
+          }
+        },
+        "l3": {
+          "type": "line",
+          "settings": {
+            "text": "Rat vom Lech."
+          }
+        }
       },
-      "block_order": ["l1", "l2", "l3"],
+      "block_order": [
+        "l1",
+        "l2",
+        "l3"
+      ],
       "settings": {
-        "text": "<p>Kunstköder, Ruten und Zubehör für Raubfisch, Karpfen und Forelle. Ausgesucht von Anglern aus Landsberg am Lech.</p>",
+        "text": "<p>Kunstköder, Ruten und Zubehör für Hecht, Zander, Barsch und Forelle. Ausgesucht von Anglern aus Landsberg am Lech.</p>",
         "button_label": "Sortiment ansehen",
         "button2_label": "Abholung im Laden",
         "show_cue": true,
@@ -19,26 +38,134 @@
     "tiles": {
       "type": "collection-tiles",
       "blocks": {
-        "c1": { "type": "collection", "settings": { "title": "Raubfisch" } },
-        "c2": { "type": "collection", "settings": { "title": "Karpfen" } },
-        "c3": { "type": "collection", "settings": { "title": "Friedfisch" } },
-        "c4": { "type": "collection", "settings": { "title": "Forelle & Fliege" } }
+        "c1": {
+          "type": "collection",
+          "settings": {
+            "title": "Kunstköder"
+          }
+        },
+        "c2": {
+          "type": "collection",
+          "settings": {
+            "title": "Ruten"
+          }
+        },
+        "c3": {
+          "type": "collection",
+          "settings": {
+            "title": "Rollen"
+          }
+        },
+        "c4": {
+          "type": "collection",
+          "settings": {
+            "title": "Zubehör"
+          }
+        }
       },
-      "block_order": ["c1", "c2", "c3", "c4"],
-      "settings": { "heading": "Worauf gehst du?", "columns": 4, "style": "cutout" }
+      "block_order": [
+        "c1",
+        "c2",
+        "c3",
+        "c4"
+      ],
+      "settings": {
+        "heading": "Oder nach Ausrüstung",
+        "text": "Du weißt schon, was fehlt? Direkt zu Ködern, Ruten, Rollen und Kleinteilen.",
+        "columns": 4,
+        "style": "cutout"
+      }
     },
     "featured": {
       "type": "featured-collection",
-      "settings": { "heading": "Neu im Depot", "limit": 8, "white": true }
+      "settings": {
+        "heading": "Neu im Depot",
+        "limit": 8,
+        "white": true
+      }
     },
     "statement": {
       "type": "rich-text",
-      "settings": { "style": "ink" }
+      "settings": {
+        "style": "ink",
+        "heading": "Von Anglern für Angler.",
+        "text": "<p>Köderdepot ist ein Angelladen aus Landsberg am Lech. Wir verkaufen, womit wir selbst am Wasser stehen, und beraten dich im Laden oder per Nachricht.</p>"
+      }
     },
     "store": {
       "type": "store-info",
       "settings": {}
+    },
+    "zielfisch": {
+      "type": "target-fish",
+      "blocks": {
+        "f1": {
+          "type": "fish",
+          "settings": {
+            "species": "hecht",
+            "title": "Hecht"
+          }
+        },
+        "f2": {
+          "type": "fish",
+          "settings": {
+            "species": "zander",
+            "title": "Zander"
+          }
+        },
+        "f3": {
+          "type": "fish",
+          "settings": {
+            "species": "barsch",
+            "title": "Barsch"
+          }
+        },
+        "f4": {
+          "type": "fish",
+          "settings": {
+            "species": "forelle",
+            "title": "Forelle"
+          }
+        }
+      },
+      "block_order": [
+        "f1",
+        "f2",
+        "f3",
+        "f4"
+      ],
+      "settings": {
+        "heading": "Welchen Zielfisch willst du angeln?"
+      }
+    },
+    "bundle": {
+      "type": "image-with-text",
+      "settings": {
+        "heading": "Neu dabei? Starte mit dem Starter Bundle",
+        "text": "<p>Rute, Rolle, bewährte Köder und das nötige Kleinzeug, fertig zusammengestellt. Für Hecht gibt es ein eigenes Bundle.</p>",
+        "button_label": "Bundles ansehen",
+        "reverse": true,
+        "white": false,
+        "landscape": true
+      }
+    },
+    "blog": {
+      "type": "featured-blog",
+      "settings": {
+        "heading": "News, Bundles & Empfehlungen",
+        "limit": 2,
+        "white": true
+      }
     }
   },
-  "order": ["hero", "tiles", "featured", "statement", "store"]
+  "order": [
+    "hero",
+    "zielfisch",
+    "featured",
+    "bundle",
+    "tiles",
+    "blog",
+    "statement",
+    "store"
+  ]
 }

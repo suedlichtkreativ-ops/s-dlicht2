@@ -16,7 +16,7 @@
           <li aria-current="page">{{ collection.title | escape }}</li>
         </ol>
       </nav>
-      <h1 class="collection-hero__title display"><span class="slant">{{ collection.title | escape }}</span></h1>
+      <h1 class="collection-hero__title display">{% render 'slant-words', text: collection.title %}</h1>
       {%- if collection.description != blank and section.settings.show_description -%}
         <div class="rte muted">{{ collection.description }}</div>
       {%- endif -%}

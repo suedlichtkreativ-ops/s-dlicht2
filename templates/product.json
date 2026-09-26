@@ -3,11 +3,29 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "usps": { "type": "usps", "settings": {} },
-        "description": { "type": "description", "settings": { "open": true } },
-        "shipping": { "type": "collapsible", "settings": { "heading": "Versand & Rückgabe", "content": "<p>Versand innerhalb Deutschlands in 1–2 Werktagen. Abholung im Laden in Landsberg am Lech auf Wunsch. Details in den Versandinformationen.</p>" } }
+        "usps": {
+          "type": "usps",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "open": true
+          }
+        },
+        "shipping": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Versand & Rückgabe",
+            "content": "<p>Wir versenden mit DHL, innerhalb Deutschlands ab 100 € versandkostenfrei. Auf Wunsch holst du deine Bestellung im Laden in Landsberg am Lech ab. Du hast ein gesetzliches Widerrufsrecht von 14 Tagen.</p>"
+          }
+        }
       },
-      "block_order": ["usps", "description", "shipping"],
+      "block_order": [
+        "usps",
+        "description",
+        "shipping"
+      ],
       "settings": {}
     },
     "related": {
@@ -15,5 +33,8 @@
       "settings": {}
     }
   },
-  "order": ["main", "related"]
+  "order": [
+    "main",
+    "related"
+  ]
 }

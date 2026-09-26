@@ -82,7 +82,7 @@
       "quantity": "Menge",
       "increase": "Menge erhöhen",
       "decrease": "Menge verringern",
-      "in_stock": "Auf Lager, Versand in 1–2 Werktagen",
+      "in_stock": "Auf Lager",
       "low_stock": "Nur noch {{ count }} auf Lager",
       "pickup_available": "Abholung möglich in {{ location }}",
       "pickup_unavailable": "Derzeit nicht zur Abholung in {{ location }} verfügbar",
@@ -121,7 +121,8 @@
     "text": "Vielleicht wurde das Produkt umbenannt. Such danach oder geh zurück ins Sortiment."
   },
   "blog": {
-    "back": "Zurück zu {{ title }}"
+    "back": "Zurück zu {{ title }}",
+    "view_all": "Alle Beiträge"
   },
   "contact": {
     "name": "Name",
@@ -208,5 +209,8 @@
       "set_default": "Als Standardadresse festlegen",
       "save": "Adresse speichern"
     }
+  },
+  "faq": {
+    "more_questions": "Noch Fragen? Frag uns direkt."
   }
 }

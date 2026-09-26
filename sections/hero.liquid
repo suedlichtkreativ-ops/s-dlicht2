@@ -26,7 +26,7 @@
         {%- assign words = block.settings.text | escape | split: ' ' -%}
         <span class="hero__line" {{ block.shopify_attributes }}><span class="hero__line-inner"><span style="--i: {{ forloop.index0 }}">{% for w in words %}<span class="slant">{{ w }}</span>{% unless forloop.last %} {% endunless %}{% endfor %}</span></span></span>
       {%- else -%}
-        <span class="hero__line"><span class="hero__line-inner"><span><span class="slant">{{ shop.name | escape }}</span></span></span></span>
+        <span class="hero__line"><span class="hero__line-inner"><span>{% render 'slant-words', text: shop.name %}</span></span></span>
       {%- endfor -%}
     </{{ heading_tag }}>
 
@@ -62,7 +62,7 @@
   "max_blocks": 4,
   "settings": [
     { "type": "image_picker", "id": "image", "label": "Hintergrundbild (optional)", "info": "Stimmungsvolles Wasser- oder Landschaftsfoto, mind. 2400 px breit. Wird links unten abgedunkelt, damit die Schrift lesbar bleibt. Ohne Bild: schwarze Fläche." },
-    { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Kunstköder, Ruten und Zubehör für Raubfisch, Karpfen und Forelle. Ausgesucht von Anglern aus Landsberg am Lech.</p>" },
+    { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Kunstköder, Ruten und Zubehör für Hecht, Zander, Barsch und Forelle. Ausgesucht von Anglern aus Landsberg am Lech.</p>" },
     { "type": "text", "id": "button_label", "label": "Button 1", "default": "Sortiment ansehen" },
     { "type": "url", "id": "button_link", "label": "Link Button 1" },
     { "type": "text", "id": "button2_label", "label": "Button 2", "default": "Abholung im Laden" },

@@ -154,8 +154,8 @@
           {%- when 'usps' -%}
             <ul class="product__usps" role="list" {{ block.shopify_attributes }}>
               {%- if block.settings.usp1 != blank -%}<li>{% render 'icon', name: 'truck', class: 'icon--sm' %}{{ block.settings.usp1 | escape }}</li>{%- endif -%}
-              {%- if block.settings.usp2 != blank -%}<li>{% render 'icon', name: 'return', class: 'icon--sm' %}{{ block.settings.usp2 | escape }}</li>{%- endif -%}
-              {%- if block.settings.usp3 != blank -%}<li>{% render 'icon', name: 'chat', class: 'icon--sm' %}{{ block.settings.usp3 | escape }}</li>{%- endif -%}
+              {%- if block.settings.usp2 != blank -%}<li>{% render 'icon', name: 'check', class: 'icon--sm' %}{{ block.settings.usp2 | escape }}</li>{%- endif -%}
+              {%- if block.settings.usp3 != blank -%}<li>{% render 'icon', name: 'check', class: 'icon--sm' %}{{ block.settings.usp3 | escape }}</li>{%- endif -%}
             </ul>
           {%- when 'description' -%}
             {%- if product.description != blank -%}
@@ -221,9 +221,9 @@
     {
       "type": "usps", "name": "Vorteile", "limit": 1,
       "settings": [
-        { "type": "text", "id": "usp1", "label": "Versand", "default": "Versand in 1–2 Werktagen" },
-        { "type": "text", "id": "usp2", "label": "Rückgabe", "default": "30 Tage Rückgaberecht" },
-        { "type": "text", "id": "usp3", "label": "Beratung", "default": "Fragen? Wir beraten persönlich" }
+        { "type": "text", "id": "usp1", "label": "Versand", "default": "Schnell geliefert mit DHL" },
+        { "type": "text", "id": "usp2", "label": "Versandkosten", "default": "Versandkostenfrei ab 100 € in DE" },
+        { "type": "text", "id": "usp3", "label": "Zahlung", "default": "Kauf auf Rechnung möglich" }
       ]
     }
   ]

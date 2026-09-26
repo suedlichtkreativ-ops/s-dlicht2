@@ -84,3 +84,16 @@ Ein inszenierter Moment, der Rest reagiert nur auf Aktionen.
 - **Kategorie-Kacheln (Zielfisch):** freigestellter Fisch oder Köder als PNG, quer, mind. 1000 px breit. Er liegt vor dem gelben Band.
 - **Hero:** stimmungsvolles Foto (Lech, Morgennebel, Ufer), mind. 2400 × 1400 px. Das Motiv sollte rechts liegen, links unten wird für die Schrift abgedunkelt.
 - **Logo:** PNG mit Transparenz oder SVG, mind. 600 px breit.
+
+## Übernommen von der bisherigen koederdepot.de
+
+| Inhalt | Umsetzung im neuen Theme |
+|---|---|
+| Versprechen-Leiste (5 Punkte mit Haken) | Gelbe Ansage-Leiste, Haken-Symbol, auf dem Handy wischbar |
+| Menü Köder · Angelrollen · Angelruten · Zubehör · Bundles · FAQ | Mega-Menü für „Köder“ (Zielfisch, Softbaits, Hardbaits, Blechköder), kompakte Listen für die übrigen |
+| „Welchen Zielfisch willst du angeln?“ (Hecht, Zander, Barsch, Forelle) | Schwarze Kreise mit weißen Fisch-Linien; beim Überfahren wird der Kreis gelb und der Fisch schwimmt ein Stück nach vorn. Die Symbole tauchen auch im Mega-Menü auf |
+| FAQs | Eigene Seite, Akkordeon, als FAQ für Google ausgezeichnet |
+| News, Bundles & Empfehlungen | Blog-Abschnitt auf der Startseite plus Einstieg „Starter Bundle“ |
+| Slogan „Von Anglern für Angler!“ | Leitsatz auf der Startseite und in der Ansage-Leiste |
+
+Bewusst nicht übernommen: Beige/Taupe-Farben und die geometrische Schrift der alten Seite. Sie passen nicht zum schwarz-gelben Logo.

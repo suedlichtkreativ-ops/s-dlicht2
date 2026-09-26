@@ -24,14 +24,19 @@ npx @shopify/cli theme check                               # Prüfung (aktuell o
 |---|---|---|
 | Logo | Theme anpassen → Theme-Einstellungen → Logo & Favicon | Logo als PNG (transparent) oder SVG hochladen |
 | Laden-Daten | Theme-Einstellungen → Laden & Kontakt | Adresse, Öffnungszeiten, Telefon, E-Mail, Karten-Link |
-| Hauptmenü | Onlineshop → Navigation → `main-menu` | 3 Ebenen: Zielfisch → Produktart → Unterkategorie. Ebene 2 wird zur Spalte im Mega-Menü |
+| Hauptmenü | Onlineshop → Navigation → `main-menu` | Köder · Angelrollen · Angelruten · Zubehör · Bundles · FAQ. Menüpunkte mit **3 Ebenen** (Köder → Zielfisch/Softbaits/Hardbaits/Blechköder → Unterpunkte) öffnen das Mega-Menü; Menüpunkte mit **2 Ebenen** (Angelrollen, Angelruten, Bundles) eine kompakte Liste. Unterpunkte mit „Hecht“, „Zander“, „Barsch“, „Forelle“ oder „Karpfen“ im Namen bekommen automatisch ihr Fisch-Symbol |
+| Mega-Menü-Bilder | Theme anpassen → Header → Block „Mega-Menü: Bild“ | Menüpunkt (z. B. „Köder“) eintragen und Bild wählen, mehrere Bilder möglich |
 | Footer-Menüs | Navigation | `footer` (Sortiment) und ein Menü „Rechtliches“ (im Footer-Abschnitt auswählen) |
 | Filter | App **Search & Discovery** (kostenlos von Shopify) | Filter anlegen: Verfügbarkeit, Preis, Marke, Köderart, Gewicht … |
 | Abholung | Einstellungen → Versand und Zustellung → Abholung vor Ort | Laden aktivieren. Die Produktseite zeigt dann automatisch „Abholung möglich in …“ |
 | Rechtstexte | Einstellungen → Richtlinien + Seiten | Impressum, Datenschutz, AGB, Widerruf, Versand. Texte müssen von euch bzw. eurem Rechtsdienst kommen |
 | Kontaktseite | Seite „Kontakt“ anlegen | Vorlage `page.contact` wählen |
+| FAQ | Seite „FAQ“ anlegen | Vorlage `page.faq` wählen. Die 7 Fragen sind vorbefüllt, die Antworten sind Entwürfe und müssen geprüft werden |
+| News & Empfehlungen | Onlineshop → Blogbeiträge | Blog anlegen und im Startseiten-Abschnitt „Blog-Beiträge“ auswählen |
+| Zielfisch | Startseite → „Zielfisch-Auswahl“ | Je Fisch eine Kollektion wählen. Eigene Fisch-Zeichnungen können das Symbol ersetzen |
 | Über-uns-Seite | Seite anlegen | Vorlage `page.about` wählen |
-| Kategorie-Kacheln | Startseite → „Kategorie-Kacheln“ | Je Kachel eine Kollektion und ein freigestelltes Bild wählen |
+| Ausrüstungs-Kacheln | Startseite → „Oder nach Ausrüstung“ | Je Kachel eine Kollektion und ein freigestelltes Bild wählen |
+| Starter Bundle | Startseite → „Neu dabei?“ | Bild und Link zur Bundles-Kollektion setzen |
 
 ## Aufbau
 

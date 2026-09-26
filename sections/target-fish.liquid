@@ -1,0 +1,83 @@
+{%- comment -%}
+  "Welchen Zielfisch willst du angeln?" – entry by species, carried over from the
+  previous koederdepot.de and redrawn in the logo CI: black disc, white line fish;
+  on hover/focus the disc fills yellow and the fish swims forward.
+{%- endcomment -%}
+<section class="section target-fish" id="zielfisch">
+  <div class="page-width">
+    <h2 class="target-fish__heading display">{% render 'slant-words', text: section.settings.heading %}</h2>
+    {%- if section.settings.text != blank -%}
+      <p class="muted target-fish__text">{{ section.settings.text | escape }}</p>
+    {%- endif -%}
+
+    <ul class="target-fish__list" role="list">
+      {%- for block in section.blocks -%}
+        {%- liquid
+          assign c = block.settings.collection
+          assign label = block.settings.title | default: c.title
+          if label == blank
+            assign label = block.settings.species | capitalize
+          endif
+        -%}
+        <li {{ block.shopify_attributes }}>
+          <a class="target-fish__item" href="{{ c.url | default: routes.collections_url }}">
+            <span class="target-fish__disc">
+              {%- if block.settings.image != blank -%}
+                {{ block.settings.image | image_url: width: 400 | image_tag: widths: '200, 300, 400', sizes: '(min-width: 990px) 180px, 40vw', alt: '', class: 'target-fish__img', loading: 'lazy' }}
+              {%- else -%}
+                {% render 'fish-icon', name: block.settings.species %}
+              {%- endif -%}
+            </span>
+            <span class="target-fish__label display">{% render 'slant-words', text: label %}</span>
+            {%- if c.products_count > 0 -%}
+              <span class="target-fish__count">{{ 'collections.count' | t: count: c.products_count }}</span>
+            {%- endif -%}
+          </a>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Zielfisch-Auswahl",
+  "max_blocks": 8,
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Überschrift", "default": "Welchen Zielfisch willst du angeln?" },
+    { "type": "text", "id": "text", "label": "Text", "default": "Köder, Montagen und Ruten, sortiert nach dem Fisch, den du fangen willst." }
+  ],
+  "blocks": [
+    {
+      "type": "fish",
+      "name": "Zielfisch",
+      "settings": [
+        {
+          "type": "select", "id": "species", "label": "Fisch-Symbol", "default": "hecht",
+          "options": [
+            { "value": "hecht", "label": "Hecht" },
+            { "value": "zander", "label": "Zander" },
+            { "value": "barsch", "label": "Barsch" },
+            { "value": "forelle", "label": "Forelle" },
+            { "value": "karpfen", "label": "Karpfen" }
+          ]
+        },
+        { "type": "collection", "id": "collection", "label": "Kollektion" },
+        { "type": "text", "id": "title", "label": "Name (optional)", "info": "Leer lassen, um den Namen der Kollektion zu verwenden." },
+        { "type": "image_picker", "id": "image", "label": "Eigene Illustration (optional)", "info": "Ersetzt das Symbol, z. B. eure bisherigen Fisch-Zeichnungen. Weiß auf transparent, quadratisch." }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Zielfisch-Auswahl",
+      "blocks": [
+        { "type": "fish", "settings": { "species": "hecht", "title": "Hecht" } },
+        { "type": "fish", "settings": { "species": "zander", "title": "Zander" } },
+        { "type": "fish", "settings": { "species": "barsch", "title": "Barsch" } },
+        { "type": "fish", "settings": { "species": "forelle", "title": "Forelle" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
