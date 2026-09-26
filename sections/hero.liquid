@@ -18,12 +18,15 @@
   {%- endif -%}
 
   {%- if section.settings.image == blank or section.settings.line_with_image -%}
-  <div class="hero__line-art" aria-hidden="true">
-    <span class="hero__string"></span>
-    <svg class="hero__hook" viewBox="0 0 40 72" width="40" height="72">
-      <circle cx="20" cy="7" r="5.5"/>
-      <path d="M20 12.5 V48 C20 64 3 66 2 52 V44 L9 50"/>
-    </svg>
+  <div class="hero__line-art{% if section.settings.image != blank %} hero__line-art--photo{% endif %}" style="--line-x: {{ section.settings.line_position }}%;" data-hero-line aria-hidden="true">
+    <span class="hero__rig">
+      <span class="hero__string"></span>
+      <svg class="hero__hook" viewBox="0 0 40 72" width="40" height="72">
+        <circle cx="20" cy="7" r="5.5"/>
+        <path d="M20 12.5 V48 C20 64 3 66 2 52 V44 L9 50"/>
+      </svg>
+      <span class="hero__ripple"></span>
+    </span>
   </div>
   {%- endif -%}
 
@@ -75,7 +78,8 @@
     { "type": "url", "id": "button_link", "label": "Link Button 1" },
     { "type": "text", "id": "button2_label", "label": "Button 2", "default": "Abholung vor Ort" },
     { "type": "url", "id": "button2_link", "label": "Link Button 2", "info": "Leer lassen, um zum Abschnitt „Laden“ zu springen." },
-    { "type": "checkbox", "id": "line_with_image", "label": "Angelschnur auch mit Hintergrundbild zeigen", "info": "Ohne Bild ist die Schnur immer zu sehen.", "default": false },
+    { "type": "checkbox", "id": "line_with_image", "label": "Angelschnur auch mit Hintergrundbild zeigen", "info": "Ohne Bild ist die Schnur immer zu sehen. Beim Überfahren mit der Maus (am Handy: Antippen) zupft sie wie bei einem Biss.", "default": true },
+    { "type": "range", "id": "line_position", "label": "Position der Angelschnur", "info": "Abstand vom linken Rand. Am besten eine ruhige Stelle im Bild wählen, z. B. das Wasser.", "min": 30, "max": 90, "step": 1, "unit": "%", "default": 44 },
     { "type": "checkbox", "id": "show_cue", "label": "Scroll-Hinweis anzeigen", "default": true },
     { "type": "checkbox", "id": "animate", "label": "Einstiegsanimation", "default": true }
   ],

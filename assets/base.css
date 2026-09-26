@@ -410,15 +410,32 @@ input, textarea { caret-color: var(--ink); }
 .hero__band .btn--outline:hover { --btn-bg: var(--ink); --btn-fg: var(--white); }
 
 .hero__line-art {
-  position: absolute; top: 0; right: clamp(2rem, 14vw, 16rem); height: 58%;
+  position: absolute; top: -3rem; right: clamp(2rem, 14vw, 16rem); height: calc(58% + 3rem);
   display: flex; flex-direction: column; align-items: center; z-index: -1; pointer-events: none;
+}
+.hero__line-art--photo { right: auto; left: var(--line-x, 44%); }
+/* The text layer spans the full width: let pointers through to the line, keep links and buttons live */
+.hero__inner { pointer-events: none; }
+.hero__inner a, .hero__inner button { pointer-events: auto; }
+/* Invisible, wider grab area so the line is easy to "touch" */
+.hero__rig {
+  position: relative; flex: 1; display: flex; flex-direction: column; align-items: center;
+  padding-inline: 1.25rem; transform-origin: 50% 0; pointer-events: auto; -webkit-tap-highlight-color: transparent;
 }
 .hero__string { flex: 1; width: 2px; background: var(--signal); transform-origin: top; }
 .hero__hook {
   width: 2.5rem; height: auto; margin-top: -0.35rem; overflow: visible; transform-origin: 50% 0;
   fill: none; stroke: var(--white); stroke-width: 3.5; stroke-linecap: round; stroke-linejoin: round;
 }
+.hero__ripple {
+  position: absolute; left: 50%; bottom: -0.75rem; width: 4.5rem; height: 1.1rem; margin-left: -2.25rem;
+  border: 1.5px solid var(--signal); border-radius: 50%; opacity: 0; pointer-events: none;
+}
 @media (max-width: 989px) { .hero__line-art { display: none; } }
+@media (max-width: 989px) {
+  .hero__line-art--photo { display: flex; left: auto; right: 6%; height: calc(34% + 3rem); }
+  .hero__line-art--photo .hero__hook { width: 1.875rem; }
+}
 .hero__cue {
   position: absolute; right: var(--gutter); bottom: clamp(1.25rem, 3vw, 2rem);
   display: flex; flex-direction: column; align-items: center; gap: 0.75rem;
@@ -449,6 +466,26 @@ input, textarea { caret-color: var(--ink); }
 @keyframes settle { from { opacity: 0; transform: translateY(0.75rem); } to { opacity: 1; transform: none; } }
 @keyframes drop { from { transform: scaleY(0); } to { transform: scaleY(1); } }
 @keyframes lower { from { transform: translateY(-100%); } to { transform: none; } }
+/* Bite: two quick tugs, the hook shivers, a ring spreads on the water */
+@media (prefers-reduced-motion: no-preference) {
+  .hero__rig.is-biting { animation: bite 1100ms cubic-bezier(.3,.7,.2,1) both; }
+  .hero__rig.is-biting .hero__ripple { animation: ripple 1100ms var(--ease-out) 60ms both; }
+}
+@keyframes bite {
+  0% { transform: none; }
+  9% { transform: translateY(1.1rem) rotate(-1.2deg); }
+  18% { transform: translateY(0.2rem) rotate(0.8deg); }
+  30% { transform: translateY(1.6rem) rotate(-1.6deg); }
+  44% { transform: translateY(0.35rem) rotate(0.9deg); }
+  60% { transform: translateY(0.6rem) rotate(-0.4deg); }
+  78% { transform: translateY(-0.1rem) rotate(0.2deg); }
+  100% { transform: none; }
+}
+@keyframes ripple {
+  0% { opacity: 0; transform: scale(0.3); }
+  20% { opacity: 0.9; }
+  100% { opacity: 0; transform: scale(1.8); }
+}
 @keyframes swing {
   0% { transform: rotate(9deg); }
   30% { transform: rotate(-4deg); }

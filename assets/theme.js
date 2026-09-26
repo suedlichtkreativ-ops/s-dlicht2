@@ -264,6 +264,17 @@
     hero.classList.add('is-in');
   }
 
+  /* ---------- Hero line: a bite when touched ---------- */
+  $$('[data-hero-line] .hero__rig').forEach((rig) => {
+    const bite = () => {
+      if (reducedMotion.matches || rig.classList.contains('is-biting')) return;
+      rig.classList.add('is-biting');
+    };
+    rig.addEventListener('animationend', (e) => { if (e.animationName === 'bite') rig.classList.remove('is-biting'); });
+    rig.addEventListener('pointerenter', (e) => { if (e.pointerType === 'mouse') bite(); });
+    rig.addEventListener('click', bite);
+  });
+
   /* ---------- Cart ---------- */
   const sectionsToRender = () => {
     const drawer = document.getElementById('shopify-section-cart-drawer');
