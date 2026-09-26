@@ -2,7 +2,7 @@
   <div class="page-width">
     <div class="section-head">
       {%- if section.settings.heading != blank -%}
-        <h2 class="h2 display">{% render 'slant-words', text: section.settings.heading %}</h2>
+        <h2 class="section-title display">{% render 'slant-words', text: section.settings.heading %}</h2>
       {%- endif -%}
       {%- if section.settings.text != blank -%}
         <p class="muted">{{ section.settings.text | escape }}</p>

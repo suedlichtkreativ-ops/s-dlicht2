@@ -16,7 +16,7 @@
 <section class="section section--white bundle">
   <div class="page-width bundle__layout">
     <div class="stack" style="--stack:1.25rem">
-      <h2 class="bundle__heading display">{% render 'slant-words', text: section.settings.heading %}</h2>
+      <h2 class="bundle__heading section-title display">{% render 'slant-words', text: section.settings.heading %}</h2>
       {%- if section.settings.audience != blank -%}
         <div class="bundle__audience">
           <p class="h3">{{ section.settings.audience_heading | escape }}</p>

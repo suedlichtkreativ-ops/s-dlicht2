@@ -1,6 +1,6 @@
 <div class="page-width" data-collection-section data-section-id="{{ section.id }}">
   <div class="page-head stack" style="--stack:1.5rem">
-    <h1 class="page-head__title display"><span class="slant">{{ 'search.title' | t }}</span></h1>
+    <h1 class="page-head__title page-title display"><span class="slant">{{ 'search.title' | t }}</span></h1>
     <form action="{{ routes.search_url }}" method="get" role="search" class="search-form">
       <label class="visually-hidden" for="SearchPageInput">{{ 'header.search' | t }}</label>
       <input class="input" id="SearchPageInput" type="search" name="q" value="{{ search.terms | escape }}" placeholder="{{ 'header.search_placeholder' | t }}">

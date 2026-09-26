@@ -1,7 +1,7 @@
 <section class="section section--white" data-related data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ section.settings.limit }}&intent=related">
   {%- if recommendations.performed and recommendations.products_count > 0 -%}
     <div class="page-width">
-      <div class="section-head"><h2 class="h2">{{ section.settings.heading | escape }}</h2></div>
+      <div class="section-head"><h2 class="section-title display">{% render 'slant-words', text: section.settings.heading %}</h2></div>
       <ul class="grid grid--4" role="list">
         {%- for product in recommendations.products -%}
           <li>{% render 'product-card', product: product, show_vendor: true %}</li>

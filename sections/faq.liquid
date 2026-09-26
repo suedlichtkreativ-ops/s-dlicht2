@@ -5,9 +5,9 @@
   <div class="page-width faq__layout">
     <div class="faq__intro stack" style="--stack:1rem">
       {%- if section.settings.as_page_title -%}
-        <h1 class="faq__heading display">{% render 'slant-words', text: section.settings.heading %}</h1>
+        <h1 class="faq__heading page-title display">{% render 'slant-words', text: section.settings.heading %}</h1>
       {%- else -%}
-        <h2 class="faq__heading display">{% render 'slant-words', text: section.settings.heading %}</h2>
+        <h2 class="faq__heading section-title display">{% render 'slant-words', text: section.settings.heading %}</h2>
       {%- endif -%}
       {%- if section.settings.text != blank -%}<p class="muted">{{ section.settings.text | escape }}</p>{%- endif -%}
       {%- if section.settings.show_contact -%}

@@ -115,6 +115,13 @@ input, textarea { caret-color: var(--ink); }
 
 .section-head { display: flex; align-items: end; justify-content: space-between; gap: 1rem 2rem; flex-wrap: wrap; margin-bottom: clamp(1.5rem, 3vw, 2.5rem); }
 .section-head p { max-width: 52ch; }
+/* Description always sits under the heading; only links (Alle ansehen) sit to the right. */
+.section-head > p { flex: 0 0 100%; max-width: none; padding-right: max(0px, calc(100% - 52ch)); order: 3; margin-top: -0.25rem; }
+
+/* One scale for all section headings, one for all page titles. */
+.section-title { font-size: clamp(2.25rem, 5.5vw, 4.25rem); max-width: 18ch; }
+.page-title { font-size: clamp(3rem, 9vw, 7.5rem); }
+.section-title, .page-title { line-height: 0.96; }
 .text-link {
   font-weight: 650; text-decoration: underline; text-decoration-thickness: 2px;
   text-underline-offset: 4px; text-decoration-color: var(--signal-shade);
@@ -147,6 +154,9 @@ input, textarea { caret-color: var(--ink); }
 .btn--full { width: 100%; }
 /* Section CTAs follow the brand slant; buy/checkout/form buttons stay square next to square inputs. */
 .btn--slant { transform: skewX(-9deg); }
+.btn-row { display: inline-grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 0.75rem; }
+.btn-row .btn { min-width: 10rem; }
+@media (max-width: 480px) { .btn-row { grid-auto-flow: row; width: 100%; } .btn-row .btn { min-width: 0; } }
 .btn--slant:active { transform: skewX(-9deg) translateY(1px); }
 .btn[disabled], .btn[aria-disabled='true'] { opacity: 0.45; cursor: not-allowed; transform: none; }
 .btn .spinner { display: none; }
@@ -525,7 +535,6 @@ input, textarea { caret-color: var(--ink); }
 .store__fact dt { font-weight: 750; font-stretch: 87%; }
 .store__fact dd { white-space: pre-line; }
 @media (max-width: 480px) { .store__fact { grid-template-columns: 1fr; gap: 0.25rem; } }
-.store__title { font-size: clamp(2.75rem, 8vw, 6rem); }
 
 /* ==========================================================================
    Rich text
@@ -559,7 +568,6 @@ input, textarea { caret-color: var(--ink); }
    ========================================================================== */
 .collection-hero { border-bottom: var(--border); background: var(--white); }
 .collection-hero__inner { display: grid; gap: 1rem; padding-block: clamp(2rem, 5vw, 3.5rem); }
-.collection-hero__title { font-size: clamp(3rem, 10vw, 8rem); }
 .breadcrumbs ol { display: flex; flex-wrap: wrap; gap: 0.25rem 0.5rem; font-size: 0.875rem; color: var(--muted); }
 .breadcrumbs li + li::before { content: '/'; margin-right: 0.5rem; }
 .breadcrumbs a { text-decoration: none; }
@@ -569,6 +577,16 @@ input, textarea { caret-color: var(--ink); }
 .toolbar__count { color: var(--muted); font-variant-numeric: tabular-nums; }
 .toolbar__sort { display: flex; align-items: center; gap: 0.6rem; }
 .toolbar__sort .select { min-height: 2.75rem; width: auto; }
+@media (max-width: 989px) {
+  .toolbar { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; align-items: stretch; }
+  .toolbar > div:first-child { display: contents !important; }
+  .toolbar__filter-btn { min-height: 3rem; width: 100%; }
+  .toolbar__count { grid-column: 1 / -1; order: 3; }
+  .toolbar__sort { display: block; }
+  .toolbar__sort .label { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .toolbar__sort .select { width: 100%; min-height: 3rem; }
+  .toolbar:not(:has(.toolbar__filter-btn)) .toolbar__sort { grid-column: 1 / -1; }
+}
 .collection-layout { display: grid; gap: 2rem; padding-bottom: clamp(3rem, 6vw, 5rem); }
 @media (min-width: 990px) { .collection-layout--filters { grid-template-columns: 16rem 1fr; gap: 3rem; } }
 .facets__desktop { display: none; }
@@ -696,7 +714,6 @@ input, textarea { caret-color: var(--ink); }
    Misc pages
    ========================================================================== */
 .page-head { padding-block: clamp(2.5rem, 6vw, 4.5rem) clamp(1.5rem, 3vw, 2.5rem); }
-.page-head__title { font-size: clamp(3rem, 10vw, 7.5rem); }
 .not-found { display: grid; gap: 1.5rem; justify-items: start; padding-block: clamp(4rem, 10vw, 8rem); }
 .not-found__code { font-size: clamp(6rem, 30vw, 20rem); color: var(--ink); -webkit-text-stroke: 0; }
 .search-form { display: flex; gap: 0.5rem; max-width: 40rem; }
@@ -729,7 +746,6 @@ input, textarea { caret-color: var(--ink); }
 /* ==========================================================================
    Zielfisch (target fish) – entry by species
    ========================================================================== */
-.target-fish__heading { font-size: clamp(2.25rem, 6vw, 4.5rem); max-width: 18ch; }
 .target-fish__text { margin-top: 1rem; max-width: 52ch; }
 .target-fish__list {
   display: grid; gap: clamp(1.5rem, 4vw, 3rem) clamp(1rem, 3vw, 2.5rem);
@@ -767,7 +783,6 @@ input, textarea { caret-color: var(--ink); }
    ========================================================================== */
 .faq__layout { display: grid; gap: 2rem 4rem; }
 @media (min-width: 990px) { .faq__layout { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.4fr); align-items: start; } .faq__intro { position: sticky; top: calc(var(--header-h) + 2rem); } }
-.faq__heading { font-size: clamp(3rem, 8vw, 6.5rem); }
 .faq__contact { margin-top: 1.5rem; padding-top: 1.5rem; border-top: var(--border); display: grid; gap: 0.4rem; }
 .faq__list { border-top: var(--border); }
 .faq__item { border-bottom: var(--hairline); }
@@ -862,7 +877,6 @@ input, textarea { caret-color: var(--ink); }
    ========================================================================== */
 .bundle__layout { display: grid; gap: 2.5rem 4rem; }
 @media (min-width: 990px) { .bundle__layout { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.3fr); align-items: start; } }
-.bundle__heading { font-size: clamp(2.5rem, 6vw, 5rem); }
 .bundle__audience { display: grid; gap: 0.5rem; }
 .bundle__saving { display: grid; gap: 0.25rem; justify-items: start; padding: 1.25rem 1.5rem; background: var(--ink); color: var(--white); }
 .bundle__saving-label { font-weight: 700; }
