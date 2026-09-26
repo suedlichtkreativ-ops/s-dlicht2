@@ -1,0 +1,36 @@
+<div class="page-width">
+  <div class="page-head">
+    <h1 class="page-head__title display"><span class="slant">{{ 'cart.title' | t }}</span></h1>
+  </div>
+  {%- if cart.item_count > 0 -%}
+    <div class="cart-page" data-cart-page>
+      <div>{% render 'cart-line-items', context: 'page' %}</div>
+      <form class="cart-summary" action="{{ routes.cart_url }}" method="post">
+        <div class="cart-totals"><span>{{ 'cart.subtotal' | t }}</span><span class="price">{{ cart.total_price | money }}</span></div>
+        <p class="cart-note">{{ 'cart.taxes_shipping' | t }}</p>
+        {%- if settings.cart_note_pickup != blank -%}<p class="cart-note">{{ settings.cart_note_pickup }}</p>{%- endif -%}
+        {%- if section.settings.show_note -%}
+          <div class="field">
+            <label for="CartNote">{{ 'cart.note' | t }}</label>
+            <textarea class="textarea" id="CartNote" name="note">{{ cart.note }}</textarea>
+          </div>
+        {%- endif -%}
+        <button type="submit" name="checkout" class="btn btn--full">{{ 'cart.checkout' | t }}</button>
+        {%- if additional_checkout_buttons -%}<div>{{ content_for_additional_checkout_buttons }}</div>{%- endif -%}
+      </form>
+    </div>
+  {%- else -%}
+    <div class="cart-empty" style="padding-bottom:5rem">
+      <p class="h3">{{ 'cart.empty' | t }}</p>
+      <p class="muted">{{ 'cart.empty_hint' | t }}</p>
+      <a class="btn" href="{{ routes.all_products_collection_url }}">{{ 'cart.continue' | t }}</a>
+    </div>
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "Warenkorb",
+  "settings": [{ "type": "checkbox", "id": "show_note", "label": "Bestellnotiz erlauben", "default": true }]
+}
+{% endschema %}

@@ -1,0 +1,54 @@
+<div class="page-width" data-collection-section data-section-id="{{ section.id }}">
+  <div class="page-head stack" style="--stack:1.5rem">
+    <h1 class="page-head__title display"><span class="slant">{{ 'search.title' | t }}</span></h1>
+    <form action="{{ routes.search_url }}" method="get" role="search" class="search-form">
+      <label class="visually-hidden" for="SearchPageInput">{{ 'header.search' | t }}</label>
+      <input class="input" id="SearchPageInput" type="search" name="q" value="{{ search.terms | escape }}" placeholder="{{ 'header.search_placeholder' | t }}">
+      <input type="hidden" name="options[prefix]" value="last">
+      <button class="btn btn--dark" type="submit">{{ 'header.search_submit' | t }}</button>
+    </form>
+    {%- if search.performed -%}
+      <p class="toolbar__count" data-refresh="count">{{ 'search.results_for' | t: count: search.results_count, terms: search.terms }}</p>
+    {%- endif -%}
+  </div>
+
+  {%- if search.performed -%}
+    {%- paginate search.results by 24 -%}
+      <div class="collection-layout" style="padding-top:0">
+        <div class="results" data-results>
+          <div data-refresh="grid">
+            {%- if search.results_count > 0 -%}
+              <ul class="grid grid--4" role="list">
+                {%- for item in search.results -%}
+                  <li>
+                    {%- case item.object_type -%}
+                      {%- when 'product' -%}
+                        {% render 'product-card', product: item, show_vendor: true %}
+                      {%- else -%}
+                        <a class="article-card" href="{{ item.url }}">
+                          <div class="media">
+                            {%- if item.image -%}{% render 'image', image: item.image, sizes: '(min-width: 990px) 22vw, 46vw', alt: '' %}{%- else -%}{{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}{%- endif -%}
+                          </div>
+                          <span class="article-card__title">{{ item.title | escape }}</span>
+                        </a>
+                    {%- endcase -%}
+                  </li>
+                {%- endfor -%}
+              </ul>
+              {% render 'pagination', paginate: paginate %}
+            {%- else -%}
+              <div class="empty-state">
+                <p class="h3">{{ 'search.no_results' | t: terms: search.terms }}</p>
+                <p class="muted">{{ 'search.no_results_hint' | t }}</p>
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+    {%- endpaginate -%}
+  {%- endif -%}
+</div>
+
+{% schema %}
+{ "name": "Suche", "settings": [] }
+{% endschema %}

@@ -1,0 +1,13 @@
+{
+  "current": "Default",
+  "presets": {
+    "Default": {
+      "logo_width": 132,
+      "color_ink": "#0D0D0D",
+      "color_signal": "#FFCC00",
+      "color_paper": "#F4F4F1",
+      "page_width": 1440,
+      "cart_type": "drawer"
+    }
+  }
+}

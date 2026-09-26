@@ -1,0 +1,26 @@
+{%- liquid
+  assign any_active = false
+  for filter in results.filters
+    if filter.active_values.size > 0 or filter.min_value.value or filter.max_value.value
+      assign any_active = true
+    endif
+  endfor
+-%}
+{%- if any_active -%}
+  <div class="active-facets">
+    {%- for filter in results.filters -%}
+      {%- for value in filter.active_values -%}
+        <a class="chip" href="{{ value.url_to_remove }}" data-facet-link>{{ value.label | escape }} {% render 'icon', name: 'close', class: 'icon--sm' %}<span class="visually-hidden">{{ 'collections.remove_filter' | t }}</span></a>
+      {%- endfor -%}
+      {%- if filter.type == 'price_range' -%}
+        {%- if filter.min_value.value or filter.max_value.value -%}
+          <a class="chip" href="{{ filter.url_to_remove }}" data-facet-link>
+            {{ filter.min_value.value | default: 0 | money }}–{{ filter.max_value.value | default: filter.range_max | money }}
+            {% render 'icon', name: 'close', class: 'icon--sm' %}
+          </a>
+        {%- endif -%}
+      {%- endif -%}
+    {%- endfor -%}
+    <a class="chip" href="{{ clear_url }}" data-facet-link style="background:var(--ink);color:var(--white)">{{ 'collections.clear_all' | t }}</a>
+  </div>
+{%- endif -%}

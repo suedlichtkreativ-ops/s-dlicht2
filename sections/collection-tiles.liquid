@@ -1,0 +1,82 @@
+<section class="section" id="section-{{ section.id }}">
+  <div class="page-width">
+    <div class="section-head">
+      {%- if section.settings.heading != blank -%}
+        <h2 class="h2 display"><span class="slant">{{ section.settings.heading | escape }}</span></h2>
+      {%- endif -%}
+      {%- if section.settings.text != blank -%}
+        <p class="muted">{{ section.settings.text | escape }}</p>
+      {%- endif -%}
+    </div>
+
+    <ul class="tiles{% if section.settings.style == 'cutout' %} tiles--cutout{% endif %}" role="list" style="--cols: {{ section.settings.columns }}">
+      {%- for block in section.blocks -%}
+        {%- assign c = block.settings.collection -%}
+        {%- assign title = block.settings.title | default: c.title | default: 'Kategorie' -%}
+        <li {{ block.shopify_attributes }}>
+          <a class="tile" href="{{ c.url | default: routes.collections_url }}">
+            <div class="media">
+              {%- if block.settings.image != blank -%}
+                {% render 'image', image: block.settings.image, sizes: '(min-width: 990px) 24vw, 48vw', alt: '' %}
+              {%- elsif c.featured_image -%}
+                {% render 'image', image: c.featured_image, sizes: '(min-width: 990px) 24vw, 48vw', alt: '' %}
+              {%- else -%}
+                {%- assign ph = forloop.index | modulo: 4 | plus: 1 -%}
+                {{ 'collection-' | append: ph | placeholder_svg_tag: 'placeholder-svg' }}
+              {%- endif -%}
+            </div>
+            <span class="tile__label">
+              <span>
+                <span class="tile__name display slant">{{ title | escape }}</span>
+                {%- if c.products_count > 0 -%}<span class="tile__count">{{ 'collections.count' | t: count: c.products_count }}</span>{%- endif -%}
+              </span>
+              {% render 'icon', name: 'arrow' %}
+            </span>
+          </a>
+        </li>
+      {%- endfor -%}
+    </ul>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Kategorie-Kacheln",
+  "max_blocks": 8,
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Überschrift", "default": "Worauf gehst du?" },
+    { "type": "text", "id": "text", "label": "Text", "default": "Ausrüstung nach Zielfisch sortiert – vom Hecht im Lech bis zur Forelle im Bach." },
+    {
+      "type": "select", "id": "style", "label": "Bildstil", "default": "cutout",
+      "info": "Freigestellt: Fisch oder Produkt als PNG mit transparentem Hintergrund, vor einem gelben Band.",
+      "options": [
+        { "value": "cutout", "label": "Freigestellt" },
+        { "value": "photo", "label": "Foto, randlos" }
+      ]
+    },
+    { "type": "range", "id": "columns", "label": "Spalten (Desktop)", "min": 2, "max": 4, "step": 1, "default": 4 }
+  ],
+  "blocks": [
+    {
+      "type": "collection",
+      "name": "Kategorie",
+      "settings": [
+        { "type": "collection", "id": "collection", "label": "Kollektion" },
+        { "type": "text", "id": "title", "label": "Titel (optional)" },
+        { "type": "image_picker", "id": "image", "label": "Bild (optional)" }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Kategorie-Kacheln",
+      "blocks": [
+        { "type": "collection", "settings": { "title": "Raubfisch" } },
+        { "type": "collection", "settings": { "title": "Karpfen" } },
+        { "type": "collection", "settings": { "title": "Friedfisch" } },
+        { "type": "collection", "settings": { "title": "Forelle & Fliege" } }
+      ]
+    }
+  ]
+}
+{% endschema %}

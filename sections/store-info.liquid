@@ -1,0 +1,52 @@
+<section class="section" id="laden">
+  <div class="page-width store">
+    <div class="stack" style="--stack:1.25rem">
+      <h2 class="store__title display"><span class="slant">{{ section.settings.heading | escape }}</span></h2>
+      {%- if section.settings.text != blank -%}
+        <div class="lead rte">{{ section.settings.text }}</div>
+      {%- endif -%}
+      <div style="display:flex;flex-wrap:wrap;gap:.75rem">
+        {%- if settings.store_map_url != blank -%}
+          <a class="btn" href="{{ settings.store_map_url }}" target="_blank" rel="noopener">{{ 'store.route' | t }}</a>
+        {%- endif -%}
+        {%- if settings.store_phone != blank -%}
+          <a class="btn btn--outline" href="tel:{{ settings.store_phone | remove: ' ' | remove: '/' }}">{{ 'store.call' | t }}</a>
+        {%- endif -%}
+      </div>
+    </div>
+
+    <dl class="store__facts">
+      {%- if settings.store_address != blank -%}
+        <div class="store__fact"><dt>{{ 'store.address' | t }}</dt><dd>{{ settings.store_address }}</dd></div>
+      {%- endif -%}
+      {%- if settings.store_hours != blank -%}
+        <div class="store__fact"><dt>{{ 'store.hours' | t }}</dt><dd>{{ settings.store_hours }}</dd></div>
+      {%- endif -%}
+      {%- if section.settings.pickup_text != blank -%}
+        <div class="store__fact"><dt>{{ 'store.pickup' | t }}</dt><dd>{{ section.settings.pickup_text }}</dd></div>
+      {%- endif -%}
+      {%- if settings.store_phone != blank or settings.store_email != blank -%}
+        <div class="store__fact"><dt>{{ 'store.contact' | t }}</dt>
+          <dd>
+            {%- if settings.store_phone != blank -%}<a href="tel:{{ settings.store_phone | remove: ' ' | remove: '/' }}">{{ settings.store_phone }}</a>{%- endif -%}
+            {%- if settings.store_email != blank %}
+<a href="mailto:{{ settings.store_email }}">{{ settings.store_email }}</a>{%- endif -%}
+          </dd>
+        </div>
+      {%- endif -%}
+    </dl>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Laden",
+  "settings": [
+    { "type": "paragraph", "content": "Adresse, Öffnungszeiten und Kontakt pflegst du unter Theme-Einstellungen → Laden & Kontakt." },
+    { "type": "text", "id": "heading", "label": "Überschrift", "default": "Im Laden in Landsberg" },
+    { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Online bestellen und im Laden abholen – oder einfach vorbeikommen, Köder in die Hand nehmen und fragen, was am Lech gerade läuft.</p>" },
+    { "type": "text", "id": "pickup_text", "label": "Hinweis Abholung", "default": "Auf Wunsch kostenlos. Wir melden uns, sobald deine Bestellung bereitliegt." }
+  ],
+  "presets": [{ "name": "Laden" }]
+}
+{% endschema %}

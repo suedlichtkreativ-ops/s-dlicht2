@@ -1,0 +1,199 @@
+{%- liquid
+  assign menu = section.settings.menu
+  assign has_logo = false
+  if settings.logo != blank
+    assign has_logo = true
+  endif
+-%}
+<header class="header{% if has_logo and section.settings.logo_overhang %} header--overhang{% endif %}" data-header style="--logo-w: {{ settings.logo_width }}px">
+  <div class="page-width header__inner">
+    <div class="header__start on-dark">
+      <button type="button" class="icon-btn header__menu-toggle" data-drawer-open="menu" aria-controls="MenuDrawer" aria-expanded="false" aria-label="{{ 'header.menu' | t }}">
+        {% render 'icon', name: 'menu' %}
+      </button>
+      <div class="header__logo-wrap">
+        <a href="{{ routes.root_url }}" class="header__logo">
+          {%- if has_logo -%}
+            {%- assign logo_alt = settings.logo.alt | default: shop.name | escape -%}
+            {{ settings.logo | image_url: width: 600 | image_tag: widths: '150, 300, 450, 600', sizes: '(min-width: 990px) 180px, 110px', alt: logo_alt, loading: 'eager', fetchpriority: 'high' }}
+          {%- else -%}
+            <span class="wordmark"><span>{{ shop.name | escape }}</span></span>
+          {%- endif -%}
+        </a>
+      </div>
+    </div>
+
+    <nav class="nav" aria-label="{{ 'header.main_nav' | t }}">
+      <ul class="nav__list" role="list">
+        {%- for link in menu.links -%}
+          <li class="nav__item">
+            {%- if link.links != blank -%}
+              <button type="button" class="nav__link" aria-expanded="false" aria-controls="Mega-{{ forloop.index }}" data-mega-toggle>
+                <span class="slant">{{ link.title | escape }}</span>{% render 'icon', name: 'chevron-down', class: 'icon--sm' %}
+              </button>
+              <div class="mega" id="Mega-{{ forloop.index }}" data-mega>
+                <div class="page-width mega__inner">
+                  {%- for child in link.links limit: 4 -%}
+                    <div>
+                      <a class="mega__col-title" href="{{ child.url }}"{% if child.current %} aria-current="page"{% endif %}>{{ child.title | escape }}</a>
+                      {%- if child.links != blank -%}
+                        <ul class="mega__links" role="list">
+                          {%- for grandchild in child.links -%}
+                            <li><a href="{{ grandchild.url }}"{% if grandchild.current %} aria-current="page"{% endif %}>{{ grandchild.title | escape }}</a></li>
+                          {%- endfor -%}
+                        </ul>
+                      {%- endif -%}
+                    </div>
+                  {%- endfor -%}
+
+                  {%- liquid
+                    assign promo = null
+                    for block in section.blocks
+                      assign wanted = block.settings.menu_item | strip | downcase
+                      assign current = link.title | strip | downcase
+                      if wanted == current
+                        assign promo = block
+                      endif
+                    endfor
+                  -%}
+                  {%- if promo -%}
+                    <a class="mega__promo" href="{{ promo.settings.link | default: link.url }}" {{ promo.shopify_attributes }}>
+                      <div class="media">
+                        {%- if promo.settings.image -%}
+                          {% render 'image', image: promo.settings.image, sizes: '360px', widths: '360, 540, 720', alt: '' %}
+                        {%- else -%}
+                          {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                        {%- endif -%}
+                      </div>
+                      {%- if promo.settings.title != blank -%}<span class="mega__promo-title">{{ promo.settings.title | escape }}</span>{%- endif -%}
+                    </a>
+                  {%- else -%}
+                    <a class="mega__promo" href="{{ link.url }}">
+                      <span class="btn btn--dark">{{ 'header.view_all' | t: title: link.title }}</span>
+                    </a>
+                  {%- endif -%}
+                </div>
+              </div>
+            {%- else -%}
+              <a class="nav__link" href="{{ link.url }}"{% if link.current %} aria-current="page"{% endif %}><span class="slant">{{ link.title | escape }}</span></a>
+            {%- endif -%}
+          </li>
+        {%- endfor -%}
+      </ul>
+    </nav>
+
+    <div class="header__icons">
+      <button type="button" class="icon-btn" data-search-toggle aria-controls="HeaderSearch" aria-expanded="false" aria-label="{{ 'header.search' | t }}">
+        {% render 'icon', name: 'search' %}
+      </button>
+      {%- if shop.customer_accounts_enabled -%}
+        <a class="icon-btn" href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}" aria-label="{{ 'header.account' | t }}">
+          {% render 'icon', name: 'account' %}
+        </a>
+      {%- endif -%}
+      <a class="icon-btn" href="{{ routes.cart_url }}" data-cart-toggle aria-label="{{ 'header.cart' | t }}">
+        {% render 'icon', name: 'cart' %}
+        <span class="cart-count" data-cart-count-bubble aria-hidden="true">{% if cart.item_count > 0 %}{{ cart.item_count }}{% endif %}</span>
+        <span class="visually-hidden" data-cart-count-label>{{ 'header.cart_count' | t: count: cart.item_count }}</span>
+      </a>
+    </div>
+  </div>
+
+  <div class="search-bar" id="HeaderSearch" data-search-bar>
+    <form action="{{ routes.search_url }}" method="get" role="search" class="page-width">
+      <label class="visually-hidden" for="HeaderSearchInput">{{ 'header.search' | t }}</label>
+      <input class="input" id="HeaderSearchInput" type="search" name="q" placeholder="{{ 'header.search_placeholder' | t }}" autocomplete="off">
+      <input type="hidden" name="options[prefix]" value="last">
+      <button type="submit" class="btn btn--dark">{{ 'header.search_submit' | t }}</button>
+    </form>
+  </div>
+
+  <div class="header-overlay" data-header-overlay></div>
+</header>
+
+<div class="drawer drawer--left" id="MenuDrawer" data-drawer="menu" aria-hidden="true">
+  <button type="button" class="drawer__backdrop" data-drawer-close tabindex="-1" aria-label="{{ 'general.close' | t }}"></button>
+  <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="{{ 'header.menu' | t }}" tabindex="-1">
+    <div class="drawer__head">
+      <span class="h3">{{ 'header.menu' | t }}</span>
+      <button type="button" class="icon-btn" data-drawer-close aria-label="{{ 'general.close' | t }}">{% render 'icon', name: 'close' %}</button>
+    </div>
+    <nav class="drawer__body mobile-nav" aria-label="{{ 'header.main_nav' | t }}">
+      {%- for link in menu.links -%}
+        {%- if link.links != blank -%}
+          <details>
+            <summary>{{ link.title | escape }}{% render 'icon', name: 'plus' %}</summary>
+            <div class="mobile-nav__sub">
+              <a href="{{ link.url }}">{{ 'header.view_all' | t: title: link.title }}</a>
+              {%- for child in link.links -%}
+                {%- if child.links != blank -%}
+                  <details>
+                    <summary>{{ child.title | escape }}{% render 'icon', name: 'plus', class: 'icon--sm' %}</summary>
+                    <div class="mobile-nav__grand">
+                      <a href="{{ child.url }}">{{ 'header.view_all' | t: title: child.title }}</a>
+                      {%- for grandchild in child.links -%}
+                        <a href="{{ grandchild.url }}">{{ grandchild.title | escape }}</a>
+                      {%- endfor -%}
+                    </div>
+                  </details>
+                {%- else -%}
+                  <a href="{{ child.url }}">{{ child.title | escape }}</a>
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+          </details>
+        {%- else -%}
+          <a class="mobile-nav__link" href="{{ link.url }}">{{ link.title | escape }}</a>
+        {%- endif -%}
+      {%- endfor -%}
+      <div class="mobile-nav__extra">
+        {%- if shop.customer_accounts_enabled -%}
+          <a class="text-link" href="{% if customer %}{{ routes.account_url }}{% else %}{{ routes.account_login_url }}{% endif %}">{{ 'header.account' | t }}</a>
+        {%- endif -%}
+        {%- if settings.store_address != blank -%}
+          <p class="muted" style="white-space:pre-line">{{ settings.store_address }}</p>
+        {%- endif -%}
+      </div>
+    </nav>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Header",
+  "class": "header-section",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Hauptmenü",
+      "default": "main-menu",
+      "info": "Menüpunkte mit Unterpunkten öffnen ein Mega-Menü. Ebene 2 = Spaltenüberschrift, Ebene 3 = Links in der Spalte."
+    },
+    {
+      "type": "checkbox",
+      "id": "logo_overhang",
+      "label": "Logo ragt über den Header (Desktop)",
+      "info": "Wirkt wie ein Aufkleber. Beim Scrollen wird das Logo kleiner.",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "promo",
+      "name": "Mega-Menü: Bild",
+      "settings": [
+        {
+          "type": "text",
+          "id": "menu_item",
+          "label": "Menüpunkt",
+          "info": "Genau so geschrieben wie im Hauptmenü, z. B. „Raubfisch“."
+        },
+        { "type": "image_picker", "id": "image", "label": "Bild" },
+        { "type": "text", "id": "title", "label": "Bildunterschrift" },
+        { "type": "url", "id": "link", "label": "Link" }
+      ]
+    }
+  ]
+}
+{% endschema %}

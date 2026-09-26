@@ -1,0 +1,63 @@
+{%- comment -%}
+  Params: product (may be blank -> placeholder), index (for placeholders), sizes, show_vendor
+{%- endcomment -%}
+{%- liquid
+  assign sizes = sizes | default: '(min-width: 1200px) 22vw, (min-width: 750px) 30vw, 46vw'
+-%}
+<div class="card">
+  <div class="card__media">
+    {%- if product != blank -%}
+      <div class="card__badges">
+        {%- if product.available == false -%}
+          <span class="badge badge--light">{{ 'products.product.sold_out' | t }}</span>
+        {%- elsif product.compare_at_price > product.price -%}
+          <span class="badge">{{ 'products.product.on_sale' | t }}</span>
+        {%- endif -%}
+      </div>
+      <div class="media">
+        {%- if product.featured_media -%}
+          {% render 'image', image: product.featured_media.preview_image, sizes: sizes, class: 'card__img-main', alt: product.title %}
+          {%- if product.media[1] -%}
+            {% render 'image', image: product.media[1].preview_image, sizes: sizes, class: 'card__img-alt', alt: '' %}
+          {%- endif -%}
+        {%- else -%}
+          {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+        {%- endif -%}
+      </div>
+    {%- else -%}
+      <div class="media">
+        {%- assign ph = index | modulo: 6 | plus: 1 -%}
+        {{ 'product-' | append: ph | placeholder_svg_tag: 'placeholder-svg' }}
+      </div>
+    {%- endif -%}
+  </div>
+
+  <div class="stack" style="--stack:.25rem">
+    {%- if show_vendor and product.vendor != blank -%}
+      <p class="card__vendor">{{ product.vendor }}</p>
+    {%- endif -%}
+    <h3 class="card__title">
+      {%- if product != blank -%}
+        <a class="card__link" href="{{ product.url }}">{{ product.title | escape }}</a>
+      {%- else -%}
+        {{ 'products.product.placeholder_title' | t }}
+      {%- endif -%}
+    </h3>
+    {%- if product != blank -%}
+      {% render 'price', product: product, target: product.selected_or_first_available_variant, use_from: true %}
+    {%- else -%}
+      <div class="price">{{ 1999 | money }}</div>
+    {%- endif -%}
+  </div>
+
+  {%- if product != blank and product.has_only_default_variant and product.available -%}
+    <form class="card__quick" method="post" action="{{ routes.cart_add_url }}" data-product-form>
+      <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+      <input type="hidden" name="quantity" value="1">
+      <button type="submit" class="btn btn--outline">
+        <span class="btn__label">{{ 'products.product.add_to_cart' | t }}</span>
+        <span class="spinner" aria-hidden="true"></span>
+      </button>
+    </form>
+  {%- endif -%}
+</div>

@@ -1,0 +1,26 @@
+{%- comment -%} Params: product or variant (use `target`), class {%- endcomment -%}
+{%- liquid
+  assign t = target | default: product.selected_or_first_available_variant
+  assign on_sale = false
+  if t.compare_at_price > t.price
+    assign on_sale = true
+  endif
+  if product and product.price_varies and use_from
+    assign from = true
+  endif
+-%}
+<div class="price{% if on_sale %} price--sale{% endif %} {{ class }}">
+  <span class="visually-hidden">{% if on_sale %}{{ 'products.product.sale_price' | t }}{% else %}{{ 'products.product.regular_price' | t }}{% endif %}</span>
+  <span class="price__current">
+    {%- if from -%}{%- assign min_price = product.price_min | money -%}{{ 'products.product.price_from' | t: price: min_price }}{%- else -%}{{ t.price | money }}{%- endif -%}
+  </span>
+  {%- if on_sale -%}
+    <span class="visually-hidden">{{ 'products.product.regular_price' | t }}</span>
+    <s>{{ t.compare_at_price | money }}</s>
+  {%- endif -%}
+  {%- if t.unit_price_measurement -%}
+    <div class="muted" style="font-size:.8125rem;font-weight:400">
+      {{ t.unit_price | money }}/{%- if t.unit_price_measurement.reference_value != 1 -%}{{ t.unit_price_measurement.reference_value }}{%- endif -%}{{ t.unit_price_measurement.reference_unit }}
+    </div>
+  {%- endif -%}
+</div>

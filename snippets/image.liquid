@@ -1,0 +1,28 @@
+{%- comment -%}
+  Responsive image inside .media wrapper handled by caller.
+  Params: image (required), sizes, widths, loading ('lazy'|'eager'), class, alt
+  Uses onload to add .is-loaded so images fade in once decoded (see base.css).
+{%- endcomment -%}
+{%- liquid
+  assign widths = widths | default: '240, 360, 480, 640, 800, 1000, 1200, 1600, 2000'
+  assign sizes = sizes | default: '100vw'
+  assign loading = loading | default: 'lazy'
+  assign alt_text = alt | default: image.alt | default: fallback_alt | escape
+  if loading == 'eager'
+    assign priority = 'high'
+  else
+    assign priority = 'auto'
+  endif
+-%}
+{{
+  image
+  | image_url: width: 2000
+  | image_tag:
+    widths: widths,
+    sizes: sizes,
+    loading: loading,
+    fetchpriority: priority,
+    class: class,
+    alt: alt_text,
+    onload: "this.classList.add('is-loaded')"
+}}

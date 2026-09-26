@@ -1,0 +1,27 @@
+{%- comment -%}
+  Font-face and color tokens. Colors come from theme settings so they stay editable,
+  defaults follow the Köderdepot logo (see DESIGN.md).
+{%- endcomment -%}
+<style>
+  @font-face {
+    font-family: 'Archivo';
+    src: url('{{ 'archivo-var.woff2' | asset_url }}') format('woff2');
+    font-weight: 100 900;
+    font-stretch: 62% 125%;
+    font-style: normal;
+    font-display: swap;
+  }
+
+  :root {
+    --ink: {{ settings.color_ink }};
+    --signal: {{ settings.color_signal }};
+    --signal-shade: {{ settings.color_signal | color_darken: 8 }};
+    --paper: {{ settings.color_paper }};
+    --white: #ffffff;
+    --stone: #d6d6d0;
+    --muted: #55554f;
+    --alert: #b3261e;
+    --ok: #1f6f3f;
+    --page-width: {{ settings.page_width }}px;
+  }
+</style>

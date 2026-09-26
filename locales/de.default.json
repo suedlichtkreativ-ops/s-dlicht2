@@ -1,0 +1,212 @@
+{
+  "general": {
+    "home": "Start",
+    "breadcrumbs": "Brotkrumen-Navigation",
+    "close": "Schließen",
+    "cancel": "Abbrechen",
+    "error": "Das hat nicht geklappt. Bitte versuche es noch einmal.",
+    "pagination": "Seiten",
+    "previous": "Vorherige Seite",
+    "next": "Nächste Seite",
+    "page": "Seite {{ page }}",
+    "tagged": "Schlagwort „{{ tags }}“"
+  },
+  "accessibility": {
+    "skip_to_content": "Zum Inhalt springen"
+  },
+  "header": {
+    "menu": "Menü",
+    "main_nav": "Hauptnavigation",
+    "search": "Suchen",
+    "search_placeholder": "Köder, Rute, Marke …",
+    "search_submit": "Suchen",
+    "account": "Kundenkonto",
+    "cart": "Warenkorb",
+    "cart_count": {
+      "one": "{{ count }} Artikel im Warenkorb",
+      "other": "{{ count }} Artikel im Warenkorb"
+    },
+    "view_all": "Alles aus {{ title }}"
+  },
+  "hero": {
+    "scroll_cue": "Weiter"
+  },
+  "footer": {
+    "payment": "Zahlungsarten"
+  },
+  "store": {
+    "address": "Adresse",
+    "hours": "Öffnungszeiten",
+    "pickup": "Abholung",
+    "contact": "Kontakt",
+    "route": "Route planen",
+    "call": "Anrufen"
+  },
+  "collections": {
+    "all": "Sortiment",
+    "view_all": "Alle ansehen",
+    "count": {
+      "one": "{{ count }} Produkt",
+      "other": "{{ count }} Produkte"
+    },
+    "product_count": {
+      "one": "{{ count }} Produkt",
+      "other": "{{ count }} Produkte"
+    },
+    "show_results": {
+      "one": "{{ count }} Produkt anzeigen",
+      "other": "{{ count }} Produkte anzeigen"
+    },
+    "filter": "Filter",
+    "sort_by": "Sortieren",
+    "from": "Von (€)",
+    "to": "Bis (€)",
+    "apply": "Filter anwenden",
+    "clear_all": "Alle Filter entfernen",
+    "remove_filter": "Filter entfernen",
+    "no_matches": "Keine Produkte passen zu diesen Filtern. Entferne einen Filter, um mehr zu sehen."
+  },
+  "products": {
+    "product": {
+      "add_to_cart": "In den Warenkorb",
+      "added": "Zum Warenkorb hinzugefügt",
+      "sold_out": "Ausverkauft",
+      "unavailable": "nicht verfügbar",
+      "on_sale": "Angebot",
+      "regular_price": "Normalpreis",
+      "sale_price": "Angebotspreis",
+      "price_from": "ab {{ price }}",
+      "tax_included": "inkl. MwSt.",
+      "shipping": "zzgl. Versand",
+      "plus_shipping": "zzgl. Versand",
+      "quantity": "Menge",
+      "increase": "Menge erhöhen",
+      "decrease": "Menge verringern",
+      "in_stock": "Auf Lager, Versand in 1–2 Werktagen",
+      "low_stock": "Nur noch {{ count }} auf Lager",
+      "pickup_available": "Abholung möglich in {{ location }}",
+      "pickup_unavailable": "Derzeit nicht zur Abholung in {{ location }} verfügbar",
+      "description": "Beschreibung",
+      "gallery": "Produktbilder",
+      "show_media": "Bild {{ index }} anzeigen",
+      "placeholder_title": "Produktname"
+    }
+  },
+  "cart": {
+    "title": "Warenkorb",
+    "empty": "Dein Warenkorb ist leer.",
+    "empty_hint": "Stöber im Sortiment – nach Zielfisch oder Produktart.",
+    "continue": "Zum Sortiment",
+    "subtotal": "Zwischensumme",
+    "taxes_shipping": "Inkl. MwSt., Versandkosten werden an der Kasse berechnet.",
+    "checkout": "Zur Kasse",
+    "view_cart": "Warenkorb ansehen",
+    "remove": "Entfernen",
+    "increase": "Menge von {{ title }} erhöhen",
+    "decrease": "Menge von {{ title }} verringern",
+    "quantity_for": "Menge von {{ title }}",
+    "note": "Anmerkung zur Bestellung"
+  },
+  "search": {
+    "title": "Suche",
+    "results_for": {
+      "one": "{{ count }} Ergebnis für „{{ terms }}“",
+      "other": "{{ count }} Ergebnisse für „{{ terms }}“"
+    },
+    "no_results": "Nichts gefunden für „{{ terms }}“.",
+    "no_results_hint": "Prüfe die Schreibweise oder suche nach einer Marke oder Produktart."
+  },
+  "not_found": {
+    "title": "Diese Seite gibt es nicht (mehr).",
+    "text": "Vielleicht wurde das Produkt umbenannt. Such danach oder geh zurück ins Sortiment."
+  },
+  "blog": {
+    "back": "Zurück zu {{ title }}"
+  },
+  "contact": {
+    "name": "Name",
+    "email": "E-Mail",
+    "phone": "Telefon",
+    "message": "Nachricht",
+    "send": "Nachricht senden",
+    "success": "Danke, deine Nachricht ist angekommen. Wir melden uns bald.",
+    "privacy": "Wir nutzen deine Angaben nur, um deine Anfrage zu beantworten."
+  },
+  "password": {
+    "enter": "Mit Passwort öffnen",
+    "label": "Passwort",
+    "submit": "Öffnen",
+    "error": "Das Passwort stimmt nicht."
+  },
+  "gift_card": {
+    "title": "Dein Geschenkgutschein",
+    "code": "Gutscheincode",
+    "expired": "Dieser Gutschein ist abgelaufen oder deaktiviert."
+  },
+  "customer": {
+    "email": "E-Mail",
+    "password": "Passwort",
+    "password_confirm": "Passwort wiederholen",
+    "first_name": "Vorname",
+    "last_name": "Nachname",
+    "login": {
+      "title": "Anmelden",
+      "submit": "Anmelden",
+      "forgot": "Passwort vergessen?",
+      "new": "Noch kein Konto?",
+      "guest": "Als Gast fortfahren"
+    },
+    "recover": {
+      "submit": "Link zum Zurücksetzen senden",
+      "success": "Wir haben dir eine E-Mail mit einem Link geschickt."
+    },
+    "register": {
+      "title": "Konto erstellen",
+      "submit": "Konto erstellen"
+    },
+    "reset": {
+      "title": "Neues Passwort festlegen",
+      "submit": "Passwort speichern"
+    },
+    "activate": {
+      "title": "Konto aktivieren",
+      "submit": "Konto aktivieren",
+      "decline": "Einladung ablehnen"
+    },
+    "account": {
+      "title": "Mein Konto",
+      "logout": "Abmelden",
+      "orders": "Bestellungen",
+      "no_orders": "Du hast noch keine Bestellungen.",
+      "details": "Deine Daten"
+    },
+    "order": {
+      "title": "Bestellung {{ name }}",
+      "number": "Bestellung",
+      "date": "Datum",
+      "status": "Status",
+      "total": "Summe",
+      "product": "Produkt",
+      "quantity": "Menge",
+      "billing": "Rechnungsadresse",
+      "shipping": "Lieferadresse",
+      "cancelled": "Storniert"
+    },
+    "addresses": {
+      "title": "Adressen",
+      "add": "Neue Adresse",
+      "default": "Standard",
+      "delete": "Löschen",
+      "confirm_delete": "Adresse wirklich löschen?",
+      "company": "Firma",
+      "address1": "Straße und Hausnummer",
+      "address2": "Adresszusatz",
+      "zip": "PLZ",
+      "city": "Ort",
+      "country": "Land",
+      "phone": "Telefon",
+      "set_default": "Als Standardadresse festlegen",
+      "save": "Adresse speichern"
+    }
+  }
+}

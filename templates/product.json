@@ -1,0 +1,19 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "usps": { "type": "usps", "settings": {} },
+        "description": { "type": "description", "settings": { "open": true } },
+        "shipping": { "type": "collapsible", "settings": { "heading": "Versand & Rückgabe", "content": "<p>Versand innerhalb Deutschlands in 1–2 Werktagen. Abholung im Laden in Landsberg am Lech auf Wunsch. Details in den Versandinformationen.</p>" } }
+      },
+      "block_order": ["usps", "description", "shipping"],
+      "settings": {}
+    },
+    "related": {
+      "type": "related-products",
+      "settings": {}
+    }
+  },
+  "order": ["main", "related"]
+}

@@ -1,0 +1,17 @@
+{
+  "type": "footer",
+  "name": "Footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "b1": { "type": "menu", "settings": { "heading": "Sortiment", "menu": "footer" } },
+        "b2": { "type": "store", "settings": { "heading": "Laden" } },
+        "b3": { "type": "text", "settings": { "heading": "Service", "text": "<p>Fragen zu Ausrüstung oder Bestellung? Ruf an oder schreib uns.</p>" } }
+      },
+      "block_order": ["b1", "b2", "b3"],
+      "settings": {}
+    }
+  },
+  "order": ["footer"]
+}

@@ -1,0 +1,8 @@
+{
+  "sections": {
+    "main": { "type": "main-page", "settings": {} },
+    "story": { "type": "image-with-text", "settings": { "heading": "Vom Lech in den Laden", "white": true } },
+    "store": { "type": "store-info", "settings": {} }
+  },
+  "order": ["main", "story", "store"]
+}

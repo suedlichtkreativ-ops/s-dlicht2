@@ -1,0 +1,49 @@
+{%- comment -%}
+  Storefront filtering. Params: results (collection or search), id_prefix
+  Form submits via GET; theme.js upgrades it to fetch + section rendering.
+{%- endcomment -%}
+<form class="facets" data-facets-form action="{{ request.path }}" method="get">
+  {%- if results.terms -%}<input type="hidden" name="q" value="{{ results.terms | escape }}">{%- endif -%}
+  {%- if results.sort_by -%}<input type="hidden" name="sort_by" value="{{ results.sort_by }}" data-sort-mirror>{%- endif -%}
+  {%- for filter in results.filters -%}
+    {%- assign active_count = filter.active_values.size -%}
+    <details class="facet"{% if forloop.index <= 3 or active_count > 0 %} open{% endif %}>
+      <summary>
+        <span>{{ filter.label | escape }}{% if active_count > 0 %} ({{ active_count }}){% endif %}</span>
+        {% render 'icon', name: 'plus', class: 'icon--sm' %}
+      </summary>
+      {%- case filter.type -%}
+        {%- when 'price_range' -%}
+          <div class="facet__price">
+            <div class="field">
+              <label for="{{ id_prefix }}-{{ filter.param_name }}-gte">{{ 'collections.from' | t }}</label>
+              <input class="input" type="number" inputmode="decimal" id="{{ id_prefix }}-{{ filter.param_name }}-gte" name="{{ filter.min_value.param_name }}"
+                value="{% if filter.min_value.value %}{{ filter.min_value.value | money_without_currency | replace: '.', '' | replace: ',', '.' }}{% endif %}"
+                placeholder="0" min="0" max="{{ filter.range_max | money_without_currency | replace: '.', '' | replace: ',', '.' }}">
+            </div>
+            <div class="field">
+              <label for="{{ id_prefix }}-{{ filter.param_name }}-lte">{{ 'collections.to' | t }}</label>
+              <input class="input" type="number" inputmode="decimal" id="{{ id_prefix }}-{{ filter.param_name }}-lte" name="{{ filter.max_value.param_name }}"
+                value="{% if filter.max_value.value %}{{ filter.max_value.value | money_without_currency | replace: '.', '' | replace: ',', '.' }}{% endif %}"
+                placeholder="{{ filter.range_max | money_without_currency | replace: '.', '' | replace: ',', '.' }}" min="0">
+            </div>
+          </div>
+        {%- when 'boolean' or 'list' -%}
+          <ul class="facet__list" role="list">
+            {%- for value in filter.values -%}
+              {%- assign disabled = false -%}
+              {%- if value.count == 0 and value.active == false -%}{%- assign disabled = true -%}{%- endif -%}
+              <li>
+                <label class="facet__option{% if disabled %} is-disabled{% endif %}">
+                  <input type="checkbox" name="{{ value.param_name }}" value="{{ value.value }}"{% if value.active %} checked{% endif %}{% if disabled %} disabled{% endif %}>
+                  <span>{{ value.label | escape }}</span>
+                  <span class="facet__count">{{ value.count }}</span>
+                </label>
+              </li>
+            {%- endfor -%}
+          </ul>
+      {%- endcase -%}
+    </details>
+  {%- endfor -%}
+  <noscript><button type="submit" class="btn btn--dark" style="margin-top:1rem">{{ 'collections.apply' | t }}</button></noscript>
+</form>

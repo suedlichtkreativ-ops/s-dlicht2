@@ -1,0 +1,10 @@
+<div class="page-width" style="padding-bottom:clamp(3rem,6vw,5rem)">
+  <div class="page-head">
+    <h1 class="h1">{{ page.title | escape }}</h1>
+  </div>
+  <div class="rte">{{ page.content }}</div>
+</div>
+
+{% schema %}
+{ "name": "Seite", "settings": [] }
+{% endschema %}

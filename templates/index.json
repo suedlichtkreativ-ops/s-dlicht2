@@ -1,0 +1,44 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero",
+      "blocks": {
+        "l1": { "type": "line", "settings": { "text": "Köder." } },
+        "l2": { "type": "line", "settings": { "text": "Ruten." } },
+        "l3": { "type": "line", "settings": { "text": "Rat vom Lech." } }
+      },
+      "block_order": ["l1", "l2", "l3"],
+      "settings": {
+        "text": "<p>Kunstköder, Ruten und Zubehör für Raubfisch, Karpfen und Forelle. Ausgesucht von Anglern aus Landsberg am Lech.</p>",
+        "button_label": "Sortiment ansehen",
+        "button2_label": "Abholung im Laden",
+        "show_cue": true,
+        "animate": true
+      }
+    },
+    "tiles": {
+      "type": "collection-tiles",
+      "blocks": {
+        "c1": { "type": "collection", "settings": { "title": "Raubfisch" } },
+        "c2": { "type": "collection", "settings": { "title": "Karpfen" } },
+        "c3": { "type": "collection", "settings": { "title": "Friedfisch" } },
+        "c4": { "type": "collection", "settings": { "title": "Forelle & Fliege" } }
+      },
+      "block_order": ["c1", "c2", "c3", "c4"],
+      "settings": { "heading": "Worauf gehst du?", "columns": 4, "style": "cutout" }
+    },
+    "featured": {
+      "type": "featured-collection",
+      "settings": { "heading": "Neu im Depot", "limit": 8, "white": true }
+    },
+    "statement": {
+      "type": "rich-text",
+      "settings": { "style": "ink" }
+    },
+    "store": {
+      "type": "store-info",
+      "settings": {}
+    }
+  },
+  "order": ["hero", "tiles", "featured", "statement", "store"]
+}

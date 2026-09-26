@@ -1,0 +1,116 @@
+{%- liquid
+  assign per_page = section.settings.per_page
+  assign show_filters = false
+  if section.settings.enable_filtering and collection.filters.size > 0
+    assign show_filters = true
+  endif
+  assign sort_by = collection.sort_by | default: collection.default_sort_by
+-%}
+<div data-collection-section data-section-id="{{ section.id }}">
+  <header class="collection-hero">
+    <div class="page-width collection-hero__inner">
+      <nav class="breadcrumbs" aria-label="{{ 'general.breadcrumbs' | t }}">
+        <ol role="list">
+          <li><a href="{{ routes.root_url }}">{{ 'general.home' | t }}</a></li>
+          <li><a href="{{ routes.collections_url }}">{{ 'collections.all' | t }}</a></li>
+          <li aria-current="page">{{ collection.title | escape }}</li>
+        </ol>
+      </nav>
+      <h1 class="collection-hero__title display"><span class="slant">{{ collection.title | escape }}</span></h1>
+      {%- if collection.description != blank and section.settings.show_description -%}
+        <div class="rte muted">{{ collection.description }}</div>
+      {%- endif -%}
+    </div>
+  </header>
+
+  {%- paginate collection.products by per_page -%}
+    <div class="page-width">
+      <div class="toolbar">
+        <div style="display:flex;align-items:center;gap:1rem">
+          {%- if show_filters -%}
+            <button type="button" class="btn btn--outline toolbar__filter-btn" data-drawer-open="filters" aria-controls="FilterDrawer" aria-expanded="false">
+              {% render 'icon', name: 'filter' %}<span class="btn__label">{{ 'collections.filter' | t }}</span>
+            </button>
+          {%- endif -%}
+          <p class="toolbar__count" data-refresh="count">{{ 'collections.product_count' | t: count: collection.products_count }}</p>
+        </div>
+        {%- if section.settings.enable_sorting -%}
+          <div class="toolbar__sort">
+            <label for="SortBy" class="label">{{ 'collections.sort_by' | t }}</label>
+            <select id="SortBy" class="select" name="sort_by" data-sort>
+              {%- for option in collection.sort_options -%}
+                <option value="{{ option.value | escape }}"{% if option.value == sort_by %} selected{% endif %}>{{ option.name | escape }}</option>
+              {%- endfor -%}
+            </select>
+          </div>
+        {%- endif -%}
+      </div>
+
+      <div class="collection-layout{% if show_filters %} collection-layout--filters{% endif %}">
+        {%- if show_filters -%}
+          <aside class="facets__desktop" aria-label="{{ 'collections.filter' | t }}" data-refresh="facets-desktop">
+            {% render 'facets', results: collection, id_prefix: 'Desktop' %}
+          </aside>
+        {%- endif -%}
+
+        <div class="results" data-results>
+          <div data-refresh="active">
+            {% render 'active-facets', results: collection, clear_url: collection.url %}
+          </div>
+          <div data-refresh="grid">
+            {%- if collection.products.size > 0 -%}
+              <ul class="grid{% unless show_filters %} grid--4{% endunless %}" role="list">
+                {%- for product in collection.products -%}
+                  <li>{% render 'product-card', product: product, show_vendor: section.settings.show_vendor %}</li>
+                {%- endfor -%}
+              </ul>
+              {% render 'pagination', paginate: paginate %}
+            {%- elsif collection.all_products_count == 0 -%}
+              <ul class="grid{% unless show_filters %} grid--4{% endunless %}" role="list">
+                {%- for i in (1..8) -%}<li>{% render 'product-card', product: blank, index: i %}</li>{%- endfor -%}
+              </ul>
+            {%- else -%}
+              <div class="empty-state">
+                <p class="h3">{{ 'collections.no_matches' | t }}</p>
+                <a class="btn btn--dark" href="{{ collection.url }}" data-facet-link>{{ 'collections.clear_all' | t }}</a>
+              </div>
+            {%- endif -%}
+          </div>
+        </div>
+      </div>
+    </div>
+  {%- endpaginate -%}
+
+  {%- if show_filters -%}
+    <div class="drawer drawer--left" id="FilterDrawer" data-drawer="filters" aria-hidden="true">
+      <button type="button" class="drawer__backdrop" data-drawer-close tabindex="-1" aria-label="{{ 'general.close' | t }}"></button>
+      <div class="drawer__panel" role="dialog" aria-modal="true" aria-label="{{ 'collections.filter' | t }}" tabindex="-1">
+        <div class="drawer__head">
+          <span class="h3">{{ 'collections.filter' | t }}</span>
+          <button type="button" class="icon-btn" data-drawer-close aria-label="{{ 'general.close' | t }}">{% render 'icon', name: 'close' %}</button>
+        </div>
+        <div class="drawer__body" data-refresh="facets-mobile">
+          {% render 'facets', results: collection, id_prefix: 'Mobile' %}
+        </div>
+        <div class="drawer__foot">
+          <button type="button" class="btn btn--full" data-drawer-close>
+            <span data-refresh="count-button">{{ 'collections.show_results' | t: count: collection.products_count }}</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  {%- endif -%}
+</div>
+
+{% schema %}
+{
+  "name": "Kollektion",
+  "settings": [
+    { "type": "range", "id": "per_page", "label": "Produkte pro Seite", "min": 8, "max": 48, "step": 4, "default": 24 },
+    { "type": "checkbox", "id": "enable_filtering", "label": "Filter anzeigen", "default": true, "info": "Filter richtest du in der Shopify-App „Search & Discovery“ ein." },
+    { "type": "checkbox", "id": "enable_sorting", "label": "Sortierung anzeigen", "default": true },
+    { "type": "checkbox", "id": "show_description", "label": "Beschreibung anzeigen", "default": true },
+    { "type": "checkbox", "id": "show_vendor", "label": "Marke anzeigen", "default": true }
+  ]
+}
+{% endschema %}

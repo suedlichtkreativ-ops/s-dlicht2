@@ -1,0 +1,47 @@
+<div class="page-width" style="padding-bottom:clamp(3rem,6vw,5rem)">
+  <div class="page-head">
+    <h1 class="page-head__title display"><span class="slant">{{ page.title | escape }}</span></h1>
+  </div>
+  <div class="store">
+    <div class="stack" style="--stack:1.5rem">
+      {%- if page.content != blank -%}<div class="rte lead">{{ page.content }}</div>{%- endif -%}
+      {%- form 'contact', class: 'form-grid' -%}
+        {%- if form.posted_successfully? -%}
+          <p class="form-message form-message--success" role="status">{{ 'contact.success' | t }}</p>
+        {%- elsif form.errors -%}
+          <div class="form-message form-message--error" role="alert">{{ form.errors | default_errors }}</div>
+        {%- endif -%}
+        <div class="form-grid form-grid--2">
+          <div class="field">
+            <label for="ContactName">{{ 'contact.name' | t }}</label>
+            <input class="input" id="ContactName" type="text" name="contact[name]" autocomplete="name" value="{{ form.name }}">
+          </div>
+          <div class="field">
+            <label for="ContactEmail">{{ 'contact.email' | t }} *</label>
+            <input class="input" id="ContactEmail" type="email" name="contact[email]" autocomplete="email" required value="{{ form.email }}">
+          </div>
+        </div>
+        <div class="field">
+          <label for="ContactPhone">{{ 'contact.phone' | t }}</label>
+          <input class="input" id="ContactPhone" type="tel" name="contact[phone]" autocomplete="tel" value="{{ form.phone }}">
+        </div>
+        <div class="field">
+          <label for="ContactBody">{{ 'contact.message' | t }} *</label>
+          <textarea class="textarea" id="ContactBody" name="contact[body]" required>{{ form.body }}</textarea>
+        </div>
+        <p class="muted" style="font-size:.875rem">{{ 'contact.privacy' | t }}</p>
+        <div><button type="submit" class="btn">{{ 'contact.send' | t }}</button></div>
+      {%- endform -%}
+    </div>
+    <dl class="store__facts">
+      {%- if settings.store_address != blank -%}<div class="store__fact"><dt>{{ 'store.address' | t }}</dt><dd>{{ settings.store_address }}</dd></div>{%- endif -%}
+      {%- if settings.store_hours != blank -%}<div class="store__fact"><dt>{{ 'store.hours' | t }}</dt><dd>{{ settings.store_hours }}</dd></div>{%- endif -%}
+      {%- if settings.store_phone != blank -%}<div class="store__fact"><dt>{{ 'contact.phone' | t }}</dt><dd><a href="tel:{{ settings.store_phone | remove: ' ' | remove: '/' }}">{{ settings.store_phone }}</a></dd></div>{%- endif -%}
+      {%- if settings.store_email != blank -%}<div class="store__fact"><dt>{{ 'contact.email' | t }}</dt><dd><a href="mailto:{{ settings.store_email }}">{{ settings.store_email }}</a></dd></div>{%- endif -%}
+    </dl>
+  </div>
+</div>
+
+{% schema %}
+{ "name": "Kontakt", "settings": [] }
+{% endschema %}
