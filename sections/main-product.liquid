@@ -100,7 +100,7 @@
                     {% if value.available == false %}class="is-unavailable"{% endif %}>
                   <label for="{{ input_id }}"{% if swatch_media %} class="swatch"{% endif %}>
                     {%- if swatch_media -%}
-                      <span class="swatch__img">{{ swatch_media.preview_image | image_url: width: 240, height: 160, crop: 'center' | image_tag: width: 120, height: 80, loading: 'lazy', alt: '' }}</span>
+                      <span class="swatch__img">{{ swatch_media.preview_image | image_url: width: 360, height: 240, crop: 'center' | image_tag: width: 120, height: 80, loading: 'lazy', alt: '' }}</span>
                       <span class="swatch__name">{{ value | escape }}</span>
                     {%- else -%}
                       {{ value | escape }}

@@ -22,7 +22,7 @@
 -%}
 {%- if fish_name == 'hecht' or fish_name == 'zander' or fish_name == 'barsch' or fish_name == 'forelle' -%}
   {%- comment -%} Köderdepot's own line drawings (white on transparent), taken from the previous shop. {%- endcomment -%}
-  {%- assign drawing = 'fish-' | append: fish_name | append: '.png' -%}
+  {%- assign drawing = 'fish-' | append: fish_name | append: '.svg' -%}
   <img class="fish fish--drawing {{ class }}" src="{{ drawing | asset_url }}" width="224" height="224" alt="" aria-hidden="true" loading="lazy">
 {%- elsif fish_name != '' -%}
 <svg class="fish {{ class }}" viewBox="0 0 100 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">

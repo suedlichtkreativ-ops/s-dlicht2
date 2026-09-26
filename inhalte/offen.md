@@ -27,6 +27,10 @@ Stand 26.09.2026, nach dem Auslesen des Shopify-Stores „Köderdepot neu“. Am
 - **Social Media:** Instagram-Link im Live-Theme ist nur ein Platzhalter „#“. Echte Profile fehlen.
 - **Bundles:** Die Kollektionen „Bundles“, „Starter Bundle“ und „Hecht Bundle“ enthalten 0 Produkte. Es gibt die nicht gelisteten Produkte „Starter Set“ und „Combo Deal“ (siehe `produkte.json`). Welche Produkte gehören in welches Bundle?
 - **Neuheiten:** Kollektion „Neuheiten“ ist leer. Auf der Startseite steht deshalb „Bestseller“ (91 Produkte).
+- **Bildauflösung (Qualitätsprüfung 26.09.2026):**
+  - Hero-Fotos sind auf Retina-Bildschirmen weich. Für volle Schärfe braucht es ≥2880 px Breite. Vorhanden: Angler 1983 px, Topwater 2400 px, 10 %-Motiv 1672 px, Kurzläufer nur 1254 px. Bitte Originale in voller Größe liefern.
+  - Das Handy-Motiv des Anglers (`…_99e322a9-….png`) liefert auf dem CDN einen Fehler (404), die Vorschau nutzt eine 1080-px-Version.
+  - Kompaktblitz (Bild 1 und 2, 600 px) und Silberstreif (Bild 2, 500 px) sind im Shop nur klein vorhanden. Größere Fotos würden die Produktseiten schärfer machen.
 - **Hero-Bild:** Der Live-Shop nutzt Werbebanner mit eingebranntem Text (10 %-Rabatt, Topwater, Kurzläufer). Für den neuen Hero braucht es ein Foto ohne Text.
 - **Seiten ohne Text:** „Newsletter“ (leer, Inhalt aus App/Vorlage) und „Widerruf“ (nur ein Satz, Formular aus einer App).
 - **Seitentexte „Versand & Lieferung“ und „Zahlung“** sind nur Einleitungen ohne Fakten. Die Fakten stehen in den Richtlinien.

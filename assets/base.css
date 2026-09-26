@@ -794,10 +794,11 @@ input, textarea { caret-color: var(--ink); }
 .gallery__list::-webkit-scrollbar { display: none; }
 .gallery__item { scroll-snap-align: start; border: var(--border); background: var(--white); }
 .gallery__item .media { background: var(--white); }
-.gallery__dots { display: flex; justify-content: center; gap: 0.4rem; margin-top: 0.75rem; }
-.gallery__dots button { width: 1.5rem; height: 1.5rem; padding: 0; border: 0; background: none; display: grid; place-items: center; }
-.gallery__dots button::before { content: ''; width: 0.5rem; height: 0.5rem; border: 2px solid var(--ink); transform: skewX(-9deg); transition: background-color var(--dur-fast) var(--ease-out), width var(--dur-base) var(--ease-out); }
-.gallery__dots button[aria-current='true']::before { background: var(--ink); width: 1.25rem; }
+.gallery__item .media--contain > img { padding: 0; }
+.gallery__dots { display: flex; justify-content: center; gap: 0; margin-top: 0.25rem; }
+.gallery__dots button { width: 2.75rem; height: 2.75rem; padding: 0; border: 0; background: none; display: grid; place-items: center; }
+.gallery__dots button::before { content: ''; width: 0.5rem; height: 0.5rem; border: 2px solid var(--ink); transform: skewX(-9deg); transition: background-color var(--dur-fast) var(--ease-out), transform var(--dur-base) var(--ease-out); }
+.gallery__dots button[aria-current='true']::before { background: var(--ink); transform: skewX(-9deg) scaleX(2.5); }
 @media (min-width: 990px) {
   .gallery__list { grid-auto-flow: row; grid-template-columns: 1fr 1fr; overflow: visible; gap: 0.75rem; }
   .gallery__item:first-child, .gallery__item:last-child:nth-child(even) { grid-column: 1 / -1; }
@@ -1090,7 +1091,7 @@ input[type='search']::-webkit-search-cancel-button { -webkit-appearance: none; a
 /* Headings inside rich text (product descriptions, articles) step down from page headings */
 .rte h1 { font-size: clamp(1.625rem, 2.6vw, 2.125rem); }
 .rte h2 { font-size: clamp(1.375rem, 2.2vw, 1.75rem); }
-.rte h3 { font-size: 1.1875rem; }
+.rte h3 { font-size: 1.3125rem; }
 .rte h4 { font-size: 1.0625rem; }
 
 /* The shop's fish drawings are white lines; flip to black on the yellow hover disc */
