@@ -1069,6 +1069,59 @@ input, textarea { caret-color: var(--ink); }
 .quick__details { display: inline-flex; align-items: center; gap: 0.4rem; justify-self: start; font-weight: 650; text-decoration: underline; text-underline-offset: 3px; min-height: 2.75rem; }
 .quick .variant-picker__values { gap: 0.5rem; }
 
+/* Welcome pop-up: centred card on desktop, bottom sheet on phones; page darkens behind */
+.welcome .drawer__backdrop { background: rgb(13 13 13 / 0.62); transition-duration: 420ms; }
+.welcome .drawer__panel {
+  top: 50%; bottom: auto; left: 50%; width: min(27rem, calc(100% - 2 * var(--gutter)));
+  max-height: calc(100dvh - 2rem); overflow-y: auto;
+  background: var(--ink); color: var(--paper); border: 2px solid var(--ink);
+  box-shadow: 0 1.5rem 3rem rgb(0 0 0 / 0.35);
+  opacity: 0; transform: translate(-50%, -46%) scale(0.96);
+  transition: transform 220ms var(--ease-in), opacity 180ms var(--ease-in);
+}
+.welcome.is-open .drawer__panel { opacity: 1; transform: translate(-50%, -50%); transition: transform 520ms var(--ease-out) 80ms, opacity 320ms var(--ease-out) 80ms; }
+.welcome__close { position: absolute; top: 0.5rem; right: 0.5rem; z-index: 1; color: var(--paper); }
+.welcome__art { position: relative; height: 7.5rem; overflow: hidden; border-bottom: 2px solid var(--signal); background: linear-gradient(180deg, #1c1c1a, var(--ink)); }
+.welcome__line { position: absolute; left: 28%; top: 0; width: 1px; height: 3.1rem; background: rgb(244 244 241 / 0.7); transform-origin: top center; }
+.welcome__lure { position: absolute; left: 28%; top: 3rem; width: 9.5rem; max-width: none; height: auto; transform-origin: 0 50%; transform: translate(-0.3rem, -50%) rotate(8deg); }
+.welcome.is-open .welcome__line { animation: drop 700ms var(--ease-out) 180ms both; }
+.welcome.is-open .welcome__lure { animation: welcome-lure 1600ms var(--ease-out) 260ms both; }
+@keyframes welcome-lure {
+  0% { opacity: 0; transform: translate(-0.3rem, calc(-50% - 4rem)) rotate(0deg); }
+  35% { opacity: 1; transform: translate(-0.3rem, -50%) rotate(16deg); }
+  60% { transform: translate(-0.3rem, -50%) rotate(3deg); }
+  80% { transform: translate(-0.3rem, -50%) rotate(10deg); }
+  100% { transform: translate(-0.3rem, -50%) rotate(8deg); }
+}
+.welcome__body { display: grid; gap: 1rem; padding: 1.5rem var(--gutter) 1.5rem; }
+.welcome__title { display: grid; gap: 0.25rem; }
+.welcome__big { color: var(--signal); font-size: clamp(2.75rem, 11vw, 3.5rem); line-height: 0.9; }
+.welcome__sub { font-size: 1.3125rem; font-weight: 750; font-stretch: 80%; line-height: 1.15; }
+.welcome__text { color: #c9c9c3; font-size: 0.9375rem; line-height: 1.5; max-width: 34ch; }
+.welcome__code {
+  display: flex; align-items: center; justify-content: space-between; gap: 1rem; width: 100%; min-height: 3.25rem;
+  padding: 0.6rem 1rem; background: transparent; color: var(--paper); border: 2px dashed var(--signal); cursor: copy;
+  transition: background-color var(--dur-fast) var(--ease-out);
+}
+.welcome__code:hover { background: rgb(255 204 0 / 0.08); }
+.welcome__code strong { font-size: 1.25rem; font-weight: 800; letter-spacing: 0.08em; font-variant-numeric: tabular-nums; }
+.welcome__copy { font-size: 0.8125rem; font-weight: 700; color: var(--signal); text-transform: uppercase; letter-spacing: 0.06em; }
+.welcome__actions { display: grid; gap: 0.25rem; }
+.welcome__later { min-height: 2.75rem; background: none; border: 0; color: #c9c9c3; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
+.welcome__later:hover { color: var(--paper); }
+.welcome__note { color: #a3a39d; font-size: 0.8125rem; }
+.welcome :focus-visible { outline-color: var(--signal); }
+.welcome__panel:focus-visible { outline: none; }
+@media (max-width: 749px) {
+  .welcome .drawer__panel { top: auto; bottom: 0; left: 0; width: 100%; max-height: 92dvh; transform: translateY(100%); opacity: 1; border-bottom: 0; }
+  .welcome.is-open .drawer__panel { transform: none; }
+  .welcome__body { padding-bottom: calc(1.25rem + env(safe-area-inset-bottom)); }
+  .welcome__art { height: 6rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .welcome.is-open .welcome__lure, .welcome.is-open .welcome__line { animation: none; }
+}
+
 /* Free shipping progress */
 .ship { display: grid; gap: 0.5rem; }
 .ship__text { display: flex; align-items: center; gap: 0.4rem; font-size: 0.9375rem; font-weight: 650; }

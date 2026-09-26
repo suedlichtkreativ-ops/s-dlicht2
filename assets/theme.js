@@ -433,14 +433,58 @@
     }
 
     // Copy a discount code
-    $$('[data-copy]', hero).forEach((btn) => btn.addEventListener('click', async () => {
-      const hint = $('[data-copy-hint]', btn);
-      try { await navigator.clipboard.writeText(btn.dataset.copy); } catch (err) {
-        const r = document.createRange(); r.selectNodeContents($('strong', btn)); const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r);
-      }
-      if (hint) { const before = hint.textContent; hint.textContent = btn.dataset.copied; setTimeout(() => { hint.textContent = before; }, 2000); }
-    }));
   });
+
+  /* ---------- Copy discount codes (hero slide, welcome pop-up) ---------- */
+  document.addEventListener('click', async (e) => {
+    const btn = e.target.closest('[data-copy]');
+    if (!btn) return;
+    const hint = $('[data-copy-hint]', btn);
+    try { await navigator.clipboard.writeText(btn.dataset.copy); } catch (err) {
+      const r = document.createRange(); r.selectNodeContents($('strong', btn)); const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r);
+    }
+    if (hint) {
+      clearTimeout(btn.copyTimer);
+      if (!btn.dataset.hint) btn.dataset.hint = hint.textContent;
+      hint.textContent = btn.dataset.copied;
+      btn.copyTimer = setTimeout(() => { hint.textContent = btn.dataset.hint; }, 2000);
+    }
+  });
+
+  /* ---------- Welcome pop-up: once per visitor, after a short delay ---------- */
+  const welcome = $('[data-welcome]');
+  if (welcome) {
+    const KEY = 'kd-welcome';
+    const days = parseFloat(welcome.dataset.days) || 30;
+    let seen = 0;
+    try { seen = parseInt(localStorage.getItem(KEY), 10) || 0; } catch (_) { /* storage blocked */ }
+    const remember = (ms = Date.now()) => { try { localStorage.setItem(KEY, String(ms)); } catch (_) { /* storage blocked */ } };
+    const due = Date.now() - seen > days * 864e5;
+    const show = () => {
+      // Never interrupt an open menu, cart or picker; try again shortly.
+      if (activeDrawer) { setTimeout(show, 4000); return; }
+      openDrawer('welcome', document.activeElement);
+      remember();
+    };
+    if (due && !document.body.classList.contains('template-cart')) {
+      setTimeout(show, (parseFloat(welcome.dataset.delay) || 3) * 1000);
+    }
+    const apply = $('[data-welcome-apply]', welcome);
+    if (apply) apply.addEventListener('click', async (e) => {
+      e.preventDefault();
+      apply.classList.add('is-loading');
+      try {
+        await fetch(apply.getAttribute('href').split('?')[0], { credentials: 'same-origin' });
+        remember(Date.now() + 3650 * 864e5);
+        closeDrawer();
+        toast(apply.dataset.applied);
+      } catch (_) {
+        window.location.href = apply.getAttribute('href');
+      } finally {
+        apply.classList.remove('is-loading');
+      }
+    });
+  }
 
   /* ---------- Cart ---------- */
   const sectionsToRender = () => {

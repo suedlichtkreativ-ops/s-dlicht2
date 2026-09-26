@@ -14,7 +14,7 @@ Stand 26.09.2026, nach dem Auslesen des Shopify-Stores „Köderdepot neu“. Am
 
 ## Dringend (betrifft auch den alten Shop)
 
-- **Rabattcode WILLKOMMEN10 existiert nicht.** Der alte Shop wirbt im Slider und in der Kollektion „Willkommen bei Köderdepot“ mit „10 % auf die erste Bestellung, Code WILLKOMMEN10“. Unter Rabatte ist aber kein einziger Code angelegt (Abfrage vom 26.09.2026). Kunden bekommen beim Eingeben vermutlich eine Fehlermeldung. Im neuen Shop: Rabatt „WILLKOMMEN10“, 10 %, einmal pro Kunde, anlegen. Der neue Hero zeigt den Code im Slide „10 % Rabatt“.
+- **Rabattcode WILLKOMMEN10 existiert nicht.** Der alte Shop wirbt im Slider und in der Kollektion „Willkommen bei Köderdepot“ mit „10 % auf die erste Bestellung, Code WILLKOMMEN10“. Unter Rabatte ist aber kein einziger Code angelegt (Abfrage vom 26.09.2026). Kunden bekommen beim Eingeben vermutlich eine Fehlermeldung. Im neuen Shop: Rabatt „WILLKOMMEN10“, 10 %, einmal pro Kunde, anlegen. Der neue Hero zeigt den Code im Slide „10 % Rabatt“. Auch das neue Willkommens-Pop-up (erscheint beim ersten Besuch nach 3 s) bietet den Code zum Kopieren und „Im Warenkorb anwenden“ an. Solange der Code fehlt, im Editor unter „Willkommens-Pop-up“ ausschalten. Bedingungen (z. B. Mindestbestellwert) bitte nennen, dann kommen sie ins Kleingedruckte.
 
 ## Fehlende Inhalte
 

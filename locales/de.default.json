@@ -37,6 +37,11 @@
     "copy": "Kopieren",
     "copied": "Kopiert"
   },
+  "welcome": {
+    "apply": "Im Warenkorb anwenden",
+    "applied": "{{ code }} ist hinterlegt. Der Rabatt wird im Warenkorb und an der Kasse abgezogen.",
+    "later": "Nein danke"
+  },
   "footer": {
     "payment": "Zahlungsarten"
   },
