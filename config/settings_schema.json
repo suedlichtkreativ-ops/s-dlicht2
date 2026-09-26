@@ -93,19 +93,19 @@
         "type": "textarea",
         "id": "store_address",
         "label": "Adresse",
-        "default": "Musterstraße 1\n86899 Landsberg am Lech"
+        "default": "Schwaighofstraße 18 h\n86899 Landsberg am Lech"
       },
       {
         "type": "textarea",
         "id": "store_hours",
         "label": "Öffnungszeiten",
-        "default": "Mo–Fr 9:00–18:00\nSa 9:00–14:00"
+        "info": "Im bisherigen Shop nicht hinterlegt. Leer lassen blendet die Zeile aus."
       },
       {
         "type": "text",
         "id": "store_phone",
         "label": "Telefon",
-        "default": "+49 8191 000000"
+        "default": "0176 41450088"
       },
       {
         "type": "text",
@@ -150,7 +150,7 @@
         "type": "text",
         "id": "cart_note_pickup",
         "label": "Hinweis zur Abholung im Warenkorb",
-        "default": "Abholung im Laden in Landsberg? Wähle an der Kasse „Abholung“."
+        "default": "Abholung vor Ort in Landsberg am Lech ist kostenlos. Wähle an der Kasse „Abholung im Geschäft“."
       }
     ]
   },

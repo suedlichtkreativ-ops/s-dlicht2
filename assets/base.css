@@ -892,3 +892,12 @@ input, textarea { caret-color: var(--ink); }
 a.bundle__title:hover { text-decoration: underline; }
 @media (max-width: 480px) { .bundle__item { grid-template-columns: 2.25rem 3.5rem minmax(0, 1fr); } .bundle__item .price { grid-column: 3; } }
 input[type='search']::-webkit-search-cancel-button { -webkit-appearance: none; appearance: none; }
+
+/* Several promo images in one mega panel: landscape so the column stays short */
+.mega__promos .mega__promo .media { --ratio: 16 / 9; }
+
+/* Headings inside rich text (product descriptions, articles) step down from page headings */
+.rte h1 { font-size: clamp(1.625rem, 2.6vw, 2.125rem); }
+.rte h2 { font-size: clamp(1.375rem, 2.2vw, 1.75rem); }
+.rte h3 { font-size: 1.1875rem; }
+.rte h4 { font-size: 1.0625rem; }

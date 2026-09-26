@@ -5,7 +5,11 @@
       "blocks": {
         "usps": {
           "type": "usps",
-          "settings": {}
+          "settings": {
+            "usp1": "Versand mit DPD in 2–4 Werktagen",
+            "usp2": "Versandkostenfrei ab 100 € in DE",
+            "usp3": "Abholung vor Ort kostenlos"
+          }
         },
         "description": {
           "type": "description",
@@ -17,7 +21,7 @@
           "type": "collapsible",
           "settings": {
             "heading": "Versand & Rückgabe",
-            "content": "<p>Wir versenden mit DHL, innerhalb Deutschlands ab 100 € versandkostenfrei. Auf Wunsch holst du deine Bestellung im Laden in Landsberg am Lech ab. Du hast ein gesetzliches Widerrufsrecht von 14 Tagen.</p>"
+            "content": "<p>Versand innerhalb Deutschlands mit DPD, Zustellung in der Regel in 2–4 Werktagen. Versandkosten 4,99 €, ab 100 € Bestellwert kostenlos. Für sperrige Artikel (z. B. Ruten ab 115 cm Transportmaß) fällt ein Sperrgutzuschlag von 9,99 € an. Abholung im Geschäft in Landsberg am Lech ist kostenlos.</p><p>Du hast ein Widerrufsrecht von 14 Tagen. Details stehen in der Widerrufsbelehrung.</p>"
           }
         }
       },

@@ -1,0 +1,593 @@
+[
+  {
+    "handle": "main-menu",
+    "titel": "Main menu",
+    "punkte": [
+      {
+        "titel": "Köder",
+        "url": "#",
+        "typ": "HTTP",
+        "unterpunkte": [
+          {
+            "titel": "Zielfisch",
+            "url": "/collections/zielfische",
+            "typ": "COLLECTION",
+            "unterpunkte": [
+              {
+                "titel": "Hechtköder",
+                "url": "/collections/hechtkoder",
+                "typ": "COLLECTION"
+              },
+              {
+                "titel": "Zanderköder",
+                "url": "/collections/zanderkoder",
+                "typ": "COLLECTION"
+              },
+              {
+                "titel": "Barschköder",
+                "url": "/collections/barschkoder",
+                "typ": "COLLECTION"
+              },
+              {
+                "titel": "Forellenköder",
+                "url": "/collections/forellenkoder",
+                "typ": "COLLECTION"
+              }
+            ]
+          },
+          {
+            "titel": "Softbaits",
+            "url": "#",
+            "typ": "HTTP",
+            "unterpunkte": [
+              {
+                "titel": "Gummifische",
+                "url": "/collections/frosche",
+                "typ": "COLLECTION"
+              },
+              {
+                "titel": "Softbait",
+                "url": "/collections/softbait",
+                "typ": "COLLECTION"
+              },
+              {
+                "titel": "Creature Baits",
+                "url": "/collections/creature-baits",
+                "typ": "COLLECTION"
+              },
+              {
+                "titel": "Twister / Grub",
+                "url": "/collections/wirbel",
+                "typ": "COLLECTION"
+              },
+              {
+                "titel": "Gummiwurm",
+                "url": "/collections/gummikoder",
+                "typ": "COLLECTION"
+              },
+              {
+                "titel": "Frosch / Topwater",
+                "url": "/collections/frosche-1",
+                "typ": "COLLECTION"
+              }
+            ]
+          },
+          {
+            "titel": "Hardbaits",
+            "url": "#",
+            "typ": "HTTP",
+            "unterpunkte": [
+              {
+                "titel": "Wobbler",
+                "url": "/collections/wobbler",
+                "typ": "COLLECTION"
+              },
+              {
+                "titel": "Crankbaits",
+                "url": "/collections/crankbaits",
+                "typ": "COLLECTION"
+              },
+              {
+                "titel": "Lipless Crankbaits",
+                "url": "/collections/lipless-crankbaits",
+                "typ": "COLLECTION"
+              },
+              {
+                "titel": "Jerkbaits",
+                "url": "/collections/jerkbaits",
+                "typ": "COLLECTION"
+              },
+              {
+                "titel": "Swimbait",
+                "url": "/collections/swimbait",
+                "typ": "COLLECTION"
+              },
+              {
+                "titel": "Popper",
+                "url": "/collections/popper",
+                "typ": "COLLECTION"
+              }
+            ]
+          },
+          {
+            "titel": "Blechköder",
+            "url": "#",
+            "typ": "HTTP",
+            "unterpunkte": [
+              {
+                "titel": "Spinner",
+                "url": "/collections/spinnerbait",
+                "typ": "COLLECTION"
+              },
+              {
+                "titel": "Spinnerbaits",
+                "url": "#",
+                "typ": "HTTP"
+              },
+              {
+                "titel": "Blinker / Spoon",
+                "url": "/collections/blinker",
+                "typ": "COLLECTION"
+              },
+              {
+                "titel": "Metal Jig",
+                "url": "/collections/metallkoder",
+                "typ": "COLLECTION"
+              },
+              {
+                "titel": "Jigspinner / Tail Spinner",
+                "url": "/collections/jigkopfe",
+                "typ": "COLLECTION"
+              },
+              {
+                "titel": "Blade Bait",
+                "url": "/collections/blade-bait",
+                "typ": "COLLECTION"
+              },
+              {
+                "titel": "Vibration Bait",
+                "url": "/collections/vibration-bait",
+                "typ": "COLLECTION"
+              },
+              {
+                "titel": "Buzzbaits",
+                "url": "/collections/buzzbaits-1",
+                "typ": "COLLECTION"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "titel": "Angelrollen",
+        "url": "#",
+        "typ": "HTTP",
+        "unterpunkte": [
+          {
+            "titel": "Stationäre Angelrollen",
+            "url": "/collections/stationarrollen",
+            "typ": "COLLECTION"
+          },
+          {
+            "titel": "Baitcaster Rollen",
+            "url": "/collections/baitcaster-rollen",
+            "typ": "COLLECTION"
+          }
+        ]
+      },
+      {
+        "titel": "Angelruten",
+        "url": "#",
+        "typ": "HTTP",
+        "unterpunkte": [
+          {
+            "titel": "Spinnruten",
+            "url": "/collections/spinnruten",
+            "typ": "COLLECTION"
+          },
+          {
+            "titel": "Baitcastruten",
+            "url": "/collections/baitcastruten",
+            "typ": "COLLECTION"
+          }
+        ]
+      },
+      {
+        "titel": "Zubehör",
+        "url": "/collections/zubehor",
+        "typ": "COLLECTION",
+        "unterpunkte": [
+          {
+            "titel": "Angelschnur",
+            "url": "/collections/angelschnur",
+            "typ": "COLLECTION"
+          },
+          {
+            "titel": "Wirbel",
+            "url": "/collections/wirbel",
+            "typ": "COLLECTION"
+          }
+        ]
+      },
+      {
+        "titel": "Bundles",
+        "url": "/collections/bundles",
+        "typ": "COLLECTION",
+        "unterpunkte": [
+          {
+            "titel": "Starter Bundle",
+            "url": "/collections/starter-bundle",
+            "typ": "COLLECTION"
+          },
+          {
+            "titel": "Hecht Bundle",
+            "url": "/collections/hecht-bundle",
+            "typ": "COLLECTION"
+          }
+        ]
+      },
+      {
+        "titel": "FAQ",
+        "url": "/pages/faq",
+        "typ": "PAGE"
+      }
+    ]
+  },
+  {
+    "handle": "footer",
+    "titel": "Rechtliches",
+    "punkte": [
+      {
+        "titel": "Über uns",
+        "url": "/pages/uber-uns",
+        "typ": "PAGE"
+      },
+      {
+        "titel": "AGB",
+        "url": "/policies/terms-of-service",
+        "typ": "SHOP_POLICY"
+      },
+      {
+        "titel": "Widerrufsbelehrung",
+        "url": "/policies/refund-policy",
+        "typ": "SHOP_POLICY"
+      },
+      {
+        "titel": "Datenschutzerklärung",
+        "url": "/policies/privacy-policy",
+        "typ": "SHOP_POLICY"
+      },
+      {
+        "titel": "Impressum",
+        "url": "/policies/legal-notice",
+        "typ": "SHOP_POLICY"
+      },
+      {
+        "titel": "Zahlung",
+        "url": "/pages/zahlung",
+        "typ": "PAGE"
+      },
+      {
+        "titel": "Versand und Lieferung",
+        "url": "/policies/shipping-policy",
+        "typ": "SHOP_POLICY"
+      },
+      {
+        "titel": "Vertrag widerufen",
+        "url": "/pages/widerruf-formular",
+        "typ": "PAGE"
+      }
+    ]
+  },
+  {
+    "handle": "customer-account-main-menu",
+    "titel": "Customer account main menu",
+    "punkte": [
+      {
+        "titel": "Orders",
+        "url": "#",
+        "typ": "HTTP"
+      },
+      {
+        "titel": "Profile",
+        "url": "#",
+        "typ": "HTTP"
+      },
+      {
+        "titel": "Bestellungen",
+        "url": "https://shopify.com/102112395606/account/orders",
+        "typ": "CUSTOMER_ACCOUNT_PAGE"
+      },
+      {
+        "titel": "Profil",
+        "url": "https://shopify.com/102112395606/account/profile",
+        "typ": "CUSTOMER_ACCOUNT_PAGE"
+      }
+    ]
+  },
+  {
+    "handle": "k-der-softbaits",
+    "titel": "Köder Softbaits",
+    "punkte": [
+      {
+        "titel": "Creature Baits",
+        "url": "/",
+        "typ": "FRONTPAGE"
+      },
+      {
+        "titel": "Frösche",
+        "url": "/",
+        "typ": "FRONTPAGE"
+      },
+      {
+        "titel": "Gummifische",
+        "url": "/",
+        "typ": "FRONTPAGE"
+      },
+      {
+        "titel": "Insekten",
+        "url": "/",
+        "typ": "FRONTPAGE"
+      },
+      {
+        "titel": "Krebse",
+        "url": "/",
+        "typ": "FRONTPAGE"
+      }
+    ]
+  },
+  {
+    "handle": "k-der-blechk-der",
+    "titel": "Köder Blechköder",
+    "punkte": [
+      {
+        "titel": "Spinnerbaits",
+        "url": "/",
+        "typ": "FRONTPAGE"
+      },
+      {
+        "titel": "Blinker",
+        "url": "/",
+        "typ": "FRONTPAGE"
+      },
+      {
+        "titel": "Buzzbaits",
+        "url": "/",
+        "typ": "FRONTPAGE"
+      },
+      {
+        "titel": "Chatterbaits",
+        "url": "/",
+        "typ": "FRONTPAGE"
+      },
+      {
+        "titel": "Durchlaufblinker",
+        "url": "/",
+        "typ": "FRONTPAGE"
+      }
+    ]
+  },
+  {
+    "handle": "k-der-hardbaits",
+    "titel": "Köder Hardbaits",
+    "punkte": [
+      {
+        "titel": "Crankbaits",
+        "url": "/",
+        "typ": "FRONTPAGE"
+      },
+      {
+        "titel": "Hybrid Köder",
+        "url": "/",
+        "typ": "FRONTPAGE"
+      },
+      {
+        "titel": "Imitate",
+        "url": "/",
+        "typ": "FRONTPAGE"
+      },
+      {
+        "titel": "Jerkbaits",
+        "url": "/",
+        "typ": "FRONTPAGE"
+      },
+      {
+        "titel": "Lipless Crankbaits",
+        "url": "/",
+        "typ": "FRONTPAGE"
+      }
+    ]
+  },
+  {
+    "handle": "k-der-zielfisch",
+    "titel": "Köder Zielfisch",
+    "punkte": [
+      {
+        "titel": "Barschköder",
+        "url": "/",
+        "typ": "FRONTPAGE"
+      },
+      {
+        "titel": "Dorschköder",
+        "url": "/",
+        "typ": "FRONTPAGE"
+      },
+      {
+        "titel": "Döbelköder",
+        "url": "/",
+        "typ": "FRONTPAGE"
+      },
+      {
+        "titel": "Forellenköder",
+        "url": "/",
+        "typ": "FRONTPAGE"
+      },
+      {
+        "titel": "Hechtköder",
+        "url": "/",
+        "typ": "FRONTPAGE"
+      }
+    ]
+  },
+  {
+    "handle": "main-menu-footer",
+    "titel": "Main menu (Footer)",
+    "punkte": [
+      {
+        "titel": "Angelrolle",
+        "url": "#",
+        "typ": "HTTP"
+      },
+      {
+        "titel": "Angelrute",
+        "url": "#",
+        "typ": "HTTP"
+      },
+      {
+        "titel": "Köder",
+        "url": "#",
+        "typ": "HTTP"
+      },
+      {
+        "titel": "Blei",
+        "url": "#",
+        "typ": "HTTP"
+      }
+    ]
+  },
+  {
+    "handle": "informationen",
+    "titel": "Informationen",
+    "punkte": [
+      {
+        "titel": "Startseite",
+        "url": "/",
+        "typ": "FRONTPAGE"
+      },
+      {
+        "titel": "Über uns",
+        "url": "/pages/uber-uns",
+        "typ": "PAGE"
+      },
+      {
+        "titel": "Kontakt",
+        "url": "/pages/contact",
+        "typ": "PAGE"
+      }
+    ]
+  },
+  {
+    "handle": "service",
+    "titel": "Beratung & Kontakt",
+    "punkte": [
+      {
+        "titel": "Support-Kontakt",
+        "url": "/pages/contact",
+        "typ": "PAGE"
+      },
+      {
+        "titel": "FAQs",
+        "url": "/pages/faq",
+        "typ": "PAGE"
+      }
+    ]
+  },
+  {
+    "handle": "kundeninfo",
+    "titel": "Kundeninfo",
+    "punkte": [
+      {
+        "titel": "Über uns",
+        "url": "/pages/uber-uns",
+        "typ": "PAGE"
+      },
+      {
+        "titel": "AGB",
+        "url": "/policies/terms-of-service",
+        "typ": "SHOP_POLICY"
+      },
+      {
+        "titel": "Widerrufsbelehrung",
+        "url": "/policies/refund-policy",
+        "typ": "SHOP_POLICY"
+      },
+      {
+        "titel": "Datenschutz",
+        "url": "/policies/privacy-policy",
+        "typ": "SHOP_POLICY"
+      },
+      {
+        "titel": "Impressum",
+        "url": "/policies/legal-notice",
+        "typ": "SHOP_POLICY"
+      },
+      {
+        "titel": "Widerruf",
+        "url": "/pages/widerruf-formular",
+        "typ": "PAGE"
+      }
+    ]
+  },
+  {
+    "handle": "shop-service",
+    "titel": "Shop-Service",
+    "punkte": [
+      {
+        "titel": "Newsletter",
+        "url": "/pages/newsletter",
+        "typ": "PAGE"
+      },
+      {
+        "titel": "Zahlung",
+        "url": "/pages/zahlung",
+        "typ": "PAGE"
+      },
+      {
+        "titel": "Versandkosten",
+        "url": "/pages/versand-lieferung",
+        "typ": "PAGE"
+      },
+      {
+        "titel": "Umtausch & Retoure",
+        "url": "/policies/refund-policy",
+        "typ": "SHOP_POLICY"
+      },
+      {
+        "titel": "Sonderangebote",
+        "url": "/collections/sale",
+        "typ": "COLLECTION"
+      },
+      {
+        "titel": "Support-Kontakt",
+        "url": "/pages/contact",
+        "typ": "PAGE"
+      }
+    ]
+  },
+  {
+    "handle": "footer-kategorie",
+    "titel": "Footer Kategorie",
+    "punkte": [
+      {
+        "titel": "Hecht",
+        "url": "/collections/zielfisch-hecht",
+        "typ": "COLLECTION"
+      },
+      {
+        "titel": "Zander",
+        "url": "/collections/zielfisch-zander",
+        "typ": "COLLECTION"
+      },
+      {
+        "titel": "Barsch",
+        "url": "/collections/barschkoder",
+        "typ": "COLLECTION"
+      },
+      {
+        "titel": "Forelle",
+        "url": "/collections/forellenkoder",
+        "typ": "COLLECTION"
+      }
+    ]
+  }
+]

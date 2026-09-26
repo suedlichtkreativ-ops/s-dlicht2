@@ -5,6 +5,8 @@ Ohne externe Bibliotheken, Schrift selbst gehostet (DSGVO), alle Inhalte im Shop
 
 Design und Regeln: [DESIGN.md](DESIGN.md)
 
+**Inhalte aus dem bisherigen Shop:** Im Ordner [`inhalte/`](inhalte/) liegen alle Texte, Produkte, Kollektionen, Menüs, Seiten, Blogbeiträge, Rechtstexte und Bild-Adressen des Stores „Köderdepot neu“. Sie wurden am 26.09.2026 nur gelesen, der Live-Store blieb unverändert. Was noch fehlt oder geklärt werden muss, steht in [`inhalte/offen.md`](inhalte/offen.md).
+
 ## Theme mit Shopify verbinden
 
 1. Shopify-Admin → **Onlineshop → Themes → Theme hinzufügen → Über GitHub verbinden**.
@@ -53,7 +55,7 @@ assets/      base.css, theme.js, archivo-var.woff2
 locales/     de.default.json
 ```
 
-Ordner wie `.claude/`, `licenses/` und die Markdown-Dateien gehören nicht zum Theme und werden von Shopify ignoriert.
+Ordner wie `.claude/`, `inhalte/`, `licenses/` und die Markdown-Dateien gehören nicht zum Theme und werden von Shopify ignoriert.
 
 ## Lizenzen
 

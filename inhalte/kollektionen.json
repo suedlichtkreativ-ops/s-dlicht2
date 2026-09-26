@@ -1,0 +1,1327 @@
+[
+  {
+    "titel": "Home page",
+    "handle": "frontpage",
+    "archiv": false,
+    "produktanzahl": 1,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": false,
+    "regeln": [],
+    "seo": {
+      "title": null,
+      "description": null
+    }
+  },
+  {
+    "titel": "Gummiköder",
+    "handle": "gummikoder",
+    "archiv": false,
+    "produktanzahl": 13,
+    "beschreibung": "## Gummiköder – weich, vielseitig, fängig\n\nGummiköder sind die vielseitigste Ködergruppe im Raubfischangeln. Weil sie weich sind, nehmen Raubfische sie auch dann nicht sofort wieder los, wenn sie den Köder nur kurz gepackt haben. Diese Eigenschaft macht sie besonders an Tagen interessant, an denen die Fische zurückhaltend sind und nur kurz zupacken.\n\nBei Köderdepot finden Sie Gummiköder in mehreren Grundformen: klassische Gummifische für die Führung am Grund, Krebse und Creature Baits für krautige Bereiche und strukturreiche Uferzonen sowie schwimmende Frösche für die Oberfläche. Jede Form deckt eine andere Situation ab – gemeinsam bilden sie ein Sortiment, mit dem sich fast jedes Raubfischgewässer abarbeiten lässt.\n\n### Welche Form für welche Situation\n\n- **Gummifisch:** Grundangeln, Jiggen, Faulenzen über Kanten und harten Böden\n\n- **Krebs und Creature Bait:** Krautfelder, Steinpackungen, Bereiche mit viel Struktur\n\n- **Schwimmender Frosch:** Flachwasser, Seerosen, Schilfkanten, dichter Bewuchs\n\n- **Wurm und Twister:** feine Führung, kleinere Köder, Barsch und Forelle\n\n### Zielfische und Gewässer\n\nGummiköder decken das gesamte Raubfischspektrum ab: Barsch, Hecht und Zander gehören zu den häufigsten Zielfischen, an vielen Gewässern kommen Wels und Rapfen dazu. Sie funktionieren im Baggersee, im Fluss, im Stausee und im kleineren Teich – die Anpassung entsteht über Gewicht, Größe und Führung, nicht über den Gewässertyp.\n\n*Alle Gummiköder bei Köderdepot gibt es in mehreren Größen und Farbdekoren. Welche Ausführung zu Ihrer Situation passt, steht in jeder Produktbeschreibung.*",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TYPE EQUALS Gummifisch",
+      "TYPE EQUALS Twister / Grub",
+      "TYPE EQUALS Creature Bait",
+      "TYPE EQUALS Würmer",
+      "TYPE EQUALS Softbait"
+    ],
+    "seo": {
+      "title": "Gummiköder & Softbaits für Raubfisch | Köderdepot",
+      "description": "Gummiköder von Köderdepot: Gummifische, Twister, Creature Baits und Würmer für Barsch, Zander und Hecht."
+    }
+  },
+  {
+    "titel": "Hardbaits",
+    "handle": "hardbaits",
+    "archiv": false,
+    "produktanzahl": 56,
+    "beschreibung": "## Hardbaits – Köder aus Hartkunststoff\n\nHardbaits sind Köder aus Hartkunststoff oder Holz. Anders als weiche Köder bringen sie ihre Laufeigenschaft selbst mit: Sie tauchen in einer bestimmten Tiefe, schlagen in einem bestimmten Rhythmus und bleiben bei einer bestimmten Führung in ihrer Bahn. Genau diese Berechenbarkeit macht sie im Spinnfischen so wertvoll.\n\nDie Kategorie ist der größte Bereich im Köderdepot-Sortiment. Sie umfasst Wobbler und Minnows für das Fischen in der Wassersäule, Crankbaits für das Abklopfen des Grunds, Jerkbaits für die Führung mit Rucks, Popper und Pencilbaits für die Oberfläche sowie Vibration und Lipless Crankbaits für das Fischen direkt über dem Grund.\n\n### Die Gruppen im Überblick\n\n- **Wobbler und Minnow:** laufen in der Wassersäule, oft mit Schwebepause\n\n- **Crankbait:** läuft tief und klopft den Grund ab\n\n- **Jerkbait:** wird mit Rucks geführt, bricht seitlich aus\n\n- **Popper und Pencil:** arbeiten an der Oberfläche mit Geräusch oder Zickzacklauf\n\n- **Vibration und Lipless:** zittern und rütteln direkt über dem Grund\n\n### Warum Hardbaits wichtig sind\n\nEin Hardbait lässt sich über weite Strecken systematisch abwerfen. Das ist dann entscheidend, wenn ein Gewässer groß ist und die Fische an Kanten, Rippeln oder Unterwasserbergen stehen, die sich nur mit der Wurfweite erreichen lassen. Weil die Lauftiefe feststeht, weiß man beim Auswerfen bereits, in welcher Schicht der Köder arbeitet.\n\n*Zielfische: Barsch, Hecht, Zander und je nach Größe Forelle, Döbel und Rapfen. Die passende Ausführung für Ihr Gewässer steht in den Eigennamen und in jeder Produktbeschreibung.*",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TYPE EQUALS Crankbait",
+      "TYPE EQUALS Lipless crankbait",
+      "TYPE EQUALS Wobbler",
+      "TYPE EQUALS Jerkbait",
+      "TYPE EQUALS Popper",
+      "TYPE EQUALS Vibration-Bait",
+      "TYPE EQUALS Swimbait",
+      "TYPE EQUALS Frösche"
+    ],
+    "seo": {
+      "title": "Hardbaits: Wobbler, Popper & Crankbaits | Köderdepot",
+      "description": "Hardbaits von Köderdepot: Wobbler, Popper, Jerkbaits und Crankbaits aus Hartkunststoff für Hecht und Zander."
+    }
+  },
+  {
+    "titel": "Jigköpfe",
+    "handle": "jigkopfe",
+    "archiv": false,
+    "produktanzahl": 7,
+    "beschreibung": "## Jigköpfe – das Gewicht am Gummiköder\n\nDer Jigkopf bestimmt, wie ein Gummiköder läuft. Er beschwert den Köder, führt ihn zum Grund und gibt ihm seinen Schwerpunkt. Eine saubere Auswahl zeigt sich daran, dass der Gummifisch gerade läuft, ohne zu drehen – und dass der Kontakt zum Grund über die Rutenspitze spürbar bleibt.\n\nKöderdepot führt Jigköpfe in Rundkopf-Form. Der Rundkopf ist die klassische Wahl, weil er einfach zu handhaben ist und in fast jeder Situation funktioniert: beim Jiggen, beim Faulenzen und beim Schleifen am Grund. Er ist damit der richtige Einstieg und bleibt auch für erfahrene Angler die Standardform.\n\n### Welches Gewicht für welche Situation\n\n- **Leicht:** flaches Wasser, langsames Absinken, feine Führung, Distanz zum Fisch\n\n- **Mittel:** Standardtiefen, normale Strömung, aktive Suche\n\n- **Schwer:** tiefe Bereiche, starke Strömung, Wind\n\n### Worauf es ankommt\n\nGrundsätzlich gilt: So leicht wie möglich, so schwer wie nötig. Ein leichterer Kopf sinkt langsamer und bleibt länger im Blickfeld der Fische, ein schwererer Kopf hält den Bodenkontakt auch bei Strömung. Die passende Wahl entsteht aus Tiefe, Strömung und Wurfweite – nicht aus der Fischgröße.\n\n*Zielfische: Barsch, Zander und Hecht. Erhältlich in mehreren Gewichten, Mengen und Farben, damit sich Köder und Gewicht auf die eigene Situation abstimmen lassen.*",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TAG EQUALS Jigkopf"
+    ],
+    "seo": {
+      "title": "Jigköpfe für Gummiköder | Köderdepot",
+      "description": "Jigköpfe von Köderdepot in mehreren Gewichten und Hakengrößen für Gummifische auf Zander, Barsch und Hecht."
+    }
+  },
+  {
+    "titel": "Zielfisch Hecht",
+    "handle": "zielfisch-hecht",
+    "archiv": false,
+    "produktanzahl": 92,
+    "beschreibung": "Die besten Angelköder und Ausrüstung für das gezielte Angeln auf Hecht.",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TAG EQUALS Hechtköder",
+      "TAG EQUALS Hecht Köder",
+      "TAG EQUALS Hecht",
+      "TAG EQUALS Hecht Rute",
+      "TAG EQUALS Hechtrute",
+      "TAG EQUALS Hecht Rolle",
+      "TAG EQUALS Hechtzange",
+      "TAG EQUALS Hechtangeln",
+      "TAG EQUALS Angeln auf Hecht"
+    ],
+    "seo": {
+      "title": "Hecht angeln: Köder, Ruten & Zubehör | Köderdepot",
+      "description": "Alles fürs Hechtangeln: Köder, Ruten, Rollen und Zubehör von Köderdepot – abgestimmt auf Kraut, Kanten und große Köder."
+    }
+  },
+  {
+    "titel": "Zielfisch Barsch",
+    "handle": "zielfisch-barsch",
+    "archiv": false,
+    "produktanzahl": 99,
+    "beschreibung": "Spezielle Köder und Ausrüstung für das Barschangeln.",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TAG EQUALS Barschköder",
+      "TAG EQUALS Barsch Köder",
+      "TAG EQUALS Barsch",
+      "TAG EQUALS Barsch Rute",
+      "TAG EQUALS Barsch Rolle",
+      "TAG EQUALS Barsch Zubehör",
+      "TAG EQUALS Barschangeln",
+      "TAG EQUALS Großbarsch"
+    ],
+    "seo": {
+      "title": "Barsch angeln: Köder, Ruten & Zubehör | Köderdepot",
+      "description": "Barsch-Ausrüstung von Köderdepot: feine Gummiköder, Jigköpfe, Ruten und Rollen für Ufer, Hafen und strukturreiche Bereiche."
+    }
+  },
+  {
+    "titel": "Zielfisch Zander",
+    "handle": "zielfisch-zander",
+    "archiv": false,
+    "produktanzahl": 86,
+    "beschreibung": "Effektive Köder und Ausrüstung für das Zanderangeln.",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TAG EQUALS Zanderköder",
+      "TAG EQUALS Zander Köder",
+      "TAG EQUALS Zander",
+      "TAG EQUALS Zander Rute",
+      "TAG EQUALS Zander Rolle",
+      "TAG EQUALS Zander Zubehör",
+      "TAG EQUALS Zanderzange",
+      "TAG EQUALS Zanderangeln"
+    ],
+    "seo": {
+      "title": "Zander angeln: Köder, Ruten & Zubehör | Köderdepot",
+      "description": "Ausrüstung fürs Zanderangeln: Gummifische, Jigköpfe, Ruten und Rollen von Köderdepot – für Kanten, Grund und Strömung."
+    }
+  },
+  {
+    "titel": "Spinnruten",
+    "handle": "spinnruten",
+    "archiv": false,
+    "produktanzahl": 14,
+    "beschreibung": "## Spinnruten – verlängerte Arme am Wasser\n\nEine Spinnrute überträgt, was unter Wasser passiert. Sie meldet Grundkontakt, sie zeigt Köderbewegungen und sie setzt den Anhieb durch. Deshalb ist sie mehr als ein Halter für die Rolle: Sie ist die Verbindung zwischen dem Angler und dem Köder.\n\nDie Spinnruten von Köderdepot sind für das Raubfischangeln mit Kunstködern ausgelegt. Unterschieden werden sie über drei Angaben: die **Länge** (Wurfweite und Umgang mit Hindernissen), die **Kraftklasse** (Power M, MH oder H – wie viel Druck verträgt die Rute) und die **Biegekurve** (Action MF, F oder XF – wie schnell die Spitze arbeitet).\n\n### Welche Länge für welches Gewässer\n\n- **2,10 bis 2,40 m:** enge Stellen, Boot, bewachsene Ufer, präzise Würfe\n\n- **2,40 bis 2,70 m:** offene Uferstrecken, breite Buhnenfelder, weite Würfe\n\n- **ab 2,70 m:** große Flächen, Distanz, Einsatz vom Ufer\n\n### Welche Auslegung für welchen Köder\n\nEine mittlere Auslegung (M) trägt leichtere bis mittlere Köder und verzeiht mehr im Drill. Eine mittelschwere bis schwere Auslegung (MH, H) bringt die Reserve für große Gummifische und kräftige Anhiebe. Eine sehr schnelle Aktion (XF) liefert den direktesten Kontakt, eine moderate Aktion (MF) federt Fluchten weicher ab.\n\n*Zielfische: Hecht und Zander, bei leichteren Auslegungen auch Barsch und Forelle. Alle Ruten sind als Spinn- oder Baitcastruten erhältlich, wo die Baureihe das vorsieht.*",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TYPE EQUALS Spinnruten"
+    ],
+    "seo": {
+      "title": "Spinnruten für Hecht & Zander | Köderdepot",
+      "description": "Spinnruten von Köderdepot in 2,1 bis 2,7 Metern: Allround-, Weitwurf- und Kraftruten für Kunstköder."
+    }
+  },
+  {
+    "titel": "Baitcastruten",
+    "handle": "baitcastruten",
+    "archiv": false,
+    "produktanzahl": 8,
+    "beschreibung": "## Baitcastruten – für Werfer, die den Köder spüren wollen\n\nEine Baitcastrute wird mit einer Baitcaster-Rolle gefischt, die auf dem Blank sitzt statt darunter. Der Daumen liegt dabei auf der Spule. Das erlaubt ein sehr direktes Werfen und eine feine Kontrolle, sobald die Übung da ist.\n\nDer Vorteil liegt nicht nur im Wurf. Weil der Daumen die Spule berührt, spürt man den Köder während des ganzen Wurfablaufs. Das ist besonders bei schwereren Ködern und bei präzisen Würfen an Hindernissen ein echter Vorteil – man kann den Aufprallpunkt steuern, statt ihn nur zu treffen.\n\n### Für wen sich Baitcastruten lohnen\n\n- **Schwere Köder:** große Gummifische, Jerkbaits, Spinnerbaits\n\n- **Präzise Würfe:** gezielt an Krautkanten, unter überhängendes Holz, an Stege\n\n- **Dauerhaftes Werfen:** wer den ganzen Tag wirft, schont das Handgelenk\n\n- **Direkter Kontakt:** der Köderlauf wird unmittelbar in die Hand übertragen\n\n### Was man dazu wissen sollte\n\nDer Einstieg braucht etwas Übung: Die Wurfbremse muss zur Ködergewicht-Klasse passen, sonst entstehen Schnurperücken. Dafür ist die Bremse bei jeder Baitcaster-Rolle einstellbar – ist sie einmal richtig eingestellt, wirft die Kombination sehr zuverlässig.\n\n*Zielfische: Hecht und Zander, ergänzend Barsch. Als Kraftrute, Weitwurfrute und Allroundrute in mehreren Längen erhältlich.*",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TYPE EQUALS Baitcastruten"
+    ],
+    "seo": {
+      "title": "Baitcastruten für Kunstköder | Köderdepot",
+      "description": "Baitcastruten von Köderdepot: Allround- und Kraftruten mit Trigger für präzises Werfen schwerer Köder."
+    }
+  },
+  {
+    "titel": "Stationärrollen",
+    "handle": "stationarrollen",
+    "archiv": false,
+    "produktanzahl": 10,
+    "beschreibung": "## Stationärrollen – die Standardrolle für das Spinnfischen\n\nDie Stationärrolle sitzt unter der Rute und wird mit der Hand gekurbelt, während die Schnur über eine sich drehende Spule abläuft. Sie ist damit die einfachste und verzeihendste Rollenart – weshalb sie für die meisten Angler der Einstieg ist und für viele auch der Standard bleibt.\n\nDie Stationärrollen von Köderdepot sind für das Raubfischangeln ausgelegt und werden über zwei Größenordnungen unterschieden: **1500 und 2500** für das leichte Spinnfischen auf Barsch, Zander und Forelle, **2800 und 5800** für mittlere bis schwere Raubfischangelei, und **12000** für das Distanzangeln auf Wels und Karpfen.\n\n### Was die Zahlen bedeuten\n\n- **Übersetzung:** wie viel Schnur je Kurbelumdrehung eingezogen wird – höher heißt schneller\n\n- **Bremskraft:** wie viel Druck der Fisch nehmen kann, bevor Schnur abläuft\n\n- **Kugellager:** je mehr, desto leichter meist der Lauf\n\n- **Bremssystem:** Front- oder Heckbremse mit hörbarem Alarm\n\n### Welche Größe für welchen Einsatz\n\nEine kleine Rolle mit 1500 oder 2500 wiegt wenig und passt zu leichten Ködern, kurzen Würfen und feiner Führung. Größere Rollen mit 2800 und 5800 bringen mehr Schnurfassung und mehr Kraft für schwere Köder und weite Würfe. Die 12000er ist für Distanzen gebaut, bei denen eine schwere Montage lange liegt.\n\n*Zielfische: Barsch, Zander, Hecht, Forelle, Wels und Karpfen. Alle Rollen mit Angabe zu Übersetzung, Bremskraft und Aufbau in der Produktbeschreibung.*",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TYPE EQUALS Stationärrollen"
+    ],
+    "seo": {
+      "title": "Stationärrollen für Raubfisch | Köderdepot",
+      "description": "Stationärrollen von Köderdepot: Frontbremser mit ruhigem Lauf in mehreren Größen für Ufer und Strömung."
+    }
+  },
+  {
+    "titel": "Baitcaster Rollen",
+    "handle": "baitcaster-rollen",
+    "archiv": false,
+    "produktanzahl": 6,
+    "beschreibung": "## Baitcaster-Rollen – direkte Kontrolle über den Daumen\n\nEine Baitcaster-Rolle liegt auf der Rute, die Spule dreht sich quer zur Wurfrichtung. Der Daumen steuert sie während des Wurfs. Das verlangt Übung, gibt aber eine Kontrolle zurück, die mit keiner anderen Rollenart möglich ist: Man merkt, wann der Köder aufkommt, und kann ihn abbremsen, bevor eine Schnurperücke entsteht.\n\nAlle Baitcaster-Rollen von Köderdepot sind Low-Profile-Modelle, sitzen also flach nah an der Hand. Sie sind für das Raubfischangeln ausgelegt und unterscheiden sich in Übersetzung, Bremskraft und Wurfbremssystem.\n\n### Was die Modelle unterscheidet\n\n- **Kompaktcaster:** kompakte Bauform, kombinierte Magnet- und Fliehkraftbremse\n\n- **Kraftwerfer:** hohe Übersetzung für zügige Köderführung, starke Bremse\n\n- **Allroundcaster:** ausgewogene Übersetzung, einstellbare Magnetbremse, Carbonfaserbremse\n\n### Worauf bei der Auswahl zu achten ist\n\nEine hohe Übersetzung holt viel Schnur je Kurbelumdrehung ein und passt zu Gummifischen und Ködern, die nach dem Anheben zügig wieder auf Tiefe kommen sollen. Eine niedrigere Übersetzung bringt mehr Kraft und passt zu schweren Ködern und zu Drills mit kräftigen Fischen. Bei der Spule ist eine flache Auslegung für leichtere Köder und eine tiefe Spule für schwerere Köder und stärkere Schnur gedacht.\n\n*Die meisten Modelle sind für Rechts- und Linkshand erhältlich. Zielfische: Hecht, Zander und Barsch.*",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TYPE EQUALS Baitcaster Rollen"
+    ],
+    "seo": {
+      "title": "Baitcaster-Rollen für Werfer | Köderdepot",
+      "description": "Baitcaster-Rollen von Köderdepot: Low-Profile-Modelle mit Magnet- und Fliehkraftbremse, rechts oder links."
+    }
+  },
+  {
+    "titel": "Angelschnur",
+    "handle": "angelschnur",
+    "archiv": false,
+    "produktanzahl": 8,
+    "beschreibung": "## Angelschnur – die Verbindung zum Fisch\n\nDie Schnur ist das Bauteil, das man am wenigsten sieht und am stärksten spürt. Sie überträgt jeden Kontakt und federt jeden Fehler ab. Deshalb entscheidet nicht der Preis, sondern die Bauart darüber, ob eine Schnur zum eigenen Angeln passt.\n\nKöderdepot führt zwei grundsätzlich verschiedene Bauarten.\n\n### Monofile Schnüre\n\nMonofile Schnüre haben eine gewisse Dehnung. Das verzeiht Fehler im Drill, federt den Anhieb ab und eignet sich besonders für den Einstieg sowie für empfindliche Ruten. Bei Posen- und Grundmontagen ist die Dehnung kein Nachteil, sondern hilft. Erhältlich als Uferleine mit 100 m und Vorratsleine mit 500 m, jeweils transparent und kaffeefarben.\n\n### Geflochtene Schnüre\n\nGeflochtene Schnüre haben fast keine Dehnung. Köderbewegungen und Bisse werden direkt in die Hand übertragen, und wegen des geringen Durchmessers lassen sich weitere Würfe erreichen. Achtfach geflochtene Schnüre laufen dabei runder und leiser als vierfach geflochtene. Erhältlich als Grünklinge mit 150 m und Silberleine mit 500 m.\n\n### Welche Schnur wofür\n\n- **Posen- und Grundangeln:** monofil, die Dehnung hilft\n\n- **Spinnfischen mit Gummifisch:** geflochten, für direkten Köderkontakt\n\n- **Weite Würfe:** geflochten, wegen des geringen Durchmessers\n\n- **Feine Bisserkennung auf Distanz:** geflochten, ohne Dehnungspuffer\n\n*Mit steigendem Durchmesser steigt die Tragkraft. Die passende Stärke ergibt sich aus Ködergewicht, Strömung und erwarteter Fischgröße.*",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TYPE CONTAINS Schnur",
+      "TAG EQUALS Schnur",
+      "TAG EQUALS Angelschnur",
+      "TAG EQUALS Transparente Angelschnur",
+      "TAG EQUALS Transparente Schnur",
+      "TAG EQUALS PE Schnur",
+      "TAG EQUALS Süßwasser Schnur",
+      "TAG EQUALS 500m Schnur",
+      "TAG EQUALS Geflochtene Schnur",
+      "TAG EQUALS Nylon Schnur",
+      "TAG EQUALS Nylon Angelschnur",
+      "TAG EQUALS Monofile Schnur",
+      "TAG EQUALS Monofile Angelschnur",
+      "TAG EQUALS Allround Schnur",
+      "TAG EQUALS Angelschnur 100m"
+    ],
+    "seo": {
+      "title": "Angelschnur: mono & geflochten | Köderdepot",
+      "description": "Angelschnur von Köderdepot: monofile Ufer- und Vorratsleinen sowie geflochtene Grünklinge und Silberleine."
+    }
+  },
+  {
+    "titel": "Zubehör",
+    "handle": "zubehor",
+    "archiv": false,
+    "produktanzahl": 9,
+    "beschreibung": "## Angelzubehör – die kleinen Teile, die den Unterschied machen\n\nZubehör entscheidet selten über den Fang, aber häufig über den Ablauf des Angeltags. Ein Snap-Verbinder spart Minuten beim Köderwechsel, eine Lösezange schützt Fisch und Hand. Wer diese Teile beisammen hat, arbeitet ruhiger und kommt schneller wieder zum Wurf.\n\n### Was zu diesem Bereich gehört\n\n- **Snap-Verbinder:** Köderwechsel ohne Neuknoten, in mehreren Größen\n\n- **Lösezangen:** Haken schonend lösen, kurz und lang gebaut\n\n- **Montagematerial:** Kleinteile für den Aufbau der Montage am Wasser\n\n### Worauf beim Kauf zu achten ist\n\nBeim Snap-Verbinder muss die Größe zum Köder und zur Tragkraft der Schnur passen: kleinere Ausführungen für feine Köder, größere für schwere. Bei der Lösezange gilt: kurze Zangen arbeiten präzise am Maul, lange Bauformen geben Hebelkraft bei tief sitzenden Haken und halten die Hand vom Zahngebiss der Raubfische fern.\n\n*Wer sein Tackle einmal vollständig aufbaut, wechselt danach nur noch Nachschub. Deshalb gibt es die meisten Zubehörteile in Gebinden, die einen ganzen Angelangeltag abdecken.*",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TYPE EQUALS Lösezangen",
+      "TYPE EQUALS Snap Swivel"
+    ],
+    "seo": {
+      "title": "Angelzubehör: Snap & Lösezangen | Köderdepot",
+      "description": "Angelzubehör von Köderdepot: Snap-Verbinder für schnellen Köderwechsel und Lösezangen für schonendes Hakenlösen."
+    }
+  },
+  {
+    "titel": "Metallköder",
+    "handle": "metallkoder",
+    "archiv": false,
+    "produktanzahl": 15,
+    "beschreibung": "## Metallköder – Gewicht für weite Würfe und tiefe Bereiche\n\nMetallköder bringen mit, was Kunststoff nicht leisten kann: eigenes Gewicht. Damit lassen sich auch bei Wind und Strömung noch weite Würfe setzen, und tiefe Bereiche sowie Bereiche mit starker Strömung bleiben erreichbar. Im Köderdepot-Sortiment gehören Blinker, Spoons und Metal Jigs zu dieser Gruppe.\n\nBlinker und Spoons arbeiten mit einer taumelnden Absinkphase und einem Lauf, der sich mit Tempowechseln steuern lässt. Metal Jigs sind dagegen für die senkrechte Führung gebaut: Sie fallen kontrolliert zum Grund und werden in kurzen Sprüngen wieder angehoben.\n\n### Einsatzgebiete\n\n- **Blinker und Spoons:** Fluss, Strömungskanten, große Flächen, weite Würfe\n\n- **Metal Jig:** tiefe Bereiche, senkrechte Führung, Boot oder Ufer in Wurfweite\n\n- **Salzwasser und Brackwasser:** Metallköder sind hier besonders robust\n\n### Für welche Angler Metallköder interessant sind\n\nWer viel Fluss fischt, kommt an Metallködern nicht vorbei – sie halten Strömungsdruck aus und lassen sich auch gegen den Zug führen. Auch am Meer oder im Brackwasser sind sie eine naheliegende Wahl, weil sie unempfindlich sind und auf Entfernung kontrollierbar bleiben.\n\n*Zielfische: Hecht, Zander, Barsch und Wels. Die verschiedenen Gewichte erlauben die Anpassung an Wurfweite, Tiefe und Strömung.*",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TYPE EQUALS Metal jig",
+      "TYPE EQUALS Blade Bait",
+      "TYPE EQUALS Spoons",
+      "TYPE EQUALS Spinner",
+      "TYPE EQUALS Spinnerbait",
+      "TYPE EQUALS Buzzbait",
+      "TYPE EQUALS Tail spinner"
+    ],
+    "seo": {
+      "title": "Metallköder: Blinker, Spinner & Jigs | Köderdepot",
+      "description": "Metallköder von Köderdepot: Blinker, Spinner, Spoons und Metal Jigs mit hohem Gewicht für weite Würfe und Tiefe."
+    }
+  },
+  {
+    "titel": "Oberflächenköder",
+    "handle": "oberflachenkoder",
+    "archiv": false,
+    "produktanzahl": 15,
+    "beschreibung": "## Oberflächenköder – die sichtbarste Art zu angeln\n\nOberflächenköder arbeiten an der Wasseroberfläche. Man sieht den Köder laufen, sieht ihn anwerfen und sieht, wie der Fisch darauf reagiert. Das ist der unmittelbarste Reiz im Raubfischangeln – und für viele Angler der Grund, überhaupt mit Kunstködern zu fischen.\n\nZu dieser Gruppe gehören bei Köderdepot Popper mit Knallgeräusch, Pencilbaits mit Zickzacklauf, schwimmende Frösche für den dichten Bewuchs und Buzzbaits mit rotierendem Blatt. Sie unterscheiden sich im Geräusch und im Lauf, nicht in der Wasserschicht: Alle bleiben auf oder dicht unter der Oberfläche.\n\n### Wann Oberflächenköder funktionieren\n\nDie Faustregel ist einfach: Wenn die Raubfische oben stehen, dann fischt man oben. Das sind die warmen Monate, die frühen Morgenstunden und die Abenddämmerung. An ruhigen Stellen in Flachwasserbereichen, über Kraut und an Schilfkanten bleiben Oberflächenköder oft den ganzen Tag über interessant.\n\n- **Popper:** erzeugt durch das hohle Maul ein Knallgeräusch\n\n- **Pencil:** läuft im Zickzack von links nach rechts\n\n- **Frosch:** schwimmend und weedless für den Bewuchs\n\n- **Buzzbait:** rotierendes Blatt an der Oberfläche\n\n### Zielfische und Gewässer\n\nHecht und Barsch sind die klassischen Zielfische, dazu kommen Rapfen und Döbel in Fließgewässern sowie Wels in den warmen Sommermonaten. Ideal sind flachere, krautige Gewässer, Altarme, Buchten und Bereiche mit viel Oberflächenstruktur.\n\n*Wer einmal einen Hecht auf einen Popper gesehen hat, greift freiwillig wieder zu. Für den Einstieg genügt ein Popper in Kombination mit einem schwimmenden Frosch.*",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TYPE EQUALS Popper",
+      "TYPE EQUALS Frösche",
+      "TYPE EQUALS Buzzbait"
+    ],
+    "seo": {
+      "title": "Oberflächenköder: Popper & Buzzbaits | Köderdepot",
+      "description": "Oberflächenköder von Köderdepot: Popper, Buzzbaits und Frösche für sichtbare Bisse auf Hecht und Barsch."
+    }
+  },
+  {
+    "titel": "Neuheiten",
+    "handle": "neuheiten",
+    "archiv": false,
+    "produktanzahl": 0,
+    "beschreibung": "Entdecke die neuesten Produkte im Köderdepot – frische Köder, Ruten und Rollen für die aktuelle Saison.",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TAG EQUALS neu"
+    ],
+    "seo": {
+      "title": "Neuheiten bei Köderdepot",
+      "description": "Neu im Sortiment von Köderdepot: neue Köder, Ruten und Zubehör. Jetzt die neuesten Produkte entdecken."
+    }
+  },
+  {
+    "titel": "Bestseller",
+    "handle": "bestseller",
+    "archiv": false,
+    "produktanzahl": 91,
+    "beschreibung": "Unsere meistverkauften Produkte – von Anglern empfohlen und bewährt am Wasser.",
+    "bild": "https://cdn.shopify.com/s/files/1/1021/1239/5606/collections/ChatGPT_Image_16._Juli_2026_13_48_12.png?v=1785573745",
+    "automatisch": true,
+    "regeln": [
+      "VARIANT_PRICE GREATER_THAN 0"
+    ],
+    "seo": {
+      "title": "Bestseller bei Köderdepot | Angelshop",
+      "description": "Die beliebtesten Köder, Ruten und Rollen bei Köderdepot – von Anglern am häufigsten gekauft. Jetzt Bestseller entdecken."
+    }
+  },
+  {
+    "titel": "Smart Products Filter Index - Do not delete",
+    "handle": "globofilter-best-selling-products-index",
+    "archiv": true,
+    "produktanzahl": 141,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "VARIANT_PRICE GREATER_THAN -9999"
+    ],
+    "seo": {
+      "title": null,
+      "description": null
+    }
+  },
+  {
+    "titel": "Barschköder",
+    "handle": "barschkoder",
+    "archiv": false,
+    "produktanzahl": 67,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TAG EQUALS barschköder"
+    ],
+    "seo": {
+      "title": "Barschköder: Gummiköder & Wobbler | Köderdepot",
+      "description": "Barschköder von Köderdepot: feine Gummiköder, Jigköpfe, Wobbler und Spinner für Ufer, Hafen und Krautfelder."
+    }
+  },
+  {
+    "titel": "ARCHIV – Dorschköder (leer)",
+    "handle": "dorschkoder",
+    "archiv": true,
+    "produktanzahl": 0,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TAG EQUALS Dorschköder"
+    ],
+    "seo": {
+      "title": null,
+      "description": null
+    }
+  },
+  {
+    "titel": "Döbelköder",
+    "handle": "dobelkoder",
+    "archiv": false,
+    "produktanzahl": 0,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TAG EQUALS Döbelköder"
+    ],
+    "seo": {
+      "title": "Döbelköder | Köderdepot",
+      "description": "Döbelköder von Köderdepot: kleine Spinner und Wobbler für Döbel in Fluss und Bach."
+    }
+  },
+  {
+    "titel": "Creature Baits",
+    "handle": "creature-baits",
+    "archiv": false,
+    "produktanzahl": 5,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TAG EQUALS Creature Bait"
+    ],
+    "seo": {
+      "title": "Creature Baits & Krebse | Köderdepot",
+      "description": "Creature Baits von Köderdepot: Krebse und Kreaturen mit Eigenaktion für Barsch und Zander an Strukturen."
+    }
+  },
+  {
+    "titel": "Hechtköder",
+    "handle": "hechtkoder",
+    "archiv": false,
+    "produktanzahl": 62,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TAG EQUALS Hechtköder"
+    ],
+    "seo": {
+      "title": "Hechtköder: Wobbler, Gummifische & Spinner | Köderdepot",
+      "description": "Hechtköder von Köderdepot: große Wobbler, Gummifische und Spinnerbaits für Kraut, Kanten und Flachwasser."
+    }
+  },
+  {
+    "titel": "Forellenköder",
+    "handle": "forellenkoder",
+    "archiv": false,
+    "produktanzahl": 11,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": false,
+    "regeln": [],
+    "seo": {
+      "title": "Forellenköder: Spinner & Wobbler | Köderdepot",
+      "description": "Forellenköder von Köderdepot: kleine Spinner, Wobbler und Softbaits für Bach, See und Forellenteich."
+    }
+  },
+  {
+    "titel": "Gummifische",
+    "handle": "frosche",
+    "archiv": false,
+    "produktanzahl": 2,
+    "beschreibung": "Gummifische gehören zu den **erfolgreichsten Kunstködern** beim modernen Raubfischangeln. Durch ihren natürlichen Lauf, die flexible Gummimischung und starke Druckwellen imitieren sie perfekt kleine Beutefische – ideal für **Barsch, Zander und Hecht**. Egal ob am **Jigkopf**, am **Offset-Haken**, im **Texas Rig**, **Carolina Rig** oder am **Drop Shot**: Gummifische lassen sich extrem vielseitig fischen und decken nahezu jedes Gewässer ab.\n\nIn dieser Kollektion findest du hochwertige Gummifische in verschiedenen Größen, Farben und Designs – von natürlichen Dekoren für klares Wasser bis hin zu aggressiven Schockfarben für trübe Bedingungen. Perfekt zum **Absuchen großer Wasserflächen**, für das präzise Angeln an Strukturen und für Situationen mit hohem Angeldruck.",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TAG EQUALS Gummifische"
+    ],
+    "seo": {
+      "title": "Gummifische & Froschköder | Köderdepot",
+      "description": "Gummifische und Froschköder von Köderdepot für Barsch und Hecht – für Krautfelder und flache Bereiche."
+    }
+  },
+  {
+    "titel": "Krebse",
+    "handle": "krebse",
+    "archiv": false,
+    "produktanzahl": 2,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TAG EQUALS Krebs"
+    ],
+    "seo": {
+      "title": "Krebse als Köder | Köderdepot",
+      "description": "Krebs-Imitate von Köderdepot: weiche Krebse mit Eigenaktion für Barsch und Zander an Steinpackungen."
+    }
+  },
+  {
+    "titel": "Insekten",
+    "handle": "insekten",
+    "archiv": false,
+    "produktanzahl": 1,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TAG EQUALS Insekt"
+    ],
+    "seo": {
+      "title": "Insekten-Imitate | Köderdepot",
+      "description": "Insekten-Imitate von Köderdepot für Forelle und Barsch – feine Köder für klares Wasser und scheue Fische."
+    }
+  },
+  {
+    "titel": "Frösche",
+    "handle": "frosche-1",
+    "archiv": false,
+    "produktanzahl": 5,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TAG EQUALS Froschköder"
+    ],
+    "seo": {
+      "title": "Frösche & Topwater-Köder | Köderdepot",
+      "description": "Froschköder von Köderdepot: weedless Frösche und Topwater-Köder für Seerosen, Kraut und flache Buchten."
+    }
+  },
+  {
+    "titel": "Crankbaits",
+    "handle": "crankbaits",
+    "archiv": false,
+    "produktanzahl": 15,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TAG EQUALS Crankbait"
+    ],
+    "seo": {
+      "title": "Crankbaits für Hecht & Zander | Köderdepot",
+      "description": "Crankbaits von Köderdepot: tief laufende Wobbler mit Tauchschaufel für Grundnähe und ausgedehnte Plateaus."
+    }
+  },
+  {
+    "titel": "Hybrid Köder",
+    "handle": "hybrid-koder",
+    "archiv": false,
+    "produktanzahl": 1,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TAG EQUALS Hybridköder"
+    ],
+    "seo": {
+      "title": "Hybrid-Köder | Köderdepot",
+      "description": "Hybrid-Köder von Köderdepot: Kombinationen aus Gummikörper und Blatt für Druck und Reiz zugleich."
+    }
+  },
+  {
+    "titel": "ARCHIV – Imitate (leer)",
+    "handle": "imitate",
+    "archiv": true,
+    "produktanzahl": 0,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TAG EQUALS Imitate"
+    ],
+    "seo": {
+      "title": null,
+      "description": null
+    }
+  },
+  {
+    "titel": "Lipless Crankbaits",
+    "handle": "lipless-crankbaits",
+    "archiv": false,
+    "produktanzahl": 2,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TAG EQUALS Lipless Crankbait"
+    ],
+    "seo": {
+      "title": "Lipless Crankbaits & Vibration | Köderdepot",
+      "description": "Lipless Crankbaits von Köderdepot: Vibrationsköder ohne Tauchschaufel für tiefe Kanten und vertikales Fischen."
+    }
+  },
+  {
+    "titel": "Jerkbaits",
+    "handle": "jerkbaits",
+    "archiv": false,
+    "produktanzahl": 6,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TAG EQUALS Jerkbait"
+    ],
+    "seo": {
+      "title": "Jerkbaits für Hecht & Zander | Köderdepot",
+      "description": "Jerkbaits von Köderdepot: sinkende und schwebende Köder für ruckartige Führung an Kanten und über Kraut."
+    }
+  },
+  {
+    "titel": "Blinker",
+    "handle": "blinker",
+    "archiv": false,
+    "produktanzahl": 2,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TAG EQUALS Blinker"
+    ],
+    "seo": {
+      "title": "Blinker und Spoons | Köderdepot",
+      "description": "Blinker von Köderdepot: kompakte Metallköder mit starkem Druck für Zander, Hecht und Forelle in Strömung."
+    }
+  },
+  {
+    "titel": "ARCHIV – Chatterbaits (leer)",
+    "handle": "chatterbaits",
+    "archiv": true,
+    "produktanzahl": 0,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TAG EQUALS Chatterbaits"
+    ],
+    "seo": {
+      "title": null,
+      "description": null
+    }
+  },
+  {
+    "titel": "Buzzbaits",
+    "handle": "buzzbaits-1",
+    "archiv": false,
+    "produktanzahl": 2,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TAG EQUALS Buzzbaits"
+    ],
+    "seo": {
+      "title": "Buzzbaits für die Oberfläche | Köderdepot",
+      "description": "Buzzbaits von Köderdepot: Oberflächenköder mit rotierendem Propeller für spektakuläre Hechtbisse im Flachwasser."
+    }
+  },
+  {
+    "titel": "ARCHIV – Durchlaufblinker (leer)",
+    "handle": "durchlaufblinker",
+    "archiv": true,
+    "produktanzahl": 0,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TAG EQUALS Durchlaufblinker"
+    ],
+    "seo": {
+      "title": null,
+      "description": null
+    }
+  },
+  {
+    "titel": "Zielfische",
+    "handle": "zielfische",
+    "archiv": false,
+    "produktanzahl": 80,
+    "beschreibung": "",
+    "bild": "https://cdn.shopify.com/s/files/1/1021/1239/5606/collections/Koederdepot_5.png?v=1784194290",
+    "automatisch": true,
+    "regeln": [
+      "TAG EQUALS barschköder",
+      "TAG EQUALS Dorschköder",
+      "TAG EQUALS Döbelköder",
+      "TAG EQUALS Forellenköder",
+      "TAG EQUALS Hechtköder"
+    ],
+    "seo": {
+      "title": "Zielfisch wählen: Hecht, Zander, Barsch | Köderdepot",
+      "description": "Ausrüstung nach Zielfisch: Köder, Ruten und Rollen für Hecht, Zander, Barsch, Forelle und Döbel bei Köderdepot."
+    }
+  },
+  {
+    "titel": "Spinnerbaits",
+    "handle": "spinnerbaits",
+    "archiv": false,
+    "produktanzahl": 8,
+    "beschreibung": "Spinnerbaits gehören zu den effektivsten Suchködern im Raubfischangeln und sind echte Allrounder für Hecht, Barsch und Zander. Durch ihre besondere Bauform aus Drahtbügel, Spinnerblättern und Skirt erzeugen sie eine Kombination aus **Lichtreflexen, Druckwellen und starken Vibrationen**, die Räuber auch auf größere Distanz zuverlässig aufmerksam macht.\n\nEin großer Vorteil von Spinnerbaits ist ihre hohe Fängigkeit in schwierigem Gelände: Sie lassen sich sehr gut durch **Kraut, Holz, Seerosenfelder, Steine und andere Strukturen** führen, ohne ständig hängen zu bleiben. Genau deshalb zählen Spinnerbaits zu den besten Ködern, wenn man aktiv Wasser absuchen möchte oder Räuber in Deckung stehen.\n\nJe nach Größe, Gewicht und Blattform können Spinnerbaits sowohl flach über Kraut als auch tiefer entlang von Kanten geführt werden. Besonders effektiv sind sie beim **gleichmäßigen Einkurbeln**, aber auch Stop-&-Go, kurze Beschleunigungen oder ein Absinken lassen sich perfekt einsetzen, um Bisse zu provozieren.\n\nSpinnerbaits sind ideal, wenn du schnell herausfinden willst, wo die Fische stehen – und wenn du einen Köder brauchst, der selbst bei Wind, trübem Wasser oder hohem Angeldruck zuverlässig Reize setzt.",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TAG EQUALS Spinnerbait"
+    ],
+    "seo": {
+      "title": "Spinnerbaits für Kraut & Kanten | Köderdepot",
+      "description": "Spinnerbaits von Köderdepot mit rotierenden Blättern für Hecht und Barsch – krautschonend an Kanten und Hindernissen."
+    }
+  },
+  {
+    "titel": "Topwater",
+    "handle": "topwater",
+    "archiv": false,
+    "produktanzahl": 15,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TAG EQUALS Topwater"
+    ],
+    "seo": {
+      "title": "Topwater-Köder für die Oberfläche | Köderdepot",
+      "description": "Topwater-Köder von Köderdepot: Popper, Buzzbaits und Frösche für spektakuläre Bisse an der Wasseroberfläche."
+    }
+  },
+  {
+    "titel": "Angeltechniken",
+    "handle": "einsatzzweck",
+    "archiv": false,
+    "produktanzahl": 28,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TAG EQUALS Topwater",
+      "TAG EQUALS Finesse",
+      "TAG EQUALS Searchbait",
+      "TAG EQUALS Ultralight"
+    ],
+    "seo": {
+      "title": null,
+      "description": null
+    }
+  },
+  {
+    "titel": "Zanderköder",
+    "handle": "zanderkoder",
+    "archiv": false,
+    "produktanzahl": 53,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TAG EQUALS Zanderköder"
+    ],
+    "seo": {
+      "title": "Zanderköder: Gummifische & Jigköpfe | Köderdepot",
+      "description": "Zanderköder von Köderdepot: Gummifische, Jigköpfe und Wobbler für Kanten, Grund und Strömung im Fluss und See."
+    }
+  },
+  {
+    "titel": "Searchbait",
+    "handle": "searchbait",
+    "archiv": false,
+    "produktanzahl": 2,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TAG EQUALS Searchbait"
+    ],
+    "seo": {
+      "title": "Searchbaits zum Absuchen | Köderdepot",
+      "description": "Searchbaits von Köderdepot: laufstabile Köder zum schnellen Absuchen großer Flächen auf der Suche nach aktiven Fischen."
+    }
+  },
+  {
+    "titel": "Finesse",
+    "handle": "finesse",
+    "archiv": false,
+    "produktanzahl": 7,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TAG EQUALS Finesse"
+    ],
+    "seo": {
+      "title": "Finesse-Angeln: feine Köder | Köderdepot",
+      "description": "Finesse-Köder von Köderdepot: feine Gummiköder und Rigs für Barsch und Zander bei klarem Wasser und Druck."
+    }
+  },
+  {
+    "titel": "Ultralight",
+    "handle": "ultralight",
+    "archiv": false,
+    "produktanzahl": 4,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TAG EQUALS Ultralight"
+    ],
+    "seo": {
+      "title": "Ultralight-Angeln | Köderdepot",
+      "description": "Ultralight-Ausrüstung von Köderdepot: leichte Köder und feine Ruten für Barsch, Forelle und Weißfisch."
+    }
+  },
+  {
+    "titel": "Deep Diver",
+    "handle": "deep-diver",
+    "archiv": false,
+    "produktanzahl": 2,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TAG EQUALS Deep Diver"
+    ],
+    "seo": {
+      "title": "Deep Diver: tief laufende Wobbler | Köderdepot",
+      "description": "Deep Diver von Köderdepot: Wobbler mit langer Tauchschaufel für tiefe Bereiche an Kanten und im Freiwasser."
+    }
+  },
+  {
+    "titel": "Castingrolle",
+    "handle": "castingrolle",
+    "archiv": false,
+    "produktanzahl": 2,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TAG EQUALS Castingrolle"
+    ],
+    "seo": {
+      "title": "Castingrollen | Köderdepot",
+      "description": "Castingrollen von Köderdepot: robuste Rollen mit Daumenkontrolle für schwere Köder und präzise Würfe."
+    }
+  },
+  {
+    "titel": "ARCHIV – Angelschnur (Duplikat)",
+    "handle": "schnur",
+    "archiv": true,
+    "produktanzahl": 8,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TAG EQUALS Schnur",
+      "TAG EQUALS Angelschnur",
+      "TAG EQUALS Transparente Angelschnur",
+      "TAG EQUALS PE Schnur",
+      "TAG EQUALS Süßwasser Schnur",
+      "TAG EQUALS 500m Schnur",
+      "TAG EQUALS Geflochtene Schnur"
+    ],
+    "seo": {
+      "title": null,
+      "description": null
+    }
+  },
+  {
+    "titel": "ARCHIV – Stationärrolle (Duplikat)",
+    "handle": "stationarrolle",
+    "archiv": true,
+    "produktanzahl": 10,
+    "beschreibung": "## Stationärrollen – die Standardrolle für das Spinnfischen\n\nDie Stationärrolle ist die am weitesten verbreitete Rolle am Wasser. Das Prinzip ist einfach: Die Spule steht fest, der Bügel legt die Schnur auf, und der Rotor wickelt sie beim Kurbeln auf. Diese Bauart verzeiht Wurf- und Führungsfehler und ist deshalb der richtige Einstieg – und für die meisten Angler dauerhaft die passende Wahl.\n\nAlle Stationärrollen von Köderdepot sind Frontbremser. Sie unterscheiden sich in Spulengröße, Übersetzung und Bremskraft.\n\n### Was die Modelle unterscheidet\n\n- **Uferrolle:** kompakte Gehäuse, ruhiger Lauf, für das Angeln vom Ufer\n\n- **Stromjäger:** größere Spulen und kräftigere Bremsen für Strömung und größere Fische\n\n### Worauf bei der Auswahl zu achten ist\n\nDie Spulengröße muss zum Ködergewicht und zur Schnurstärke passen: kleine Rollen für feine Köder und leichte Montagen, größere für schwere Gummifische und weite Würfe. Die Übersetzung entscheidet, wie viel Schnur je Kurbelumdrehung eingeholt wird – eine hohe Übersetzung passt zu Ködern, die zügig wieder auf Tiefe gebracht werden sollen. Die Bremse muss zur Schnurtragkraft passen, damit sie vor dem Schnurbruch nachgibt.",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TAG EQUALS Stationärrolle"
+    ],
+    "seo": {
+      "title": null,
+      "description": null
+    }
+  },
+  {
+    "titel": "ARCHIV – Spinnrute (Duplikat)",
+    "handle": "spinnrute",
+    "archiv": true,
+    "produktanzahl": 14,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TAG EQUALS Spinnrute"
+    ],
+    "seo": {
+      "title": null,
+      "description": null
+    }
+  },
+  {
+    "titel": "Geflochtene Angelschnur",
+    "handle": "geflochtene-angelschnur",
+    "archiv": false,
+    "produktanzahl": 4,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TAG EQUALS Geflochtene Schnur"
+    ],
+    "seo": {
+      "title": "Geflochtene Angelschnur | Köderdepot",
+      "description": "Geflochtene Angelschnur von Köderdepot: 4-fach und 8-fach geflochten für direkten Kontakt und weite Würfe."
+    }
+  },
+  {
+    "titel": "Wirbel",
+    "handle": "wirbel",
+    "archiv": false,
+    "produktanzahl": 1,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TAG EQUALS wirbel mit snap",
+      "TAG EQUALS karabiner wirbel",
+      "TAG EQUALS angelwirbel",
+      "TAG EQUALS schnurwirbel"
+    ],
+    "seo": {
+      "title": "Wirbel und Snap-Verbinder | Köderdepot",
+      "description": "Wirbel und Snap-Verbinder von Köderdepot für schnellen Köderwechsel und verdrehfreie Schnur am Wasser."
+    }
+  },
+  {
+    "titel": "ARCHIV – Monofile Angelschnur (leer)",
+    "handle": "monofile-angelschnur",
+    "archiv": true,
+    "produktanzahl": 0,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TAG EQUALS Monofile Angelschnur",
+      "TAG EQUALS Monofile Schnur"
+    ],
+    "seo": {
+      "title": null,
+      "description": null
+    }
+  },
+  {
+    "titel": "ARCHIV – Angelrolle (leer)",
+    "handle": "angelrolle",
+    "archiv": true,
+    "produktanzahl": 0,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": false,
+    "regeln": [],
+    "seo": {
+      "title": null,
+      "description": null
+    }
+  },
+  {
+    "titel": "Angelrute",
+    "handle": "angelrute",
+    "archiv": false,
+    "produktanzahl": 11,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": false,
+    "regeln": [],
+    "seo": {
+      "title": "Angelruten: Spinn- & Baitcastruten | Köderdepot",
+      "description": "Angelruten von Köderdepot: Spinnruten und Baitcastruten in mehreren Längen und Aktionen für Hecht und Zander."
+    }
+  },
+  {
+    "titel": "Köder",
+    "handle": "koder",
+    "archiv": false,
+    "produktanzahl": 62,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": false,
+    "regeln": [],
+    "seo": {
+      "title": "Köder für Hecht, Zander & Barsch | Köderdepot",
+      "description": "Kunstköder von Köderdepot: Gummiköder, Wobbler, Spinner, Blinker und Jigköpfe für Raubfisch – jetzt im Shop."
+    }
+  },
+  {
+    "titel": "ARCHIV – Blei (leer)",
+    "handle": "blei",
+    "archiv": true,
+    "produktanzahl": 0,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": false,
+    "regeln": [],
+    "seo": {
+      "title": null,
+      "description": null
+    }
+  },
+  {
+    "titel": "ARCHIV – Technik (leer)",
+    "handle": "technik-sale",
+    "archiv": true,
+    "produktanzahl": 0,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": false,
+    "regeln": [],
+    "seo": {
+      "title": null,
+      "description": null
+    }
+  },
+  {
+    "titel": "ARCHIV – Boot (leer)",
+    "handle": "boot",
+    "archiv": true,
+    "produktanzahl": 0,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": false,
+    "regeln": [],
+    "seo": {
+      "title": null,
+      "description": null
+    }
+  },
+  {
+    "titel": "ARCHIV – Blechköder (leer)",
+    "handle": "blechkoder",
+    "archiv": true,
+    "produktanzahl": 0,
+    "beschreibung": "Blechköder sind klassische und extrem fängige Kunstköder zum Spinnfischen auf **Barsch, Zander und Hecht**. Durch ihr hohes Eigengewicht lassen sich Metallköder sehr weit werfen und erreichen schnell die gewünschte Tiefe – ideal, um große Wasserflächen effizient abzusuchen.\n\nTypische Blechköder wie **Tailspinner, Blade Baits, Spinner oder Metall-Jigs** erzeugen starke Druckwellen, intensive Vibrationen und auffällige Lichtreflexe. Genau diese Reize sorgen dafür, dass Raubfische den Köder auch auf Distanz wahrnehmen – besonders bei Wind, in trübem Wasser oder bei hohem Angeldruck.\n\nBlechköder sind vielseitig einsetzbar: Du kannst sie gleichmäßig einkurbeln, jiggen, vertikal fischen oder im Stop-and-Go führen. Dadurch gehören Metallköder in jede Raubfischbox und sind sowohl für Einsteiger als auch für erfahrene Spinnangler eine der besten Optionen.",
+    "bild": "https://cdn.shopify.com/s/files/1/1021/1239/5606/collections/3_b25fbdfb-104e-415e-b3ef-bb7815df5ecd.png?v=1784194993",
+    "automatisch": false,
+    "regeln": [],
+    "seo": {
+      "title": null,
+      "description": null
+    }
+  },
+  {
+    "titel": "Softbait",
+    "handle": "softbait",
+    "archiv": false,
+    "produktanzahl": 3,
+    "beschreibung": "Ein **Softbait** ist ein weicher **Gummiköder**, der beim modernen **Spinnfischen** auf Raubfische eingesetzt wird. Durch seine flexible Gummimischung imitiert er besonders realistisch die Bewegung von **Beutefischen**, **Krebsen** oder **Würmern**. Genau deshalb zählen Softbaits zu den beliebtesten Kunstködern beim Angeln auf **Barsch**, **Zander** und **Hecht**.\n\nJe nach Form erzeugen Softbaits starke **Vibrationen**, **Druckwellen** und natürliche Laufbewegungen – ideal zum Absuchen großer Wasserflächen oder für das gezielte Angeln an Hotspots. Besonders effektiv sind Softbaits in Stillgewässern, Flüssen und Kanälen, da sie sowohl bei langsamer als auch schneller Führung zuverlässig spielen.\n\nSoftbaits können vielseitig montiert werden, zum Beispiel am **Jigkopf**, am **Offset-Haken** oder an beliebten Methoden wie dem **Texas Rig**, **Carolina Rig** oder dem **Drop Shot Rig**. Dadurch eignen sie sich perfekt für das Angeln im Mittelwasser, am Grund, im Kraut oder an Kanten.\n\nOb als **Gummifisch**, **Creature Bait** oder **Wurm** – Softbaits sind echte Allrounder und gehören in jede moderne Raubfischbox.",
+    "bild": "https://cdn.shopify.com/s/files/1/1021/1239/5606/collections/1_8d9907c9-f34d-432a-b57d-6516f0958696.png?v=1784194993",
+    "automatisch": true,
+    "regeln": [
+      "TYPE EQUALS Softbait"
+    ],
+    "seo": {
+      "title": "Softbaits & Gummiköder | Köderdepot",
+      "description": "Weiche Softbaits mit natürlichem Spiel für Barsch, Zander und Hecht – für Krautfelder, Steinpackungen und strukturreiche Ufer."
+    }
+  },
+  {
+    "titel": "ARCHIV – Buzzbaits (leer, Duplikat)",
+    "handle": "buzzbaits",
+    "archiv": true,
+    "produktanzahl": 0,
+    "beschreibung": "Buzzbaits sind aggressive Oberflächenköder für das Spinnfischen auf **Hecht, Barsch und große Räuber**. Sie erzeugen beim Einholen starke Vibrationen, laute Geräusche und eine deutliche Wasserverwirbelung – ein Reiz, der besonders in flachen Bereichen extrem zuverlässig Bisse auslöst.\n\nEin Buzzbait ist ideal, wenn du über Kraut, Seerosen oder entlang von Schilfkanten fischen willst. Durch den speziellen Drahtbügel und die Bauform ist der Köder sehr **hängerarm** und kann flach geführt werden, ohne ständig im Kraut zu landen.\n\nBuzzbaits sind perfekte Suchköder, um aktive Räuber schnell zu finden. Besonders im Sommer, in warmen Flachwasserzonen oder bei leicht trübem Wasser spielen sie ihre volle Stärke aus. Wer Oberflächenangeln liebt und harte Attacken erleben will, kommt an Buzzbaits nicht vorbei.",
+    "bild": null,
+    "automatisch": false,
+    "regeln": [],
+    "seo": {
+      "title": null,
+      "description": null
+    }
+  },
+  {
+    "titel": "Spinnerbait",
+    "handle": "spinnerbait",
+    "archiv": false,
+    "produktanzahl": 2,
+    "beschreibung": "Spinnerbaits gehören zu den effektivsten Suchködern im Raubfischangeln und sind echte Allrounder für Hecht, Barsch und Zander. Durch ihre besondere Bauform aus Drahtbügel, Spinnerblättern und Skirt erzeugen sie eine Kombination aus **Lichtreflexen, Druckwellen und starken Vibrationen**, die Räuber auch auf größere Distanz zuverlässig aufmerksam macht.\n\nEin großer Vorteil von Spinnerbaits ist ihre hohe Fängigkeit in schwierigem Gelände: Sie lassen sich sehr gut durch **Kraut, Holz, Seerosenfelder, Steine und andere Strukturen** führen, ohne ständig hängen zu bleiben. Genau deshalb zählen Spinnerbaits zu den besten Ködern, wenn man aktiv Wasser absuchen möchte oder Räuber in Deckung stehen.\n\nJe nach Größe, Gewicht und Blattform können Spinnerbaits sowohl flach über Kraut als auch tiefer entlang von Kanten geführt werden. Besonders effektiv sind sie beim **gleichmäßigen Einkurbeln**, aber auch Stop-&-Go, kurze Beschleunigungen oder ein Absinken lassen sich perfekt einsetzen, um Bisse zu provozieren.\n\nSpinnerbaits sind ideal, wenn du schnell herausfinden willst, wo die Fische stehen – und wenn du einen Köder brauchst, der selbst bei Wind, trübem Wasser oder hohem Angeldruck zuverlässig Reize setzt.",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TYPE EQUALS Spinnerbait"
+    ],
+    "seo": {
+      "title": "Spinnerbaits für Kraut & Kanten | Köderdepot",
+      "description": "Spinnerbaits mit rotierenden Blättern für Hecht und Barsch – laufen krautschonend an Kanten, über Kraut und an Hindernissen."
+    }
+  },
+  {
+    "titel": "ARCHIV – Gummifische (leer, Duplikat)",
+    "handle": "gummifische",
+    "archiv": true,
+    "produktanzahl": 0,
+    "beschreibung": "Gummifische gehören zu den **erfolgreichsten Kunstködern** beim modernen Raubfischangeln. Durch ihren natürlichen Lauf, die flexible Gummimischung und starke Druckwellen imitieren sie perfekt kleine Beutefische – ideal für **Barsch, Zander und Hecht**. Egal ob am **Jigkopf**, am **Offset-Haken**, im **Texas Rig**, **Carolina Rig** oder am **Drop Shot**: Gummifische lassen sich extrem vielseitig fischen und decken nahezu jedes Gewässer ab.\n\nIn dieser Kollektion findest du hochwertige Gummifische in verschiedenen Größen, Farben und Designs – von natürlichen Dekoren für klares Wasser bis hin zu aggressiven Schockfarben für trübe Bedingungen. Perfekt zum **Absuchen großer Wasserflächen**, für das präzise Angeln an Strukturen und für Situationen mit hohem Angeldruck.",
+    "bild": null,
+    "automatisch": false,
+    "regeln": [],
+    "seo": {
+      "title": null,
+      "description": null
+    }
+  },
+  {
+    "titel": "ARCHIV – Hardbait (leer)",
+    "handle": "hardbait",
+    "archiv": true,
+    "produktanzahl": 0,
+    "beschreibung": "Hardbaits sind Kunstköder aus **festen Materialien** wie Kunststoff, Metall oder Holz. Dadurch sind sie besonders **robust**, langlebig und unempfindlich gegen **Räuberzähne**, Hitze oder auch den Einsatz im Salzwasser.\n\nIm Vergleich zu Softbaits wirken Hardbaits oft zunächst hochpreisiger – dafür sind sie eine echte **Langzeit-Investition**, weil hochwertige Modelle ihren Lauf auch bei Strömung, höherem Tempo und starker Belastung sauber halten. Viele moderne Hardbaits verfügen zusätzlich über ein **Weight-Transfer-System**, das für stabile, weite Würfe sorgt.\n\nOb Crankbait, Jerkbait oder Twitchbait: Hardbaits sind meist für ganz bestimmte Situationen entwickelt und können gerade dann den Unterschied machen, wenn Raubfische nur schwer zu knacken sind.",
+    "bild": "https://cdn.shopify.com/s/files/1/1021/1239/5606/collections/2_ae308918-7eda-4296-93e8-b84a717a8d9b.png?v=1784194996",
+    "automatisch": false,
+    "regeln": [],
+    "seo": {
+      "title": null,
+      "description": null
+    }
+  },
+  {
+    "titel": "ARCHIV – Tackle & Komponenten (leer)",
+    "handle": "tackle-komponenten",
+    "archiv": true,
+    "produktanzahl": 0,
+    "beschreibung": "In der Kategorie **Tackle & Komponenten** findest du alle essenziellen Bausteine für dein individuelles Setup. Vom passenden Gewicht über präzise Haken bis hin zu Vorfachmaterial und kompletten Rigs – hier beginnt die technische Grundlage für erfolgreiches Raubfischangeln.\n\nOb **Jigköpfe**, **Offset Haken**, **Cheburashka Gewichte**, **Stinger-Systeme**, **Fluorocarbon**, **Snaps** oder komplette **Rig-Montagen** – jedes Element erfüllt eine klare Funktion und entscheidet maßgeblich über Köderlauf, Präsentation und Bissverwertung.\n\nUnsere Komponenten sind auf Belastbarkeit, Funktionalität und saubere Verarbeitung ausgelegt. Für maximale Kontrolle unter Wasser – egal ob beim feinen Finesse-Rig oder beim kraftvollen Hecht-Setup.\n\n**Tackle & Komponenten** – weil Details den Unterschied machen.",
+    "bild": null,
+    "automatisch": false,
+    "regeln": [],
+    "seo": {
+      "title": null,
+      "description": null
+    }
+  },
+  {
+    "titel": "Angelrollen",
+    "handle": "rollen",
+    "archiv": false,
+    "produktanzahl": 8,
+    "beschreibung": "In der Kategorie Angelrollen findest du hochwertige Angelrollen für modernes Spinnfischen auf Raubfisch. Ob leichtes Barschangeln, präzises Zanderfischen oder vielseitiges Allround-Spinnfischen – die richtige Rolle sorgt für ruhigen Lauf, kontrollierten Schnurabzug und zuverlässige Kraftübertragung im Drill.\n\nUnsere Spinnrollen werden auf eine ausgewogene Kombination aus Gewicht, Stabilität und Laufruhe ausgelegt. Präzise Bremssysteme ermöglichen eine fein einstellbare Bremskraft, während hochwertige Kugellager und stabile Getriebe für ein gleichmäßiges Einholen und lange Haltbarkeit sorgen. Leichte Aluminiumspulen unterstützen weite Würfe und eine saubere Schnurverlegung – entscheidend für eine kontrollierte Köderführung.\n\nEgal ob Einsteiger oder erfahrener Raubfischangler: Bei Köderdepot findest du Angelrollen, die perfekt auf moderne Kunstködertechniken abgestimmt sind und zuverlässig am See, Fluss oder Kanal funktionieren.",
+    "bild": null,
+    "automatisch": false,
+    "regeln": [],
+    "seo": {
+      "title": "Angelrollen: Stationär & Baitcaster | Köderdepot",
+      "description": "Angelrollen von Köderdepot: Stationärrollen und Baitcaster-Rollen in mehreren Größen für Hecht, Zander und Barsch."
+    }
+  },
+  {
+    "titel": "ARCHIV – Startersets (leer)",
+    "handle": "startersets",
+    "archiv": true,
+    "produktanzahl": 0,
+    "beschreibung": "Entdecke ausgewählte Startersets mit Rute, Rolle, Köder, Wirbel und Angelschnur für einen einfachen Einstieg ins Angeln.",
+    "bild": null,
+    "automatisch": false,
+    "regeln": [],
+    "seo": {
+      "title": null,
+      "description": null
+    }
+  },
+  {
+    "titel": "ARCHIV – Sale (leer)",
+    "handle": "sale",
+    "archiv": true,
+    "produktanzahl": 0,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "VARIANT_COMPARE_AT_PRICE GREATER_THAN 0.0"
+    ],
+    "seo": {
+      "title": null,
+      "description": null
+    }
+  },
+  {
+    "titel": "Bundles",
+    "handle": "bundles",
+    "archiv": false,
+    "produktanzahl": 0,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": false,
+    "regeln": [],
+    "seo": {
+      "title": "Angel-Bundles: Sets für den Einstieg | Köderdepot",
+      "description": "Angel-Bundles von Köderdepot: abgestimmte Sets aus Köder, Rute und Rolle für den direkten Einstieg."
+    }
+  },
+  {
+    "titel": "Starter Bundle",
+    "handle": "starter-bundle",
+    "archiv": false,
+    "produktanzahl": 0,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": false,
+    "regeln": [],
+    "seo": {
+      "title": "Starter Bundle für Einsteiger | Köderdepot",
+      "description": "Starter Bundle von Köderdepot: alles für den ersten Angeltag – Rute, Rolle, Schnur und Köder im Set."
+    }
+  },
+  {
+    "titel": "Hecht Bundle",
+    "handle": "hecht-bundle",
+    "archiv": false,
+    "produktanzahl": 0,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": false,
+    "regeln": [],
+    "seo": {
+      "title": "Hecht Bundle | Köderdepot",
+      "description": "Hecht Bundle von Köderdepot: abgestimmte Ausrüstung für das Hechtangeln – Köder, Rute und Rolle im Set."
+    }
+  },
+  {
+    "titel": "Wobbler",
+    "handle": "wobbler",
+    "archiv": false,
+    "produktanzahl": 10,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TYPE EQUALS Wobbler"
+    ],
+    "seo": {
+      "title": "Wobbler für Hecht, Zander & Barsch | Köderdepot",
+      "description": "Wobbler von Köderdepot: schlanke Minnows mit stabiler Laufeigenschaft und Schwebepause für Hecht, Zander und Barsch. Jetzt entdecken."
+    }
+  },
+  {
+    "titel": "Swimbait",
+    "handle": "swimbait",
+    "archiv": false,
+    "produktanzahl": 5,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TYPE EQUALS Swimbait"
+    ],
+    "seo": {
+      "title": "Swimbaits & Pencilbaits | Köderdepot",
+      "description": "Swimbaits und Pencilbaits mit natürlichem Lauf für Hecht und Zander – für gleichmäßige Führung und Zickzack an der Oberfläche."
+    }
+  },
+  {
+    "titel": "Popper",
+    "handle": "popper",
+    "archiv": false,
+    "produktanzahl": 7,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TYPE EQUALS Popper"
+    ],
+    "seo": {
+      "title": "Popper & Oberflächenköder | Köderdepot",
+      "description": "Popper mit Knallgeräusch für die Oberfläche: sichtbare Bisse auf Hecht und Barsch in flachen, krautigen Bereichen. Jetzt im Shop."
+    }
+  },
+  {
+    "titel": "Blade Bait",
+    "handle": "blade-bait",
+    "archiv": false,
+    "produktanzahl": 2,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TYPE EQUALS Blade Bait"
+    ],
+    "seo": {
+      "title": "Blade Baits für tiefe Bereiche | Köderdepot",
+      "description": "Blade Baits mit Rüttelreiz für Zander, Barsch und Hecht – ideal für vertikales Fischen und tiefe Kanten im Fluss und See."
+    }
+  },
+  {
+    "titel": "Vibration Bait",
+    "handle": "vibration-bait",
+    "archiv": false,
+    "produktanzahl": 6,
+    "beschreibung": "",
+    "bild": null,
+    "automatisch": true,
+    "regeln": [
+      "TYPE EQUALS Vibration-Bait"
+    ],
+    "seo": {
+      "title": "Vibration Baits & Lipless Köder | Köderdepot",
+      "description": "Vibrationsköder mit starkem Druck und Rüttelreiz für Hecht, Zander und Barsch – über Grund, an Kanten und im tiefen Wasser."
+    }
+  },
+  {
+    "titel": "Spannung an der Oberfläche",
+    "handle": "spannung-an-der-oberflache",
+    "archiv": false,
+    "produktanzahl": 4,
+    "beschreibung": "Wenn Räuber dicht unter der Wasseroberfläche jagen, beginnt die aufregendste Art des Spinnfischens. Unsere Topwater-Köder erzeugen auffällige Bewegungen, Druckwellen und akustische Reize, die Barsche, Hechte und Rapfen gezielt auf den Köder aufmerksam machen.\n\nOb **Oberflächenblitz, Knallkopf, Uferknall oder Federkopf** – entdecke verschiedene Köderformen für unterschiedliche Führungsstile und Gewässersituationen. Ideal für flache Bereiche, Uferzonen und aktive Räuber in der warmen Jahreszeit.\n\n**Entdecke jetzt die Topwater-Auswahl von Köderdepot und erlebe spektakuläre Bisse direkt an der Oberfläche.**",
+    "bild": "https://cdn.shopify.com/s/files/1/1021/1239/5606/collections/aktuell_topwater_oberflaechenblitz_desktop.png?v=1790435679",
+    "automatisch": false,
+    "regeln": [],
+    "seo": {
+      "title": null,
+      "description": null
+    }
+  },
+  {
+    "titel": "Willkommen bei Köderdepot",
+    "handle": "willkommen-bei-koderdepot-10-rabatt-fur-neukunden",
+    "archiv": true,
+    "produktanzahl": 90,
+    "beschreibung": "Sichere dir als Neukunde **10 % Rabatt auf deine erste Bestellung**. Entdecke ausgewähltes Angelzubehör für erfolgreiche Stunden am Wasser und gib beim Bezahlen einfach den Rabattcode **WILLKOMMEN10** ein.",
+    "bild": "https://cdn.shopify.com/s/files/1/1021/1239/5606/collections/angler-komplettlogo-ohne-werbetext.png?v=1790437853",
+    "automatisch": false,
+    "regeln": [],
+    "seo": {
+      "title": null,
+      "description": null
+    }
+  },
+  {
+    "titel": "Willkommen bei Köderdepot – 10 % Rabatt für Neukunden (Kopie)",
+    "handle": "willkommen-bei-koderdepot-10-rabatt-fur-neukunden-kopie",
+    "archiv": true,
+    "produktanzahl": 90,
+    "beschreibung": "Du bist neu bei Köderdepot? Dann sichere dir **10 % Rabatt auf deine erste Bestellung** und entdecke sorgfältig ausgewähltes Angelzubehör für erfolgreiche Stunden am Wasser.\n\nOb Gummiköder, Wobbler, Jigköpfe, Haken, Vorfächer oder weiteres Zubehör – bei Köderdepot findest du praxistaugliche Produkte für unterschiedliche Zielfische, Gewässer und Angelmethoden. Unser Sortiment richtet sich an Einsteiger ebenso wie an erfahrene Angler, die Wert auf zuverlässige Ausrüstung und eine durchdachte Produktauswahl legen.\n\n**Starte jetzt mit Köderdepot und nutze deinen Neukundenvorteil bei der ersten Bestellung.**",
+    "bild": "https://cdn.shopify.com/s/files/1/1021/1239/5606/collections/angler-komplettlogo-ohne-werbetext_99e322a9-9496-4a11-8301-0940ce863032.png?v=1790441727",
+    "automatisch": false,
+    "regeln": [],
+    "seo": {
+      "title": null,
+      "description": null
+    }
+  },
+  {
+    "titel": "Willkommen bei Köderdepot – 10 % Rabatt für Neukunden (Kopie) (Kopie)",
+    "handle": "willkommen-bei-koderdepot-10-rabatt-fur-neukunden-kopie-kopie",
+    "archiv": true,
+    "produktanzahl": 90,
+    "beschreibung": "Du bist neu bei Köderdepot? Dann sichere dir **10 % Rabatt auf deine erste Bestellung** und entdecke sorgfältig ausgewähltes Angelzubehör für erfolgreiche Stunden am Wasser.\n\nOb Gummiköder, Wobbler, Jigköpfe, Haken, Vorfächer oder weiteres Zubehör – bei Köderdepot findest du praxistaugliche Produkte für unterschiedliche Zielfische, Gewässer und Angelmethoden. Unser Sortiment richtet sich an Einsteiger ebenso wie an erfahrene Angler, die Wert auf zuverlässige Ausrüstung und eine durchdachte Produktauswahl legen.\n\n**Starte jetzt mit Köderdepot und nutze deinen Neukundenvorteil bei der ersten Bestellung.**",
+    "bild": "https://cdn.shopify.com/s/files/1/1021/1239/5606/collections/angler-komplettlogo-ohne-werbetext_8b407c49-dd3a-43d7-8e7a-0ffdb3d30e91.png?v=1790439732",
+    "automatisch": false,
+    "regeln": [],
+    "seo": {
+      "title": null,
+      "description": null
+    }
+  }
+]

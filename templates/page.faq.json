@@ -7,7 +7,7 @@
           "type": "question",
           "settings": {
             "question": "Ich bin Anfänger – was brauche ich wirklich zum Start?",
-            "answer": "<p>Eine passende Rute, eine Rolle mit Schnur, ein paar bewährte Köder und das nötige Kleinzeug wie Vorfach, Wirbel und Zange. Genau dafür gibt es unser <a href=\"/collections/bundles\">Starter Bundle</a>. Wenn du unsicher bist, frag uns einfach – im Laden oder per Nachricht.</p>"
+            "answer": "<p>Eine passende Rute, eine Rolle mit Schnur, ein paar bewährte Köder und das nötige Kleinzeug wie Vorfach, Wirbel und Zange. Genau dafür gibt es unser <a href=\"/collections/bundles\">Starter Bundle</a>. Wenn du unsicher bist, schreib uns an <a href=\"mailto:info@koederdepot.de\">info@koederdepot.de</a>.</p>"
           }
         },
         "q2": {
@@ -21,35 +21,35 @@
           "type": "question",
           "settings": {
             "question": "Wie lange dauert der Versand?",
-            "answer": "<p>Wir versenden mit DHL. Innerhalb Deutschlands ist der Versand ab 100 € Bestellwert kostenlos. Die aktuelle Lieferzeit siehst du an der Kasse.</p>"
+            "answer": "<p>Wir versenden innerhalb Deutschlands mit DPD. Die Zustellung erfolgt in der Regel innerhalb von 2–4 Werktagen, nachdem deine Zahlung eingegangen ist. Der Versand kostet 4,99 €, ab 100 € Bestellwert ist er kostenlos. Für sperrige Artikel, etwa Ruten ab 115 cm Transportmaß, kommt ein Sperrgutzuschlag von 9,99 € dazu.</p><p>Alternativ holst du deine Bestellung kostenlos in Landsberg am Lech ab. Wir informieren dich, sobald sie bereitsteht.</p>"
           }
         },
         "q4": {
           "type": "question",
           "settings": {
             "question": "Kann ich Produkte zurückgeben, wenn sie nicht passen?",
-            "answer": "<p>Ja. Du hast ein gesetzliches Widerrufsrecht von 14 Tagen. Alle Details stehen in unserer Widerrufsbelehrung.</p>"
+            "answer": "<p>Ja. Du hast das Recht, deinen Kauf binnen 14 Tagen ohne Angabe von Gründen zu widerrufen. Die Frist beginnt, sobald du die Ware erhalten hast. Alle Details stehen in der <a href=\"/policies/refund-policy\">Widerrufsbelehrung</a>, für den Widerruf kannst du unser <a href=\"/pages/widerruf-formular\">Widerrufsformular</a> nutzen.</p>"
           }
         },
         "q5": {
           "type": "question",
           "settings": {
             "question": "Sind eure Produkte für Profis geeignet?",
-            "answer": "<p>Ja. Wir führen Einsteiger-Ausrüstung genauso wie Tackle für erfahrene Raubfischangler. Wir angeln selbst und verkaufen, was sich bei uns am Wasser bewährt hat.</p>"
+            "answer": "<p>Unser Sortiment richtet sich an Raubfischangler, die gezielt auf Hecht, Zander und Barsch angeln und Wert auf stimmige Produkte legen. Wir achten auf eine saubere Auswahl und verständliche Produktinformationen.</p>"
           }
         },
         "q6": {
           "type": "question",
           "settings": {
             "question": "Ich weiß nicht, welcher Köder der richtige ist – helft ihr mir?",
-            "answer": "<p>Klar. Schreib uns, welchen Zielfisch du an welchem Gewässer fangen willst, oder komm im Laden in Landsberg vorbei. Wir empfehlen dir passende Köder.</p>"
+            "answer": "<p>Ja. Bei der Auswahl spielen Zielfisch, Jahreszeit, Gewässerstruktur, Lauftiefe und Führungsstil eine wichtige Rolle. Auf unserer Seite <a href=\"/pages/koderberatung\">Köderberatung</a> findest du Orientierung. Wenn du unsicher bist, schreib uns an <a href=\"mailto:info@koederdepot.de\">info@koederdepot.de</a>.</p>"
           }
         },
         "q7": {
           "type": "question",
           "settings": {
             "question": "Ist meine Zahlung bei euch sicher?",
-            "answer": "<p>Ja. Die Zahlung läuft verschlüsselt über Shopify. Du kannst auch bequem auf Rechnung kaufen.</p>"
+            "answer": "<p>Ja. Die Zahlung läuft über etablierte Zahlungsdienstleister: Shopify Payments, PayPal, Apple Pay, Google Pay und Kreditkarte über Stripe. Welche Zahlungsarten dir zur Verfügung stehen, siehst du direkt im Checkout.</p>"
           }
         }
       },
@@ -64,7 +64,7 @@
       ],
       "settings": {
         "heading": "FAQs",
-        "text": "Häufig gestellte Fragen zu unserem Shop und unseren Produkten.",
+        "text": "Häufig gestellte Fragen zu unserem Shop & Produkten.",
         "as_page_title": true,
         "open_first": true,
         "show_contact": true

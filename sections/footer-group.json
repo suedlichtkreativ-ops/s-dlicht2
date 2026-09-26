@@ -5,13 +5,39 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "b1": { "type": "menu", "settings": { "heading": "Sortiment", "menu": "footer" } },
-        "b2": { "type": "store", "settings": { "heading": "Laden" } },
-        "b3": { "type": "text", "settings": { "heading": "Service", "text": "<p>Fragen zu Ausrüstung oder Bestellung? Ruf an oder schreib uns.</p>" } }
+        "b1": {
+          "type": "menu",
+          "settings": {
+            "heading": "Zielfisch",
+            "menu": "footer-kategorie"
+          }
+        },
+        "b2": {
+          "type": "store",
+          "settings": {
+            "heading": "Kontakt"
+          }
+        },
+        "b3": {
+          "type": "menu",
+          "settings": {
+            "heading": "Shop-Service",
+            "menu": "shop-service"
+          }
+        }
       },
-      "block_order": ["b1", "b2", "b3"],
-      "settings": {}
+      "block_order": [
+        "b1",
+        "b2",
+        "b3"
+      ],
+      "settings": {
+        "legal_menu": "kundeninfo",
+        "text": "Angelköder und Tackle aus Landsberg am Lech. Versand innerhalb Deutschlands, Abholung vor Ort."
+      }
     }
   },
-  "order": ["footer"]
+  "order": [
+    "footer"
+  ]
 }
