@@ -487,10 +487,13 @@ input, textarea { caret-color: var(--ink); }
   position: absolute; left: 0; top: clamp(9.2rem, 13.4vw, 13.8rem); width: 5.5rem; height: 1.3rem; margin-left: -2.75rem;
   border: 1.5px solid var(--signal); border-radius: 50%; opacity: 0; pointer-events: none;
 }
+/* Phones and tablets: the copy runs full width, so the lure gets its own space
+   in the top-right corner and the copy starts below it – nothing hides behind the text. */
 @media (max-width: 989px) {
-  .hero__line-art { left: auto; right: 7%; height: calc(22% + 3rem); }
-  .hero__lure img { width: 5.25rem; }
-  .hero__ripple { top: 5.5rem; width: 3.5rem; margin-left: -1.75rem; }
+  .hero__line-art { left: auto; right: 9%; height: 6rem; }
+  .hero__lure img { width: 5.5rem; }
+  .hero__ripple { top: 5.8rem; width: 3.5rem; margin-left: -1.75rem; }
+  .hero--line .hero__inner { padding-top: 10.5rem; }
 }
 
 /* Slide tabs with a progress bar, pause button */

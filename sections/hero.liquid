@@ -11,7 +11,7 @@
   assign interval_ms = section.settings.interval | times: 1000
 -%}
 <section
-  class="hero on-dark{% if is_slider %} hero--slider{% endif %}"
+  class="hero on-dark{% if is_slider %} hero--slider{% endif %}{% if section.settings.show_line %} hero--line{% endif %}"
   data-hero
   {% if section.settings.animate %}data-animate{% endif %}
   {% if is_slider %}data-hero-slider data-interval="{{ interval_ms }}"{% if section.settings.autoplay %} data-autoplay{% endif %} aria-roledescription="carousel" aria-label="{{ 'hero.carousel' | t }}"{% endif %}
