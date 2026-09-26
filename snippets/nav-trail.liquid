@@ -1,0 +1,71 @@
+{%- comment -%}
+  Finds where something sits in the main menu and renders the breadcrumb steps between "Home" and the current page.
+  - target: 'collection' (uses `collection`) or 'product' (uses `product`: the most specific menu collection it belongs to)
+  - menu: the menu to search (default: main-menu)
+  Renders only <li> items; the caller wraps them.
+{%- endcomment -%}
+{%- liquid
+  assign nav_menu = linklists[menu] | default: linklists['main-menu']
+  assign best_count = 1000000
+  assign t1 = nil
+  assign t2 = nil
+  assign t3 = nil
+  if target == 'product'
+    assign pc = product.collections | map: 'handle' | join: ','
+    assign pc = ',' | append: pc | append: ','
+  endif
+  for l1 in nav_menu.links
+    for l2 in l1.links
+      for l3 in l2.links
+        if l3.type == 'collection_link'
+          assign key = ',' | append: l3.object.handle | append: ','
+          if target == 'collection' and l3.object.handle == collection.handle and t1 == nil
+            assign t1 = l1
+            assign t2 = l2
+            assign t3 = l3
+          elsif target == 'product' and pc contains key and l3.object.products_count < best_count
+            assign best_count = l3.object.products_count
+            assign t1 = l1
+            assign t2 = l2
+            assign t3 = l3
+          endif
+        endif
+      endfor
+      if l2.type == 'collection_link'
+        assign key = ',' | append: l2.object.handle | append: ','
+        if target == 'collection' and l2.object.handle == collection.handle and t1 == nil
+          assign t1 = l1
+          assign t2 = l2
+          assign t3 = nil
+        elsif target == 'product' and pc contains key and l2.object.products_count < best_count
+          assign best_count = l2.object.products_count
+          assign t1 = l1
+          assign t2 = l2
+          assign t3 = nil
+        endif
+      endif
+    endfor
+  endfor
+-%}
+{%- if t1 -%}
+  {%- if target == 'collection' -%}
+    {%- if t3 -%}
+      <li><a href="{{ t1.url }}">{{ t1.title | escape }}</a></li>
+      {%- unless t2.url == t1.url -%}<li><a href="{{ t2.url }}">{{ t2.title | escape }}</a></li>{%- endunless -%}
+    {%- elsif t2 and t2.url != t1.url -%}
+      <li><a href="{{ t1.url }}">{{ t1.title | escape }}</a></li>
+    {%- endif -%}
+  {%- else -%}
+    <li><a href="{{ t1.url }}">{{ t1.title | escape }}</a></li>
+    {%- if t3 -%}
+      {%- unless t2.url == t1.url -%}<li><a href="{{ t2.url }}">{{ t2.title | escape }}</a></li>{%- endunless -%}
+      <li><a href="{{ t3.url }}">{{ t3.title | escape }}</a></li>
+    {%- elsif t2.url != t1.url -%}
+      <li><a href="{{ t2.url }}">{{ t2.title | escape }}</a></li>
+    {%- endif -%}
+  {%- endif -%}
+{%- elsif target == 'product' and collection -%}
+  <li><a href="{{ collection.url }}">{{ collection.title | escape }}</a></li>
+{%- elsif target == 'collection' -%}
+  <li><a href="{{ routes.collections_url }}">{{ 'collections.all' | t }}</a></li>
+{%- endif -%}

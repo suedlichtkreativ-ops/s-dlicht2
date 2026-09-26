@@ -64,7 +64,11 @@
     "apply": "Filter anwenden",
     "clear_all": "Alle Filter entfernen",
     "remove_filter": "Filter entfernen",
-    "no_matches": "Keine Produkte passen zu diesen Filtern. Entferne einen Filter, um mehr zu sehen."
+    "no_matches": "Keine Produkte passen zu diesen Filtern. Entferne einen Filter, um mehr zu sehen.",
+    "subnav": "Unterkategorien",
+    "subnav_all": "Alle",
+    "read_more": "Mehr erfahren",
+    "about": "Über {{ title }}"
   },
   "products": {
     "product": {

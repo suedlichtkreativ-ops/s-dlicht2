@@ -1,0 +1,48 @@
+{%- comment -%}
+  Chips under a collection title that lead one level deeper (or sideways) in the main menu,
+  e.g. on "Hardbaits": Alle · Wobbler 6 · Crankbaits 10 …  Empty collections are left out.
+{%- endcomment -%}
+{%- liquid
+  assign nav_menu = linklists[menu] | default: linklists['main-menu']
+  assign sub_parent = nil
+  for l1 in nav_menu.links
+    if sub_parent
+      break
+    endif
+    if l1.type == 'collection_link' and l1.object.handle == collection.handle and l1.links != blank
+      assign sub_parent = l1
+      break
+    endif
+    for l2 in l1.links
+      if l2.type == 'collection_link' and l2.object.handle == collection.handle and l2.url != l1.url
+        if l2.links != blank
+          assign sub_parent = l2
+        else
+          assign sub_parent = l1
+        endif
+        break
+      endif
+      for l3 in l2.links
+        if l3.type == 'collection_link' and l3.object.handle == collection.handle
+          assign sub_parent = l2
+          break
+        endif
+      endfor
+      if sub_parent
+        break
+      endif
+    endfor
+  endfor
+-%}
+{%- if sub_parent -%}
+  <nav class="subnav" aria-label="{{ 'collections.subnav' | t }}">
+    <ul class="subnav__list" role="list">
+      <li><a class="subnav__chip" href="{{ sub_parent.url }}"{% if sub_parent.url == collection.url %} aria-current="page"{% endif %}>{{ 'collections.subnav_all' | t }}{% if sub_parent.type == 'collection_link' %} <span class="subnav__count">{{ sub_parent.object.products_count }}</span>{% endif %}</a></li>
+      {%- for child in sub_parent.links -%}
+        {%- if child.url == sub_parent.url -%}{%- continue -%}{%- endif -%}
+        {%- if child.type == 'collection_link' and child.object.products_count == 0 -%}{%- continue -%}{%- endif -%}
+        <li><a class="subnav__chip" href="{{ child.url }}"{% if child.type == 'collection_link' and child.object.handle == collection.handle %} aria-current="page"{% endif %}>{{ child.title | escape }}{% if child.type == 'collection_link' %} <span class="subnav__count">{{ child.object.products_count }}</span>{% endif %}</a></li>
+      {%- endfor -%}
+    </ul>
+  </nav>
+{%- endif -%}

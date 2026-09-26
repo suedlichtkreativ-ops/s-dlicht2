@@ -96,7 +96,7 @@
         "heading": "Bestseller",
         "limit": 8,
         "white": true,
-        "collection": "bestseller"
+        "collection": "koder"
       }
     },
     "statement": {
@@ -149,7 +149,7 @@
           "settings": {
             "species": "forelle",
             "title": "Forelle",
-            "collection": "forellenkoder"
+            "collection": "zielfisch-forelle"
           }
         }
       },
@@ -174,7 +174,8 @@
         "landscape": true,
         "button_link": "shopify://collections/bundles",
         "image": "shopify://shop_images/ChatGPT_Image_16._Juli_2026_13_48_12.png"
-      }
+      },
+      "disabled": true
     },
     "blog": {
       "type": "featured-blog",

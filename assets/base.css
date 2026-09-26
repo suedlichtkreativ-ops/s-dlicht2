@@ -605,6 +605,26 @@ input, textarea { caret-color: var(--ink); }
    ========================================================================== */
 .collection-hero { border-bottom: var(--border); background: var(--white); }
 .collection-hero__inner { display: grid; gap: 1rem; padding-block: clamp(2rem, 5vw, 3.5rem); }
+/* Sub-category chips: one level deeper without reopening the menu */
+.collection-hero__intro { max-width: 68ch; margin: 0; }
+.collection-about { border-top: var(--border); background: var(--white); padding-block: clamp(2.5rem, 6vw, 4.5rem); }
+.collection-about__text { max-width: 68ch; }
+.subnav { margin-top: 0.25rem; margin-inline: calc(var(--gutter) * -1); padding-inline: var(--gutter); padding-block: 0.125rem; overflow-x: auto; scrollbar-width: none; overscroll-behavior-x: contain; }
+.subnav::-webkit-scrollbar { display: none; }
+.subnav__list { display: flex; gap: 0.5rem; width: max-content; }
+.subnav__list::after { content: ''; flex: 0 0 calc(var(--gutter) - 0.5rem); }
+.subnav__chip {
+  display: inline-flex; align-items: baseline; gap: 0.4rem; min-height: 2.75rem; align-items: center;
+  padding-inline: 0.95rem; border: 2px solid var(--ink); background: var(--white); color: var(--ink);
+  font-weight: 650; font-stretch: 87%; text-decoration: none; white-space: nowrap;
+  transition: background-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+}
+.subnav__chip:hover { background: var(--signal); }
+.subnav__chip[aria-current="page"] { background: var(--ink); color: var(--white); }
+.subnav__count { font-size: 0.8125rem; font-weight: 500; font-variant-numeric: tabular-nums; color: var(--muted); }
+.subnav__chip:hover .subnav__count { color: var(--ink); }
+.subnav__chip[aria-current="page"] .subnav__count { color: #bdbdb6; }
+@media (min-width: 990px) { .subnav { margin-inline: 0; padding-inline: 0; overflow: visible; } .subnav__list { width: auto; flex-wrap: wrap; } .subnav__list::after { content: none; } }
 .breadcrumbs ol { display: flex; flex-wrap: wrap; gap: 0.25rem 0.5rem; font-size: 0.875rem; color: var(--muted); }
 .breadcrumbs li + li::before { content: '/'; margin-right: 0.5rem; }
 .breadcrumbs a { text-decoration: none; }

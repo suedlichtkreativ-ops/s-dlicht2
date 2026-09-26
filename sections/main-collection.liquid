@@ -12,13 +12,25 @@
       <nav class="breadcrumbs" aria-label="{{ 'general.breadcrumbs' | t }}">
         <ol role="list">
           <li><a href="{{ routes.root_url }}">{{ 'general.home' | t }}</a></li>
-          <li><a href="{{ routes.collections_url }}">{{ 'collections.all' | t }}</a></li>
+          {% render 'nav-trail', target: 'collection', collection: collection, menu: section.settings.menu %}
           <li aria-current="page">{{ collection.title | escape }}</li>
         </ol>
       </nav>
       <h1 class="collection-hero__title page-title display">{% render 'slant-words', text: collection.title %}</h1>
+      {% render 'subnav', collection: collection, menu: section.settings.menu %}
       {%- if collection.description != blank and section.settings.show_description -%}
-        <div class="rte muted">{{ collection.description }}</div>
+        {%- liquid
+          assign intro_full = collection.description | strip_html | strip
+          assign intro_src = intro_full
+          if collection.description contains '<p'
+            assign intro_src = collection.description | split: '</p>' | first | split: '>' | last | strip_html | strip
+          endif
+          assign intro = intro_src | truncatewords: 24, '…'
+        -%}
+        <p class="collection-hero__intro muted">
+          {{- intro -}}
+          {%- if intro.size < intro_full.size %} <a class="text-link" href="#CollectionAbout">{{ 'collections.read_more' | t }}</a>{% endif -%}
+        </p>
       {%- endif -%}
     </div>
   </header>
@@ -81,6 +93,14 @@
     </div>
   {%- endpaginate -%}
 
+  {%- if collection.description != blank and section.settings.show_description -%}
+    <section class="collection-about" id="CollectionAbout" aria-label="{{ 'collections.about' | t: title: collection.title }}">
+      <div class="page-width">
+        <div class="rte collection-about__text">{{ collection.description }}</div>
+      </div>
+    </section>
+  {%- endif -%}
+
   {%- if show_filters -%}
     <div class="drawer drawer--left" id="FilterDrawer" data-drawer="filters" aria-hidden="true">
       <button type="button" class="drawer__backdrop" data-drawer-close tabindex="-1" aria-label="{{ 'general.close' | t }}"></button>
@@ -106,6 +126,7 @@
 {
   "name": "Kollektion",
   "settings": [
+    { "type": "link_list", "id": "menu", "label": "Menü für die Navigation", "default": "main-menu", "info": "Aus diesem Menü kommen die Pfadangabe und die Leiste mit den Unterkategorien." },
     { "type": "range", "id": "per_page", "label": "Produkte pro Seite", "min": 8, "max": 48, "step": 4, "default": 24 },
     { "type": "checkbox", "id": "enable_filtering", "label": "Filter anzeigen", "default": true, "info": "Filter richtest du in der Shopify-App „Search & Discovery“ ein." },
     { "type": "checkbox", "id": "enable_sorting", "label": "Sortierung anzeigen", "default": true },

@@ -26,6 +26,7 @@
     <nav class="nav" aria-label="{{ 'header.main_nav' | t }}">
       <ul class="nav__list" role="list">
         {%- for link in menu.links -%}
+          {%- if link.type == 'collection_link' and link.object.products_count == 0 -%}{%- continue -%}{%- endif -%}
           <li class="nav__item">
             {%- if link.links != blank -%}
               <button type="button" class="nav__link" aria-expanded="false" aria-controls="Mega-{{ forloop.index }}" data-mega-toggle>
@@ -36,6 +37,7 @@
                 <div class="dropdown" id="Mega-{{ forloop.index }}" data-mega>
                   <ul class="dropdown__list" role="list">
                     {%- for child in link.links -%}
+                      {%- if child.type == 'collection_link' and child.object.products_count == 0 -%}{%- continue -%}{%- endif -%}
                       <li><a href="{{ child.url }}"{% if child.current %} aria-current="page"{% endif %}>{{ child.title | escape }}</a></li>
                     {%- endfor -%}
                     <li class="dropdown__all"><a href="{{ link.url }}">{{ 'header.view_all' | t: title: link.title }}</a></li>
@@ -55,6 +57,7 @@
                 <div class="mega" id="Mega-{{ forloop.index }}" data-mega>
                   <div class="page-width mega__inner{% if promo_count > 0 %} mega__inner--promo{% endif %}">
                     {%- for child in link.links limit: 5 -%}
+                      {%- if child.type == 'collection_link' and child.object.products_count == 0 -%}{%- continue -%}{%- endif -%}
                       <div>
                         {%- capture fish_svg -%}{% render 'fish-icon', name: child.title %}{%- endcapture -%}
                         <a class="mega__col-title{% if fish_svg != blank %} mega__col-title--fish{% endif %}" href="{{ child.url }}"{% if child.current %} aria-current="page"{% endif %}>
@@ -64,6 +67,7 @@
                         {%- if child.links != blank -%}
                           <ul class="mega__links" role="list">
                             {%- for grandchild in child.links -%}
+                              {%- if grandchild.type == 'collection_link' and grandchild.object.products_count == 0 -%}{%- continue -%}{%- endif -%}
                               {%- capture small_fish -%}{% render 'fish-icon', name: grandchild.title %}{%- endcapture -%}
                               <li>
                                 <a href="{{ grandchild.url }}"{% if small_fish != blank %} class="mega__link--fish"{% endif %}{% if grandchild.current %} aria-current="page"{% endif %}>
@@ -151,12 +155,14 @@
     </div>
     <nav class="drawer__body mobile-nav" aria-label="{{ 'header.main_nav' | t }}">
       {%- for link in menu.links -%}
+        {%- if link.type == 'collection_link' and link.object.products_count == 0 -%}{%- continue -%}{%- endif -%}
         {%- if link.links != blank -%}
           <details>
             <summary>{{ link.title | escape }}{% render 'icon', name: 'plus' %}</summary>
             <div class="mobile-nav__sub">
               <a href="{{ link.url }}">{{ 'header.view_all' | t: title: link.title }}</a>
               {%- for child in link.links -%}
+                {%- if child.type == 'collection_link' and child.object.products_count == 0 -%}{%- continue -%}{%- endif -%}
                 {%- if child.links != blank -%}
                   <details>
                     {%- capture fish_svg -%}{% render 'fish-icon', name: child.title %}{%- endcapture -%}
@@ -164,6 +170,7 @@
                     <div class="mobile-nav__grand">
                       <a href="{{ child.url }}">{{ 'header.view_all' | t: title: child.title }}</a>
                       {%- for grandchild in child.links -%}
+                        {%- if grandchild.type == 'collection_link' and grandchild.object.products_count == 0 -%}{%- continue -%}{%- endif -%}
                         <a href="{{ grandchild.url }}">{{ grandchild.title | escape }}</a>
                       {%- endfor -%}
                     </div>
