@@ -42,19 +42,58 @@
     {%- endif -%}
   </div>
 
-  <div class="stack" style="--stack:.25rem">
+  {%- liquid
+    assign card_title = product.title
+    if settings.card_strip_vendor and product.vendor != blank
+      assign vendor_prefix = product.vendor | append: ' '
+      assign title_start = product.title | slice: 0, vendor_prefix.size
+      if title_start == vendor_prefix
+        assign card_title = product.title | remove_first: vendor_prefix
+      endif
+    endif
+    assign color_count = 0
+    for option in product.options_with_values
+      assign on = option.name | downcase
+      if on contains 'farbe' or on contains 'color'
+        assign color_count = option.values.size
+      endif
+    endfor
+  -%}
+  <div class="stack" style="--stack:.3rem">
     {%- if show_vendor and product.vendor != blank -%}
       <p class="card__vendor">{{ product.vendor }}</p>
     {%- endif -%}
     <h3 class="card__title">
       {%- if product != blank -%}
-        <a class="card__link" href="{{ product.url }}">{{ product.title | escape }}</a>
+        <a class="card__link" href="{{ product.url }}">{{ card_title | escape }}</a>
       {%- else -%}
         {{ 'products.product.placeholder_title' | t }}
       {%- endif -%}
     </h3>
+    {%- if product != blank and settings.card_show_meta -%}
+      {%- if product.type != blank or color_count > 1 -%}
+        <p class="card__meta">
+          {{- product.type | escape -}}
+          {%- if product.type != blank and color_count > 1 %} · {% endif -%}
+          {%- if color_count > 1 -%}{{ 'products.product.colors' | t: count: color_count }}{%- endif -%}
+        </p>
+      {%- endif -%}
+    {%- endif -%}
     {%- if product != blank -%}
-      {% render 'price', product: product, target: product.selected_or_first_available_variant, use_from: true %}
+      <div class="card__foot">
+        {% render 'price', product: product, target: product.selected_or_first_available_variant, use_from: true %}
+        {%- if settings.card_show_meta -%}
+          {%- capture card_fish -%}
+            {%- for tag in product.tags -%}
+              {%- if tag contains 'zielfisch-' -%}
+                {%- assign fish_label = tag | remove: 'zielfisch-' | capitalize -%}
+                <li class="card__fish-item" title="{{ fish_label }}">{% render 'fish-icon', name: tag %}<span class="visually-hidden">{{ fish_label }}</span></li>
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endcapture -%}
+          {%- if card_fish != blank -%}<ul class="card__fish" role="list" aria-label="{{ 'products.product.specs_fish' | t }}">{{ card_fish }}</ul>{%- endif -%}
+        {%- endif -%}
+      </div>
     {%- else -%}
       <div class="price">{{ 1999 | money }}</div>
     {%- endif -%}

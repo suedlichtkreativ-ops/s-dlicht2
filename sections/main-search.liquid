@@ -23,7 +23,7 @@
                   <li>
                     {%- case item.object_type -%}
                       {%- when 'product' -%}
-                        {% render 'product-card', product: item, show_vendor: true %}
+                        {% render 'product-card', product: item, show_vendor: false %}
                       {%- else -%}
                         <a class="article-card" href="{{ item.url }}">
                           <div class="media">

@@ -69,15 +69,44 @@
       {%- unless product.has_only_default_variant -%}
         <div class="stack" style="--stack:1.25rem" data-variant-picker data-refresh="picker">
           {%- for option in product.options_with_values -%}
-            <fieldset class="variant-picker">
-              <legend>{{ option.name | escape }}: <span class="muted" style="font-weight:500">{{ option.selected_value | escape }}</span></legend>
+            {%- liquid
+              assign option_index = option.position | minus: 1
+              assign option_name = option.name | downcase
+              assign is_swatch = false
+              if section.settings.image_swatches
+                if option_name contains 'farbe' or option_name contains 'color' or option_name contains 'dekor'
+                  assign is_swatch = true
+                endif
+              endif
+            -%}
+            <fieldset class="variant-picker{% if is_swatch %} variant-picker--swatch{% endif %}">
+              <legend>{{ option.name | escape }}: <span class="muted" style="font-weight:500">{{ option.selected_value | escape }}</span>{% if is_swatch %} <span class="variant-picker__count muted">{{ 'products.product.colors_count' | t: count: option.values.size }}</span>{% endif %}</legend>
               <div class="variant-picker__values">
                 {%- for value in option.values -%}
                   {%- assign input_id = section.id | append: '-' | append: option.position | append: '-' | append: forloop.index0 -%}
+                  {%- liquid
+                    assign swatch_media = nil
+                    if is_swatch
+                      for v in product.variants
+                        if v.options[option_index] == value and v.featured_media
+                          assign swatch_media = v.featured_media
+                          break
+                        endif
+                      endfor
+                    endif
+                  -%}
                   <input type="radio" id="{{ input_id }}" name="option{{ option.position }}" value="{{ value | escape }}"
                     {% if option.selected_value == value %}checked{% endif %}
                     {% if value.available == false %}class="is-unavailable"{% endif %}>
-                  <label for="{{ input_id }}">{{ value | escape }}{% if value.available == false %}<span class="visually-hidden"> – {{ 'products.product.unavailable' | t }}</span>{% endif %}</label>
+                  <label for="{{ input_id }}"{% if swatch_media %} class="swatch"{% endif %}>
+                    {%- if swatch_media -%}
+                      <span class="swatch__img">{{ swatch_media.preview_image | image_url: width: 240, height: 160, crop: 'center' | image_tag: width: 120, height: 80, loading: 'lazy', alt: '' }}</span>
+                      <span class="swatch__name">{{ value | escape }}</span>
+                    {%- else -%}
+                      {{ value | escape }}
+                    {%- endif -%}
+                    {%- if value.available == false %}<span class="visually-hidden"> – {{ 'products.product.unavailable' | t }}</span>{% endif -%}
+                  </label>
                 {%- endfor -%}
               </div>
             </fieldset>
@@ -155,6 +184,30 @@
               {%- if block.settings.usp2 != blank -%}<li>{% render 'icon', name: 'check', class: 'icon--sm' %}{{ block.settings.usp2 | escape }}</li>{%- endif -%}
               {%- if block.settings.usp3 != blank -%}<li>{% render 'icon', name: 'check', class: 'icon--sm' %}{{ block.settings.usp3 | escape }}</li>{%- endif -%}
             </ul>
+          {%- when 'specs' -%}
+            {%- liquid
+              assign fish_list = ''
+              for tag in product.tags
+                if tag contains 'zielfisch-'
+                  assign f = tag | remove: 'zielfisch-' | capitalize
+                  assign fish_list = fish_list | append: f | append: ', '
+                endif
+              endfor
+              assign fish_list = fish_list | remove_last: ', '
+            -%}
+            <dl class="specs" {{ block.shopify_attributes }}>
+              {%- if product.type != blank -%}<div><dt>{{ 'products.product.specs_type' | t }}</dt><dd>{{ product.type | escape }}</dd></div>{%- endif -%}
+              {%- if fish_list != blank -%}<div><dt>{{ 'products.product.specs_fish' | t }}</dt><dd>{{ fish_list }}</dd></div>{%- endif -%}
+              {%- for option in product.options_with_values -%}
+                {%- assign on = option.name | downcase -%}
+                {%- if on contains 'farbe' or on contains 'color' -%}
+                  <div><dt>{{ 'products.product.specs_colors' | t }}</dt><dd>{{ option.values.size }}</dd></div>
+                {%- else -%}
+                  <div><dt>{{ option.name | escape }}</dt><dd>{{ option.values | join: ' · ' }}</dd></div>
+                {%- endif -%}
+              {%- endfor -%}
+              {%- if current_variant.sku != blank -%}<div><dt>{{ 'products.product.sku' | t }}</dt><dd data-refresh="sku">{{ current_variant.sku }}</dd></div>{%- endif -%}
+            </dl>
           {%- when 'description' -%}
             {%- if product.description != blank -%}
               <div class="product__accordion" {{ block.shopify_attributes }}>
@@ -200,13 +253,15 @@
 {
   "name": "Produkt",
   "settings": [
+    { "type": "checkbox", "id": "image_swatches", "label": "Farben als Bild zeigen", "info": "Für Optionen wie „Farbe“: zeigt das Variantenbild statt nur den Namen.", "default": true },
     { "type": "link_list", "id": "menu", "label": "Menü für die Navigation", "default": "main-menu", "info": "Aus diesem Menü kommt die Pfadangabe (die genaueste Kategorie, in der das Produkt steckt)." },
-    { "type": "checkbox", "id": "show_vendor", "label": "Marke anzeigen", "default": true },
+    { "type": "checkbox", "id": "show_vendor", "label": "Marke anzeigen", "default": false },
     { "type": "checkbox", "id": "show_dynamic_checkout", "label": "Express-Checkout-Buttons anzeigen", "info": "PayPal, Apple Pay usw., je nach Zahlungseinstellungen.", "default": false },
     { "type": "text", "id": "pickup_note", "label": "Hinweis Abholung", "info": "Wird gezeigt, solange in Shopify keine Abholung am Standort eingerichtet ist.", "default": "Abholung vor Ort in Landsberg kostenlos" }
   ],
   "blocks": [
     { "type": "@app" },
+    { "type": "specs", "name": "Kurzdaten", "limit": 1, "settings": [{ "type": "paragraph", "content": "Zeigt Köderart (Produkttyp), Zielfische (Tags „zielfisch-…“), Optionen wie Größe und Gewicht, Anzahl der Farben und die Artikelnummer." }] },
     { "type": "description", "name": "Beschreibung", "limit": 1, "settings": [{ "type": "checkbox", "id": "open", "label": "Standardmäßig geöffnet", "default": true }] },
     {
       "type": "collapsible", "name": "Aufklappbereich",

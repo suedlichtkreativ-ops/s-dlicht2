@@ -68,7 +68,8 @@
     "subnav": "Unterkategorien",
     "subnav_all": "Alle",
     "read_more": "Mehr erfahren",
-    "about": "Über {{ title }}"
+    "about": "Über {{ title }}",
+    "products_heading": "Produkte in {{ title }}"
   },
   "products": {
     "product": {
@@ -93,7 +94,19 @@
       "description": "Beschreibung",
       "gallery": "Produktbilder",
       "show_media": "Bild {{ index }} anzeigen",
-      "placeholder_title": "Produktname"
+      "placeholder_title": "Produktname",
+      "colors_count": {
+        "one": "({{ count }} Farbe)",
+        "other": "({{ count }} Farben)"
+      },
+      "specs_type": "Art",
+      "specs_fish": "Zielfisch",
+      "specs_colors": "Farben",
+      "sku": "Artikelnummer",
+      "colors": {
+        "one": "{{ count }} Farbe",
+        "other": "{{ count }} Farben"
+      }
     }
   },
   "cart": {

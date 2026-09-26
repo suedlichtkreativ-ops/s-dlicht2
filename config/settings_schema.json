@@ -178,5 +178,24 @@
         "label": "TikTok"
       }
     ]
+  },
+  {
+    "name": "Produktkarten",
+    "settings": [
+      {
+        "type": "checkbox",
+        "id": "card_strip_vendor",
+        "label": "Markennamen im Kartentitel weglassen",
+        "info": "Aus „Köderdepot Rasselminnow“ wird „Rasselminnow“, wenn die Marke Köderdepot ist. Die Produktseite zeigt weiter den vollen Titel.",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "card_show_meta",
+        "label": "Köderart und Anzahl der Farben zeigen",
+        "info": "Zum Beispiel „Wobbler · 10 Farben“ unter dem Titel.",
+        "default": true
+      }
+    ]
   }
 ]

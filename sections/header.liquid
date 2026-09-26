@@ -85,7 +85,37 @@
                       <div class="mega__promos">
                         {%- for block in section.blocks -%}
                           {%- assign block_title = block.settings.menu_item | strip | downcase -%}
-                          {%- if block_title == wanted_title -%}
+                          {%- if block_title == wanted_title and block.type == 'products' and block.settings.collection != blank -%}
+                            <div class="mega__products" {{ block.shopify_attributes }}>
+                              {%- if block.settings.title != blank -%}<p class="mega__col-title">{{ block.settings.title | escape }}</p>{%- endif -%}
+                              <ul class="mega__product-list" role="list">
+                                {%- for p in block.settings.collection.products limit: block.settings.count -%}
+                                  <li>
+                                    <a class="mega__product" href="{{ p.url }}">
+                                      <span class="mega__product-img">
+                                        {%- if p.featured_media -%}{% render 'image', image: p.featured_media.preview_image, sizes: '96px', widths: '96, 192', alt: '' %}{%- endif -%}
+                                      </span>
+                                      <span class="mega__product-text">
+                                        {%- liquid
+                                          assign p_title = p.title
+                                          if settings.card_strip_vendor and p.vendor != blank
+                                            assign vp = p.vendor | append: ' '
+                                            assign ts = p.title | slice: 0, vp.size
+                                            if ts == vp
+                                              assign p_title = p.title | remove_first: vp
+                                            endif
+                                          endif
+                                        -%}
+                                        <span class="mega__product-title">{{ p_title | escape }}</span>
+                                        <span class="mega__product-meta">{{ p.type | escape }}</span>
+                                        {% render 'price', product: p, target: p.selected_or_first_available_variant, use_from: true %}
+                                      </span>
+                                    </a>
+                                  </li>
+                                {%- endfor -%}
+                              </ul>
+                            </div>
+                          {%- elsif block_title == wanted_title and block.type == 'promo' -%}
                             <a class="mega__promo" href="{{ block.settings.link | default: link.url }}" {{ block.shopify_attributes }}>
                               <div class="media">
                                 {%- if block.settings.image -%}
@@ -154,6 +184,11 @@
       <button type="button" class="icon-btn" data-drawer-close aria-label="{{ 'general.close' | t }}">{% render 'icon', name: 'close' %}</button>
     </div>
     <nav class="drawer__body mobile-nav" aria-label="{{ 'header.main_nav' | t }}">
+      <form class="mobile-nav__search" action="{{ routes.search_url }}" method="get" role="search">
+        <label class="visually-hidden" for="MobileSearchInput">{{ 'header.search' | t }}</label>
+        <input class="input" id="MobileSearchInput" type="search" name="q" placeholder="{{ 'header.search_placeholder' | t }}" autocomplete="off">
+        <button type="submit" class="icon-btn" aria-label="{{ 'header.search' | t }}">{% render 'icon', name: 'search' %}</button>
+      </form>
       {%- for link in menu.links -%}
         {%- if link.type == 'collection_link' and link.object.products_count == 0 -%}{%- continue -%}{%- endif -%}
         {%- if link.links != blank -%}
@@ -231,6 +266,16 @@
         { "type": "image_picker", "id": "image", "label": "Bild" },
         { "type": "text", "id": "title", "label": "Bildunterschrift" },
         { "type": "url", "id": "link", "label": "Link" }
+      ]
+    },
+    {
+      "type": "products",
+      "name": "Mega-Menü: Produkte",
+      "settings": [
+        { "type": "text", "id": "menu_item", "label": "Menüpunkt", "info": "Genau so geschrieben wie im Hauptmenü, z. B. „Köder“." },
+        { "type": "text", "id": "title", "label": "Überschrift", "default": "Beliebt" },
+        { "type": "collection", "id": "collection", "label": "Kollektion", "info": "Tipp: In Shopify die Sortierung der Kollektion auf „Bestseller“ stellen, dann stehen hier die meistverkauften." },
+        { "type": "range", "id": "count", "label": "Anzahl", "min": 1, "max": 4, "step": 1, "default": 3 }
       ]
     }
   ]

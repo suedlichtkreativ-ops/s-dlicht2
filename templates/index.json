@@ -125,7 +125,7 @@
           "settings": {
             "species": "hecht",
             "title": "Hecht",
-            "collection": "zielfisch-hecht"
+            "collection": "hechtkoder"
           }
         },
         "f2": {
@@ -133,7 +133,7 @@
           "settings": {
             "species": "zander",
             "title": "Zander",
-            "collection": "zielfisch-zander"
+            "collection": "zanderkoder"
           }
         },
         "f3": {
@@ -141,7 +141,7 @@
           "settings": {
             "species": "barsch",
             "title": "Barsch",
-            "collection": "zielfisch-barsch"
+            "collection": "barschkoder"
           }
         },
         "f4": {
@@ -149,7 +149,7 @@
           "settings": {
             "species": "forelle",
             "title": "Forelle",
-            "collection": "zielfisch-forelle"
+            "collection": "forellenkoder"
           }
         }
       },
@@ -160,7 +160,8 @@
         "f4"
       ],
       "settings": {
-        "heading": "Welchen Zielfisch willst du angeln?"
+        "heading": "Welchen Zielfisch willst du angeln?",
+        "text": "Köder für deinen Zielfisch, sortiert nach Köderart."
       }
     },
     "bundle": {

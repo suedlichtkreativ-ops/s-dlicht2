@@ -4,7 +4,7 @@
       <div class="section-head"><h2 class="section-title display">{% render 'slant-words', text: section.settings.heading %}</h2></div>
       <ul class="grid grid--4" role="list">
         {%- for product in recommendations.products -%}
-          <li>{% render 'product-card', product: product, show_vendor: true %}</li>
+          <li>{% render 'product-card', product: product, show_vendor: false %}</li>
         {%- endfor -%}
       </ul>
     </div>

@@ -54,35 +54,18 @@
         "logo_overhang": true
       },
       "blocks": {
-        "koeder_1": {
-          "type": "promo",
+        "koeder_beliebt": {
+          "type": "products",
           "settings": {
             "menu_item": "Köder",
-            "image": "shopify://shop_images/hf_20260413_183955_4fe74c1f-5884-4e02-9db0-fa0ecf00f3db.png",
-            "link": "shopify://collections/koder"
-          }
-        },
-        "koeder_2": {
-          "type": "promo",
-          "settings": {
-            "menu_item": "Köder",
-            "image": "shopify://shop_images/hf_20260413_184645_71e8dd99-9052-48a4-8b26-692f2d030dfa.png",
-            "link": "shopify://collections/koder"
-          }
-        },
-        "koeder_3": {
-          "type": "promo",
-          "settings": {
-            "menu_item": "Köder",
-            "image": "shopify://shop_images/hf_20260413_182735_3a8cf2fc-1290-4398-82eb-4b2e37f266dc.png",
-            "link": "shopify://collections/koder"
+            "title": "Beliebt",
+            "collection": "koder",
+            "count": 3
           }
         }
       },
       "block_order": [
-        "koeder_1",
-        "koeder_2",
-        "koeder_3"
+        "koeder_beliebt"
       ]
     }
   },

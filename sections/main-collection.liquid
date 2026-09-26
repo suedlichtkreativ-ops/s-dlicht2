@@ -70,6 +70,7 @@
             {% render 'active-facets', results: collection, clear_url: collection.url %}
           </div>
           <div data-refresh="grid">
+            <h2 class="visually-hidden">{{ 'collections.products_heading' | t: title: collection.title }}</h2>
             {%- if collection.products.size > 0 -%}
               <ul class="grid{% unless show_filters %} grid--4{% endunless %}" role="list">
                 {%- for product in collection.products -%}
@@ -131,7 +132,7 @@
     { "type": "checkbox", "id": "enable_filtering", "label": "Filter anzeigen", "default": true, "info": "Filter richtest du in der Shopify-App „Search & Discovery“ ein." },
     { "type": "checkbox", "id": "enable_sorting", "label": "Sortierung anzeigen", "default": true },
     { "type": "checkbox", "id": "show_description", "label": "Beschreibung anzeigen", "default": true },
-    { "type": "checkbox", "id": "show_vendor", "label": "Marke anzeigen", "default": true }
+    { "type": "checkbox", "id": "show_vendor", "label": "Marke anzeigen", "default": false }
   ]
 }
 {% endschema %}
