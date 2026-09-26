@@ -186,8 +186,14 @@
         "type": "checkbox",
         "id": "card_strip_vendor",
         "label": "Markennamen im Kartentitel weglassen",
-        "info": "Aus „Köderdepot Rasselminnow“ wird „Rasselminnow“, wenn die Marke Köderdepot ist. Die Produktseite zeigt weiter den vollen Titel.",
+        "info": "Aus „Köderdepot Rasselminnow“ wird „Rasselminnow“. Die Produktseite zeigt weiter den vollen Titel.",
         "default": true
+      },
+      {
+        "type": "text",
+        "id": "card_title_prefix",
+        "label": "Markenname",
+        "default": "Köderdepot"
       },
       {
         "type": "checkbox",

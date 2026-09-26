@@ -40,40 +40,40 @@ In Shopify: **Produkte → Kollektionen → Kollektion erstellen**, Typ „Autom
 | Titel | Handle | Gehört zu | Produkte | Bedingung | Regeln |
 |---|---|---|---|---|---|
 | Köder | `koder` | – | 63 | eine beliebige | Produkt-Tag ist gleich „kategorie-koeder“ |
-| Softbaits | `gummikoder` | Köder | 18 | eine beliebige | Produkttyp ist gleich „Gummifisch“<br>Produkttyp ist gleich „Softbait“<br>Produkttyp ist gleich „Creature Bait“<br>Produkttyp ist gleich „Twister / Grub“<br>Produkttyp ist gleich „Würmer“<br>Produkttyp ist gleich „Frösche“ |
+| Softbaits | `gummikoder` | Köder | 18 | eine beliebige | Produkttyp ist gleich „Gummifisch“<br>Produkttyp ist gleich „Softbait“<br>Produkttyp ist gleich „Creature Bait“<br>Produkttyp ist gleich „Twister & Grub“<br>Produkttyp ist gleich „Gummiwurm“<br>Produkttyp ist gleich „Froschköder“ |
 | Gummifische | `gummifische` | Softbaits | 2 | eine beliebige | Produkttyp ist gleich „Gummifisch“ |
 | Softbaits | `softbait` | Softbaits | 3 | eine beliebige | Produkttyp ist gleich „Softbait“ |
 | Creature Baits | `creature-baits` | Softbaits | 4 | eine beliebige | Produkttyp ist gleich „Creature Bait“ |
-| Twister & Grubs | `twister-grubs` | Softbaits | 3 | eine beliebige | Produkttyp ist gleich „Twister / Grub“ |
-| Gummiwürmer | `gummiwuermer` | Softbaits | 1 | eine beliebige | Produkttyp ist gleich „Würmer“ |
-| Frösche & Topwater | `frosche` | Softbaits | 5 | eine beliebige | Produkttyp ist gleich „Frösche“ |
-| Hardbaits | `hardbaits` | Köder | 29 | eine beliebige | Produkttyp ist gleich „Wobbler“<br>Produkttyp ist gleich „Crankbait“<br>Produkttyp ist gleich „Lipless crankbait“<br>Produkttyp ist gleich „Jerkbait“<br>Produkttyp ist gleich „Swimbait“<br>Produkttyp ist gleich „Popper“ |
+| Twister & Grubs | `twister-grubs` | Softbaits | 3 | eine beliebige | Produkttyp ist gleich „Twister & Grub“ |
+| Gummiwürmer | `gummiwuermer` | Softbaits | 1 | eine beliebige | Produkttyp ist gleich „Gummiwurm“ |
+| Frösche & Topwater | `frosche` | Softbaits | 5 | eine beliebige | Produkttyp ist gleich „Froschköder“ |
+| Hardbaits | `hardbaits` | Köder | 29 | eine beliebige | Produkttyp ist gleich „Wobbler“<br>Produkttyp ist gleich „Crankbait“<br>Produkttyp ist gleich „Lipless Crankbait“<br>Produkttyp ist gleich „Jerkbait“<br>Produkttyp ist gleich „Swimbait“<br>Produkttyp ist gleich „Popper“ |
 | Wobbler | `wobbler` | Hardbaits | 6 | eine beliebige | Produkttyp ist gleich „Wobbler“ |
 | Crankbaits | `crankbaits` | Hardbaits | 10 | eine beliebige | Produkttyp ist gleich „Crankbait“ |
-| Lipless Crankbaits | `lipless-crankbaits` | Hardbaits | 2 | eine beliebige | Produkttyp ist gleich „Lipless crankbait“ |
+| Lipless Crankbaits | `lipless-crankbaits` | Hardbaits | 2 | eine beliebige | Produkttyp ist gleich „Lipless Crankbait“ |
 | Jerkbaits | `jerkbaits` | Hardbaits | 3 | eine beliebige | Produkttyp ist gleich „Jerkbait“ |
 | Swimbaits | `swimbait` | Hardbaits | 4 | eine beliebige | Produkttyp ist gleich „Swimbait“ |
 | Popper | `popper` | Hardbaits | 4 | eine beliebige | Produkttyp ist gleich „Popper“ |
-| Blechköder | `metallkoder` | Köder | 16 | eine beliebige | Produkttyp ist gleich „Spinner“<br>Produkttyp ist gleich „Spinnerbait“<br>Produkttyp ist gleich „Spoons“<br>Produkttyp ist gleich „Metal jig“<br>Produkttyp ist gleich „Tail spinner“<br>Produkttyp ist gleich „Blade Bait“<br>Produkttyp ist gleich „Vibration-Bait“<br>Produkttyp ist gleich „Buzzbait“ |
+| Blechköder | `metallkoder` | Köder | 16 | eine beliebige | Produkttyp ist gleich „Spinner“<br>Produkttyp ist gleich „Spinnerbait“<br>Produkttyp ist gleich „Blinker“<br>Produkttyp ist gleich „Metal Jig“<br>Produkttyp ist gleich „Tail Spinner“<br>Produkttyp ist gleich „Blade Bait“<br>Produkttyp ist gleich „Vibration Bait“<br>Produkttyp ist gleich „Buzzbait“ |
 | Spinner | `spinner` | Blechköder | 2 | eine beliebige | Produkttyp ist gleich „Spinner“ |
 | Spinnerbaits | `spinnerbait` | Blechköder | 2 | eine beliebige | Produkttyp ist gleich „Spinnerbait“ |
-| Blinker & Spoons | `blinker` | Blechköder | 1 | eine beliebige | Produkttyp ist gleich „Spoons“ |
-| Metal Jigs | `metal-jigs` | Blechköder | 3 | eine beliebige | Produkttyp ist gleich „Metal jig“ |
-| Tail Spinner | `tail-spinner` | Blechköder | 1 | eine beliebige | Produkttyp ist gleich „Tail spinner“ |
+| Blinker & Spoons | `blinker` | Blechköder | 1 | eine beliebige | Produkttyp ist gleich „Blinker“ |
+| Metal Jigs | `metal-jigs` | Blechköder | 3 | eine beliebige | Produkttyp ist gleich „Metal Jig“ |
+| Tail Spinner | `tail-spinner` | Blechköder | 1 | eine beliebige | Produkttyp ist gleich „Tail Spinner“ |
 | Blade Baits | `blade-bait` | Blechköder | 2 | eine beliebige | Produkttyp ist gleich „Blade Bait“ |
-| Vibration Baits | `vibration-bait` | Blechköder | 3 | eine beliebige | Produkttyp ist gleich „Vibration-Bait“ |
+| Vibration Baits | `vibration-bait` | Blechköder | 3 | eine beliebige | Produkttyp ist gleich „Vibration Bait“ |
 | Buzzbaits | `buzzbaits` | Blechköder | 2 | eine beliebige | Produkttyp ist gleich „Buzzbait“ |
-| Angelruten | `angelrute` | – | 11 | eine beliebige | Produkttyp ist gleich „Spinnruten“<br>Produkttyp ist gleich „Baitcastruten“ |
-| Spinnruten | `spinnruten` | Angelruten | 7 | eine beliebige | Produkttyp ist gleich „Spinnruten“ |
-| Baitcastruten | `baitcastruten` | Angelruten | 4 | eine beliebige | Produkttyp ist gleich „Baitcastruten“ |
-| Angelrollen | `rollen` | – | 8 | eine beliebige | Produkttyp ist gleich „Stationärrollen“<br>Produkttyp ist gleich „Baitcaster Rollen“ |
-| Stationärrollen | `stationarrollen` | Angelrollen | 5 | eine beliebige | Produkttyp ist gleich „Stationärrollen“ |
-| Baitcaster-Rollen | `baitcaster-rollen` | Angelrollen | 3 | eine beliebige | Produkttyp ist gleich „Baitcaster Rollen“ |
-| Zubehör | `zubehor` | – | 9 | eine beliebige | Produkttyp enthält „Schnur“<br>Produkttyp ist gleich „Snap Swivel“<br>Produkttyp ist gleich „Lösezangen“<br>Produkttyp ist gleich „Jigköpfe“ |
+| Angelruten | `angelrute` | – | 11 | eine beliebige | Produkttyp ist gleich „Spinnrute“<br>Produkttyp ist gleich „Baitcastrute“ |
+| Spinnruten | `spinnruten` | Angelruten | 7 | eine beliebige | Produkttyp ist gleich „Spinnrute“ |
+| Baitcastruten | `baitcastruten` | Angelruten | 4 | eine beliebige | Produkttyp ist gleich „Baitcastrute“ |
+| Angelrollen | `rollen` | – | 8 | eine beliebige | Produkttyp ist gleich „Stationärrolle“<br>Produkttyp ist gleich „Baitcaster-Rolle“ |
+| Stationärrollen | `stationarrollen` | Angelrollen | 5 | eine beliebige | Produkttyp ist gleich „Stationärrolle“ |
+| Baitcaster-Rollen | `baitcaster-rollen` | Angelrollen | 3 | eine beliebige | Produkttyp ist gleich „Baitcaster-Rolle“ |
+| Zubehör | `zubehor` | – | 9 | eine beliebige | Produkttyp enthält „Schnur“<br>Produkttyp ist gleich „Wirbel mit Snap“<br>Produkttyp ist gleich „Lösezange“<br>Produkttyp ist gleich „Jigkopf“ |
 | Angelschnur | `angelschnur` | Zubehör | 4 | eine beliebige | Produkttyp enthält „Schnur“ |
-| Wirbel & Snaps | `wirbel` | Zubehör | 1 | eine beliebige | Produkttyp ist gleich „Snap Swivel“ |
-| Lösezangen | `loesezangen` | Zubehör | 2 | eine beliebige | Produkttyp ist gleich „Lösezangen“ |
-| Jigköpfe | `jigkopfe` | Zubehör | 2 | eine beliebige | Produkttyp ist gleich „Jigköpfe“ |
+| Wirbel & Snaps | `wirbel` | Zubehör | 1 | eine beliebige | Produkttyp ist gleich „Wirbel mit Snap“ |
+| Lösezangen | `loesezangen` | Zubehör | 2 | eine beliebige | Produkttyp ist gleich „Lösezange“ |
+| Jigköpfe | `jigkopfe` | Zubehör | 2 | eine beliebige | Produkttyp ist gleich „Jigkopf“ |
 | Zielfisch Hecht | `zielfisch-hecht` | – | 65 | eine beliebige | Produkt-Tag ist gleich „zielfisch-hecht“ |
 | Hechtköder | `hechtkoder` | Köder | 52 | alle | Produkt-Tag ist gleich „zielfisch-hecht“<br>Produkt-Tag ist gleich „kategorie-koeder“ |
 | Zielfisch Zander | `zielfisch-zander` | – | 59 | eine beliebige | Produkt-Tag ist gleich „zielfisch-zander“ |
@@ -85,6 +85,10 @@ In Shopify: **Produkte → Kollektionen → Kollektion erstellen**, Typ „Autom
 | Bestseller | `bestseller` | – | 91 | eine beliebige | Preis ist größer als „0“ |
 
 Bundles (`bundles`, `starter-bundle`, `hecht-bundle`) bleiben manuelle Kollektionen. Solange sie leer sind, blendet das Theme sie im Menü automatisch aus.
+
+## Produkttypen
+
+Die Import-Datei nutzt lesbare deutsche Produkttypen in der Einzahl, passend zum Menü (z. B. „Metal Jig“ statt „Metal jig“, „Blinker“ statt „Spoons“, „Spinnrute“ statt „Spinnruten“). Die Zuordnung alt → neu steht in `struktur-neu.json` unter `produkttypen`. Die Regeln oben verwenden schon die neuen Namen.
 
 ## Menüs
 

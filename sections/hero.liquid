@@ -1,67 +1,165 @@
 {%- liquid
-  assign lines = section.blocks | where: 'type', 'line'
-  assign heading_tag = 'h2'
+  assign slides = section.blocks | where: 'type', 'slide'
+  assign first_tag = 'h2'
   if section.index == 1
-    assign heading_tag = 'h1'
+    assign first_tag = 'h1'
   endif
+  assign is_slider = false
+  if slides.size > 1
+    assign is_slider = true
+  endif
+  assign interval_ms = section.settings.interval | times: 1000
 -%}
-<section class="hero on-dark" data-hero{% if section.settings.animate %} data-animate{% endif %}>
-  {%- if section.settings.image != blank -%}
-    <div class="hero__media{% if section.settings.image_mobile != blank %} hero__media--desktop{% endif %}">
-      {% render 'image', image: section.settings.image, sizes: '100vw', loading: 'eager', alt: '' %}
+<section
+  class="hero on-dark{% if is_slider %} hero--slider{% endif %}"
+  data-hero
+  {% if section.settings.animate %}data-animate{% endif %}
+  {% if is_slider %}data-hero-slider data-interval="{{ interval_ms }}"{% if section.settings.autoplay %} data-autoplay{% endif %} aria-roledescription="carousel" aria-label="{{ 'hero.carousel' | t }}"{% endif %}
+  style="--hero-interval: {{ interval_ms }}ms;"
+>
+  {%- comment -%} Layer 1: backgrounds (cross-fade on their own, so the line can sit between photo and text) {%- endcomment -%}
+  <div class="hero__backdrops" aria-hidden="true">
+    {%- for block in slides -%}
+      <div class="hero__backdrop{% if forloop.first %} is-active{% endif %}" data-backdrop>
+        {%- if block.settings.image != blank -%}
+          <div class="hero__media{% if block.settings.image_mobile != blank %} hero__media--desktop{% endif %}">
+            {%- if forloop.first -%}
+              {% render 'image', image: block.settings.image, sizes: '100vw', loading: 'eager', alt: '' %}
+            {%- else -%}
+              {% render 'image', image: block.settings.image, sizes: '100vw', loading: 'lazy', alt: '' %}
+            {%- endif -%}
+          </div>
+          {%- if block.settings.image_mobile != blank -%}
+            <div class="hero__media hero__media--mobile">
+              {%- if forloop.first -%}
+                {% render 'image', image: block.settings.image_mobile, sizes: '100vw', loading: 'eager', alt: '' %}
+              {%- else -%}
+                {% render 'image', image: block.settings.image_mobile, sizes: '100vw', loading: 'lazy', alt: '' %}
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        {%- endif -%}
+      </div>
+    {%- endfor -%}
+  </div>
+
+  {%- comment -%} Layer 2: the fishing line with a real lure on a snap. One lure per slide. {%- endcomment -%}
+  {%- if section.settings.show_line -%}
+    <div class="hero__line-art" style="--line-x: {{ section.settings.line_position }}%;" data-hero-line>
+      <span class="hero__rig" data-rig>
+        <span class="hero__string" aria-hidden="true"></span>
+        <svg class="hero__snap" viewBox="0 0 16 44" width="16" height="44" aria-hidden="true" focusable="false">
+          <circle cx="8" cy="3.5" r="2.6"/>
+          <rect x="5" y="6.5" width="6" height="9" rx="3"/>
+          <circle cx="8" cy="18.5" r="2.6"/>
+          <path d="M8 21.2 C3 24 3.2 32 5 37 C6 40 10 40 11 37 C12.6 32 12.8 26.5 9.6 23.4"/>
+        </svg>
+        <span class="hero__tackle" data-tackle>
+          {%- for block in slides -%}
+            {%- liquid
+              assign lure_src = nil
+              if block.settings.lure_image != blank
+                assign lure_src = block.settings.lure_image | image_url: width: 640
+              elsif block.settings.lure_asset != blank
+                assign lure_src = block.settings.lure_asset | asset_url
+              endif
+            -%}
+            {%- if lure_src -%}
+              {%- assign lure_product = block.settings.lure_product -%}
+              <a class="hero__lure{% if forloop.first %} is-active{% endif %}" data-lure href="{% if lure_product != blank %}{{ lure_product.url }}{% else %}{{ block.settings.button_link | default: routes.all_products_collection_url }}{% endif %}"{% unless forloop.first %} tabindex="-1" aria-hidden="true"{% endunless %}>
+                <img src="{{ lure_src }}" alt="" width="640" height="200" loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">
+                <span class="visually-hidden">{% if lure_product != blank %}{{ lure_product.title | escape }}{% else %}{{ block.settings.button_label | escape }}{% endif %}</span>
+              </a>
+            {%- endif -%}
+          {%- endfor -%}
+          <span class="hero__ripple" aria-hidden="true"></span>
+        </span>
+      </span>
     </div>
-    {%- if section.settings.image_mobile != blank -%}
-      <div class="hero__media hero__media--mobile">
-        {% render 'image', image: section.settings.image_mobile, sizes: '100vw', loading: 'eager', alt: '' %}
-      </div>
-    {%- endif -%}
   {%- endif -%}
 
-  {%- if section.settings.image == blank or section.settings.line_with_image -%}
-  <div class="hero__line-art{% if section.settings.image != blank %} hero__line-art--photo{% endif %}" style="--line-x: {{ section.settings.line_position }}%;" data-hero-line aria-hidden="true">
-    <span class="hero__rig">
-      <span class="hero__string"></span>
-      <svg class="hero__hook" viewBox="0 0 40 72" width="40" height="72">
-        <circle cx="20" cy="7" r="5.5"/>
-        <path d="M20 12.5 V48 C20 64 3 66 2 52 V44 L9 50"/>
-      </svg>
-      <span class="hero__ripple"></span>
-    </span>
+  {%- comment -%} Layer 3: copy and buttons {%- endcomment -%}
+  <div class="hero__slides">
+    {%- for block in slides -%}
+      {%- liquid
+        assign tag = 'h2'
+        if forloop.first
+          assign tag = first_tag
+        endif
+        assign lines = block.settings.heading | newline_to_br | split: '<br />'
+      -%}
+      <div
+        class="hero__slide{% if forloop.first %} is-active{% endif %}"
+        id="HeroSlide-{{ section.id }}-{{ forloop.index }}"
+        data-slide
+        {% if is_slider %}role="tabpanel" aria-roledescription="slide" aria-label="{{ forloop.index }} / {{ slides.size }}"{% endif %}
+        {% unless forloop.first %}aria-hidden="true" inert{% endunless %}
+        {{ block.shopify_attributes }}
+      >
+        <div class="page-width hero__inner">
+          <{{ tag }} class="hero__title display">
+            {%- for line in lines -%}
+              {%- assign clean = line | strip -%}
+              {%- if clean == blank -%}{%- continue -%}{%- endif -%}
+              {%- assign words = clean | escape | split: ' ' -%}
+              <span class="hero__line"><span class="hero__line-inner"><span style="--i: {{ forloop.index0 }}">{% for w in words %}<span class="slant">{{ w }}</span>{% unless forloop.last %} {% endunless %}{% endfor %}</span></span></span>
+            {%- endfor -%}
+          </{{ tag }}>
+
+          {%- if block.settings.text != blank -%}
+            <div class="hero__text">{{ block.settings.text }}</div>
+          {%- endif -%}
+
+          {%- if block.settings.code != blank -%}
+            <p class="hero__code">
+              <span>{{ 'hero.code_label' | t }}</span>
+              <button type="button" class="hero__code-btn" data-copy="{{ block.settings.code | escape }}" data-copied="{{ 'hero.copied' | t }}">
+                <strong>{{ block.settings.code | escape }}</strong>
+                <span class="hero__code-hint" data-copy-hint>{{ 'hero.copy' | t }}</span>
+              </button>
+            </p>
+          {%- endif -%}
+
+          {%- if block.settings.button_label != blank or block.settings.button2_label != blank -%}
+            <div class="hero__band">
+              {%- if block.settings.button_label != blank -%}
+                <a class="btn btn--dark btn--slant" href="{{ block.settings.button_link | default: routes.all_products_collection_url }}">{{ block.settings.button_label | escape }}</a>
+              {%- endif -%}
+              {%- if block.settings.button2_label != blank -%}
+                <a class="btn btn--outline btn--slant" href="{{ block.settings.button2_link | default: '#laden' }}">{{ block.settings.button2_label | escape }}</a>
+              {%- endif -%}
+            </div>
+          {%- endif -%}
+        </div>
+      </div>
+    {%- endfor -%}
   </div>
+
+  {%- if is_slider -%}
+    <div class="page-width hero__controls">
+      <div class="hero__tabs" role="tablist" aria-label="{{ 'hero.carousel' | t }}">
+        {%- for block in slides -%}
+          <button type="button" class="hero__tab" role="tab" data-slide-to="{{ forloop.index0 }}" aria-controls="HeroSlide-{{ section.id }}-{{ forloop.index }}" aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"{% unless forloop.first %} tabindex="-1"{% endunless %}>
+            <span class="hero__tab-label">{{ block.settings.label | default: forloop.index | escape }}</span>
+            <span class="hero__tab-bar" aria-hidden="true"><i></i></span>
+          </button>
+        {%- endfor -%}
+      </div>
+      {%- if section.settings.autoplay -%}
+        <button type="button" class="hero__pause" data-hero-pause aria-pressed="false" aria-label="{{ 'hero.pause' | t }}" data-label-pause="{{ 'hero.pause' | t }}" data-label-play="{{ 'hero.play' | t }}">
+          <svg class="hero__pause-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><rect x="3.5" y="2.5" width="3" height="11"/><rect x="9.5" y="2.5" width="3" height="11"/></svg>
+          <svg class="hero__play-icon" viewBox="0 0 16 16" width="16" height="16" aria-hidden="true" focusable="false"><path d="M4 2.5 L13 8 L4 13.5 Z"/></svg>
+        </button>
+      {%- endif -%}
+    </div>
   {%- endif -%}
 
-  <div class="page-width hero__inner">
-    <{{ heading_tag }} class="hero__title display">
-      {%- for block in lines -%}
-        {%- assign words = block.settings.text | escape | split: ' ' -%}
-        <span class="hero__line" {{ block.shopify_attributes }}><span class="hero__line-inner"><span style="--i: {{ forloop.index0 }}">{% for w in words %}<span class="slant">{{ w }}</span>{% unless forloop.last %} {% endunless %}{% endfor %}</span></span></span>
-      {%- else -%}
-        <span class="hero__line"><span class="hero__line-inner"><span>{% render 'slant-words', text: shop.name %}</span></span></span>
-      {%- endfor -%}
-    </{{ heading_tag }}>
-
-    {%- if section.settings.text != blank -%}
-      <div class="hero__text">{{ section.settings.text }}</div>
-    {%- endif -%}
-
-    {%- if section.settings.button_label != blank or section.settings.button2_label != blank -%}
-      <div class="hero__band">
-        {%- if section.settings.button_label != blank -%}
-          <a class="btn btn--dark btn--slant" href="{{ section.settings.button_link | default: routes.all_products_collection_url }}">{{ section.settings.button_label | escape }}</a>
-        {%- endif -%}
-        {%- if section.settings.button2_label != blank -%}
-          <a class="btn btn--outline btn--slant" href="{{ section.settings.button2_link | default: '#laden' }}">{{ section.settings.button2_label | escape }}</a>
-        {%- endif -%}
-      </div>
-    {%- endif -%}
-
-    {%- if section.settings.show_cue -%}
-      <a class="hero__cue" href="#hero-next-{{ section.id }}">
-        <span class="hero__cue-line" aria-hidden="true"></span>
-        <span>{{ 'hero.scroll_cue' | t }}</span>
-      </a>
-    {%- endif -%}
-  </div>
+  {%- if section.settings.show_cue -%}
+    <a class="hero__cue" href="#hero-next-{{ section.id }}">
+      <span>{{ 'hero.scroll_cue' | t }}</span>
+      <span class="hero__cue-line" aria-hidden="true"></span>
+    </a>
+  {%- endif -%}
 </section>
 <span id="hero-next-{{ section.id }}"></span>
 
@@ -69,34 +167,42 @@
 {
   "name": "Hero",
   "class": "hero-section",
-  "max_blocks": 4,
+  "max_blocks": 5,
   "settings": [
-    { "type": "image_picker", "id": "image", "label": "Hintergrundbild (optional)", "info": "Stimmungsvolles Wasser- oder Landschaftsfoto, mind. 2400 px breit. Wird links unten abgedunkelt, damit die Schrift lesbar bleibt. Ohne Bild: schwarze Fläche." },
-    { "type": "image_picker", "id": "image_mobile", "label": "Hintergrundbild Handy (optional)", "info": "Hochformat. Ohne Angabe wird das Desktop-Bild verwendet." },
-    { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Kunstköder, Ruten und Zubehör für Hecht, Zander, Barsch und Forelle. Ausgesucht von Anglern aus Landsberg am Lech.</p>" },
-    { "type": "text", "id": "button_label", "label": "Button 1", "default": "Sortiment ansehen" },
-    { "type": "url", "id": "button_link", "label": "Link Button 1" },
-    { "type": "text", "id": "button2_label", "label": "Button 2", "default": "Abholung vor Ort" },
-    { "type": "url", "id": "button2_link", "label": "Link Button 2", "info": "Leer lassen, um zum Abschnitt „Laden“ zu springen." },
-    { "type": "checkbox", "id": "line_with_image", "label": "Angelschnur auch mit Hintergrundbild zeigen", "info": "Ohne Bild ist die Schnur immer zu sehen. Beim Überfahren mit der Maus (am Handy: Antippen) zupft sie wie bei einem Biss.", "default": true },
-    { "type": "range", "id": "line_position", "label": "Position der Angelschnur", "info": "Abstand vom linken Rand. Am besten eine ruhige Stelle im Bild wählen, z. B. das Wasser.", "min": 30, "max": 90, "step": 1, "unit": "%", "default": 44 },
+    { "type": "checkbox", "id": "autoplay", "label": "Motive automatisch wechseln", "info": "Pausiert, solange die Maus über dem Bereich ist, und bei „Bewegung reduzieren“ im Betriebssystem.", "default": true },
+    { "type": "range", "id": "interval", "label": "Anzeigedauer pro Motiv", "min": 5, "max": 12, "step": 1, "unit": "s", "default": 7 },
+    { "type": "checkbox", "id": "show_line", "label": "Angelschnur mit Köder zeigen", "info": "Beim Überfahren mit der Maus (am Handy: Antippen der Schnur) zupft sie wie bei einem Biss. Ein Klick auf den Köder öffnet das Produkt.", "default": true },
+    { "type": "range", "id": "line_position", "label": "Position der Angelschnur", "info": "Abstand vom linken Rand. Am besten eine ruhige Stelle im Bild wählen, z. B. das Wasser.", "min": 30, "max": 90, "step": 1, "unit": "%", "default": 52 },
     { "type": "checkbox", "id": "show_cue", "label": "Scroll-Hinweis anzeigen", "default": true },
     { "type": "checkbox", "id": "animate", "label": "Einstiegsanimation", "default": true }
   ],
   "blocks": [
     {
-      "type": "line",
-      "name": "Zeile",
-      "settings": [{ "type": "text", "id": "text", "label": "Text", "default": "Köder." }]
+      "type": "slide",
+      "name": "Motiv",
+      "settings": [
+        { "type": "text", "id": "label", "label": "Name im Reiter", "info": "Kurz, z. B. „Topwater“. Steht unten als Reiter.", "default": "Sortiment" },
+        { "type": "image_picker", "id": "image", "label": "Hintergrundbild", "info": "Stimmungsfoto ohne eingebrannten Text, mind. 2400 px breit. Links unten wird es für die Schrift abgedunkelt." },
+        { "type": "image_picker", "id": "image_mobile", "label": "Hintergrundbild Handy (optional)", "info": "Hochformat. Ohne Angabe wird das Desktop-Bild verwendet." },
+        { "type": "textarea", "id": "heading", "label": "Überschrift", "info": "Jede Zeile wird eine eigene Zeile. Kurze Wörter wirken am besten.", "default": "Köder.\nRuten.\nRat vom Lech." },
+        { "type": "richtext", "id": "text", "label": "Text" },
+        { "type": "text", "id": "code", "label": "Rabattcode (optional)", "info": "Wird als Feld zum Kopieren gezeigt. Der Code muss unter Rabatte in Shopify angelegt sein." },
+        { "type": "text", "id": "button_label", "label": "Button 1", "default": "Sortiment ansehen" },
+        { "type": "url", "id": "button_link", "label": "Link Button 1" },
+        { "type": "text", "id": "button2_label", "label": "Button 2" },
+        { "type": "url", "id": "button2_link", "label": "Link Button 2", "info": "Leer lassen, um zum Abschnitt „Laden“ zu springen." },
+        { "type": "header", "content": "Köder an der Angelschnur" },
+        { "type": "image_picker", "id": "lure_image", "label": "Köder-Bild", "info": "Freigestelltes PNG, Kopf (Öse) nach links. Er hängt am Snap." },
+        { "type": "text", "id": "lure_asset", "label": "Köder aus dem Theme", "info": "Wird genutzt, wenn kein Bild gewählt ist. Mitgeliefert: lure-fernlaeufer.png, lure-oberflaechenblitz.png, lure-kurzlaeufer.png, lure-rasselminnow.png" },
+        { "type": "product", "id": "lure_product", "label": "Köder-Produkt", "info": "Ein Klick auf den Köder öffnet dieses Produkt." }
+      ]
     }
   ],
   "presets": [
     {
       "name": "Hero",
       "blocks": [
-        { "type": "line", "settings": { "text": "Köder." } },
-        { "type": "line", "settings": { "text": "Ruten." } },
-        { "type": "line", "settings": { "text": "Rat vom Lech." } }
+        { "type": "slide", "settings": { "label": "Sortiment", "heading": "Köder.\nRuten.\nRat vom Lech.", "lure_asset": "lure-fernlaeufer.png" } }
       ]
     }
   ]

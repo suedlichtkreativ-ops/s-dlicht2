@@ -44,8 +44,8 @@
 
   {%- liquid
     assign card_title = product.title
-    if settings.card_strip_vendor and product.vendor != blank
-      assign vendor_prefix = product.vendor | append: ' '
+    if settings.card_strip_vendor and settings.card_title_prefix != blank
+      assign vendor_prefix = settings.card_title_prefix | strip | append: ' '
       assign title_start = product.title | slice: 0, vendor_prefix.size
       if title_start == vendor_prefix
         assign card_title = product.title | remove_first: vendor_prefix

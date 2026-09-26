@@ -1,4 +1,22 @@
 {
+  "produkttypen": {
+    "Baitcaster Rollen": "Baitcaster-Rolle",
+    "Baitcastruten": "Baitcastrute",
+    "Frösche": "Froschköder",
+    "Jigköpfe": "Jigkopf",
+    "Lipless crankbait": "Lipless Crankbait",
+    "Lösezangen": "Lösezange",
+    "Metal jig": "Metal Jig",
+    "Monofyle Angelschnur": "Monofile Angelschnur",
+    "Snap Swivel": "Wirbel mit Snap",
+    "Spinnruten": "Spinnrute",
+    "Spoons": "Blinker",
+    "Stationärrollen": "Stationärrolle",
+    "Tail spinner": "Tail Spinner",
+    "Twister / Grub": "Twister & Grub",
+    "Vibration-Bait": "Vibration Bait",
+    "Würmer": "Gummiwurm"
+  },
   "kollektionen": [
     {
       "handle": "koder",
@@ -23,9 +41,9 @@
         "TYPE EQUALS Gummifisch",
         "TYPE EQUALS Softbait",
         "TYPE EQUALS Creature Bait",
-        "TYPE EQUALS Twister / Grub",
-        "TYPE EQUALS Würmer",
-        "TYPE EQUALS Frösche"
+        "TYPE EQUALS Twister & Grub",
+        "TYPE EQUALS Gummiwurm",
+        "TYPE EQUALS Froschköder"
       ],
       "bedingung": "beliebige",
       "beschreibung": "## Gummiköder – weich, vielseitig, fängig\n\nGummiköder sind die vielseitigste Ködergruppe im Raubfischangeln. Weil sie weich sind, nehmen Raubfische sie auch dann nicht sofort wieder los, wenn sie den Köder nur kurz gepackt haben. Diese Eigenschaft macht sie besonders an Tagen interessant, an denen die Fische zurückhaltend sind und nur kurz zupacken.\n\nBei Köderdepot finden Sie Gummiköder in mehreren Grundformen: klassische Gummifische für die Führung am Grund, Krebse und Creature Baits für krautige Bereiche und strukturreiche Uferzonen sowie schwimmende Frösche für die Oberfläche. Jede Form deckt eine andere Situation ab – gemeinsam bilden sie ein Sortiment, mit dem sich fast jedes Raubfischgewässer abarbeiten lässt.\n\n### Welche Form für welche Situation\n\n- **Gummifisch:** Grundangeln, Jiggen, Faulenzen über Kanten und harten Böden\n\n- **Krebs und Creature Bait:** Krautfelder, Steinpackungen, Bereiche mit viel Struktur\n\n- **Schwimmender Frosch:** Flachwasser, Seerosen, Schilfkanten, dichter Bewuchs\n\n- **Wurm und Twister:** feine Führung, kleinere Köder, Barsch und Forelle\n\n### Zielfische und Gewässer\n\nGummiköder decken das gesamte Raubfischspektrum ab: Barsch, Hecht und Zander gehören zu den häufigsten Zielfischen, an vielen Gewässern kommen Wels und Rapfen dazu. Sie funktionieren im Baggersee, im Fluss, im Stausee und im kleineren Teich – die Anpassung entsteht über Gewicht, Größe und Führung, nicht über den Gewässertyp.\n\n*Alle Gummiköder bei Köderdepot gibt es in mehreren Größen und Farbdekoren. Welche Ausführung zu Ihrer Situation passt, steht in jeder Produktbeschreibung.*",
@@ -89,7 +107,7 @@
       "handle": "twister-grubs",
       "titel": "Twister & Grubs",
       "regeln": [
-        "TYPE EQUALS Twister / Grub"
+        "TYPE EQUALS Twister & Grub"
       ],
       "bedingung": "beliebige",
       "beschreibung": "",
@@ -105,7 +123,7 @@
       "handle": "gummiwuermer",
       "titel": "Gummiwürmer",
       "regeln": [
-        "TYPE EQUALS Würmer"
+        "TYPE EQUALS Gummiwurm"
       ],
       "bedingung": "beliebige",
       "beschreibung": "",
@@ -121,7 +139,7 @@
       "handle": "frosche",
       "titel": "Frösche & Topwater",
       "regeln": [
-        "TYPE EQUALS Frösche"
+        "TYPE EQUALS Froschköder"
       ],
       "bedingung": "beliebige",
       "beschreibung": "Gummifische gehören zu den **erfolgreichsten Kunstködern** beim modernen Raubfischangeln. Durch ihren natürlichen Lauf, die flexible Gummimischung und starke Druckwellen imitieren sie perfekt kleine Beutefische – ideal für **Barsch, Zander und Hecht**. Egal ob am **Jigkopf**, am **Offset-Haken**, im **Texas Rig**, **Carolina Rig** oder am **Drop Shot**: Gummifische lassen sich extrem vielseitig fischen und decken nahezu jedes Gewässer ab.\n\nIn dieser Kollektion findest du hochwertige Gummifische in verschiedenen Größen, Farben und Designs – von natürlichen Dekoren für klares Wasser bis hin zu aggressiven Schockfarben für trübe Bedingungen. Perfekt zum **Absuchen großer Wasserflächen**, für das präzise Angeln an Strukturen und für Situationen mit hohem Angeldruck.",
@@ -139,7 +157,7 @@
       "regeln": [
         "TYPE EQUALS Wobbler",
         "TYPE EQUALS Crankbait",
-        "TYPE EQUALS Lipless crankbait",
+        "TYPE EQUALS Lipless Crankbait",
         "TYPE EQUALS Jerkbait",
         "TYPE EQUALS Swimbait",
         "TYPE EQUALS Popper"
@@ -190,7 +208,7 @@
       "handle": "lipless-crankbaits",
       "titel": "Lipless Crankbaits",
       "regeln": [
-        "TYPE EQUALS Lipless crankbait"
+        "TYPE EQUALS Lipless Crankbait"
       ],
       "bedingung": "beliebige",
       "beschreibung": "",
@@ -256,11 +274,11 @@
       "regeln": [
         "TYPE EQUALS Spinner",
         "TYPE EQUALS Spinnerbait",
-        "TYPE EQUALS Spoons",
-        "TYPE EQUALS Metal jig",
-        "TYPE EQUALS Tail spinner",
+        "TYPE EQUALS Blinker",
+        "TYPE EQUALS Metal Jig",
+        "TYPE EQUALS Tail Spinner",
         "TYPE EQUALS Blade Bait",
-        "TYPE EQUALS Vibration-Bait",
+        "TYPE EQUALS Vibration Bait",
         "TYPE EQUALS Buzzbait"
       ],
       "bedingung": "beliebige",
@@ -309,7 +327,7 @@
       "handle": "blinker",
       "titel": "Blinker & Spoons",
       "regeln": [
-        "TYPE EQUALS Spoons"
+        "TYPE EQUALS Blinker"
       ],
       "bedingung": "beliebige",
       "beschreibung": "",
@@ -325,7 +343,7 @@
       "handle": "metal-jigs",
       "titel": "Metal Jigs",
       "regeln": [
-        "TYPE EQUALS Metal jig"
+        "TYPE EQUALS Metal Jig"
       ],
       "bedingung": "beliebige",
       "beschreibung": "",
@@ -341,7 +359,7 @@
       "handle": "tail-spinner",
       "titel": "Tail Spinner",
       "regeln": [
-        "TYPE EQUALS Tail spinner"
+        "TYPE EQUALS Tail Spinner"
       ],
       "bedingung": "beliebige",
       "beschreibung": "",
@@ -373,7 +391,7 @@
       "handle": "vibration-bait",
       "titel": "Vibration Baits",
       "regeln": [
-        "TYPE EQUALS Vibration-Bait"
+        "TYPE EQUALS Vibration Bait"
       ],
       "bedingung": "beliebige",
       "beschreibung": "",
@@ -405,8 +423,8 @@
       "handle": "angelrute",
       "titel": "Angelruten",
       "regeln": [
-        "TYPE EQUALS Spinnruten",
-        "TYPE EQUALS Baitcastruten"
+        "TYPE EQUALS Spinnrute",
+        "TYPE EQUALS Baitcastrute"
       ],
       "bedingung": "beliebige",
       "beschreibung": "",
@@ -422,7 +440,7 @@
       "handle": "spinnruten",
       "titel": "Spinnruten",
       "regeln": [
-        "TYPE EQUALS Spinnruten"
+        "TYPE EQUALS Spinnrute"
       ],
       "bedingung": "beliebige",
       "beschreibung": "## Spinnruten – verlängerte Arme am Wasser\n\nEine Spinnrute überträgt, was unter Wasser passiert. Sie meldet Grundkontakt, sie zeigt Köderbewegungen und sie setzt den Anhieb durch. Deshalb ist sie mehr als ein Halter für die Rolle: Sie ist die Verbindung zwischen dem Angler und dem Köder.\n\nDie Spinnruten von Köderdepot sind für das Raubfischangeln mit Kunstködern ausgelegt. Unterschieden werden sie über drei Angaben: die **Länge** (Wurfweite und Umgang mit Hindernissen), die **Kraftklasse** (Power M, MH oder H – wie viel Druck verträgt die Rute) und die **Biegekurve** (Action MF, F oder XF – wie schnell die Spitze arbeitet).\n\n### Welche Länge für welches Gewässer\n\n- **2,10 bis 2,40 m:** enge Stellen, Boot, bewachsene Ufer, präzise Würfe\n\n- **2,40 bis 2,70 m:** offene Uferstrecken, breite Buhnenfelder, weite Würfe\n\n- **ab 2,70 m:** große Flächen, Distanz, Einsatz vom Ufer\n\n### Welche Auslegung für welchen Köder\n\nEine mittlere Auslegung (M) trägt leichtere bis mittlere Köder und verzeiht mehr im Drill. Eine mittelschwere bis schwere Auslegung (MH, H) bringt die Reserve für große Gummifische und kräftige Anhiebe. Eine sehr schnelle Aktion (XF) liefert den direktesten Kontakt, eine moderate Aktion (MF) federt Fluchten weicher ab.\n\n*Zielfische: Hecht und Zander, bei leichteren Auslegungen auch Barsch und Forelle. Alle Ruten sind als Spinn- oder Baitcastruten erhältlich, wo die Baureihe das vorsieht.*",
@@ -438,7 +456,7 @@
       "handle": "baitcastruten",
       "titel": "Baitcastruten",
       "regeln": [
-        "TYPE EQUALS Baitcastruten"
+        "TYPE EQUALS Baitcastrute"
       ],
       "bedingung": "beliebige",
       "beschreibung": "## Baitcastruten – für Werfer, die den Köder spüren wollen\n\nEine Baitcastrute wird mit einer Baitcaster-Rolle gefischt, die auf dem Blank sitzt statt darunter. Der Daumen liegt dabei auf der Spule. Das erlaubt ein sehr direktes Werfen und eine feine Kontrolle, sobald die Übung da ist.\n\nDer Vorteil liegt nicht nur im Wurf. Weil der Daumen die Spule berührt, spürt man den Köder während des ganzen Wurfablaufs. Das ist besonders bei schwereren Ködern und bei präzisen Würfen an Hindernissen ein echter Vorteil – man kann den Aufprallpunkt steuern, statt ihn nur zu treffen.\n\n### Für wen sich Baitcastruten lohnen\n\n- **Schwere Köder:** große Gummifische, Jerkbaits, Spinnerbaits\n\n- **Präzise Würfe:** gezielt an Krautkanten, unter überhängendes Holz, an Stege\n\n- **Dauerhaftes Werfen:** wer den ganzen Tag wirft, schont das Handgelenk\n\n- **Direkter Kontakt:** der Köderlauf wird unmittelbar in die Hand übertragen\n\n### Was man dazu wissen sollte\n\nDer Einstieg braucht etwas Übung: Die Wurfbremse muss zur Ködergewicht-Klasse passen, sonst entstehen Schnurperücken. Dafür ist die Bremse bei jeder Baitcaster-Rolle einstellbar – ist sie einmal richtig eingestellt, wirft die Kombination sehr zuverlässig.\n\n*Zielfische: Hecht und Zander, ergänzend Barsch. Als Kraftrute, Weitwurfrute und Allroundrute in mehreren Längen erhältlich.*",
@@ -454,8 +472,8 @@
       "handle": "rollen",
       "titel": "Angelrollen",
       "regeln": [
-        "TYPE EQUALS Stationärrollen",
-        "TYPE EQUALS Baitcaster Rollen"
+        "TYPE EQUALS Stationärrolle",
+        "TYPE EQUALS Baitcaster-Rolle"
       ],
       "bedingung": "beliebige",
       "beschreibung": "In der Kategorie Angelrollen findest du hochwertige Angelrollen für modernes Spinnfischen auf Raubfisch. Ob leichtes Barschangeln, präzises Zanderfischen oder vielseitiges Allround-Spinnfischen – die richtige Rolle sorgt für ruhigen Lauf, kontrollierten Schnurabzug und zuverlässige Kraftübertragung im Drill.\n\nUnsere Spinnrollen werden auf eine ausgewogene Kombination aus Gewicht, Stabilität und Laufruhe ausgelegt. Präzise Bremssysteme ermöglichen eine fein einstellbare Bremskraft, während hochwertige Kugellager und stabile Getriebe für ein gleichmäßiges Einholen und lange Haltbarkeit sorgen. Leichte Aluminiumspulen unterstützen weite Würfe und eine saubere Schnurverlegung – entscheidend für eine kontrollierte Köderführung.\n\nEgal ob Einsteiger oder erfahrener Raubfischangler: Bei Köderdepot findest du Angelrollen, die perfekt auf moderne Kunstködertechniken abgestimmt sind und zuverlässig am See, Fluss oder Kanal funktionieren.",
@@ -471,7 +489,7 @@
       "handle": "stationarrollen",
       "titel": "Stationärrollen",
       "regeln": [
-        "TYPE EQUALS Stationärrollen"
+        "TYPE EQUALS Stationärrolle"
       ],
       "bedingung": "beliebige",
       "beschreibung": "## Stationärrollen – die Standardrolle für das Spinnfischen\n\nDie Stationärrolle sitzt unter der Rute und wird mit der Hand gekurbelt, während die Schnur über eine sich drehende Spule abläuft. Sie ist damit die einfachste und verzeihendste Rollenart – weshalb sie für die meisten Angler der Einstieg ist und für viele auch der Standard bleibt.\n\nDie Stationärrollen von Köderdepot sind für das Raubfischangeln ausgelegt und werden über zwei Größenordnungen unterschieden: **1500 und 2500** für das leichte Spinnfischen auf Barsch, Zander und Forelle, **2800 und 5800** für mittlere bis schwere Raubfischangelei, und **12000** für das Distanzangeln auf Wels und Karpfen.\n\n### Was die Zahlen bedeuten\n\n- **Übersetzung:** wie viel Schnur je Kurbelumdrehung eingezogen wird – höher heißt schneller\n\n- **Bremskraft:** wie viel Druck der Fisch nehmen kann, bevor Schnur abläuft\n\n- **Kugellager:** je mehr, desto leichter meist der Lauf\n\n- **Bremssystem:** Front- oder Heckbremse mit hörbarem Alarm\n\n### Welche Größe für welchen Einsatz\n\nEine kleine Rolle mit 1500 oder 2500 wiegt wenig und passt zu leichten Ködern, kurzen Würfen und feiner Führung. Größere Rollen mit 2800 und 5800 bringen mehr Schnurfassung und mehr Kraft für schwere Köder und weite Würfe. Die 12000er ist für Distanzen gebaut, bei denen eine schwere Montage lange liegt.\n\n*Zielfische: Barsch, Zander, Hecht, Forelle, Wels und Karpfen. Alle Rollen mit Angabe zu Übersetzung, Bremskraft und Aufbau in der Produktbeschreibung.*",
@@ -487,7 +505,7 @@
       "handle": "baitcaster-rollen",
       "titel": "Baitcaster-Rollen",
       "regeln": [
-        "TYPE EQUALS Baitcaster Rollen"
+        "TYPE EQUALS Baitcaster-Rolle"
       ],
       "bedingung": "beliebige",
       "beschreibung": "## Baitcaster-Rollen – direkte Kontrolle über den Daumen\n\nEine Baitcaster-Rolle liegt auf der Rute, die Spule dreht sich quer zur Wurfrichtung. Der Daumen steuert sie während des Wurfs. Das verlangt Übung, gibt aber eine Kontrolle zurück, die mit keiner anderen Rollenart möglich ist: Man merkt, wann der Köder aufkommt, und kann ihn abbremsen, bevor eine Schnurperücke entsteht.\n\nAlle Baitcaster-Rollen von Köderdepot sind Low-Profile-Modelle, sitzen also flach nah an der Hand. Sie sind für das Raubfischangeln ausgelegt und unterscheiden sich in Übersetzung, Bremskraft und Wurfbremssystem.\n\n### Was die Modelle unterscheidet\n\n- **Kompaktcaster:** kompakte Bauform, kombinierte Magnet- und Fliehkraftbremse\n\n- **Kraftwerfer:** hohe Übersetzung für zügige Köderführung, starke Bremse\n\n- **Allroundcaster:** ausgewogene Übersetzung, einstellbare Magnetbremse, Carbonfaserbremse\n\n### Worauf bei der Auswahl zu achten ist\n\nEine hohe Übersetzung holt viel Schnur je Kurbelumdrehung ein und passt zu Gummifischen und Ködern, die nach dem Anheben zügig wieder auf Tiefe kommen sollen. Eine niedrigere Übersetzung bringt mehr Kraft und passt zu schweren Ködern und zu Drills mit kräftigen Fischen. Bei der Spule ist eine flache Auslegung für leichtere Köder und eine tiefe Spule für schwerere Köder und stärkere Schnur gedacht.\n\n*Die meisten Modelle sind für Rechts- und Linkshand erhältlich. Zielfische: Hecht, Zander und Barsch.*",
@@ -504,9 +522,9 @@
       "titel": "Zubehör",
       "regeln": [
         "TYPE CONTAINS Schnur",
-        "TYPE EQUALS Snap Swivel",
-        "TYPE EQUALS Lösezangen",
-        "TYPE EQUALS Jigköpfe"
+        "TYPE EQUALS Wirbel mit Snap",
+        "TYPE EQUALS Lösezange",
+        "TYPE EQUALS Jigkopf"
       ],
       "bedingung": "beliebige",
       "beschreibung": "## Angelzubehör – die kleinen Teile, die den Unterschied machen\n\nZubehör entscheidet selten über den Fang, aber häufig über den Ablauf des Angeltags. Ein Snap-Verbinder spart Minuten beim Köderwechsel, eine Lösezange schützt Fisch und Hand. Wer diese Teile beisammen hat, arbeitet ruhiger und kommt schneller wieder zum Wurf.\n\n### Was zu diesem Bereich gehört\n\n- **Snap-Verbinder:** Köderwechsel ohne Neuknoten, in mehreren Größen\n\n- **Lösezangen:** Haken schonend lösen, kurz und lang gebaut\n\n- **Montagematerial:** Kleinteile für den Aufbau der Montage am Wasser\n\n### Worauf beim Kauf zu achten ist\n\nBeim Snap-Verbinder muss die Größe zum Köder und zur Tragkraft der Schnur passen: kleinere Ausführungen für feine Köder, größere für schwere. Bei der Lösezange gilt: kurze Zangen arbeiten präzise am Maul, lange Bauformen geben Hebelkraft bei tief sitzenden Haken und halten die Hand vom Zahngebiss der Raubfische fern.\n\n*Wer sein Tackle einmal vollständig aufbaut, wechselt danach nur noch Nachschub. Deshalb gibt es die meisten Zubehörteile in Gebinden, die einen ganzen Angelangeltag abdecken.*",
@@ -538,7 +556,7 @@
       "handle": "wirbel",
       "titel": "Wirbel & Snaps",
       "regeln": [
-        "TYPE EQUALS Snap Swivel"
+        "TYPE EQUALS Wirbel mit Snap"
       ],
       "bedingung": "beliebige",
       "beschreibung": "",
@@ -554,7 +572,7 @@
       "handle": "loesezangen",
       "titel": "Lösezangen",
       "regeln": [
-        "TYPE EQUALS Lösezangen"
+        "TYPE EQUALS Lösezange"
       ],
       "bedingung": "beliebige",
       "beschreibung": "",
@@ -570,7 +588,7 @@
       "handle": "jigkopfe",
       "titel": "Jigköpfe",
       "regeln": [
-        "TYPE EQUALS Jigköpfe"
+        "TYPE EQUALS Jigkopf"
       ],
       "bedingung": "beliebige",
       "beschreibung": "## Jigköpfe – das Gewicht am Gummiköder\n\nDer Jigkopf bestimmt, wie ein Gummiköder läuft. Er beschwert den Köder, führt ihn zum Grund und gibt ihm seinen Schwerpunkt. Eine saubere Auswahl zeigt sich daran, dass der Gummifisch gerade läuft, ohne zu drehen – und dass der Kontakt zum Grund über die Rutenspitze spürbar bleibt.\n\nKöderdepot führt Jigköpfe in Rundkopf-Form. Der Rundkopf ist die klassische Wahl, weil er einfach zu handhaben ist und in fast jeder Situation funktioniert: beim Jiggen, beim Faulenzen und beim Schleifen am Grund. Er ist damit der richtige Einstieg und bleibt auch für erfahrene Angler die Standardform.\n\n### Welches Gewicht für welche Situation\n\n- **Leicht:** flaches Wasser, langsames Absinken, feine Führung, Distanz zum Fisch\n\n- **Mittel:** Standardtiefen, normale Strömung, aktive Suche\n\n- **Schwer:** tiefe Bereiche, starke Strömung, Wind\n\n### Worauf es ankommt\n\nGrundsätzlich gilt: So leicht wie möglich, so schwer wie nötig. Ein leichterer Kopf sinkt langsamer und bleibt länger im Blickfeld der Fische, ein schwererer Kopf hält den Bodenkontakt auch bei Strömung. Die passende Wahl entsteht aus Tiefe, Strömung und Wurfweite – nicht aus der Fischgröße.\n\n*Zielfische: Barsch, Zander und Hecht. Erhältlich in mehreren Gewichten, Mengen und Farben, damit sich Köder und Gewicht auf die eigene Situation abstimmen lassen.*",

@@ -3,42 +3,80 @@
     "hero": {
       "type": "hero",
       "blocks": {
-        "l1": {
-          "type": "line",
+        "sortiment": {
+          "type": "slide",
           "settings": {
-            "text": "Köder."
+            "label": "Sortiment",
+            "image": "shopify://shop_images/angler-komplettlogo-ohne-werbetext.png",
+            "image_mobile": "shopify://shop_images/angler-komplettlogo-ohne-werbetext_99e322a9-9496-4a11-8301-0940ce863032.png",
+            "heading": "Köder.\nRuten.\nRat vom Lech.",
+            "text": "<p>Kunstköder, Ruten und Zubehör für Hecht, Zander, Barsch und Forelle. Von Anglern für Angler, aus Landsberg am Lech.</p>",
+            "button_label": "Sortiment ansehen",
+            "button_link": "shopify://collections/koder",
+            "button2_label": "Abholung vor Ort",
+            "button2_link": "",
+            "lure_asset": "lure-fernlaeufer.png",
+            "lure_product": "koederdepot-fernlaeufer-13-cm"
           }
         },
-        "l2": {
-          "type": "line",
+        "topwater": {
+          "type": "slide",
           "settings": {
-            "text": "Ruten."
+            "label": "Topwater",
+            "image": "shopify://shop_images/aktuell_topwater_oberflaechenblitz_desktop.png",
+            "heading": "Topwater.\nSpannung an\nder Oberfläche.",
+            "text": "<p>Wenn Räuber dicht unter der Wasseroberfläche jagen: Oberflächenblitz, Knallkopf, Uferknall und Federkopf für Barsch, Hecht und Rapfen.</p>",
+            "button_label": "Popper ansehen",
+            "button_link": "shopify://collections/popper",
+            "button2_label": "Froschköder",
+            "button2_link": "shopify://collections/frosche",
+            "lure_asset": "lure-oberflaechenblitz.png",
+            "lure_product": "koederdepot-oberflaechenblitz"
           }
         },
-        "l3": {
-          "type": "line",
+        "kurzlaeufer": {
+          "type": "slide",
           "settings": {
-            "text": "Rat vom Lech."
+            "label": "Kurzläufer",
+            "image": "shopify://shop_images/ChatGPT_Image_1._Aug._2026_10_21_43.png",
+            "heading": "Kurzläufer.\nLeise führen.\nPräsent bleiben.",
+            "text": "<p>Schwimmender Wobbler für flache Kanten und wechselnde Pausen, gelenkiger Lauf über flachem Kraut. 8 cm, 15,3 g, 5 Farben.</p>",
+            "button_label": "Zum Kurzläufer",
+            "button_link": "shopify://products/koederdepot-kurzlaeufer",
+            "button2_label": "Alle Swimbaits",
+            "button2_link": "shopify://collections/swimbait",
+            "lure_asset": "lure-kurzlaeufer.png",
+            "lure_product": "koederdepot-kurzlaeufer"
+          }
+        },
+        "willkommen": {
+          "type": "slide",
+          "settings": {
+            "label": "10 % Rabatt",
+            "image": "shopify://shop_images/ChatGPT_Image_16._Juli_2026_13_55_27.png",
+            "heading": "Dein erster\nFang lohnt\nsich.",
+            "text": "<p>10 % Rabatt auf deine erste Bestellung. Gib den Code beim Bezahlen ein.</p>",
+            "code": "WILLKOMMEN10",
+            "button_label": "Köder entdecken",
+            "button_link": "shopify://collections/koder",
+            "lure_asset": "lure-rasselminnow.png",
+            "lure_product": "koederdepot-rasselminnow"
           }
         }
       },
       "block_order": [
-        "l1",
-        "l2",
-        "l3"
+        "sortiment",
+        "topwater",
+        "kurzlaeufer",
+        "willkommen"
       ],
       "settings": {
-        "text": "<p>Kunstköder, Ruten und Zubehör für Hecht, Zander, Barsch und Forelle. Von Anglern für Angler, aus Landsberg am Lech.</p>",
-        "button_label": "Sortiment ansehen",
-        "button2_label": "Abholung vor Ort",
+        "autoplay": true,
+        "interval": 7,
+        "show_line": true,
+        "line_position": 52,
         "show_cue": true,
-        "animate": true,
-        "button_link": "shopify://collections/koder",
-        "button2_link": "",
-        "image": "shopify://shop_images/angler-komplettlogo-ohne-werbetext.png",
-        "image_mobile": "shopify://shop_images/angler-komplettlogo-ohne-werbetext_99e322a9-9496-4a11-8301-0940ce863032.png",
-        "line_with_image": true,
-        "line_position": 44
+        "animate": true
       }
     },
     "tiles": {

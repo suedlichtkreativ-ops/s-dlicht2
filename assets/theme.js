@@ -252,27 +252,145 @@
   }, { passive: true });
   setCompact();
 
-  /* ---------- Hero load sequence ---------- */
-  const hero = $('[data-hero][data-animate]');
-  if (hero && !reducedMotion.matches) {
-    const start = () => requestAnimationFrame(() => hero.classList.add('is-in'));
-    // Wait for the display font so lines do not re-wrap mid-animation.
-    if (document.fonts && document.fonts.ready) {
-      Promise.race([document.fonts.ready, new Promise((r) => setTimeout(r, 600))]).then(start);
-    } else start();
-  } else if (hero) {
-    hero.classList.add('is-in');
-  }
+  /* ---------- Hero: load sequence, slides, fishing line ---------- */
+  $$('[data-hero]').forEach((hero) => {
+    const slides = $$('[data-slide]', hero);
+    const backdrops = $$('[data-backdrop]', hero);
+    const lures = $$('[data-lure]', hero);
+    const tabs = $$('[role="tab"]', hero);
+    const lineArt = $('[data-hero-line]', hero);
+    const rig = $('[data-rig]', hero);
+    const tackle = $('[data-tackle]', hero);
+    const animate = hero.hasAttribute('data-animate') && !reducedMotion.matches;
+    let current = 0;
 
-  /* ---------- Hero line: a bite when touched ---------- */
-  $$('[data-hero-line] .hero__rig').forEach((rig) => {
-    const bite = () => {
-      if (reducedMotion.matches || rig.classList.contains('is-biting')) return;
-      rig.classList.add('is-biting');
+    const reveal = (slide) => {
+      slide.classList.remove('is-in');
+      void slide.offsetWidth; // restart the copy animation
+      slide.classList.add('is-in');
     };
-    rig.addEventListener('animationend', (e) => { if (e.animationName === 'bite') rig.classList.remove('is-biting'); });
-    rig.addEventListener('pointerenter', (e) => { if (e.pointerType === 'mouse') bite(); });
-    rig.addEventListener('click', bite);
+    const start = () => requestAnimationFrame(() => { hero.classList.add('is-in'); if (slides[0]) reveal(slides[0]); });
+    if (animate) {
+      // Wait for the display font so lines do not re-wrap mid-animation.
+      if (document.fonts && document.fonts.ready) Promise.race([document.fonts.ready, new Promise((r) => setTimeout(r, 600))]).then(start);
+      else start();
+    } else {
+      hero.classList.add('is-in');
+      slides.forEach((sl) => sl.classList.add('is-in'));
+    }
+
+    // Swap the lure on the line: reel in, change, let it down again.
+    const swapLure = (index) => {
+      if (!lures.length) return;
+      const next = lures[index] || lures[0];
+      const apply = () => lures.forEach((l) => {
+        const on = l === next;
+        l.classList.toggle('is-active', on);
+        l.tabIndex = on ? 0 : -1;
+        if (on) l.removeAttribute('aria-hidden'); else l.setAttribute('aria-hidden', 'true');
+      });
+      if (!lineArt || reducedMotion.matches) { apply(); return; }
+      lineArt.classList.add('is-reeling');
+      setTimeout(() => {
+        apply();
+        lineArt.classList.remove('is-reeling');
+        if (tackle) { tackle.classList.remove('is-swinging'); void tackle.offsetWidth; tackle.classList.add('is-swinging'); }
+      }, 480);
+    };
+
+    const go = (index, { focusTab = false } = {}) => {
+      if (!slides.length) return;
+      const n = (index + slides.length) % slides.length;
+      if (n === current) return;
+      slides.forEach((sl, i) => {
+        const on = i === n;
+        sl.classList.toggle('is-active', on);
+        if (on) { sl.removeAttribute('aria-hidden'); sl.removeAttribute('inert'); if (animate) reveal(sl); else sl.classList.add('is-in'); }
+        else { sl.setAttribute('aria-hidden', 'true'); sl.setAttribute('inert', ''); }
+      });
+      backdrops.forEach((b, i) => b.classList.toggle('is-active', i === n));
+      tabs.forEach((t, i) => {
+        t.setAttribute('aria-selected', i === n ? 'true' : 'false');
+        t.tabIndex = i === n ? 0 : -1;
+      });
+      if (focusTab && tabs[n]) tabs[n].focus();
+      swapLure(n);
+      current = n;
+      restartTimer();
+    };
+
+    // Autoplay: pauses on hover, keyboard focus, hidden tab, or the pause button.
+    const interval = parseInt(hero.dataset.interval || '7000', 10);
+    const pauseBtn = $('[data-hero-pause]', hero);
+    let timer = null;
+    let userPaused = false;
+    let held = false;
+    const canPlay = () => hero.hasAttribute('data-autoplay') && slides.length > 1 && !reducedMotion.matches && !userPaused;
+    function restartTimer() {
+      clearTimeout(timer);
+      hero.classList.toggle('is-playing', canPlay());
+      if (!canPlay()) return;
+      // restart the progress bar
+      const bar = $('.hero__tab[aria-selected="true"] .hero__tab-bar i', hero);
+      if (bar) { bar.style.animation = 'none'; void bar.offsetWidth; bar.style.animation = ''; }
+      if (!held) timer = setTimeout(() => go(current + 1), interval);
+    }
+    const hold = (on) => {
+      if (held === on) return;
+      held = on;
+      hero.classList.toggle('is-held', on);
+      if (on) clearTimeout(timer); else restartTimer();
+    };
+    if (slides.length > 1) {
+      tabs.forEach((t, i) => {
+        t.addEventListener('click', () => go(i));
+        t.addEventListener('keydown', (e) => {
+          if (e.key === 'ArrowRight') { e.preventDefault(); go(current + 1, { focusTab: true }); }
+          if (e.key === 'ArrowLeft') { e.preventDefault(); go(current - 1, { focusTab: true }); }
+        });
+      });
+      hero.addEventListener('pointerenter', (e) => { if (e.pointerType === 'mouse') hold(true); });
+      hero.addEventListener('pointerleave', (e) => { if (e.pointerType === 'mouse') hold(false); });
+      hero.addEventListener('focusin', () => hold(true));
+      hero.addEventListener('focusout', (e) => { if (!hero.contains(e.relatedTarget)) hold(false); });
+      document.addEventListener('visibilitychange', () => hold(document.hidden));
+      if (pauseBtn) pauseBtn.addEventListener('click', () => {
+        userPaused = !userPaused;
+        pauseBtn.setAttribute('aria-pressed', String(userPaused));
+        pauseBtn.setAttribute('aria-label', userPaused ? pauseBtn.dataset.labelPlay : pauseBtn.dataset.labelPause);
+        restartTimer();
+      });
+      // Swipe on touch screens
+      let sx = null; let sy = null;
+      hero.addEventListener('touchstart', (e) => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, { passive: true });
+      hero.addEventListener('touchend', (e) => {
+        if (sx === null) return;
+        const dx = e.changedTouches[0].clientX - sx; const dy = e.changedTouches[0].clientY - sy;
+        if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.5) go(current + (dx < 0 ? 1 : -1));
+        sx = null;
+      }, { passive: true });
+      restartTimer();
+    }
+
+    // A bite when the line is touched: two tugs, the lure kicks, a ring on the water.
+    if (rig) {
+      const bite = () => {
+        if (reducedMotion.matches || rig.classList.contains('is-biting') || (lineArt && lineArt.classList.contains('is-reeling'))) return;
+        rig.classList.add('is-biting');
+      };
+      rig.addEventListener('animationend', (e) => { if (e.animationName === 'bite') rig.classList.remove('is-biting'); });
+      rig.addEventListener('pointerenter', (e) => { if (e.pointerType === 'mouse') bite(); });
+      rig.addEventListener('click', (e) => { if (!e.target.closest('[data-lure]')) bite(); });
+    }
+
+    // Copy a discount code
+    $$('[data-copy]', hero).forEach((btn) => btn.addEventListener('click', async () => {
+      const hint = $('[data-copy-hint]', btn);
+      try { await navigator.clipboard.writeText(btn.dataset.copy); } catch (err) {
+        const r = document.createRange(); r.selectNodeContents($('strong', btn)); const sel = getSelection(); sel.removeAllRanges(); sel.addRange(r);
+      }
+      if (hint) { const before = hint.textContent; hint.textContent = btn.dataset.copied; setTimeout(() => { hint.textContent = before; }, 2000); }
+    }));
   });
 
   /* ---------- Cart ---------- */

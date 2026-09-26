@@ -29,7 +29,13 @@
     "view_all": "Alles aus {{ title }}"
   },
   "hero": {
-    "scroll_cue": "Weiter"
+    "scroll_cue": "Weiter",
+    "carousel": "Themen und Aktionen",
+    "pause": "Automatischen Wechsel anhalten",
+    "play": "Automatischen Wechsel fortsetzen",
+    "code_label": "Code",
+    "copy": "Kopieren",
+    "copied": "Kopiert"
   },
   "footer": {
     "payment": "Zahlungsarten"

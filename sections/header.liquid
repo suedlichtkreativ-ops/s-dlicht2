@@ -98,8 +98,8 @@
                                       <span class="mega__product-text">
                                         {%- liquid
                                           assign p_title = p.title
-                                          if settings.card_strip_vendor and p.vendor != blank
-                                            assign vp = p.vendor | append: ' '
+                                          if settings.card_strip_vendor and settings.card_title_prefix != blank
+                                            assign vp = settings.card_title_prefix | strip | append: ' '
                                             assign ts = p.title | slice: 0, vp.size
                                             if ts == vp
                                               assign p_title = p.title | remove_first: vp

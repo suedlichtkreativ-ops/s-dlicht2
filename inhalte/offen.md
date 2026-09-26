@@ -12,6 +12,10 @@ Stand 26.09.2026, nach dem Auslesen des Shopify-Stores „Köderdepot neu“. Am
 | Adresse | Shopify: „Schwaighofstrasse 18 h“ + Zusatz „18h“ | Impressum: „Schwaighof Straße 18 H“ | Im Theme: „Schwaighofstraße 18 h“. Offizielle Schreibweise bestätigen. |
 | E-Mail im Impressum | – | Impressum zeigt „info@xn--kderdepot-07a.de“ (Punycode für köderdepot.de mit ö) | Theme nutzt info@koederdepot.de. Im Impressum korrigieren lassen. |
 
+## Dringend (betrifft auch den alten Shop)
+
+- **Rabattcode WILLKOMMEN10 existiert nicht.** Der alte Shop wirbt im Slider und in der Kollektion „Willkommen bei Köderdepot“ mit „10 % auf die erste Bestellung, Code WILLKOMMEN10“. Unter Rabatte ist aber kein einziger Code angelegt (Abfrage vom 26.09.2026). Kunden bekommen beim Eingeben vermutlich eine Fehlermeldung. Im neuen Shop: Rabatt „WILLKOMMEN10“, 10 %, einmal pro Kunde, anlegen. Der neue Hero zeigt den Code im Slide „10 % Rabatt“.
+
 ## Fehlende Inhalte
 
 - **FAQ-Antworten:** Im Live-Theme sind alle sieben Fragen ohne Antwort. Drei Antworten (Versand, Rückgabe, Zahlung) stammen jetzt wörtlich bzw. sinngemäß aus euren Rechtstexten. Zwei (Profis, Köderhilfe) stützen sich auf „Über uns“ und „Köderberatung“. **Zwei sind weiterhin meine Entwürfe und müssen von euch geprüft oder ersetzt werden:**
@@ -30,6 +34,9 @@ Stand 26.09.2026, nach dem Auslesen des Shopify-Stores „Köderdepot neu“. Am
 - **Menülinks mit falschem Ziel:** „Gummifische“ zeigt auf `/collections/frosche`, „Twister / Grub“ auf `/collections/wirbel`, „Spinner“ auf `/collections/spinnerbait`. Bitte prüfen.
 
 ## Bilder
+
+- **Produktfotos im Studio-Look:** Alle Produktbilder wurden automatisch freigestellt und einheitlich gesetzt (gleiche Größe, heller Verlauf, weicher Schatten). Vorher/Nachher: `docs/vorschau/bilder-studio-look.png`. Wie die Bilder in den neuen Shop kommen (ZIP zum Hochladen oder nachträglicher Austausch), ist noch offen.
+- **Köder an der Angelschnur (Hero):** Vier freigestellte Köder liegen als Theme-Dateien bei (`assets/lure-*.png`). Weitere lassen sich pro Motiv als PNG hochladen.
 
 - Das Shopify-CDN ist jetzt freigegeben. Alle Design-Bilder sind gesichtet und zugeordnet:
   - **Logo und Favicon:** `LOGOKOeDER.png`
