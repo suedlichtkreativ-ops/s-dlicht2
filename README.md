@@ -37,6 +37,8 @@ npx @shopify/cli theme check                               # Prüfung (aktuell o
 | Über-uns-Seite | Seite anlegen | Vorlage `page.about` wählen |
 | Ausrüstungs-Kacheln | Startseite → „Oder nach Ausrüstung“ | Je Kachel eine Kollektion und ein freigestelltes Bild wählen |
 | Starter Bundle | Startseite → „Neu dabei?“ | Bild und Link zur Bundles-Kollektion setzen |
+| Bundle-Produkte | Produkt → Theme-Vorlage `product.bundle` | Im Abschnitt „Bundle-Inhalt“ die enthaltenen Produkte und Mengen wählen. Die Ersparnis gegenüber Einzelkauf wird automatisch berechnet |
+| Versandkostenfrei-Anzeige | Theme-Einstellungen → Warenkorb | Schwelle in € (Standard 100). Der Warenkorb zeigt „Noch X € bis zum kostenlosen Versand“ |
 
 ## Aufbau
 

@@ -14,6 +14,16 @@
           <span class="badge">{{ 'products.product.on_sale' | t }}</span>
         {%- endif -%}
       </div>
+      {%- if product.has_only_default_variant and product.available -%}
+        <form class="card__quick" method="post" action="{{ routes.cart_add_url }}" data-product-form>
+          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+          <input type="hidden" name="quantity" value="1">
+          <button type="submit" class="card__add" aria-label="{{ 'products.product.add_to_cart' | t }}: {{ product.title | escape }}">
+            <span class="btn__label">{% render 'icon', name: 'cart-plus' %}</span>
+            <span class="spinner" aria-hidden="true"></span>
+          </button>
+        </form>
+      {%- endif -%}
       <div class="media">
         {%- if product.featured_media -%}
           {% render 'image', image: product.featured_media.preview_image, sizes: sizes, class: 'card__img-main', alt: product.title %}
@@ -50,14 +60,5 @@
     {%- endif -%}
   </div>
 
-  {%- if product != blank and product.has_only_default_variant and product.available -%}
-    <form class="card__quick" method="post" action="{{ routes.cart_add_url }}" data-product-form>
-      <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-      <input type="hidden" name="quantity" value="1">
-      <button type="submit" class="btn btn--outline">
-        <span class="btn__label">{{ 'products.product.add_to_cart' | t }}</span>
-        <span class="spinner" aria-hidden="true"></span>
-      </button>
-    </form>
-  {%- endif -%}
+
 </div>

@@ -1,0 +1,52 @@
+{%- comment -%}
+  Rendered via /search/suggest?section_id=predictive-search. Not added to templates.
+{%- endcomment -%}
+{%- liquid
+  assign r = predictive_search.resources
+  assign total = r.products.size | plus: r.collections.size | plus: r.articles.size | plus: r.pages.size
+-%}
+<div class="predictive" data-predictive-results data-count="{{ total }}">
+  {%- if predictive_search.performed and total > 0 -%}
+    <div class="predictive__grid">
+      {%- if r.collections.size > 0 or r.pages.size > 0 or r.articles.size > 0 -%}
+        <div class="predictive__group">
+          <p class="predictive__label">{{ 'search.suggestions' | t }}</p>
+          <ul role="list" class="predictive__links">
+            {%- for c in r.collections limit: 4 -%}<li><a href="{{ c.url }}" data-predictive-item>{{ c.title | escape }}</a></li>{%- endfor -%}
+            {%- for a in r.articles limit: 2 -%}<li><a href="{{ a.url }}" data-predictive-item>{{ a.title | escape }}</a></li>{%- endfor -%}
+            {%- for p in r.pages limit: 2 -%}<li><a href="{{ p.url }}" data-predictive-item>{{ p.title | escape }}</a></li>{%- endfor -%}
+          </ul>
+        </div>
+      {%- endif -%}
+      {%- if r.products.size > 0 -%}
+        <div class="predictive__group">
+          <p class="predictive__label">{{ 'search.products' | t }}</p>
+          <ul role="list" class="predictive__products">
+            {%- for p in r.products limit: 6 -%}
+              <li>
+                <a class="predictive__product" href="{{ p.url }}" data-predictive-item>
+                  <span class="media media--white">
+                    {%- if p.featured_image -%}
+                      {% render 'image', image: p.featured_image, sizes: '64px', widths: '64, 128', alt: '' %}
+                    {%- else -%}
+                      {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
+                    {%- endif -%}
+                  </span>
+                  <span>
+                    <span class="predictive__title">{{ p.title | escape }}</span>
+                    <span class="price">{{ p.price | money }}</span>
+                  </span>
+                </a>
+              </li>
+            {%- endfor -%}
+          </ul>
+        </div>
+      {%- endif -%}
+    </div>
+    <a class="btn btn--dark predictive__all" href="{{ routes.search_url }}?q={{ predictive_search.terms | url_encode }}&options%5Bprefix%5D=last" data-predictive-item>
+      {{ 'search.view_all' | t: terms: predictive_search.terms }}
+    </a>
+  {%- elsif predictive_search.performed -%}
+    <p class="predictive__empty">{{ 'search.no_results' | t: terms: predictive_search.terms }} {{ 'search.no_results_hint' | t }}</p>
+  {%- endif -%}
+</div>

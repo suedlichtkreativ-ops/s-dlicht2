@@ -41,9 +41,24 @@
         "type": "paragraph",
         "content": "Standardwerte entsprechen dem Köderdepot-Logo. Gelb wird nur als Fläche mit schwarzem Text genutzt."
       },
-      { "type": "color", "id": "color_ink", "label": "Schwarz (Text, Flächen)", "default": "#0D0D0D" },
-      { "type": "color", "id": "color_signal", "label": "Köder-Gelb (Buttons, Akzente)", "default": "#FFCC00" },
-      { "type": "color", "id": "color_paper", "label": "Hintergrund", "default": "#F4F4F1" }
+      {
+        "type": "color",
+        "id": "color_ink",
+        "label": "Schwarz (Text, Flächen)",
+        "default": "#0D0D0D"
+      },
+      {
+        "type": "color",
+        "id": "color_signal",
+        "label": "Köder-Gelb (Buttons, Akzente)",
+        "default": "#FFCC00"
+      },
+      {
+        "type": "color",
+        "id": "color_paper",
+        "label": "Hintergrund",
+        "default": "#F4F4F1"
+      }
     ]
   },
   {
@@ -68,12 +83,41 @@
         "type": "paragraph",
         "content": "Diese Angaben erscheinen im Footer, im Abschnitt „Laden“ und bei der Abholung."
       },
-      { "type": "text", "id": "store_name", "label": "Name", "default": "Köderdepot" },
-      { "type": "textarea", "id": "store_address", "label": "Adresse", "default": "Musterstraße 1\n86899 Landsberg am Lech" },
-      { "type": "textarea", "id": "store_hours", "label": "Öffnungszeiten", "default": "Mo–Fr 9:00–18:00\nSa 9:00–14:00" },
-      { "type": "text", "id": "store_phone", "label": "Telefon", "default": "+49 8191 000000" },
-      { "type": "text", "id": "store_email", "label": "E-Mail", "default": "info@koederdepot.de" },
-      { "type": "url", "id": "store_map_url", "label": "Link zur Karte (Google Maps o. ä.)" }
+      {
+        "type": "text",
+        "id": "store_name",
+        "label": "Name",
+        "default": "Köderdepot"
+      },
+      {
+        "type": "textarea",
+        "id": "store_address",
+        "label": "Adresse",
+        "default": "Musterstraße 1\n86899 Landsberg am Lech"
+      },
+      {
+        "type": "textarea",
+        "id": "store_hours",
+        "label": "Öffnungszeiten",
+        "default": "Mo–Fr 9:00–18:00\nSa 9:00–14:00"
+      },
+      {
+        "type": "text",
+        "id": "store_phone",
+        "label": "Telefon",
+        "default": "+49 8191 000000"
+      },
+      {
+        "type": "text",
+        "id": "store_email",
+        "label": "E-Mail",
+        "default": "info@koederdepot.de"
+      },
+      {
+        "type": "url",
+        "id": "store_map_url",
+        "label": "Link zur Karte (Google Maps o. ä.)"
+      }
     ]
   },
   {
@@ -84,10 +128,23 @@
         "id": "cart_type",
         "label": "Nach „In den Warenkorb“",
         "options": [
-          { "value": "drawer", "label": "Warenkorb seitlich öffnen" },
-          { "value": "page", "label": "Zur Warenkorbseite wechseln" }
+          {
+            "value": "drawer",
+            "label": "Warenkorb seitlich öffnen"
+          },
+          {
+            "value": "page",
+            "label": "Zur Warenkorbseite wechseln"
+          }
         ],
         "default": "drawer"
+      },
+      {
+        "type": "number",
+        "id": "free_shipping_threshold",
+        "label": "Versandkostenfrei ab (€)",
+        "info": "0 blendet die Fortschrittsanzeige aus.",
+        "default": 100
       },
       {
         "type": "text",
@@ -100,10 +157,26 @@
   {
     "name": "Social Media",
     "settings": [
-      { "type": "url", "id": "social_instagram", "label": "Instagram" },
-      { "type": "url", "id": "social_facebook", "label": "Facebook" },
-      { "type": "url", "id": "social_youtube", "label": "YouTube" },
-      { "type": "url", "id": "social_tiktok", "label": "TikTok" }
+      {
+        "type": "url",
+        "id": "social_instagram",
+        "label": "Instagram"
+      },
+      {
+        "type": "url",
+        "id": "social_facebook",
+        "label": "Facebook"
+      },
+      {
+        "type": "url",
+        "id": "social_youtube",
+        "label": "YouTube"
+      },
+      {
+        "type": "url",
+        "id": "social_tiktok",
+        "label": "TikTok"
+      }
     ]
   }
 ]

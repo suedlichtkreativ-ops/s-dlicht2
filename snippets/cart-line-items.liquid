@@ -1,7 +1,7 @@
 {%- comment -%} Shared line items for drawer and cart page. Param: context ('drawer'|'page') {%- endcomment -%}
 <ul class="cart-items" role="list">
   {%- for item in cart.items -%}
-    <li class="cart-item" data-line="{{ forloop.index }}" data-key="{{ item.key }}">
+    <li class="cart-item" data-line="{{ forloop.index }}" data-key="{{ item.key }}" data-variant-id="{{ item.variant_id }}" data-quantity="{{ item.quantity }}" data-title="{{ item.product.title | escape }}">
       <a href="{{ item.url }}" class="media" tabindex="-1" aria-hidden="true">
         {%- if item.image -%}
           {% render 'image', image: item.image, sizes: '96px', widths: '96, 192, 288', alt: '' %}

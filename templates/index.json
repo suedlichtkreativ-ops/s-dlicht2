@@ -146,7 +146,8 @@
         "button_label": "Bundles ansehen",
         "reverse": true,
         "white": false,
-        "landscape": true
+        "landscape": true,
+        "button_link": "shopify://collections/bundles"
       }
     },
     "blog": {

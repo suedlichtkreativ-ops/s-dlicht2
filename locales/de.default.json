@@ -105,7 +105,12 @@
     "increase": "Menge von {{ title }} erhöhen",
     "decrease": "Menge von {{ title }} verringern",
     "quantity_for": "Menge von {{ title }}",
-    "note": "Anmerkung zur Bestellung"
+    "note": "Anmerkung zur Bestellung",
+    "error": "Die Menge ließ sich nicht ändern. Lade die Seite neu und versuch es noch einmal.",
+    "removed": "[title] entfernt.",
+    "undo": "Rückgängig",
+    "free_shipping_left": "Noch [amount] bis zum kostenlosen Versand",
+    "free_shipping_reached": "Dein Versand ist kostenlos."
   },
   "search": {
     "title": "Suche",
@@ -114,7 +119,12 @@
       "other": "{{ count }} Ergebnisse für „{{ terms }}“"
     },
     "no_results": "Nichts gefunden für „{{ terms }}“.",
-    "no_results_hint": "Prüfe die Schreibweise oder suche nach einer Marke oder Produktart."
+    "no_results_hint": "Prüfe die Schreibweise oder suche nach einer Marke oder Produktart.",
+    "suggestions": "Vorschläge",
+    "products": "Produkte",
+    "view_all": "Alle Ergebnisse für „{{ terms }}“",
+    "status_one": "1 Vorschlag",
+    "status_other": "[count] Vorschläge"
   },
   "not_found": {
     "title": "Diese Seite gibt es nicht (mehr).",
@@ -212,5 +222,9 @@
   },
   "faq": {
     "more_questions": "Noch Fragen? Frag uns direkt."
+  },
+  "bundle": {
+    "saving": "Du sparst",
+    "compared": "gegenüber Einzelkauf ({{ total }})"
   }
 }

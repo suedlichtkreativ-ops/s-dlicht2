@@ -1,0 +1,103 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "usps": {
+          "type": "usps",
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "settings": {
+            "open": true
+          }
+        },
+        "shipping": {
+          "type": "collapsible",
+          "settings": {
+            "heading": "Versand & Rückgabe",
+            "content": "<p>Wir versenden mit DHL, innerhalb Deutschlands ab 100 € versandkostenfrei. Auf Wunsch holst du deine Bestellung im Laden in Landsberg am Lech ab. Du hast ein gesetzliches Widerrufsrecht von 14 Tagen.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "usps",
+        "description",
+        "shipping"
+      ],
+      "settings": {}
+    },
+    "bundle": {
+      "type": "bundle-contents",
+      "blocks": {
+        "i1": {
+          "type": "item",
+          "settings": {
+            "fallback_title": "Spinnrute 2,40 m",
+            "quantity": 1,
+            "note": "10–40 g Wurfgewicht"
+          }
+        },
+        "i2": {
+          "type": "item",
+          "settings": {
+            "fallback_title": "Stationärrolle 3000",
+            "quantity": 1,
+            "note": "mit geflochtener Schnur bespult"
+          }
+        },
+        "i3": {
+          "type": "item",
+          "settings": {
+            "fallback_title": "Gummifische",
+            "quantity": 5,
+            "note": "verschiedene Farben"
+          }
+        },
+        "i4": {
+          "type": "item",
+          "settings": {
+            "fallback_title": "Jigköpfe",
+            "quantity": 5,
+            "note": "7–15 g"
+          }
+        },
+        "i5": {
+          "type": "item",
+          "settings": {
+            "fallback_title": "Stahlvorfächer",
+            "quantity": 3,
+            "note": ""
+          }
+        },
+        "i6": {
+          "type": "item",
+          "settings": {
+            "fallback_title": "Köderbox",
+            "quantity": 1,
+            "note": ""
+          }
+        }
+      },
+      "block_order": [
+        "i1",
+        "i2",
+        "i3",
+        "i4",
+        "i5",
+        "i6"
+      ],
+      "settings": {}
+    },
+    "related": {
+      "type": "related-products",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "bundle",
+    "related"
+  ]
+}

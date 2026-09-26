@@ -6,6 +6,7 @@
     <div class="cart-page" data-cart-page>
       <div>{% render 'cart-line-items', context: 'page' %}</div>
       <form class="cart-summary" action="{{ routes.cart_url }}" method="post">
+        {% render 'free-shipping' %}
         <div class="cart-totals"><span>{{ 'cart.subtotal' | t }}</span><span class="price">{{ cart.total_price | money }}</span></div>
         <p class="cart-note">{{ 'cart.taxes_shipping' | t }}</p>
         {%- if settings.cart_note_pickup != blank -%}<p class="cart-note">{{ settings.cart_note_pickup }}</p>{%- endif -%}

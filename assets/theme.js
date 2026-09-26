@@ -15,13 +15,24 @@
 
   /* ---------- Toast ---------- */
   let toastTimer;
-  const toast = (msg) => {
+  const toast = (msg, action) => {
     const el = $('[data-toast]');
     if (!el) return;
-    el.textContent = msg;
+    el.textContent = '';
+    const text = document.createElement('span');
+    text.textContent = msg;
+    el.appendChild(text);
+    if (action) {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'toast__action';
+      btn.textContent = action.label;
+      btn.addEventListener('click', () => { el.classList.remove('is-visible'); action.run(); }, { once: true });
+      el.appendChild(btn);
+    }
     requestAnimationFrame(() => el.classList.add('is-visible'));
     clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => el.classList.remove('is-visible'), 3500);
+    toastTimer = setTimeout(() => el.classList.remove('is-visible'), action ? 6000 : 3500);
   };
 
   /* ---------- Drawers (menu, cart, filters) with focus trap ---------- */
@@ -165,6 +176,51 @@
     });
   }
 
+  /* ---------- Predictive search ---------- */
+  const pInput = $('[data-predictive-input]');
+  const pTarget = $('[data-predictive-target]');
+  const pStatus = $('[data-predictive-status]');
+  if (pInput && pTarget && theme.routes.predictiveSearch) {
+    let pTimer; let pController; let activeIndex = -1;
+    const items = () => $$('[data-predictive-item]', pTarget);
+    const setActive = (i) => {
+      const list = items();
+      list.forEach((el) => el.classList.remove('is-active'));
+      activeIndex = list.length ? (i + list.length) % list.length : -1;
+      if (activeIndex >= 0) { list[activeIndex].classList.add('is-active'); list[activeIndex].scrollIntoView({ block: 'nearest' }); }
+    };
+    const clear = () => { pTarget.innerHTML = ''; pInput.setAttribute('aria-expanded', 'false'); activeIndex = -1; };
+    const run = async (q) => {
+      if (pController) pController.abort();
+      pController = new AbortController();
+      const url = `${theme.routes.predictiveSearch}?q=${encodeURIComponent(q)}&resources[type]=product,collection,article,page&resources[limit]=6&resources[options][unavailable_products]=last&section_id=predictive-search`;
+      try {
+        const html = await (await fetch(url, { signal: pController.signal })).text();
+        const doc = new DOMParser().parseFromString(html, 'text/html');
+        const results = doc.querySelector('[data-predictive-results]');
+        if (!results) return clear();
+        pTarget.innerHTML = results.outerHTML;
+        markLoaded(pTarget);
+        pInput.setAttribute('aria-expanded', 'true');
+        activeIndex = -1;
+        const count = parseInt(results.dataset.count, 10) || 0;
+        if (pStatus) pStatus.textContent = (count === 1 ? theme.strings.suggestionOne : theme.strings.suggestionOther).replace('[count]', count);
+      } catch (err) { if (err.name !== 'AbortError') clear(); }
+    };
+    pInput.addEventListener('input', () => {
+      clearTimeout(pTimer);
+      const q = pInput.value.trim();
+      if (q.length < 2) { clear(); return; }
+      pTimer = setTimeout(() => run(q), 220);
+    });
+    pInput.addEventListener('keydown', (e) => {
+      if (!items().length) return;
+      if (e.key === 'ArrowDown') { e.preventDefault(); setActive(activeIndex + 1); }
+      else if (e.key === 'ArrowUp') { e.preventDefault(); setActive(activeIndex - 1); }
+      else if (e.key === 'Enter' && activeIndex >= 0) { e.preventDefault(); items()[activeIndex].click(); }
+    });
+  }
+
   // Scale factor for the overhanging logo when compact: fit into header height.
   const logoImg = $('.header--overhang .header__logo img');
   const fitLogo = () => {
@@ -236,7 +292,16 @@
     // Swap inner panel content so the open/close state (and transition) is preserved.
     const freshPanel = $('.drawer__panel', fresh);
     const currentPanel = $('.drawer__panel', current);
+    const oldBar = $('.ship__bar span', currentPanel);
+    const oldTransform = oldBar ? oldBar.style.transform : null;
     currentPanel.innerHTML = freshPanel.innerHTML;
+    const newBar = $('.ship__bar span', currentPanel);
+    if (newBar && oldTransform && !reducedMotion.matches) {
+      const target = newBar.style.transform;
+      newBar.style.transition = 'none';
+      newBar.style.transform = oldTransform;
+      requestAnimationFrame(() => requestAnimationFrame(() => { newBar.style.transition = ''; newBar.style.transform = target; }));
+    }
     current.dataset.cartCount = fresh.dataset.cartCount;
     markLoaded(currentPanel);
     updateCount(parseInt(fresh.dataset.cartCount, 10) || 0);
@@ -245,6 +310,7 @@
 
   const cartChange = async (line, quantity) => {
     const item = $(`[data-drawer="cart"] [data-line="${line}"]`) || $(`[data-line="${line}"]`);
+    const removed = quantity === 0 && item ? { id: item.dataset.variantId, quantity: parseInt(item.dataset.quantity, 10) || 1, title: item.dataset.title } : null;
     if (item) item.classList.add('is-removing');
     try {
       const res = await fetch(`${theme.routes.cartChange}.js`, {
@@ -253,18 +319,42 @@
         body: JSON.stringify({ line, quantity, sections: sectionsToRender(), sections_url: window.location.pathname }),
       });
       const data = await res.json();
-      if (!res.ok) throw new Error(data.description || data.message);
+      if (!res.ok) throw new Error(data.description || data.message || theme.strings.cartError);
       if ($('[data-cart-page]') || document.body.classList.contains('template-cart')) {
+        if (removed) { try { sessionStorage.setItem('kd-undo', JSON.stringify(removed)); } catch (_) {} }
         window.location.reload();
         return;
       }
       renderDrawer(data.sections && data.sections['cart-drawer']);
       updateCount(data.item_count);
+      if (removed) offerUndo(removed);
     } catch (err) {
       if (item) item.classList.remove('is-removing');
-      toast(err.message || theme.strings.error);
+      toast(err.message || theme.strings.cartError);
     }
   };
+
+  const offerUndo = (removed) => {
+    toast(theme.strings.removed.replace('[title]', removed.title || ''), {
+      label: theme.strings.undo,
+      run: async () => {
+        try {
+          const body = { items: [{ id: removed.id, quantity: removed.quantity }], sections: sectionsToRender(), sections_url: window.location.pathname };
+          const res = await fetch(`${theme.routes.cartAdd}.js`, { method: 'POST', headers: { 'Content-Type': 'application/json', Accept: 'application/json' }, body: JSON.stringify(body) });
+          const data = await res.json();
+          if (!res.ok) throw new Error(data.description || theme.strings.cartError);
+          if (document.body.classList.contains('template-cart')) { window.location.reload(); return; }
+          renderDrawer(data.sections && data.sections['cart-drawer']);
+        } catch (err) { toast(err.message); }
+      },
+    });
+  };
+
+  // Undo offer survives the reload on the cart page.
+  try {
+    const pending = sessionStorage.getItem('kd-undo');
+    if (pending) { sessionStorage.removeItem('kd-undo'); window.addEventListener('load', () => offerUndo(JSON.parse(pending))); }
+  } catch (_) { /* storage unavailable */ }
 
   document.addEventListener('click', (e) => {
     const cartToggle = e.target.closest('[data-cart-toggle]');
