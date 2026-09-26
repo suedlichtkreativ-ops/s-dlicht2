@@ -31,7 +31,8 @@
     "seo": {
       "title": "Gummiköder & Softbaits für Raubfisch | Köderdepot",
       "description": "Gummiköder von Köderdepot: Gummifische, Twister, Creature Baits und Würmer für Barsch, Zander und Hecht."
-    }
+    },
+    "bedingung": "beliebige"
   },
   {
     "titel": "Hardbaits",
@@ -54,7 +55,8 @@
     "seo": {
       "title": "Hardbaits: Wobbler, Popper & Crankbaits | Köderdepot",
       "description": "Hardbaits von Köderdepot: Wobbler, Popper, Jerkbaits und Crankbaits aus Hartkunststoff für Hecht und Zander."
-    }
+    },
+    "bedingung": "beliebige"
   },
   {
     "titel": "Jigköpfe",
@@ -70,7 +72,8 @@
     "seo": {
       "title": "Jigköpfe für Gummiköder | Köderdepot",
       "description": "Jigköpfe von Köderdepot in mehreren Gewichten und Hakengrößen für Gummifische auf Zander, Barsch und Hecht."
-    }
+    },
+    "bedingung": "alle"
   },
   {
     "titel": "Zielfisch Hecht",
@@ -94,7 +97,8 @@
     "seo": {
       "title": "Hecht angeln: Köder, Ruten & Zubehör | Köderdepot",
       "description": "Alles fürs Hechtangeln: Köder, Ruten, Rollen und Zubehör von Köderdepot – abgestimmt auf Kraut, Kanten und große Köder."
-    }
+    },
+    "bedingung": "beliebige"
   },
   {
     "titel": "Zielfisch Barsch",
@@ -117,7 +121,8 @@
     "seo": {
       "title": "Barsch angeln: Köder, Ruten & Zubehör | Köderdepot",
       "description": "Barsch-Ausrüstung von Köderdepot: feine Gummiköder, Jigköpfe, Ruten und Rollen für Ufer, Hafen und strukturreiche Bereiche."
-    }
+    },
+    "bedingung": "beliebige"
   },
   {
     "titel": "Zielfisch Zander",
@@ -140,7 +145,8 @@
     "seo": {
       "title": "Zander angeln: Köder, Ruten & Zubehör | Köderdepot",
       "description": "Ausrüstung fürs Zanderangeln: Gummifische, Jigköpfe, Ruten und Rollen von Köderdepot – für Kanten, Grund und Strömung."
-    }
+    },
+    "bedingung": "beliebige"
   },
   {
     "titel": "Spinnruten",
@@ -156,7 +162,8 @@
     "seo": {
       "title": "Spinnruten für Hecht & Zander | Köderdepot",
       "description": "Spinnruten von Köderdepot in 2,1 bis 2,7 Metern: Allround-, Weitwurf- und Kraftruten für Kunstköder."
-    }
+    },
+    "bedingung": "beliebige"
   },
   {
     "titel": "Baitcastruten",
@@ -172,7 +179,8 @@
     "seo": {
       "title": "Baitcastruten für Kunstköder | Köderdepot",
       "description": "Baitcastruten von Köderdepot: Allround- und Kraftruten mit Trigger für präzises Werfen schwerer Köder."
-    }
+    },
+    "bedingung": "beliebige"
   },
   {
     "titel": "Stationärrollen",
@@ -188,7 +196,8 @@
     "seo": {
       "title": "Stationärrollen für Raubfisch | Köderdepot",
       "description": "Stationärrollen von Köderdepot: Frontbremser mit ruhigem Lauf in mehreren Größen für Ufer und Strömung."
-    }
+    },
+    "bedingung": "beliebige"
   },
   {
     "titel": "Baitcaster Rollen",
@@ -204,7 +213,8 @@
     "seo": {
       "title": "Baitcaster-Rollen für Werfer | Köderdepot",
       "description": "Baitcaster-Rollen von Köderdepot: Low-Profile-Modelle mit Magnet- und Fliehkraftbremse, rechts oder links."
-    }
+    },
+    "bedingung": "beliebige"
   },
   {
     "titel": "Angelschnur",
@@ -234,7 +244,8 @@
     "seo": {
       "title": "Angelschnur: mono & geflochten | Köderdepot",
       "description": "Angelschnur von Köderdepot: monofile Ufer- und Vorratsleinen sowie geflochtene Grünklinge und Silberleine."
-    }
+    },
+    "bedingung": "beliebige"
   },
   {
     "titel": "Zubehör",
@@ -251,7 +262,8 @@
     "seo": {
       "title": "Angelzubehör: Snap & Lösezangen | Köderdepot",
       "description": "Angelzubehör von Köderdepot: Snap-Verbinder für schnellen Köderwechsel und Lösezangen für schonendes Hakenlösen."
-    }
+    },
+    "bedingung": "beliebige"
   },
   {
     "titel": "Metallköder",
@@ -273,7 +285,8 @@
     "seo": {
       "title": "Metallköder: Blinker, Spinner & Jigs | Köderdepot",
       "description": "Metallköder von Köderdepot: Blinker, Spinner, Spoons und Metal Jigs mit hohem Gewicht für weite Würfe und Tiefe."
-    }
+    },
+    "bedingung": "beliebige"
   },
   {
     "titel": "Oberflächenköder",
@@ -291,7 +304,8 @@
     "seo": {
       "title": "Oberflächenköder: Popper & Buzzbaits | Köderdepot",
       "description": "Oberflächenköder von Köderdepot: Popper, Buzzbaits und Frösche für sichtbare Bisse auf Hecht und Barsch."
-    }
+    },
+    "bedingung": "beliebige"
   },
   {
     "titel": "Neuheiten",
@@ -307,7 +321,8 @@
     "seo": {
       "title": "Neuheiten bei Köderdepot",
       "description": "Neu im Sortiment von Köderdepot: neue Köder, Ruten und Zubehör. Jetzt die neuesten Produkte entdecken."
-    }
+    },
+    "bedingung": "beliebige"
   },
   {
     "titel": "Bestseller",
@@ -323,7 +338,8 @@
     "seo": {
       "title": "Bestseller bei Köderdepot | Angelshop",
       "description": "Die beliebtesten Köder, Ruten und Rollen bei Köderdepot – von Anglern am häufigsten gekauft. Jetzt Bestseller entdecken."
-    }
+    },
+    "bedingung": "alle"
   },
   {
     "titel": "Smart Products Filter Index - Do not delete",
@@ -339,7 +355,8 @@
     "seo": {
       "title": null,
       "description": null
-    }
+    },
+    "bedingung": "beliebige"
   },
   {
     "titel": "Barschköder",
@@ -355,7 +372,8 @@
     "seo": {
       "title": "Barschköder: Gummiköder & Wobbler | Köderdepot",
       "description": "Barschköder von Köderdepot: feine Gummiköder, Jigköpfe, Wobbler und Spinner für Ufer, Hafen und Krautfelder."
-    }
+    },
+    "bedingung": "alle"
   },
   {
     "titel": "ARCHIV – Dorschköder (leer)",
@@ -371,7 +389,8 @@
     "seo": {
       "title": null,
       "description": null
-    }
+    },
+    "bedingung": "alle"
   },
   {
     "titel": "Döbelköder",
@@ -387,7 +406,8 @@
     "seo": {
       "title": "Döbelköder | Köderdepot",
       "description": "Döbelköder von Köderdepot: kleine Spinner und Wobbler für Döbel in Fluss und Bach."
-    }
+    },
+    "bedingung": "alle"
   },
   {
     "titel": "Creature Baits",
@@ -403,7 +423,8 @@
     "seo": {
       "title": "Creature Baits & Krebse | Köderdepot",
       "description": "Creature Baits von Köderdepot: Krebse und Kreaturen mit Eigenaktion für Barsch und Zander an Strukturen."
-    }
+    },
+    "bedingung": "alle"
   },
   {
     "titel": "Hechtköder",
@@ -419,7 +440,8 @@
     "seo": {
       "title": "Hechtköder: Wobbler, Gummifische & Spinner | Köderdepot",
       "description": "Hechtköder von Köderdepot: große Wobbler, Gummifische und Spinnerbaits für Kraut, Kanten und Flachwasser."
-    }
+    },
+    "bedingung": "alle"
   },
   {
     "titel": "Forellenköder",
@@ -449,7 +471,8 @@
     "seo": {
       "title": "Gummifische & Froschköder | Köderdepot",
       "description": "Gummifische und Froschköder von Köderdepot für Barsch und Hecht – für Krautfelder und flache Bereiche."
-    }
+    },
+    "bedingung": "alle"
   },
   {
     "titel": "Krebse",
@@ -465,7 +488,8 @@
     "seo": {
       "title": "Krebse als Köder | Köderdepot",
       "description": "Krebs-Imitate von Köderdepot: weiche Krebse mit Eigenaktion für Barsch und Zander an Steinpackungen."
-    }
+    },
+    "bedingung": "alle"
   },
   {
     "titel": "Insekten",
@@ -481,7 +505,8 @@
     "seo": {
       "title": "Insekten-Imitate | Köderdepot",
       "description": "Insekten-Imitate von Köderdepot für Forelle und Barsch – feine Köder für klares Wasser und scheue Fische."
-    }
+    },
+    "bedingung": "alle"
   },
   {
     "titel": "Frösche",
@@ -497,7 +522,8 @@
     "seo": {
       "title": "Frösche & Topwater-Köder | Köderdepot",
       "description": "Froschköder von Köderdepot: weedless Frösche und Topwater-Köder für Seerosen, Kraut und flache Buchten."
-    }
+    },
+    "bedingung": "alle"
   },
   {
     "titel": "Crankbaits",
@@ -513,7 +539,8 @@
     "seo": {
       "title": "Crankbaits für Hecht & Zander | Köderdepot",
       "description": "Crankbaits von Köderdepot: tief laufende Wobbler mit Tauchschaufel für Grundnähe und ausgedehnte Plateaus."
-    }
+    },
+    "bedingung": "alle"
   },
   {
     "titel": "Hybrid Köder",
@@ -529,7 +556,8 @@
     "seo": {
       "title": "Hybrid-Köder | Köderdepot",
       "description": "Hybrid-Köder von Köderdepot: Kombinationen aus Gummikörper und Blatt für Druck und Reiz zugleich."
-    }
+    },
+    "bedingung": "alle"
   },
   {
     "titel": "ARCHIV – Imitate (leer)",
@@ -545,7 +573,8 @@
     "seo": {
       "title": null,
       "description": null
-    }
+    },
+    "bedingung": "alle"
   },
   {
     "titel": "Lipless Crankbaits",
@@ -561,7 +590,8 @@
     "seo": {
       "title": "Lipless Crankbaits & Vibration | Köderdepot",
       "description": "Lipless Crankbaits von Köderdepot: Vibrationsköder ohne Tauchschaufel für tiefe Kanten und vertikales Fischen."
-    }
+    },
+    "bedingung": "alle"
   },
   {
     "titel": "Jerkbaits",
@@ -577,7 +607,8 @@
     "seo": {
       "title": "Jerkbaits für Hecht & Zander | Köderdepot",
       "description": "Jerkbaits von Köderdepot: sinkende und schwebende Köder für ruckartige Führung an Kanten und über Kraut."
-    }
+    },
+    "bedingung": "alle"
   },
   {
     "titel": "Blinker",
@@ -593,7 +624,8 @@
     "seo": {
       "title": "Blinker und Spoons | Köderdepot",
       "description": "Blinker von Köderdepot: kompakte Metallköder mit starkem Druck für Zander, Hecht und Forelle in Strömung."
-    }
+    },
+    "bedingung": "alle"
   },
   {
     "titel": "ARCHIV – Chatterbaits (leer)",
@@ -609,7 +641,8 @@
     "seo": {
       "title": null,
       "description": null
-    }
+    },
+    "bedingung": "alle"
   },
   {
     "titel": "Buzzbaits",
@@ -625,7 +658,8 @@
     "seo": {
       "title": "Buzzbaits für die Oberfläche | Köderdepot",
       "description": "Buzzbaits von Köderdepot: Oberflächenköder mit rotierendem Propeller für spektakuläre Hechtbisse im Flachwasser."
-    }
+    },
+    "bedingung": "alle"
   },
   {
     "titel": "ARCHIV – Durchlaufblinker (leer)",
@@ -641,7 +675,8 @@
     "seo": {
       "title": null,
       "description": null
-    }
+    },
+    "bedingung": "alle"
   },
   {
     "titel": "Zielfische",
@@ -661,7 +696,8 @@
     "seo": {
       "title": "Zielfisch wählen: Hecht, Zander, Barsch | Köderdepot",
       "description": "Ausrüstung nach Zielfisch: Köder, Ruten und Rollen für Hecht, Zander, Barsch, Forelle und Döbel bei Köderdepot."
-    }
+    },
+    "bedingung": "beliebige"
   },
   {
     "titel": "Spinnerbaits",
@@ -677,7 +713,8 @@
     "seo": {
       "title": "Spinnerbaits für Kraut & Kanten | Köderdepot",
       "description": "Spinnerbaits von Köderdepot mit rotierenden Blättern für Hecht und Barsch – krautschonend an Kanten und Hindernissen."
-    }
+    },
+    "bedingung": "alle"
   },
   {
     "titel": "Topwater",
@@ -693,7 +730,8 @@
     "seo": {
       "title": "Topwater-Köder für die Oberfläche | Köderdepot",
       "description": "Topwater-Köder von Köderdepot: Popper, Buzzbaits und Frösche für spektakuläre Bisse an der Wasseroberfläche."
-    }
+    },
+    "bedingung": "alle"
   },
   {
     "titel": "Angeltechniken",
@@ -712,7 +750,8 @@
     "seo": {
       "title": null,
       "description": null
-    }
+    },
+    "bedingung": "beliebige"
   },
   {
     "titel": "Zanderköder",
@@ -728,7 +767,8 @@
     "seo": {
       "title": "Zanderköder: Gummifische & Jigköpfe | Köderdepot",
       "description": "Zanderköder von Köderdepot: Gummifische, Jigköpfe und Wobbler für Kanten, Grund und Strömung im Fluss und See."
-    }
+    },
+    "bedingung": "alle"
   },
   {
     "titel": "Searchbait",
@@ -744,7 +784,8 @@
     "seo": {
       "title": "Searchbaits zum Absuchen | Köderdepot",
       "description": "Searchbaits von Köderdepot: laufstabile Köder zum schnellen Absuchen großer Flächen auf der Suche nach aktiven Fischen."
-    }
+    },
+    "bedingung": "alle"
   },
   {
     "titel": "Finesse",
@@ -760,7 +801,8 @@
     "seo": {
       "title": "Finesse-Angeln: feine Köder | Köderdepot",
       "description": "Finesse-Köder von Köderdepot: feine Gummiköder und Rigs für Barsch und Zander bei klarem Wasser und Druck."
-    }
+    },
+    "bedingung": "alle"
   },
   {
     "titel": "Ultralight",
@@ -776,7 +818,8 @@
     "seo": {
       "title": "Ultralight-Angeln | Köderdepot",
       "description": "Ultralight-Ausrüstung von Köderdepot: leichte Köder und feine Ruten für Barsch, Forelle und Weißfisch."
-    }
+    },
+    "bedingung": "alle"
   },
   {
     "titel": "Deep Diver",
@@ -792,7 +835,8 @@
     "seo": {
       "title": "Deep Diver: tief laufende Wobbler | Köderdepot",
       "description": "Deep Diver von Köderdepot: Wobbler mit langer Tauchschaufel für tiefe Bereiche an Kanten und im Freiwasser."
-    }
+    },
+    "bedingung": "alle"
   },
   {
     "titel": "Castingrolle",
@@ -808,7 +852,8 @@
     "seo": {
       "title": "Castingrollen | Köderdepot",
       "description": "Castingrollen von Köderdepot: robuste Rollen mit Daumenkontrolle für schwere Köder und präzise Würfe."
-    }
+    },
+    "bedingung": "alle"
   },
   {
     "titel": "ARCHIV – Angelschnur (Duplikat)",
@@ -830,7 +875,8 @@
     "seo": {
       "title": null,
       "description": null
-    }
+    },
+    "bedingung": "beliebige"
   },
   {
     "titel": "ARCHIV – Stationärrolle (Duplikat)",
@@ -846,7 +892,8 @@
     "seo": {
       "title": null,
       "description": null
-    }
+    },
+    "bedingung": "alle"
   },
   {
     "titel": "ARCHIV – Spinnrute (Duplikat)",
@@ -862,7 +909,8 @@
     "seo": {
       "title": null,
       "description": null
-    }
+    },
+    "bedingung": "alle"
   },
   {
     "titel": "Geflochtene Angelschnur",
@@ -878,7 +926,8 @@
     "seo": {
       "title": "Geflochtene Angelschnur | Köderdepot",
       "description": "Geflochtene Angelschnur von Köderdepot: 4-fach und 8-fach geflochten für direkten Kontakt und weite Würfe."
-    }
+    },
+    "bedingung": "alle"
   },
   {
     "titel": "Wirbel",
@@ -897,7 +946,8 @@
     "seo": {
       "title": "Wirbel und Snap-Verbinder | Köderdepot",
       "description": "Wirbel und Snap-Verbinder von Köderdepot für schnellen Köderwechsel und verdrehfreie Schnur am Wasser."
-    }
+    },
+    "bedingung": "alle"
   },
   {
     "titel": "ARCHIV – Monofile Angelschnur (leer)",
@@ -914,7 +964,8 @@
     "seo": {
       "title": null,
       "description": null
-    }
+    },
+    "bedingung": "alle"
   },
   {
     "titel": "ARCHIV – Angelrolle (leer)",
@@ -1028,7 +1079,8 @@
     "seo": {
       "title": "Softbaits & Gummiköder | Köderdepot",
       "description": "Weiche Softbaits mit natürlichem Spiel für Barsch, Zander und Hecht – für Krautfelder, Steinpackungen und strukturreiche Ufer."
-    }
+    },
+    "bedingung": "alle"
   },
   {
     "titel": "ARCHIV – Buzzbaits (leer, Duplikat)",
@@ -1058,7 +1110,8 @@
     "seo": {
       "title": "Spinnerbaits für Kraut & Kanten | Köderdepot",
       "description": "Spinnerbaits mit rotierenden Blättern für Hecht und Barsch – laufen krautschonend an Kanten, über Kraut und an Hindernissen."
-    }
+    },
+    "bedingung": "alle"
   },
   {
     "titel": "ARCHIV – Gummifische (leer, Duplikat)",
@@ -1144,7 +1197,8 @@
     "seo": {
       "title": null,
       "description": null
-    }
+    },
+    "bedingung": "alle"
   },
   {
     "titel": "Bundles",
@@ -1202,7 +1256,8 @@
     "seo": {
       "title": "Wobbler für Hecht, Zander & Barsch | Köderdepot",
       "description": "Wobbler von Köderdepot: schlanke Minnows mit stabiler Laufeigenschaft und Schwebepause für Hecht, Zander und Barsch. Jetzt entdecken."
-    }
+    },
+    "bedingung": "alle"
   },
   {
     "titel": "Swimbait",
@@ -1218,7 +1273,8 @@
     "seo": {
       "title": "Swimbaits & Pencilbaits | Köderdepot",
       "description": "Swimbaits und Pencilbaits mit natürlichem Lauf für Hecht und Zander – für gleichmäßige Führung und Zickzack an der Oberfläche."
-    }
+    },
+    "bedingung": "alle"
   },
   {
     "titel": "Popper",
@@ -1234,7 +1290,8 @@
     "seo": {
       "title": "Popper & Oberflächenköder | Köderdepot",
       "description": "Popper mit Knallgeräusch für die Oberfläche: sichtbare Bisse auf Hecht und Barsch in flachen, krautigen Bereichen. Jetzt im Shop."
-    }
+    },
+    "bedingung": "alle"
   },
   {
     "titel": "Blade Bait",
@@ -1250,7 +1307,8 @@
     "seo": {
       "title": "Blade Baits für tiefe Bereiche | Köderdepot",
       "description": "Blade Baits mit Rüttelreiz für Zander, Barsch und Hecht – ideal für vertikales Fischen und tiefe Kanten im Fluss und See."
-    }
+    },
+    "bedingung": "alle"
   },
   {
     "titel": "Vibration Bait",
@@ -1266,7 +1324,8 @@
     "seo": {
       "title": "Vibration Baits & Lipless Köder | Köderdepot",
       "description": "Vibrationsköder mit starkem Druck und Rüttelreiz für Hecht, Zander und Barsch – über Grund, an Kanten und im tiefen Wasser."
-    }
+    },
+    "bedingung": "alle"
   },
   {
     "titel": "Spannung an der Oberfläche",

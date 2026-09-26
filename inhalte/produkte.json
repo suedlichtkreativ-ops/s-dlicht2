@@ -1833,6 +1833,12 @@
         "alt": "",
         "breite": 1563,
         "hoehe": 1563
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/1021/1239/5606/files/DesignohneTitel_50_e3d8265b-062f-46e5-9042-41a5f1dd25df.png?v=1784194772",
+        "alt": "",
+        "breite": 1563,
+        "hoehe": 1563
       }
     ],
     "metafelder": {
@@ -3410,6 +3416,66 @@
           "Gewicht | Menge": "3.5 g | 10 St.",
           "Farbe": "white-predator"
         }
+      },
+      {
+        "titel": "1.75 g | 10 St. / signal-red",
+        "sku": "JC-BS-0175-10-SR",
+        "barcode": null,
+        "preis": "8.99",
+        "vergleichspreis": null,
+        "verfuegbar": true,
+        "optionen": {
+          "Gewicht | Menge": "1.75 g | 10 St.",
+          "Farbe": "signal-red"
+        }
+      },
+      {
+        "titel": "1.75 g | 10 St. / hot-pink",
+        "sku": "JC-BS-0175-10-HP",
+        "barcode": null,
+        "preis": "5.49",
+        "vergleichspreis": null,
+        "verfuegbar": true,
+        "optionen": {
+          "Gewicht | Menge": "1.75 g | 10 St.",
+          "Farbe": "hot-pink"
+        }
+      },
+      {
+        "titel": "1.75 g | 10 St. / predator-green",
+        "sku": "JC-BS-0175-10-PG",
+        "barcode": null,
+        "preis": "5.49",
+        "vergleichspreis": null,
+        "verfuegbar": true,
+        "optionen": {
+          "Gewicht | Menge": "1.75 g | 10 St.",
+          "Farbe": "predator-green"
+        }
+      },
+      {
+        "titel": "1.75 g | 10 St. / lime-attack",
+        "sku": "JC-BS-0175-10-LA",
+        "barcode": null,
+        "preis": "5.49",
+        "vergleichspreis": null,
+        "verfuegbar": true,
+        "optionen": {
+          "Gewicht | Menge": "1.75 g | 10 St.",
+          "Farbe": "lime-attack"
+        }
+      },
+      {
+        "titel": "1.75 g | 10 St. / stealth-black",
+        "sku": "JC-BS-0175-10-SB",
+        "barcode": null,
+        "preis": "5.49",
+        "vergleichspreis": null,
+        "verfuegbar": true,
+        "optionen": {
+          "Gewicht | Menge": "1.75 g | 10 St.",
+          "Farbe": "stealth-black"
+        }
       }
     ],
     "bilder": [
@@ -4219,6 +4285,66 @@
         "optionen": {
           "Farbe": "black-ember-core",
           "Gewicht | Menge": "14 g | 10 St."
+        }
+      },
+      {
+        "titel": "black-ember-core / 10 g | 10 St.",
+        "sku": "JC-SH-100-010-BE",
+        "barcode": null,
+        "preis": "9.49",
+        "vergleichspreis": null,
+        "verfuegbar": true,
+        "optionen": {
+          "Farbe": "black-ember-core",
+          "Gewicht | Menge": "10 g | 10 St."
+        }
+      },
+      {
+        "titel": "black-ember-core / 7 g | 10 St.",
+        "sku": "JC-SH-070-010-BE",
+        "barcode": null,
+        "preis": "8.49",
+        "vergleichspreis": null,
+        "verfuegbar": true,
+        "optionen": {
+          "Farbe": "black-ember-core",
+          "Gewicht | Menge": "7 g | 10 St."
+        }
+      },
+      {
+        "titel": "black-ember-core / 5 g | 10 St.",
+        "sku": "JC-SH-050-010-BE",
+        "barcode": null,
+        "preis": "7.99",
+        "vergleichspreis": null,
+        "verfuegbar": true,
+        "optionen": {
+          "Farbe": "black-ember-core",
+          "Gewicht | Menge": "5 g | 10 St."
+        }
+      },
+      {
+        "titel": "black-ember-core / 3,5 g | 10 St.",
+        "sku": "JC-SH-035-010-BE",
+        "barcode": null,
+        "preis": "7.49",
+        "vergleichspreis": null,
+        "verfuegbar": true,
+        "optionen": {
+          "Farbe": "black-ember-core",
+          "Gewicht | Menge": "3,5 g | 10 St."
+        }
+      },
+      {
+        "titel": "black-ember-core / 1,75 g | 10 St.",
+        "sku": "JC-SH-017-010-BE",
+        "barcode": null,
+        "preis": "6.99",
+        "vergleichspreis": null,
+        "verfuegbar": true,
+        "optionen": {
+          "Farbe": "black-ember-core",
+          "Gewicht | Menge": "1,75 g | 10 St."
         }
       }
     ],
@@ -5885,6 +6011,18 @@
         "alt": "",
         "breite": 1563,
         "hoehe": 1563
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/1021/1239/5606/files/ChromeSilence.png?v=1776495179",
+        "alt": "",
+        "breite": 1563,
+        "hoehe": 1563
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/1021/1239/5606/files/FrostMirror.png?v=1776495179",
+        "alt": "",
+        "breite": 1563,
+        "hoehe": 1563
       }
     ],
     "metafelder": {
@@ -6110,6 +6248,12 @@
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/1021/1239/5606/files/EmeraldScale.png?v=1776495181",
+        "alt": "",
+        "breite": 1563,
+        "hoehe": 1563
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/1021/1239/5606/files/OliveSpeck.png?v=1776495181",
         "alt": "",
         "breite": 1563,
         "hoehe": 1563
@@ -9519,6 +9663,60 @@
         "alt": "",
         "breite": 1200,
         "hoehe": 1200
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/1021/1239/5606/files/IvorySunhalo_21g.png?v=1776495214",
+        "alt": "",
+        "breite": 1200,
+        "hoehe": 1200
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/1021/1239/5606/files/GlassNeoncore.png?v=1776495215",
+        "alt": "",
+        "breite": 1200,
+        "hoehe": 1200
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/1021/1239/5606/files/AmberPulse.png?v=1776495214",
+        "alt": "",
+        "breite": 1200,
+        "hoehe": 1200
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/1021/1239/5606/files/IvoryNeoncore_21g.png?v=1776495214",
+        "alt": "",
+        "breite": 1200,
+        "hoehe": 1200
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/1021/1239/5606/files/GlassDarkeye.png?v=1776495214",
+        "alt": "",
+        "breite": 1200,
+        "hoehe": 1200
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/1021/1239/5606/files/DriftVeil.png?v=1776495215",
+        "alt": "",
+        "breite": 1200,
+        "hoehe": 1200
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/1021/1239/5606/files/IvoryDarkeye_21g.png?v=1776495214",
+        "alt": "",
+        "breite": 1200,
+        "hoehe": 1200
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/1021/1239/5606/files/GlassDarkeye_21g.png?v=1776495214",
+        "alt": "",
+        "breite": 1200,
+        "hoehe": 1200
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/1021/1239/5606/files/DriftVeil_21g.png?v=1776495215",
+        "alt": "",
+        "breite": 1200,
+        "hoehe": 1200
       }
     ],
     "metafelder": {
@@ -10480,6 +10678,18 @@
         "alt": "",
         "breite": 1200,
         "hoehe": 1200
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/1021/1239/5606/files/DesignohneTitel_18.png?v=1776495226",
+        "alt": "",
+        "breite": 1200,
+        "hoehe": 1200
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/1021/1239/5606/files/DesignohneTitel_20.png?v=1776495226",
+        "alt": "",
+        "breite": 1200,
+        "hoehe": 1200
       }
     ],
     "metafelder": {
@@ -10867,6 +11077,12 @@
       },
       {
         "url": "https://cdn.shopify.com/s/files/1/1021/1239/5606/files/BlackScaleMirror.jpg?v=1776495229",
+        "alt": "",
+        "breite": 1563,
+        "hoehe": 1563
+      },
+      {
+        "url": "https://cdn.shopify.com/s/files/1/1021/1239/5606/files/SilverGhostline.png?v=1776495230",
         "alt": "",
         "breite": 1563,
         "hoehe": 1563

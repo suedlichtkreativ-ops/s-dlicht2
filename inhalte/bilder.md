@@ -72,7 +72,7 @@ Alle Bilder liegen im Shopify-CDN. Im neuen Theme lassen sie sich als `shopify:/
 
 ## Produktbilder
 
-Pro Produkt in `produkte.json` unter `bilder` (425 Bilder, max. 8 je Produkt). 48 Produkte haben kein Bild.
+Pro Produkt in `produkte.json` unter `bilder` (441 Bilder, vollständig; bis zu 17 je Produkt). Die 48 Entwürfe haben kein Bild, alle 91 aktiven Produkte schon. Welches Bild zu welcher Variante gehört, steht in `import/produkte-shopify-import.csv` (Spalte `Variant Image`).
 
 ## Weitere Dateien
 

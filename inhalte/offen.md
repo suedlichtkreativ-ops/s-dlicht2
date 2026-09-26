@@ -41,7 +41,7 @@ Stand 26.09.2026, nach dem Auslesen des Shopify-Stores „Köderdepot neu“. Am
 - **Zielfisch-Zeichnungen:** `hecht/zander/barsch/forelle.png` sind weiße Linien auf beigem Kreis. Ich habe den Kreis entfernt und sie als Theme-Dateien `assets/fish-*.png` eingebaut. Sie liegen nur in 224 × 224 px vor. Für scharfe Darstellung auf Retina-Bildschirmen wäre eine Version ab 600 px oder als SVG besser.
 - **Nicht verwendet:** Die Slider-Banner (10 % Rabatt, Topwater, Kurzläufer) haben eingebrannten Text und eignen sich nicht als Hero. Sie könnten als Aktionsbanner weiterleben.
 - **Reste einer Theme-Vorlage** in den Dateien, die nichts mit Köderdepot zu tun haben: `banner.png`, `banner1.jpg`, `banner2.jpg`, `homepage1–4.jpg` (Hunde, Autositzbezug, Zoohandlung), `logo.jpg` (fremdes Logo). Können gelöscht werden.
-- 48 Produkte sind Entwürfe (DRAFT), 2 nicht gelistet (UNLISTED), 91 aktiv. 48 Produkte haben kein Bild.
+- 91 Produkte sind aktiv und haben alle Bilder. Die 48 Entwürfe haben keine Bilder, sie sind leere Doppel (siehe „Produktdaten“).
 
 ## Aufräumen im Sortiment (Empfehlung, nicht umgesetzt)
 
@@ -57,5 +57,10 @@ Stand 26.09.2026, nach dem Auslesen des Shopify-Stores „Köderdepot neu“. Am
 
 ## Produktdaten
 
-- Farbvarianten heißen im Store wie technische Kürzel, z. B. „red-phantom-head“, „aurora-flash“. Für Kundinnen und Kunden lesbarer wäre „Red Phantom Head“. Das ist im Store zu ändern, nicht im Theme.
-- 48 Produkte sind Entwürfe. Sie erscheinen erst nach dem Aktivieren im neuen Shop.
+- **Import-Datei für den neuen Shop:** `inhalte/import/produkte-shopify-import.csv` mit allen 91 aktiven Produkten, 556 Varianten, 439 Bildern und Variantenbildern. Anleitung und Kollektions-Liste: `inhalte/import/ANLEITUNG.md`.
+- **Die 48 Entwürfe sind leere Doppel** der aktiven Produkte (Preis 0,00 €, keine Bilder, dieselben Artikelnummern, z. B. „Minnow-Wobbler Köderdepot Langklinge – 18,5 g / 120 mm“ neben dem aktiven „Köderdepot Langklinge“). Empfehlung: nicht übernehmen. Sie liegen zur Sicherheit in `inhalte/import/entwuerfe-nicht-importieren.csv`.
+- Farbvarianten heißen im Store wie technische Kürzel, z. B. „red-phantom-head“, „aurora-flash“. Für Kundinnen und Kunden lesbarer wäre „Red Phantom Head“. Das lässt sich in der CSV vor dem Import oder später in Shopify ändern.
+- Doppelte Artikelnummern (`SF-SR-070-085-GS`, `HF-TS-140-400-BD`), 4 Varianten ohne Artikelnummer, 11 Varianten ohne Gewicht.
+- Kollektion „Zubehör“: Regeln und tatsächlicher Inhalt im alten Shop passen nicht zusammen (Details in der Anleitung).
+- Das Feld `kollektionen` in `produkte.json` nennt höchstens 10 Kollektionen je Produkt. Vollständig sind die Regeln in `kollektionen.json` (neu: Feld `bedingung` = „alle“ oder „beliebige“ Regel muss zutreffen).
+- Lagerbestände in der CSV sind vom 26.09.2026 und müssen kurz vor dem Start abgeglichen werden.
