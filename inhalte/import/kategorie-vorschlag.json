@@ -1,0 +1,1374 @@
+{
+  "struktur": [
+    {
+      "hauptkategorie": "Köder",
+      "gruppe": "Softbaits",
+      "unterkategorien": [
+        "Gummifische",
+        "Softbaits",
+        "Creature Baits",
+        "Twister & Grubs",
+        "Gummiwürmer",
+        "Frösche & Topwater"
+      ]
+    },
+    {
+      "hauptkategorie": "Köder",
+      "gruppe": "Hardbaits",
+      "unterkategorien": [
+        "Wobbler",
+        "Crankbaits",
+        "Lipless Crankbaits",
+        "Jerkbaits",
+        "Swimbaits",
+        "Popper"
+      ]
+    },
+    {
+      "hauptkategorie": "Köder",
+      "gruppe": "Blechköder",
+      "unterkategorien": [
+        "Spinner",
+        "Spinnerbaits",
+        "Blinker & Spoons",
+        "Metal Jigs",
+        "Tail Spinner",
+        "Blade Baits",
+        "Vibration Baits",
+        "Buzzbaits"
+      ]
+    },
+    {
+      "hauptkategorie": "Angelrollen",
+      "gruppe": "",
+      "unterkategorien": [
+        "Stationärrollen",
+        "Baitcaster-Rollen"
+      ]
+    },
+    {
+      "hauptkategorie": "Angelruten",
+      "gruppe": "",
+      "unterkategorien": [
+        "Spinnruten",
+        "Baitcastruten"
+      ]
+    },
+    {
+      "hauptkategorie": "Zubehör",
+      "gruppe": "",
+      "unterkategorien": [
+        "Angelschnur",
+        "Wirbel & Snaps",
+        "Lösezangen",
+        "Jigköpfe"
+      ]
+    }
+  ],
+  "produkte": [
+    {
+      "handle": "koederdepot-kraftrute-spinn-2-13-m",
+      "titel": "Kraftrute Spinn 2,13 m",
+      "produkttyp": "Spinnruten",
+      "vorschlag_kategorie": "Spinnruten",
+      "zielfische_aus_tags": [
+        "Hecht"
+      ],
+      "alter_shop_menue": [
+        "Angelruten › Spinnruten"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-kraftrute-spinn-2-44-m",
+      "titel": "Kraftrute Spinn 2,44 m",
+      "produkttyp": "Spinnruten",
+      "vorschlag_kategorie": "Spinnruten",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander"
+      ],
+      "alter_shop_menue": [
+        "Angelruten › Spinnruten"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-kraftrute-baitcast-2-44-m",
+      "titel": "Kraftrute Baitcast 2,44 m",
+      "produkttyp": "Baitcastruten",
+      "vorschlag_kategorie": "Baitcastruten",
+      "zielfische_aus_tags": [
+        "Hecht"
+      ],
+      "alter_shop_menue": [
+        "Angelruten › Baitcastruten"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-weitwurfrute-spinn-2-4-m",
+      "titel": "Weitwurfrute Spinn 2,4 m",
+      "produkttyp": "Spinnruten",
+      "vorschlag_kategorie": "Spinnruten",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Angelruten › Spinnruten"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-weitwurfrute-baitcast-2-4-m",
+      "titel": "Weitwurfrute Baitcast 2,4 m",
+      "produkttyp": "Baitcastruten",
+      "vorschlag_kategorie": "Baitcastruten",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Angelruten › Baitcastruten"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-allroundrute-spinn-2-1-m",
+      "titel": "Allroundrute Spinn 2,1 m",
+      "produkttyp": "Spinnruten",
+      "vorschlag_kategorie": "Spinnruten",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Angelruten › Spinnruten"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-allroundrute-baitcast-2-1-m",
+      "titel": "Allroundrute Baitcast 2,1 m",
+      "produkttyp": "Baitcastruten",
+      "vorschlag_kategorie": "Baitcastruten",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Angelruten › Baitcastruten"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-allroundrute-spinn-2-7-m",
+      "titel": "Allroundrute Spinn 2,7 m",
+      "produkttyp": "Spinnruten",
+      "vorschlag_kategorie": "Spinnruten",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Angelruten › Spinnruten"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-kraftrute-baitcast-2-13-m",
+      "titel": "Kraftrute Baitcast 2,13 m",
+      "produkttyp": "Baitcastruten",
+      "vorschlag_kategorie": "Baitcastruten",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Angelruten › Baitcastruten"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-nachtjagdrute-2-4-m",
+      "titel": "Nachtjagdrute 2,4 m",
+      "produkttyp": "Spinnruten",
+      "vorschlag_kategorie": "Spinnruten",
+      "zielfische_aus_tags": [],
+      "alter_shop_menue": [
+        "Angelruten › Spinnruten"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-weitwurfrute-spinn-2-7-m",
+      "titel": "Weitwurfrute Spinn 2,7 m",
+      "produkttyp": "Spinnruten",
+      "vorschlag_kategorie": "Spinnruten",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Angelruten › Spinnruten"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-fernlaeufer-13-cm",
+      "titel": "Fernläufer 13 cm",
+      "produkttyp": "Jerkbait",
+      "vorschlag_kategorie": "Jerkbaits",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Hardbaits › Jerkbaits"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-feingriff",
+      "titel": "Feingriff",
+      "produkttyp": "Lösezangen",
+      "vorschlag_kategorie": "Lösezangen",
+      "zielfische_aus_tags": [
+        "Zander",
+        "Barsch",
+        "Forelle"
+      ],
+      "alter_shop_menue": [],
+      "hinweis": true
+    },
+    {
+      "handle": "koederdepot-kraftzange-28-cm",
+      "titel": "Kraftzange 28 cm",
+      "produkttyp": "Lösezangen",
+      "vorschlag_kategorie": "Lösezangen",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander"
+      ],
+      "alter_shop_menue": [],
+      "hinweis": true
+    },
+    {
+      "handle": "koederdepot-uferleine",
+      "titel": "Uferleine",
+      "produkttyp": "Monofyle Angelschnur",
+      "vorschlag_kategorie": "Angelschnur",
+      "zielfische_aus_tags": [],
+      "alter_shop_menue": [
+        "Zubehör › Angelschnur"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-gruenklinge",
+      "titel": "Grünklinge",
+      "produkttyp": "Geflochtene Schnur (8-fach)",
+      "vorschlag_kategorie": "Angelschnur",
+      "zielfische_aus_tags": [],
+      "alter_shop_menue": [
+        "Zubehör › Angelschnur"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-vorratsleine",
+      "titel": "Vorratsleine",
+      "produkttyp": "Monofyle Angelschnur",
+      "vorschlag_kategorie": "Angelschnur",
+      "zielfische_aus_tags": [],
+      "alter_shop_menue": [
+        "Zubehör › Angelschnur"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-silberleine",
+      "titel": "Silberleine",
+      "produkttyp": "Geflochtene Schnur (4-fach)",
+      "vorschlag_kategorie": "Angelschnur",
+      "zielfische_aus_tags": [],
+      "alter_shop_menue": [
+        "Zubehör › Angelschnur"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-stromjaeger-12000",
+      "titel": "Stromjäger 12000",
+      "produkttyp": "Stationärrollen",
+      "vorschlag_kategorie": "Stationärrollen",
+      "zielfische_aus_tags": [],
+      "alter_shop_menue": [
+        "Angelrollen › Stationäre Angelrollen"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-stromjaeger-5800",
+      "titel": "Stromjäger 5800",
+      "produkttyp": "Stationärrollen",
+      "vorschlag_kategorie": "Stationärrollen",
+      "zielfische_aus_tags": [],
+      "alter_shop_menue": [
+        "Angelrollen › Stationäre Angelrollen"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-uferrolle-1500",
+      "titel": "Uferrolle 1500",
+      "produkttyp": "Stationärrollen",
+      "vorschlag_kategorie": "Stationärrollen",
+      "zielfische_aus_tags": [],
+      "alter_shop_menue": [
+        "Angelrollen › Stationäre Angelrollen"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-kompaktcaster",
+      "titel": "Kompaktcaster",
+      "produkttyp": "Baitcaster Rollen",
+      "vorschlag_kategorie": "Baitcaster-Rollen",
+      "zielfische_aus_tags": [],
+      "alter_shop_menue": [
+        "Angelrollen › Baitcaster Rollen"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-kraftwerfer-150",
+      "titel": "Kraftwerfer 150",
+      "produkttyp": "Baitcaster Rollen",
+      "vorschlag_kategorie": "Baitcaster-Rollen",
+      "zielfische_aus_tags": [],
+      "alter_shop_menue": [
+        "Angelrollen › Baitcaster Rollen"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-allroundcaster",
+      "titel": "Allroundcaster",
+      "produkttyp": "Baitcaster Rollen",
+      "vorschlag_kategorie": "Baitcaster-Rollen",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Angelrollen › Baitcaster Rollen"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-stromjaeger-2800",
+      "titel": "Stromjäger 2800",
+      "produkttyp": "Stationärrollen",
+      "vorschlag_kategorie": "Stationärrollen",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander",
+        "Barsch",
+        "Forelle"
+      ],
+      "alter_shop_menue": [
+        "Angelrollen › Stationäre Angelrollen"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-uferrolle-2500",
+      "titel": "Uferrolle 2500",
+      "produkttyp": "Stationärrollen",
+      "vorschlag_kategorie": "Stationärrollen",
+      "zielfische_aus_tags": [
+        "Zander",
+        "Barsch",
+        "Forelle"
+      ],
+      "alter_shop_menue": [
+        "Angelrollen › Stationäre Angelrollen"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-jigblitz",
+      "titel": "Jigblitz",
+      "produkttyp": "Jigköpfe",
+      "vorschlag_kategorie": "Jigköpfe",
+      "zielfische_aus_tags": [
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Blechköder › Jigspinner / Tail Spinner"
+      ],
+      "hinweis": true
+    },
+    {
+      "handle": "koederdepot-silberflucht",
+      "titel": "Silberflucht",
+      "produkttyp": "Spoons",
+      "vorschlag_kategorie": "Blinker & Spoons",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Blechköder › Blinker / Spoon",
+        "Köder › Blechköder › Metal Jig"
+      ],
+      "hinweis": true
+    },
+    {
+      "handle": "koederdepot-kugelblitz",
+      "titel": "Kugelblitz",
+      "produkttyp": "Metal jig",
+      "vorschlag_kategorie": "Metal Jigs",
+      "zielfische_aus_tags": [
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Blechköder › Metal Jig"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-zwergkoenig",
+      "titel": "Zwergkönig",
+      "produkttyp": "Crankbait",
+      "vorschlag_kategorie": "Crankbaits",
+      "zielfische_aus_tags": [
+        "Barsch",
+        "Forelle"
+      ],
+      "alter_shop_menue": [
+        "Köder › Hardbaits › Crankbaits"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-barschhappen",
+      "titel": "Barschhappen",
+      "produkttyp": "Crankbait",
+      "vorschlag_kategorie": "Crankbaits",
+      "zielfische_aus_tags": [
+        "Zander",
+        "Barsch",
+        "Forelle"
+      ],
+      "alter_shop_menue": [
+        "Köder › Hardbaits › Crankbaits"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-uferknall",
+      "titel": "Uferknall",
+      "produkttyp": "Popper",
+      "vorschlag_kategorie": "Popper",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Hardbaits › Popper"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-zartlaeufer",
+      "titel": "Zartläufer",
+      "produkttyp": "Crankbait",
+      "vorschlag_kategorie": "Crankbaits",
+      "zielfische_aus_tags": [
+        "Zander",
+        "Barsch",
+        "Forelle"
+      ],
+      "alter_shop_menue": [
+        "Köder › Hardbaits › Crankbaits"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-schlankminnow",
+      "titel": "Schlankminnow",
+      "produkttyp": "Jerkbait",
+      "vorschlag_kategorie": "Jerkbaits",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Hardbaits › Jerkbaits"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-oberflaechenblitz",
+      "titel": "Oberflächenblitz",
+      "produkttyp": "Popper",
+      "vorschlag_kategorie": "Popper",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Hardbaits › Popper"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-knallkopf",
+      "titel": "Knallkopf",
+      "produkttyp": "Popper",
+      "vorschlag_kategorie": "Popper",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Hardbaits › Popper"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-feinklinge",
+      "titel": "Feinklinge",
+      "produkttyp": "Crankbait",
+      "vorschlag_kategorie": "Crankbaits",
+      "zielfische_aus_tags": [
+        "Barsch",
+        "Forelle"
+      ],
+      "alter_shop_menue": [
+        "Köder › Hardbaits › Crankbaits"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-silberfunke",
+      "titel": "Silberfunke",
+      "produkttyp": "Crankbait",
+      "vorschlag_kategorie": "Crankbaits",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Barsch",
+        "Forelle"
+      ],
+      "alter_shop_menue": [
+        "Köder › Hardbaits › Crankbaits"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-rasselminnow",
+      "titel": "Rasselminnow",
+      "produkttyp": "Wobbler",
+      "vorschlag_kategorie": "Wobbler",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander",
+        "Barsch",
+        "Forelle"
+      ],
+      "alter_shop_menue": [
+        "Köder › Hardbaits › Wobbler"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-feinschwimmer",
+      "titel": "Feinschwimmer",
+      "produkttyp": "Wobbler",
+      "vorschlag_kategorie": "Wobbler",
+      "zielfische_aus_tags": [
+        "Barsch",
+        "Forelle"
+      ],
+      "alter_shop_menue": [
+        "Köder › Hardbaits › Wobbler"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-langklinge",
+      "titel": "Langklinge",
+      "produkttyp": "Wobbler",
+      "vorschlag_kategorie": "Wobbler",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander"
+      ],
+      "alter_shop_menue": [
+        "Köder › Hardbaits › Wobbler"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-streckklinge",
+      "titel": "Streckklinge",
+      "produkttyp": "Wobbler",
+      "vorschlag_kategorie": "Wobbler",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander"
+      ],
+      "alter_shop_menue": [
+        "Köder › Hardbaits › Wobbler"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-blattviber",
+      "titel": "Blattviber",
+      "produkttyp": "Vibration-Bait",
+      "vorschlag_kategorie": "Vibration Baits",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander"
+      ],
+      "alter_shop_menue": [
+        "Köder › Blechköder › Vibration Bait"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-kleinviber",
+      "titel": "Kleinviber",
+      "produkttyp": "Vibration-Bait",
+      "vorschlag_kategorie": "Vibration Baits",
+      "zielfische_aus_tags": [
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Blechköder › Vibration Bait"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-gleitklinge",
+      "titel": "Gleitklinge",
+      "produkttyp": "Swimbait",
+      "vorschlag_kategorie": "Swimbaits",
+      "zielfische_aus_tags": [
+        "Hecht"
+      ],
+      "alter_shop_menue": [
+        "Köder › Hardbaits › Swimbait"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-wasserjaeger",
+      "titel": "Wasserjäger",
+      "produkttyp": "Frösche",
+      "vorschlag_kategorie": "Frösche & Topwater",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Softbaits › Frosch / Topwater"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-tiefenschwinger",
+      "titel": "Tiefenschwinger",
+      "produkttyp": "Vibration-Bait",
+      "vorschlag_kategorie": "Vibration Baits",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Blechköder › Vibration Bait"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-naturkopf",
+      "titel": "Naturkopf",
+      "produkttyp": "Jigköpfe",
+      "vorschlag_kategorie": "Jigköpfe",
+      "zielfische_aus_tags": [
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Blechköder › Jigspinner / Tail Spinner"
+      ],
+      "hinweis": true
+    },
+    {
+      "handle": "koederdepot-schwingkoenig",
+      "titel": "Schwingkönig",
+      "produkttyp": "Lipless crankbait",
+      "vorschlag_kategorie": "Lipless Crankbaits",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Hardbaits › Lipless Crankbaits"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-teichjaeger",
+      "titel": "Teichjäger",
+      "produkttyp": "Frösche",
+      "vorschlag_kategorie": "Frösche & Topwater",
+      "zielfische_aus_tags": [
+        "Hecht"
+      ],
+      "alter_shop_menue": [
+        "Köder › Softbaits › Frosch / Topwater"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-kraftklinge",
+      "titel": "Kraftklinge",
+      "produkttyp": "Wobbler",
+      "vorschlag_kategorie": "Wobbler",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander"
+      ],
+      "alter_shop_menue": [
+        "Köder › Hardbaits › Wobbler"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-uferflitzer",
+      "titel": "Uferflitzer",
+      "produkttyp": "Spinner",
+      "vorschlag_kategorie": "Spinner",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Barsch",
+        "Forelle"
+      ],
+      "alter_shop_menue": [
+        "Köder › Blechköder › Metal Jig"
+      ],
+      "hinweis": true
+    },
+    {
+      "handle": "koederdepot-leichtblitz",
+      "titel": "Leichtblitz",
+      "produkttyp": "Spinner",
+      "vorschlag_kategorie": "Spinner",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Barsch",
+        "Forelle"
+      ],
+      "alter_shop_menue": [
+        "Köder › Blechköder › Metal Jig"
+      ],
+      "hinweis": true
+    },
+    {
+      "handle": "koederdepot-grosspfeil",
+      "titel": "Großpfeil",
+      "produkttyp": "Swimbait",
+      "vorschlag_kategorie": "Swimbaits",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Hardbaits › Swimbait"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-grossraeuber",
+      "titel": "Großräuber",
+      "produkttyp": "Swimbait",
+      "vorschlag_kategorie": "Swimbaits",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Hardbaits › Swimbait"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-schwerlaeufer",
+      "titel": "Schwerläufer",
+      "produkttyp": "Jerkbait",
+      "vorschlag_kategorie": "Jerkbaits",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Hardbaits › Jerkbaits"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-raeuberhappen",
+      "titel": "Räuberhappen",
+      "produkttyp": "Crankbait",
+      "vorschlag_kategorie": "Crankbaits",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Hardbaits › Crankbaits"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-uferjaeger",
+      "titel": "Uferjäger",
+      "produkttyp": "Frösche",
+      "vorschlag_kategorie": "Frösche & Topwater",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Softbaits › Frosch / Topwater"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-beuteflitzer",
+      "titel": "Beuteflitzer",
+      "produkttyp": "Twister / Grub",
+      "vorschlag_kategorie": "Twister & Grubs",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Softbaits › Gummiwurm"
+      ],
+      "hinweis": true
+    },
+    {
+      "handle": "koederdepot-krustenjaeger",
+      "titel": "Krustenjäger",
+      "produkttyp": "Creature Bait",
+      "vorschlag_kategorie": "Creature Baits",
+      "zielfische_aus_tags": [
+        "Barsch",
+        "Forelle"
+      ],
+      "alter_shop_menue": [
+        "Köder › Softbaits › Creature Baits",
+        "Köder › Softbaits › Gummiwurm"
+      ],
+      "hinweis": true
+    },
+    {
+      "handle": "koederdepot-tauchkoenig",
+      "titel": "Tauchkönig",
+      "produkttyp": "Crankbait",
+      "vorschlag_kategorie": "Crankbaits",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Hardbaits › Crankbaits"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-silberstreif",
+      "titel": "Silberstreif",
+      "produkttyp": "Crankbait",
+      "vorschlag_kategorie": "Crankbaits",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Hardbaits › Crankbaits"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-drucklaeufer",
+      "titel": "Druckläufer",
+      "produkttyp": "Crankbait",
+      "vorschlag_kategorie": "Crankbaits",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Hardbaits › Crankbaits"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-krautlaeufer",
+      "titel": "Krautläufer",
+      "produkttyp": "Frösche",
+      "vorschlag_kategorie": "Frösche & Topwater",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Barsch"
+      ],
+      "alter_shop_menue": [],
+      "hinweis": true
+    },
+    {
+      "handle": "koederdepot-seerosenkoenig",
+      "titel": "Seerosenkönig",
+      "produkttyp": "Frösche",
+      "vorschlag_kategorie": "Frösche & Topwater",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Softbaits › Frosch / Topwater"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-kurzlaeufer",
+      "titel": "Kurzläufer",
+      "produkttyp": "Swimbait",
+      "vorschlag_kategorie": "Swimbaits",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Hardbaits › Swimbait"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-federkopf",
+      "titel": "Federkopf",
+      "produkttyp": "Popper",
+      "vorschlag_kategorie": "Popper",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Hardbaits › Popper"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-flachlaeufer",
+      "titel": "Flachläufer",
+      "produkttyp": "Wobbler",
+      "vorschlag_kategorie": "Wobbler",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Hardbaits › Jerkbaits",
+        "Köder › Hardbaits › Wobbler"
+      ],
+      "hinweis": true
+    },
+    {
+      "handle": "koederdepot-flusslaeufer",
+      "titel": "Flussläufer",
+      "produkttyp": "Crankbait",
+      "vorschlag_kategorie": "Crankbaits",
+      "zielfische_aus_tags": [
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Hardbaits › Crankbaits"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-krabbler",
+      "titel": "Krabbler",
+      "produkttyp": "Gummifisch",
+      "vorschlag_kategorie": "Gummifische",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Softbaits › Gummiwurm"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-panzerfunke",
+      "titel": "Panzerfunke",
+      "produkttyp": "Creature Bait",
+      "vorschlag_kategorie": "Creature Baits",
+      "zielfische_aus_tags": [
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Softbaits › Creature Baits",
+        "Köder › Softbaits › Gummiwurm"
+      ],
+      "hinweis": true
+    },
+    {
+      "handle": "koederdepot-grosskriecher",
+      "titel": "Großkriecher",
+      "produkttyp": "Würmer",
+      "vorschlag_kategorie": "Gummiwürmer",
+      "zielfische_aus_tags": [
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Softbaits › Gummiwurm"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-panzerkriecher",
+      "titel": "Panzerkriecher",
+      "produkttyp": "Creature Bait",
+      "vorschlag_kategorie": "Creature Baits",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Softbaits › Creature Baits",
+        "Köder › Softbaits › Gummiwurm"
+      ],
+      "hinweis": true
+    },
+    {
+      "handle": "koederdepot-schlaengler",
+      "titel": "Schlängler",
+      "produkttyp": "Twister / Grub",
+      "vorschlag_kategorie": "Twister & Grubs",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Blechköder › Jigspinner / Tail Spinner",
+        "Köder › Softbaits › Gummiwurm"
+      ],
+      "hinweis": true
+    },
+    {
+      "handle": "koederdepot-barschfunke",
+      "titel": "Barschfunke",
+      "produkttyp": "Softbait",
+      "vorschlag_kategorie": "Softbaits",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Blechköder › Jigspinner / Tail Spinner",
+        "Köder › Softbaits › Gummifische",
+        "Köder › Softbaits › Gummiwurm",
+        "Köder › Softbaits › Softbait"
+      ],
+      "hinweis": true
+    },
+    {
+      "handle": "koederdepot-krautkoenig",
+      "titel": "Krautkönig",
+      "produkttyp": "Spinnerbait",
+      "vorschlag_kategorie": "Spinnerbaits",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Blechköder › Metal Jig",
+        "Köder › Blechköder › Spinner"
+      ],
+      "hinweis": true
+    },
+    {
+      "handle": "koederdepot-buschjaeger",
+      "titel": "Buschjäger",
+      "produkttyp": "Buzzbait",
+      "vorschlag_kategorie": "Buzzbaits",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Blechköder › Buzzbaits",
+        "Köder › Blechköder › Metal Jig"
+      ],
+      "hinweis": true
+    },
+    {
+      "handle": "koederdepot-beutefisch",
+      "titel": "Beutefisch",
+      "produkttyp": "Gummifisch",
+      "vorschlag_kategorie": "Gummifische",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Softbaits › Gummiwurm"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-krebskoenig",
+      "titel": "Krebskönig",
+      "produkttyp": "Softbait",
+      "vorschlag_kategorie": "Softbaits",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander"
+      ],
+      "alter_shop_menue": [
+        "Köder › Softbaits › Creature Baits",
+        "Köder › Softbaits › Gummiwurm",
+        "Köder › Softbaits › Softbait"
+      ],
+      "hinweis": true
+    },
+    {
+      "handle": "koederdepot-mikroblitz",
+      "titel": "Mikroblitz",
+      "produkttyp": "Twister / Grub",
+      "vorschlag_kategorie": "Twister & Grubs",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Blechköder › Jigspinner / Tail Spinner",
+        "Köder › Softbaits › Gummiwurm"
+      ],
+      "hinweis": true
+    },
+    {
+      "handle": "koederdepot-scherenjaeger",
+      "titel": "Scherenjäger",
+      "produkttyp": "Creature Bait",
+      "vorschlag_kategorie": "Creature Baits",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Softbaits › Creature Baits",
+        "Köder › Softbaits › Gummiwurm"
+      ],
+      "hinweis": true
+    },
+    {
+      "handle": "koederdepot-bodenkriecher",
+      "titel": "Bodenkriecher",
+      "produkttyp": "Softbait",
+      "vorschlag_kategorie": "Softbaits",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander",
+        "Barsch",
+        "Forelle"
+      ],
+      "alter_shop_menue": [
+        "Köder › Softbaits › Gummifische",
+        "Köder › Softbaits › Gummiwurm",
+        "Köder › Softbaits › Softbait"
+      ],
+      "hinweis": true
+    },
+    {
+      "handle": "koederdepot-snap-set",
+      "titel": "Snap-Set",
+      "produkttyp": "Snap Swivel",
+      "vorschlag_kategorie": "Wirbel & Snaps",
+      "zielfische_aus_tags": [],
+      "alter_shop_menue": [
+        "Köder › Softbaits › Twister / Grub",
+        "Zubehör › Wirbel"
+      ],
+      "hinweis": true
+    },
+    {
+      "handle": "koederdepot-doppelblitz",
+      "titel": "Doppelblitz",
+      "produkttyp": "Blade Bait",
+      "vorschlag_kategorie": "Blade Baits",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Blechköder › Blade Bait",
+        "Köder › Blechköder › Metal Jig"
+      ],
+      "hinweis": true
+    },
+    {
+      "handle": "koederdepot-doppelklinge",
+      "titel": "Doppelklinge",
+      "produkttyp": "Spinnerbait",
+      "vorschlag_kategorie": "Spinnerbaits",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Blechköder › Metal Jig",
+        "Köder › Blechköder › Spinner"
+      ],
+      "hinweis": true
+    },
+    {
+      "handle": "koederdepot-grossjaeger",
+      "titel": "Großjäger",
+      "produkttyp": "Buzzbait",
+      "vorschlag_kategorie": "Buzzbaits",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Blechköder › Buzzbaits",
+        "Köder › Blechköder › Metal Jig"
+      ],
+      "hinweis": true
+    },
+    {
+      "handle": "koederdepot-tiefenjaeger",
+      "titel": "Tiefenjäger",
+      "produkttyp": "Metal jig",
+      "vorschlag_kategorie": "Metal Jigs",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Blechköder › Metal Jig"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-tauchjaeger",
+      "titel": "Tauchjäger",
+      "produkttyp": "Metal jig",
+      "vorschlag_kategorie": "Metal Jigs",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Blechköder › Metal Jig"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-zitterklinge",
+      "titel": "Zitterklinge",
+      "produkttyp": "Lipless crankbait",
+      "vorschlag_kategorie": "Lipless Crankbaits",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Hardbaits › Lipless Crankbaits"
+      ],
+      "hinweis": false
+    },
+    {
+      "handle": "koederdepot-kompaktblitz",
+      "titel": "Kompaktblitz",
+      "produkttyp": "Tail spinner",
+      "vorschlag_kategorie": "Tail Spinner",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Blechköder › Metal Jig"
+      ],
+      "hinweis": true
+    },
+    {
+      "handle": "koederdepot-ruettelblitz",
+      "titel": "Rüttelblitz",
+      "produkttyp": "Blade Bait",
+      "vorschlag_kategorie": "Blade Baits",
+      "zielfische_aus_tags": [
+        "Hecht",
+        "Zander",
+        "Barsch"
+      ],
+      "alter_shop_menue": [
+        "Köder › Blechköder › Blade Bait",
+        "Köder › Blechköder › Metal Jig"
+      ],
+      "hinweis": true
+    }
+  ]
+}
