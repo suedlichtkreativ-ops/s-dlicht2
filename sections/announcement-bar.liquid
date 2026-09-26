@@ -1,5 +1,5 @@
 {%- if section.blocks.size > 0 -%}
-  <div class="announcement">
+  <div class="announcement" data-announcement data-interval="{{ section.settings.interval }}">
     <ul class="page-width announcement__list" role="list">
       {%- for block in section.blocks -%}
         <li {{ block.shopify_attributes }}>
@@ -21,7 +21,8 @@
   "class": "announcement-section",
   "max_blocks": 6,
   "settings": [
-    { "type": "checkbox", "id": "show_check", "label": "Haken vor jedem Hinweis", "default": true }
+    { "type": "checkbox", "id": "show_check", "label": "Haken vor jedem Hinweis", "default": true },
+    { "type": "range", "id": "interval", "label": "Wechsel alle", "info": "Wenn nicht alle Hinweise in eine Zeile passen (z. B. auf dem Handy), wechseln sie automatisch.", "min": 3, "max": 8, "step": 1, "unit": "s", "default": 4 }
   ],
   "blocks": [
     {

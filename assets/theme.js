@@ -253,6 +253,55 @@
   setCompact();
 
   /* ---------- Hero: load sequence, slides, fishing line ---------- */
+  /* ---------- Announcement bar: rotate messages when they don't fit on one line ---------- */
+  $$('[data-announcement]').forEach((bar) => {
+    const list = $('.announcement__list', bar);
+    const items = $$('li', list);
+    if (items.length < 2) return;
+    const delay = (parseFloat(bar.dataset.interval) || 4) * 1000;
+    let index = 0;
+    let timer;
+    let held = false;
+    const show = (next) => {
+      if (next === index) return;
+      items[index].classList.remove('is-active');
+      items[index].classList.add('is-leaving');
+      const prev = items[index];
+      setTimeout(() => prev.classList.remove('is-leaving'), 560);
+      index = next;
+      items[index].classList.add('is-active');
+    };
+    const stop = () => { clearInterval(timer); timer = null; };
+    const start = () => {
+      stop();
+      if (!held && list.classList.contains('is-rotating')) timer = setInterval(() => show((index + 1) % items.length), delay);
+    };
+    const fits = () => {
+      list.classList.remove('is-rotating');
+      items.forEach((li) => li.classList.remove('is-active', 'is-leaving'));
+      const top = items[0].offsetTop;
+      return items.every((li) => li.offsetTop === top);
+    };
+    const layout = () => {
+      if (fits()) { stop(); return; }
+      list.classList.add('is-rotating');
+      items[index].classList.add('is-active');
+      start();
+    };
+    list.addEventListener('mouseenter', () => { held = true; stop(); });
+    list.addEventListener('mouseleave', () => { held = false; start(); });
+    list.addEventListener('focusin', (e) => {
+      held = true; stop();
+      const li = e.target.closest('li');
+      if (li && list.classList.contains('is-rotating')) show(items.indexOf(li));
+    });
+    list.addEventListener('focusout', () => { held = false; start(); });
+    document.addEventListener('visibilitychange', () => (document.hidden ? stop() : start()));
+    let resizeFrame;
+    window.addEventListener('resize', () => { cancelAnimationFrame(resizeFrame); resizeFrame = requestAnimationFrame(layout); });
+    layout();
+  });
+
   $$('[data-hero]').forEach((hero) => {
     const slides = $$('[data-slide]', hero);
     const backdrops = $$('[data-backdrop]', hero);

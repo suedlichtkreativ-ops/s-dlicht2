@@ -214,10 +214,13 @@ input, textarea { caret-color: var(--ink); }
 .announcement { background: var(--signal); color: var(--ink); font-size: 0.875rem; font-weight: 650; font-stretch: 87%; }
 .announcement__list { display: flex; justify-content: center; gap: 0.5rem 2.5rem; flex-wrap: wrap; padding-block: 0.5rem; text-align: center; }
 .announcement__list a { text-decoration: underline; text-underline-offset: 3px; }
-@media (max-width: 749px) {
-  .announcement__list { flex-wrap: nowrap; justify-content: flex-start; overflow-x: auto; scrollbar-width: none; scroll-snap-type: x mandatory; }
-  .announcement__list::-webkit-scrollbar { display: none; }
-  .announcement__list li { flex: 0 0 100%; scroll-snap-align: center; }
+/* Rotating mode: set by theme.js when the messages don't fit on one line. */
+.announcement__list.is-rotating { display: grid; flex-wrap: nowrap; overflow: hidden; }
+.announcement__list.is-rotating li { grid-area: 1 / 1; opacity: 0; transform: translateY(110%); transition: transform 520ms var(--ease-out), opacity 360ms var(--ease-out); }
+.announcement__list.is-rotating li.is-active { opacity: 1; transform: none; }
+.announcement__list.is-rotating li.is-leaving { opacity: 0; transform: translateY(-110%); }
+@media (prefers-reduced-motion: reduce) {
+  .announcement__list.is-rotating li { transform: none; transition: opacity 200ms linear; }
 }
 
 /* ==========================================================================
