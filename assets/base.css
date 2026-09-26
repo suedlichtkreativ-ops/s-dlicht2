@@ -145,6 +145,9 @@ input, textarea { caret-color: var(--ink); }
 .on-dark .btn--outline { --btn-fg: var(--white); --btn-border: var(--white); }
 .on-dark .btn--outline:hover { --btn-bg: var(--white); --btn-fg: var(--ink); }
 .btn--full { width: 100%; }
+/* Section CTAs follow the brand slant; buy/checkout/form buttons stay square next to square inputs. */
+.btn--slant { transform: skewX(-9deg); }
+.btn--slant:active { transform: skewX(-9deg) translateY(1px); }
 .btn[disabled], .btn[aria-disabled='true'] { opacity: 0.45; cursor: not-allowed; transform: none; }
 .btn .spinner { display: none; }
 .btn.is-loading { pointer-events: none; }
@@ -377,8 +380,22 @@ input, textarea { caret-color: var(--ink); }
 .hero__line-inner { display: block; }
 .hero__line-inner > span { display: inline-block; }
 .hero__text { margin-top: clamp(1.25rem, 3vw, 2rem); max-width: 44ch; color: #d9d9d3; font-size: clamp(1.0625rem, 1.5vw, 1.25rem); }
-.hero__band { justify-self: start; position: relative; margin-top: clamp(1.75rem, 4vw, 2.75rem); display: inline-flex; flex-wrap: wrap; gap: 0.75rem; padding: 1rem clamp(1rem, 2vw, 1.5rem); isolation: isolate; }
-.hero__band::before { content: ''; position: absolute; inset: 0; z-index: -1; background: var(--signal); transform: skewX(-9deg) rotate(-2deg); transform-origin: left center; border: 3px solid var(--white); }
+.hero__band {
+  --band-pad: 0.875rem;
+  justify-self: start; position: relative; isolation: isolate; margin-top: clamp(1.75rem, 4vw, 2.75rem);
+  display: inline-grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: var(--band-pad); padding: var(--band-pad);
+  /* The band and everything in it is slanted as one unit (the logo's -9°), so all edges share one axis
+     and the inset is the same on every side, in a row or stacked. */
+  transform: skewX(-9deg); margin-left: 0.5rem;
+}
+.hero__band::before { content: ''; position: absolute; inset: 0; z-index: -1; background: var(--signal); border: 3px solid var(--white); }
+.hero__band .btn--slant, .hero__band .btn--slant:active { transform: none; }
+.hero__band .btn:active { translate: 0 1px; }
+.hero__band .btn { min-width: 11.5rem; }
+@media (max-width: 480px) {
+  .hero__band { grid-auto-flow: row; justify-self: stretch; }
+  .hero__band .btn { min-width: 0; }
+}
 .hero__band .btn--outline { --btn-fg: var(--ink); --btn-border: var(--ink); --btn-bg: transparent; }
 .hero__band .btn--outline:hover { --btn-bg: var(--ink); --btn-fg: var(--white); }
 
@@ -406,18 +423,19 @@ input, textarea { caret-color: var(--ink); }
 @media (prefers-reduced-motion: no-preference) {
   .js .hero[data-animate] .hero__line-inner > span { transform: translateY(105%); }
   .js .hero[data-animate] .hero__text,
-  .js .hero[data-animate] .hero__band { opacity: 0; transform: translateY(0.75rem); }
+  .js .hero[data-animate] .hero__band { opacity: 0; translate: 0 0.75rem; }
   .js .hero[data-animate] .hero__line-art { transform: translateY(-100%); }
 
   .js .hero.is-in .hero__line-inner > span { animation: rise var(--dur-slow) var(--ease-out) both; animation-delay: calc(80ms + var(--i, 0) * 90ms); }
   .js .hero.is-in .hero__text { animation: settle 600ms var(--ease-out) 420ms both; }
-  .js .hero.is-in .hero__band { animation: settle 600ms var(--ease-out) 520ms both; }
+  .js .hero.is-in .hero__band { animation: settle-translate 600ms var(--ease-out) 520ms both; }
   .js .hero.is-in .hero__line-art { animation: lower 1100ms var(--ease-out) 200ms both; }
   .js .hero.is-in .hero__hook { animation: swing 1900ms var(--ease-out) 900ms both; }
   .js .hero[data-animate] .hero__cue-line { transform: scaleY(0); }
   .js .hero.is-in .hero__cue-line { animation: drop 900ms var(--ease-out) 900ms both; }
 }
 @keyframes rise { from { transform: translateY(105%); } to { transform: translateY(0); } }
+@keyframes settle-translate { from { opacity: 0; translate: 0 0.75rem; } to { opacity: 1; translate: none; } }
 @keyframes settle { from { opacity: 0; transform: translateY(0.75rem); } to { opacity: 1; transform: none; } }
 @keyframes drop { from { transform: scaleY(0); } to { transform: scaleY(1); } }
 @keyframes lower { from { transform: translateY(-100%); } to { transform: none; } }

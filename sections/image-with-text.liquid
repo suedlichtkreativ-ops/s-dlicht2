@@ -11,7 +11,7 @@
       <h2 class="h2">{{ section.settings.heading | escape }}</h2>
       {%- if section.settings.text != blank -%}<div class="rte">{{ section.settings.text }}</div>{%- endif -%}
       {%- if section.settings.button_label != blank -%}
-        <a class="btn" href="{{ section.settings.button_link }}">{{ section.settings.button_label | escape }}</a>
+        <a class="btn btn--slant" href="{{ section.settings.button_link }}">{{ section.settings.button_label | escape }}</a>
       {%- endif -%}
     </div>
   </div>

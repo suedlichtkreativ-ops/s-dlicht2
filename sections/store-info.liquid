@@ -7,10 +7,10 @@
       {%- endif -%}
       <div style="display:flex;flex-wrap:wrap;gap:.75rem">
         {%- if settings.store_map_url != blank -%}
-          <a class="btn" href="{{ settings.store_map_url }}" target="_blank" rel="noopener">{{ 'store.route' | t }}</a>
+          <a class="btn btn--slant" href="{{ settings.store_map_url }}" target="_blank" rel="noopener">{{ 'store.route' | t }}</a>
         {%- endif -%}
         {%- if settings.store_phone != blank -%}
-          <a class="btn btn--outline" href="tel:{{ settings.store_phone | remove: ' ' | remove: '/' }}">{{ 'store.call' | t }}</a>
+          <a class="btn btn--outline btn--slant" href="tel:{{ settings.store_phone | remove: ' ' | remove: '/' }}">{{ 'store.call' | t }}</a>
         {%- endif -%}
       </div>
     </div>

@@ -34,8 +34,9 @@ Eine Familie: **Archivo Variable** (wght 100–900, wdth 62–125), selbst gehos
 
 - Linksbündig, 12-Spalten-Raster, Außenabstand `clamp(1rem, 4vw, 3rem)`, max. 1440 px.
 - Bilder und Karten ohne Rundung; Buttons und Eingabefelder mit 2 px Ink-Rahmen – wie Etiketten.
-- Markenelement: das **schräge gelbe Band** aus dem Logo (−4°) – im Hero hinter den Buttons und als Ansage-Leiste. Sonst nirgends.
+- Markenelement: das **schräge gelbe Band** aus dem Logo (−9°, ohne zusätzliche Drehung) – im Hero hinter den Buttons und als Ansage-Leiste. Sonst nirgends.
 - Tiefe entsteht durch Rahmen und Flächen, nicht durch Schatten.
+- **Buttons:** Werbe-Buttons in Abschnitten (`.btn--slant`) stehen im Logo-Winkel −9°, wie Band, Navigation und Überschriften. Kauf-, Kassen- und Formular-Buttons bleiben gerade, weil sie neben geraden Eingabefeldern stehen. Im gelben Band gilt: gleicher Winkel, gleicher Innenabstand rundum, gleich breite Buttons.
 
 ```
 ┌ Ansage: Versand · Abholung in Landsberg ───────────────┐

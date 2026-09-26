@@ -37,10 +37,10 @@
     {%- if section.settings.button_label != blank or section.settings.button2_label != blank -%}
       <div class="hero__band">
         {%- if section.settings.button_label != blank -%}
-          <a class="btn btn--dark" href="{{ section.settings.button_link | default: routes.all_products_collection_url }}">{{ section.settings.button_label | escape }}</a>
+          <a class="btn btn--dark btn--slant" href="{{ section.settings.button_link | default: routes.all_products_collection_url }}">{{ section.settings.button_label | escape }}</a>
         {%- endif -%}
         {%- if section.settings.button2_label != blank -%}
-          <a class="btn btn--outline" href="{{ section.settings.button2_link | default: '#laden' }}">{{ section.settings.button2_label | escape }}</a>
+          <a class="btn btn--outline btn--slant" href="{{ section.settings.button2_link | default: '#laden' }}">{{ section.settings.button2_label | escape }}</a>
         {%- endif -%}
       </div>
     {%- endif -%}
