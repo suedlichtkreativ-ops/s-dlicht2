@@ -14,15 +14,25 @@
           <span class="badge">{{ 'products.product.on_sale' | t }}</span>
         {%- endif -%}
       </div>
-      {%- if product.has_only_default_variant and product.available -%}
-        <form class="card__quick" method="post" action="{{ routes.cart_add_url }}" data-product-form>
-          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-          <input type="hidden" name="quantity" value="1">
-          <button type="submit" class="card__add" aria-label="{{ 'products.product.add_to_cart' | t }}: {{ product.title | escape }}">
-            <span class="btn__label">{% render 'icon', name: 'cart-plus' %}</span>
-            <span class="spinner" aria-hidden="true"></span>
-          </button>
-        </form>
+      {%- if product.available -%}
+        {%- if product.has_only_default_variant -%}
+          <form class="card__quick" method="post" action="{{ routes.cart_add_url }}" data-product-form>
+            <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+            <input type="hidden" name="quantity" value="1">
+            <button type="submit" class="card__add" aria-label="{{ 'products.product.add_to_cart' | t }}: {{ product.title | escape }}">
+              <span class="btn__label">{% render 'icon', name: 'cart-plus' %}</span>
+              <span class="spinner" aria-hidden="true"></span>
+            </button>
+          </form>
+        {%- else -%}
+          {%- comment -%} Several variants: pick colour/size in the quick-add drawer first. {%- endcomment -%}
+          <div class="card__quick">
+            <button type="button" class="card__add" data-quick-add="{{ product.url }}" aria-haspopup="dialog" aria-controls="QuickAdd" aria-expanded="false" aria-label="{{ 'products.product.choose_options_for' | t: title: product.title | escape }}">
+              <span class="btn__label">{% render 'icon', name: 'cart-plus' %}</span>
+              <span class="spinner" aria-hidden="true"></span>
+            </button>
+          </div>
+        {%- endif -%}
       {%- endif -%}
       <div class="media">
         {%- if product.featured_media -%}

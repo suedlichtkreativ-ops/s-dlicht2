@@ -252,7 +252,6 @@
   }, { passive: true });
   setCompact();
 
-  /* ---------- Hero: load sequence, slides, fishing line ---------- */
   /* ---------- Announcement bar: rotate messages when they don't fit on one line ---------- */
   $$('[data-announcement]').forEach((bar) => {
     const list = $('.announcement__list', bar);
@@ -302,6 +301,7 @@
     layout();
   });
 
+  /* ---------- Hero: load sequence, slides, fishing line ---------- */
   $$('[data-hero]').forEach((hero) => {
     const slides = $$('[data-slide]', hero);
     const backdrops = $$('[data-backdrop]', hero);
@@ -650,9 +650,11 @@
           return;
         }
         idInput.value = variant.id;
-        const url = new URL(window.location.href);
-        url.searchParams.set('variant', variant.id);
-        window.history.replaceState({}, '', url);
+        if (root.hasAttribute('data-product-section')) {
+          const url = new URL(window.location.href);
+          url.searchParams.set('variant', variant.id);
+          window.history.replaceState({}, '', url);
+        }
         if (variant.featured_media) scrollToMedia(variant.featured_media.id);
         refresh(variant);
       });
@@ -694,6 +696,36 @@
     }
   };
   $$('[data-product-section]').forEach(initProduct);
+
+  /* ---------- Quick add: products with options open a picker drawer from the card ---------- */
+  const quickBody = $('[data-quick-add-body]');
+  let quickController;
+  document.addEventListener('click', async (e) => {
+    const trigger = e.target.closest('[data-quick-add]');
+    if (!trigger || !quickBody) return;
+    e.preventDefault();
+    if (quickController) quickController.abort();
+    quickController = new AbortController();
+    trigger.classList.add('is-loading');
+    try {
+      const url = `${trigger.dataset.quickAdd}${trigger.dataset.quickAdd.includes('?') ? '&' : '?'}section_id=quick-add`;
+      const html = await (await fetch(url, { signal: quickController.signal })).text();
+      const doc = new DOMParser().parseFromString(html, 'text/html');
+      const content = doc.querySelector('[data-quick-product]');
+      if (!content) throw new Error(theme.strings.error);
+      quickBody.replaceChildren(document.importNode(content, true));
+      const root = $('[data-quick-product]', quickBody);
+      markLoaded(root);
+      initProduct(root);
+      openDrawer('quick-add', trigger);
+    } catch (err) {
+      if (err.name === 'AbortError') return;
+      // Fall back to the product page, where the same choice is always possible.
+      window.location.href = trigger.dataset.quickAdd;
+    } finally {
+      trigger.classList.remove('is-loading');
+    }
+  });
 
   /* ---------- Product recommendations ---------- */
   $$('[data-related]').forEach(async (el) => {

@@ -49,6 +49,17 @@
 
     {% section 'cart-drawer' %}
 
+    <div class="drawer drawer--right drawer--sheet" id="QuickAdd" data-drawer="quick-add" aria-hidden="true">
+      <button type="button" class="drawer__backdrop" data-drawer-close tabindex="-1" aria-label="{{ 'general.close' | t }}"></button>
+      <div class="drawer__panel" role="dialog" aria-modal="true" aria-labelledby="QuickAddHeading" tabindex="-1">
+        <div class="drawer__head">
+          <h2 class="drawer__title h3" id="QuickAddHeading">{{ 'products.product.choose_options' | t }}</h2>
+          <button type="button" class="icon-btn" data-drawer-close aria-label="{{ 'general.close' | t }}">{% render 'icon', name: 'close' %}</button>
+        </div>
+        <div class="drawer__body" data-quick-add-body aria-live="polite"></div>
+      </div>
+    </div>
+
     <div class="toast" role="status" aria-live="polite" data-toast></div>
 
     <script>

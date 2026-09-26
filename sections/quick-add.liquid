@@ -1,0 +1,68 @@
+{%- comment -%}
+  Quick add: rendered on demand via `{{ product.url }}?section_id=quick-add` into the quick-add drawer
+  (see layout/theme.liquid). Not addable in the editor.
+{%- endcomment -%}
+{%- liquid
+  assign current_variant = product.selected_or_first_available_variant
+  assign featured = current_variant.featured_media | default: product.featured_media
+  assign quick_title = product.title
+  if settings.card_strip_vendor and settings.card_title_prefix != blank
+    assign vendor_prefix = settings.card_title_prefix | strip | append: ' '
+    assign title_start = product.title | slice: 0, vendor_prefix.size
+    if title_start == vendor_prefix
+      assign quick_title = product.title | remove_first: vendor_prefix
+    endif
+  endif
+-%}
+<div class="quick stack" style="--stack:1.5rem" data-quick-product data-section-id="{{ section.id }}" data-product-url="{{ product.url }}">
+  <div class="quick__top">
+    <div class="quick__media" data-refresh="quick-media">
+      <div class="media media--white">
+        {%- if featured -%}
+          {% render 'image', image: featured.preview_image, sizes: '9rem', loading: 'eager', fallback_alt: product.title %}
+        {%- endif -%}
+      </div>
+    </div>
+    <div class="stack" style="--stack:.4rem">
+      <p class="quick__title">{{ quick_title | escape }}</p>
+      <div data-refresh="price">
+        {% render 'price', product: product, target: current_variant, class: 'quick__price' %}
+      </div>
+    </div>
+  </div>
+
+  {% render 'variant-picker', product: product, id_prefix: 'quick', swatches: true %}
+
+  {%- form 'product', product, id: 'QuickAddForm', class: 'stack', data-product-form: '', novalidate: 'novalidate' -%}
+    <input type="hidden" name="id" value="{{ current_variant.id }}" data-variant-id>
+    <div class="buy">
+      <div class="qty" data-qty>
+        <button type="button" data-qty-change="-1" aria-label="{{ 'products.product.decrease' | t }}">{% render 'icon', name: 'minus', class: 'icon--sm' %}</button>
+        <input type="number" name="quantity" value="1" min="1" inputmode="numeric" aria-label="{{ 'products.product.quantity' | t }}">
+        <button type="button" data-qty-change="1" aria-label="{{ 'products.product.increase' | t }}">{% render 'icon', name: 'plus', class: 'icon--sm' %}</button>
+      </div>
+      <div data-refresh="buy">
+        <button type="submit" name="add" class="btn btn--full" data-add-button{% unless current_variant.available %} disabled{% endunless %}>
+          <span class="btn__label">
+            {%- if current_variant.available -%}{{ 'products.product.add_to_cart' | t }}{%- else -%}{{ 'products.product.sold_out' | t }}{%- endif -%}
+          </span>
+          <span class="spinner" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+    <div class="form-message form-message--error" role="alert" data-form-error hidden></div>
+  {%- endform -%}
+
+  <a class="quick__details" href="{{ product.url }}">{{ 'products.product.view_details' | t }}{% render 'icon', name: 'arrow', class: 'icon--sm' %}</a>
+
+  <script type="application/json" data-variants>
+    {{ product.variants | json }}
+  </script>
+</div>
+
+{% schema %}
+{
+  "name": "Schnellauswahl",
+  "settings": []
+}
+{% endschema %}

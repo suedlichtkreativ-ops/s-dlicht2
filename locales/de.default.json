@@ -80,6 +80,9 @@
   "products": {
     "product": {
       "add_to_cart": "In den Warenkorb",
+      "choose_options": "Auswahl treffen",
+      "choose_options_for": "Farbe oder Größe wählen: {{ title }}",
+      "view_details": "Alle Details ansehen",
       "added": "Zum Warenkorb hinzugefügt",
       "sold_out": "Ausverkauft",
       "unavailable": "nicht verfügbar",

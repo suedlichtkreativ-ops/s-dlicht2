@@ -1,0 +1,52 @@
+{%- comment -%}
+  Option picker (radio buttons, image swatches for colour options).
+  Params: product, id_prefix (unique per page, e.g. section.id), swatches (true = variant image for colour options).
+  Used on the product page and in the quick-add drawer; theme.js reads [data-variant-picker].
+{%- endcomment -%}
+{%- unless product.has_only_default_variant -%}
+  <div class="stack" style="--stack:1.25rem" data-variant-picker data-refresh="picker">
+    {%- for option in product.options_with_values -%}
+      {%- liquid
+        assign option_index = option.position | minus: 1
+        assign option_name = option.name | downcase
+        assign is_swatch = false
+        if swatches
+          if option_name contains 'farbe' or option_name contains 'color' or option_name contains 'dekor'
+            assign is_swatch = true
+          endif
+        endif
+      -%}
+      <fieldset class="variant-picker{% if is_swatch %} variant-picker--swatch{% endif %}">
+        <legend>{{ option.name | escape }}: <span class="muted" style="font-weight:500">{{ option.selected_value | escape }}</span>{% if is_swatch %} <span class="variant-picker__count muted">{{ 'products.product.colors_count' | t: count: option.values.size }}</span>{% endif %}</legend>
+        <div class="variant-picker__values">
+          {%- for value in option.values -%}
+            {%- assign input_id = id_prefix | append: '-' | append: option.position | append: '-' | append: forloop.index0 -%}
+            {%- liquid
+              assign swatch_media = nil
+              if is_swatch
+                for v in product.variants
+                  if v.options[option_index] == value and v.featured_media
+                    assign swatch_media = v.featured_media
+                    break
+                  endif
+                endfor
+              endif
+            -%}
+            <input type="radio" id="{{ input_id }}" name="option{{ option.position }}" value="{{ value | escape }}"
+              {% if option.selected_value == value %}checked{% endif %}
+              {% if value.available == false %}class="is-unavailable"{% endif %}>
+            <label for="{{ input_id }}"{% if swatch_media %} class="swatch"{% endif %}>
+              {%- if swatch_media -%}
+                <span class="swatch__img">{{ swatch_media.preview_image | image_url: width: 360, height: 240, crop: 'center' | image_tag: width: 120, height: 80, loading: 'lazy', alt: '' }}</span>
+                <span class="swatch__name">{{ value | escape }}</span>
+              {%- else -%}
+                {{ value | escape }}
+              {%- endif -%}
+              {%- if value.available == false %}<span class="visually-hidden"> – {{ 'products.product.unavailable' | t }}</span>{% endif -%}
+            </label>
+          {%- endfor -%}
+        </div>
+      </fieldset>
+    {%- endfor -%}
+  </div>
+{%- endunless -%}
