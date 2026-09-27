@@ -34,12 +34,12 @@ Erledigt (Details in `umstellung.md`): Produkte, Fotos, Farbnamen, Kategorien un
 
 **Nur ihr im Admin – in dieser Reihenfolge:**
 1. [ ] **Theme veröffentlichen:** Onlineshop → Themes → „Köderdepot 2026 (Südlicht)“ → Veröffentlichen.
-2. [ ] **Versand** (Einstellungen → Versand und Zustellung → Allgemeines Versandprofil → Deutschland): „Standard“ auf **4,99 €**, kostenlosen Versand auf **ab 59 €** Bestellwert. Die Schnittstelle übernimmt das nicht.
+2. [x] **Versand:** erledigt (27.09.). Neues Profil „Standardversand“: Deutschland 4,99 €, ab 59 € kostenlos; EU 13,99 €; International 19,99 €. Alle 594 Varianten zugeordnet, Angelruten bleiben im Sperrgut-Profil (9,99 €). Das allgemeine Profil (5,99 €, frei ab 150 €) greift nur noch für **neu angelegte** Produkte: dort ebenfalls auf 4,99 € / ab 59 € stellen oder neue Produkte dem Profil „Standardversand“ zuordnen.
 3. [x] **Sperrgut**: erledigt (eigenes Profil, 11 Ruten, 9,99 €).
 4. [ ] **Rechtstexte** (Einstellungen → Richtlinien): Inhalte aus `rechtliches/impressum.html`, `agb.html`, `widerrufsbelehrung.html`, `datenschutz.html`, `versand.html` einfügen (HTML-Ansicht „<>“). Die Schnittstelle darf das nicht.
 5. [ ] **Kundenkonten auf „klassisch“** (Einstellungen → Kundenkonten).
 6. [ ] **Barzahlung bei Abholung** (Einstellungen → Zahlungen → Manuelle Zahlungsmethoden).
-7. [ ] **Double-Opt-in und Cookie-Banner** (Einstellungen → Kundendatenschutz).
+7. [ ] **Double-Opt-in und Cookie-Banner** (Einstellungen → Kundendatenschutz). Einwilligung ist bisher nur für Deutschland Pflicht: für alle EU-/EWR-Länder einschalten (die Schnittstelle hat dafür keine Berechtigung).
 8. [ ] App **„EU Widerruf Button“** auf der Widerruf-Seite (App-Block im Editor).
 9. [ ] **Datenschutzerklärung** um Newsletter und Cookies ergänzen lassen (IT-Recht Kanzlei).
 10. [x] Abholzeit „innerhalb von 24 Stunden“ bestätigt.
