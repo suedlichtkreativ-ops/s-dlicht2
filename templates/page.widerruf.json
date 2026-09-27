@@ -10,8 +10,31 @@
     },
     "app": {
       "type": "apps",
-      "blocks": {},
-      "block_order": []
+      "blocks": {
+        "eu_widerruf_button_form_inline_dBAAbY": {
+          "type": "shopify://apps/eu-widerruf-button/blocks/form-inline/019b2ca9-9838-7858-9694-3a8051afa76e",
+          "settings": {
+            "show_heading": true,
+            "heading": "Widerruf online erklären",
+            "description": "Gib deine Bestellnummer ein und wähle die Artikel aus, die du widerrufen möchtest.",
+            "iframe_height": 500,
+            "primary_color": "#0D0D0D",
+            "background_color": "#ffffff",
+            "text_color": "#0D0D0D",
+            "border_radius": "0px",
+            "max_width": "700px",
+            "show_order_lookup": true,
+            "require_order_number": true,
+            "hide_order_notes": false,
+            "require_items": false,
+            "confirm_step": false,
+            "hide_outside_eu": false
+          }
+        }
+      },
+      "block_order": [
+        "eu_widerruf_button_form_inline_dBAAbY"
+      ]
     }
   },
   "order": [

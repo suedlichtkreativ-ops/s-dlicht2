@@ -58,14 +58,14 @@
             "label": "10 % Rabatt",
             "image": "shopify://shop_images/ChatGPT_Image_16._Juli_2026_13_55_27.png",
             "heading": "Dein erster\nFang lohnt\nsich.",
-            "text": "<p>10 % Rabatt auf deine erste Bestellung. Konto anlegen, danach liegt der Code direkt in deinem Warenkorb.</p>",
+            "text": "<p>10 % Rabatt auf deine erste Bestellung mit dem Code <strong>WILLKOMMEN10</strong>. Ein Klick, und er liegt in deinem Warenkorb.</p>",
             "signup": false,
             "signup_label": "10 % sichern",
-            "button_label": "Konto anlegen & 10 % sichern",
-            "button_link": "/account/register?willkommen",
+            "button_label": "10 % sichern",
+            "button_link": "/discount/WILLKOMMEN10?redirect=/cart",
             "lure_asset": "lure-preisschild-10.webp",
             "lure_style": "tag",
-            "lure_label": "10 % Willkommensrabatt: Konto anlegen",
+            "lure_label": "10 % Willkommensrabatt: Code in den Warenkorb legen",
             "button2_label": "Köder entdecken",
             "button2_link": "shopify://collections/koder"
           }

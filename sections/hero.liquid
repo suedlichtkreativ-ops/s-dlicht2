@@ -72,20 +72,9 @@
                 if block.settings.lure_link != blank
                   assign lure_href = block.settings.lure_link
                 elsif lure_style == 'tag'
-                  comment
-                    Price tag: new visitors go to sign-up (the code lands in the cart afterwards),
-                    customers who are already logged in get the code straight into the cart.
-                  endcomment
+                  # Price tag: puts the welcome code straight into the cart
                   assign tag_code = block.settings.code | default: 'WILLKOMMEN10'
-                  if customer
-                    assign lure_href = routes.root_url | append: 'discount/' | append: tag_code | append: '?redirect=' | append: routes.cart_url
-                  else
-                    if routes.account_register_url contains '?'
-                      assign lure_href = routes.account_register_url | append: '&willkommen'
-                    else
-                      assign lure_href = routes.account_register_url | append: '?willkommen'
-                    endif
-                  endif
+                  assign lure_href = routes.root_url | append: 'discount/' | append: tag_code | append: '?redirect=' | append: routes.cart_url | replace: '//', '/'
                 elsif lure_product != blank
                   assign lure_href = lure_product.url
                 else
@@ -242,9 +231,9 @@
           "options": [
             { "value": "lure", "label": "Köder (hängt am Kopf)" },
             { "value": "box", "label": "Köderkiste (hängt am Griff)" },
-            { "value": "tag", "label": "Preisschild (Klick führt zur Registrierung)" }
+            { "value": "tag", "label": "Preisschild (Klick: Code in den Warenkorb)" }
           ],
-          "info": "Köderkiste: lure-koederkiste.webp. Preisschild: lure-preisschild-10.webp. Beim Preisschild landet der Rabattcode dieser Folie nach der Registrierung im Warenkorb."
+          "info": "Köderkiste: lure-koederkiste.webp. Preisschild: lure-preisschild-10.webp. Beim Preisschild legt ein Klick den Rabattcode dieser Folie in den Warenkorb."
         },
         { "type": "url", "id": "lure_link", "label": "Link (optional)", "info": "Überschreibt das Ziel, z. B. „Alle Produkte“ für die Köderkiste." },
         { "type": "text", "id": "lure_label", "label": "Beschriftung für Screenreader (optional)" }
