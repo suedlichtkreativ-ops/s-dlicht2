@@ -1237,7 +1237,7 @@ input, textarea { caret-color: var(--ink); }
 .box-progress__text { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 0.4rem; font-size: 0.9375rem; font-weight: 650; }
 .box-progress__name { padding: 0.1rem 0.4rem; background: var(--ink); color: var(--signal); font-size: 0.8125rem; font-weight: 750; }
 .box-progress__track { position: relative; height: 0.5rem; margin-bottom: 1.1rem; background: var(--stone); }
-.box-progress__fill { position: absolute; inset: 0 auto 0 0; background: var(--signal); transition: width 700ms var(--ease-out); }
+.box-progress__fill { position: absolute; inset: 0; background: var(--signal); transform-origin: left; transition: transform 700ms var(--ease-out); }
 .box-progress__tick { position: absolute; top: -0.2rem; width: 2px; height: 0.9rem; background: var(--ink); transform: translateX(-1px); }
 .box-progress__tick span { position: absolute; top: 1.05rem; right: 0; white-space: nowrap; font-size: 0.75rem; font-weight: 650; color: var(--muted); font-variant-numeric: tabular-nums; }
 .box-progress__fill + .box-progress__tick span { right: auto; left: 50%; transform: translateX(-50%); }
