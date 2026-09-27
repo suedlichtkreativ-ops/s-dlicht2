@@ -78,6 +78,7 @@ input, textarea { caret-color: var(--ink); }
 .section--ink { background: var(--ink); color: var(--white); }
 .section--white { background: var(--white); }
 .stack > * + * { margin-top: var(--stack, 1rem); }
+.stack > a:not(.btn) { display: table; }
 
 /* ---------- Typography ---------- */
 .display {
@@ -631,7 +632,9 @@ input, textarea { caret-color: var(--ink); }
   padding: 0.75rem 0.9rem; border-top: var(--border); background: var(--white);
   transition: background-color var(--dur-base) var(--ease-out);
 }
-.tile__name { font-size: clamp(1.5rem, 3.2vw, 2.5rem); }
+.tile__label > span:first-child { display: grid; gap: 0.15rem; min-width: 0; }
+.tile__name { font-size: clamp(1.125rem, 4.6vw, 2.5rem); overflow-wrap: anywhere; }
+.tile__label .icon { flex: none; }
 .tile__count { font-size: 0.875rem; color: var(--muted); font-variant-numeric: tabular-nums; }
 .tile .icon { transition: transform var(--dur-base) var(--ease-out); }
 .tiles--cutout .media { background: var(--white); }
@@ -746,6 +749,7 @@ input, textarea { caret-color: var(--ink); }
 /* Sub-category chips: one level deeper without reopening the menu */
 .collection-hero__intro { max-width: 68ch; margin: 0; }
 .collection-about { border-top: var(--border); background: var(--white); padding-block: clamp(2.5rem, 6vw, 4.5rem); }
+.collection-about__title { margin-bottom: 1rem; }
 .collection-about__text { max-width: 68ch; }
 .subnav { margin-top: 0.25rem; margin-inline: calc(var(--gutter) * -1); padding-inline: var(--gutter); padding-block: 0.125rem; overflow-x: auto; scrollbar-width: none; overscroll-behavior-x: contain; }
 .subnav::-webkit-scrollbar { display: none; }
@@ -1399,7 +1403,8 @@ input[type='search']::-webkit-search-cancel-button { -webkit-appearance: none; a
 .advice-zones__body .rte { color: var(--stone); }
 .chip--dark { background: transparent; color: var(--white); border-color: rgb(255 255 255 / 0.5); }
 .chip--dark:hover { background: var(--signal); color: var(--ink); border-color: var(--signal); }
-.advice-contact__box { display: grid; gap: 2rem; padding: clamp(1.5rem, 4vw, 3rem); background: var(--signal); }
+.advice-contact { background: var(--signal); }
+.advice-contact__box { display: grid; gap: 2rem; }
 @media (min-width: 990px) { .advice-contact__box { grid-template-columns: 1fr 1fr; align-items: center; } }
 .advice-contact__text { margin-top: 1rem; max-width: 44ch; font-size: 1.0625rem; }
 .advice-contact__ways { display: grid; gap: 0.6rem; }
@@ -1415,8 +1420,6 @@ a.advice-contact__way:hover { background: var(--ink); color: var(--white); }
 
 /* ---------- Fangberichte ---------- */
 .catches__head { display: grid; gap: 0.5rem; }
-.catches__head--row { grid-template-columns: 1fr auto; align-items: end; gap: 1rem; }
-@media (max-width: 749px) { .catches__head--row { grid-template-columns: 1fr; } .catches__head--row .btn { justify-self: start; } }
 .catches__grid { display: grid; gap: 1.25rem; margin-top: 2rem; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); }
 .catches__grid--row { grid-auto-flow: column; grid-auto-columns: minmax(15rem, 1fr); grid-template-columns: none; overflow-x: auto; scroll-snap-type: x mandatory; padding-bottom: 0.5rem; }
 .catches__grid--row > li { scroll-snap-align: start; }

@@ -13,7 +13,7 @@
   data-t-why="{{ 'finder.why' | t }}" data-t-lucky="{{ 'finder.lucky_result' | t }}">
   <div class="page-width">
     <div class="finder__head">
-      <h2 class="finder__title display" id="FinderTitle-{{ section.id }}">{{ section.settings.heading | escape }}</h2>
+      <h2 class="finder__title display" id="FinderTitle-{{ section.id }}">{% render 'slant-words', text: section.settings.heading %}</h2>
       {%- if section.settings.text != blank -%}<p class="finder__text">{{ section.settings.text | escape }}</p>{%- endif -%}
       {%- if section.settings.advice_link != blank -%}<a class="text-link finder__advice" href="{{ section.settings.advice_link }}">{{ 'finder.advice_link' | t }}</a>{%- endif -%}
     </div>

@@ -17,7 +17,20 @@
     <div class="page-width">
       <h2 class="section-title display">{% render 'slant-words', text: heading %}</h2>
       {%- if text != blank -%}<p class="muted advice__intro">{{ text | escape }}</p>{%- endif -%}
-      <ul class="grid grid--4 catch-gear__grid" role="list">
+      {%- liquid
+        comment
+          Balanced rows: 5 products in one row of five, 6 in two rows of three, otherwise rows of four.
+        endcomment
+        case gear.size
+          when 5
+            assign gear_cols = 'grid--5'
+          when 6, 3
+            assign gear_cols = 'grid--3'
+          else
+            assign gear_cols = 'grid--4'
+        endcase
+      -%}
+      <ul class="grid {{ gear_cols }} catch-gear__grid" role="list">
         {%- for product in gear -%}
           <li>{% render 'product-card', product: product %}</li>
         {%- endfor -%}

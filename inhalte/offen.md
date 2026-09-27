@@ -2,6 +2,13 @@
 
 Stand 27.09.2026. Mit eurer Freigabe ist die unsichtbare Vorbereitung im Live-Store erledigt (Theme unveröffentlicht, Inhalte als Entwurf/geplant). Am sichtbaren Shop hat sich nichts geändert. Stand und nächste Schritte: `umstellung.md`. Details zu einzelnen Themen stehen in den verlinkten Dateien.
 
+## Vor Go-live zu entscheiden (Stand 27.09.2026 abends)
+
+- [ ] **Produktfotos freigeben:** Übersicht in `bilder/pruefung/` (vorher/nachher und alle 439).
+- [ ] **Kategorie-Texte:** 21 Menü-Kategorien haben im Shop keinen Einleitungstext (u. a. Köder, Hechtköder, Zanderköder, Barschköder, Forellenköder, Wobbler, Crankbaits, Jerkbaits, Popper, Swimbaits, Blinker, Angelruten, Wirbel, Bundles, Spinner, Metal Jigs, Tail Spinner, Gummiwürmer, Lösezangen, Zielfisch Forelle). **„Frösche & Topwater“ zeigt fälschlich den Gummifisch-Text.**
+- [ ] **Stahl-/Titanvorfach-Tipp** steht noch auf der Köderberatung (Hecht) und in den Bundles „Starter“ und „Hecht“ (Abschnitt „Für wen?“).
+- [ ] **Widerruf-Seite** spricht mit „Sie“, der restliche Shop mit „du“.
+
 ## A. Von euch zu klären oder zu liefern
 
 ### Entscheidungen

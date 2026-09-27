@@ -20,6 +20,19 @@ Bewusst noch nicht gemacht:
 - **439 Studio-Fotos:** kommen beim Produkt-Schritt (Phase 2) direkt an die Produkte, sonst lägen sie doppelt in den Dateien.
 - **„Sonderangebote“** fehlt im neuen Shop-Service-Menü: Die Kollektion `sale` ist ein leeres Archiv.
 
+## Phase 2 – Vorbereitung (27.09.2026, abends)
+
+Unsichtbar für Besucher erledigt:
+- **Seiten-Vorlagen zugewiesen:** Köderberatung, Zahlung, Versand & Lieferung, Über uns. Das alte Theme „Focal“ hat für diese Seiten keine eigenen Vorlagen und zeigt sie deshalb unverändert mit seiner Standardvorlage.
+- **Seitentexte bereinigt:** Kopier-Reste (ChatGPT-Klassen, Wort-für-Wort-Spans) aus Kontakt, Über uns, Versand, Zahlung, FAQ, Warum Köderdepot, Köderberatung entfernt. Wortlaut unverändert.
+- **Kategorie-Texte bereinigt:** Softbaits, Buzzbaits, Spinnerbaits, Angelrollen (Kopier-Attribute entfernt, Wortlaut unverändert).
+- **Produkt-Backup:** `backup/produkte-vor-umstellung-2026-09-27.jsonl` (alle Produkte, Varianten, Bilder, Metafelder).
+- **Studio-Fotos neu:** keine weißen Flecken mehr in Rollenbügeln, Zangenringen, Snaps und Spinnerbait-Rahmen; Produkte optisch mittig; hellerer Hintergrund. Prüfbögen: `bilder/pruefung/`.
+- **Versandrichtlinie** (`rechtliches/versand.html`) von Word-Formatierungen bereinigt, doppelte Überschrift entfernt.
+- **Qualitätskontrolle** aller 170 Seiten der Vorschau (Desktop + Handy): keine Skriptfehler, kein seitliches Überlaufen, keine toten Links, alle Bilder mit Alt-Text, je eine Hauptüberschrift. Behoben: Kachel-Beschriftung, Abstände (Link unter Text, gelbes Beratungs-Band, Fangbericht-Ausrüstung), einheitliche Überschriften und Links, Zielfisch-Symbole nur noch bei Ködern, Überschrift über Kategorietexten.
+
+Noch offen vor dem Umschalten: siehe `offen.md`, Abschnitt „Vor Go-live zu entscheiden“.
+
 ## Phase 2 – Umschalten (sichtbar, in einem Rutsch)
 
 Reihenfolge, am besten abends mit wenig Besuchern:

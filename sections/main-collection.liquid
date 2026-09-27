@@ -122,8 +122,9 @@
   {%- endpaginate -%}
 
   {%- if collection.description != blank and section.settings.show_description -%}
-    <section class="collection-about" id="CollectionAbout" aria-label="{{ 'collections.about' | t: title: collection.title }}">
+    <section class="collection-about" id="CollectionAbout" aria-labelledby="CollectionAboutTitle">
       <div class="page-width">
+        <h2 class="h3 collection-about__title" id="CollectionAboutTitle">{{ 'collections.about' | t: title: collection.title }}</h2>
         <div class="rte collection-about__text">{{ collection.description }}</div>
       </div>
     </section>

@@ -97,7 +97,8 @@
     {%- if product != blank -%}
       <div class="card__foot">
         {% render 'price', product: product, target: product.selected_or_first_available_variant, use_from: true %}
-        {%- if settings.card_show_meta -%}
+        {%- comment -%} Target-fish marks only on lures: for rods and reels the power class decides, not the fish. {%- endcomment -%}
+        {%- if settings.card_show_meta and product.tags contains 'kategorie-koeder' -%}
           {%- capture card_fish -%}
             {%- for tag in product.tags -%}
               {%- if tag contains 'zielfisch-' -%}
