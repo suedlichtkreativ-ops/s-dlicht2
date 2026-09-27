@@ -42,12 +42,21 @@
             "link_label": "Fragen? Schreib uns",
             "link": "/pages/contact"
           }
+        },
+        "b6": {
+          "type": "card",
+          "settings": {
+            "icon": "check",
+            "title": "Klarna",
+            "text": "<p>Sofort, später oder in Raten bezahlen. Welche Klarna-Optionen du bekommst, siehst du im Checkout.</p>"
+          }
         }
       },
       "block_order": [
         "b1",
         "b2",
         "b3",
+        "b6",
         "b4",
         "b5"
       ],
