@@ -1,4 +1,6 @@
 {%- assign c = section.settings.collection -%}
+{%- comment -%} Without visible products the section stays hidden for shoppers; placeholders only in the theme editor. {%- endcomment -%}
+{%- if c != blank and c.products_count > 0 or request.design_mode -%}
 <section class="section{% if section.settings.white %} section--white{% endif %}">
   <div class="page-width">
     <div class="section-head">
@@ -20,6 +22,7 @@
     </ul>
   </div>
 </section>
+{%- endif -%}
 
 {% schema %}
 {

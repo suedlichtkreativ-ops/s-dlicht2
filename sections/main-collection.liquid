@@ -100,10 +100,15 @@
                 {%- endfor -%}
               </ul>
               {% render 'pagination', paginate: paginate %}
-            {%- elsif collection.all_products_count == 0 -%}
+            {%- elsif collection.all_products_count == 0 and request.design_mode -%}
               <ul class="grid{% unless show_filters %} grid--4{% endunless %}" role="list">
                 {%- for i in (1..8) -%}<li>{% render 'product-card', product: blank, index: i %}</li>{%- endfor -%}
               </ul>
+            {%- elsif collection.all_products_count == 0 -%}
+              <div class="empty-state">
+                <p class="h3">{{ 'collections.empty' | t }}</p>
+                <a class="btn btn--dark" href="{{ routes.all_products_collection_url }}">{{ 'collections.empty_cta' | t }}</a>
+              </div>
             {%- else -%}
               <div class="empty-state">
                 <p class="h3">{{ 'collections.no_matches' | t }}</p>

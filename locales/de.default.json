@@ -89,7 +89,9 @@
     "subnav_all": "Alle",
     "read_more": "Mehr erfahren",
     "about": "Über {{ title }}",
-    "products_heading": "Produkte in {{ title }}"
+    "products_heading": "Produkte in {{ title }}",
+    "empty": "Hier ist gerade nichts vorrätig.",
+    "empty_cta": "Ganzes Sortiment ansehen"
   },
   "products": {
     "product": {
@@ -173,7 +175,8 @@
   },
   "not_found": {
     "title": "Diese Seite gibt es nicht (mehr).",
-    "text": "Vielleicht wurde das Produkt umbenannt. Such danach oder geh zurück ins Sortiment."
+    "text": "Vielleicht wurde das Produkt umbenannt. Such danach oder geh zurück ins Sortiment.",
+    "nav": "Direkt weiter"
   },
   "blog": {
     "back": "Zurück zu {{ title }}",
