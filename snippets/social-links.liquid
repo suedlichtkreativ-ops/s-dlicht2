@@ -1,0 +1,14 @@
+{%- comment -%} Links to the shop's social channels (theme settings "Social Media"). Param: class {%- endcomment -%}
+{%- capture items -%}
+  {%- assign networks = 'instagram,facebook,youtube,tiktok' | split: ',' -%}
+  {%- for net in networks -%}
+    {%- assign key = 'social_' | append: net -%}
+    {%- if settings[key] != blank -%}
+      {%- case net -%}{%- when 'youtube' -%}{%- assign label = 'YouTube' -%}{%- when 'tiktok' -%}{%- assign label = 'TikTok' -%}{%- else -%}{%- assign label = net | capitalize -%}{%- endcase -%}
+      <li><a class="social-link" href="{{ settings[key] }}" target="_blank" rel="noopener">{% render 'icon', name: net %}<span>{{ label }}</span></a></li>
+    {%- endif -%}
+  {%- endfor -%}
+{%- endcapture -%}
+{%- if items != blank -%}
+  <ul class="social-links {{ class }}" role="list" aria-label="{{ 'footer.social' | t }}">{{ items }}</ul>
+{%- endif -%}

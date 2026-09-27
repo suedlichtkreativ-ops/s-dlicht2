@@ -165,6 +165,10 @@
             <dl class="specs" {{ block.shopify_attributes }}>
               {%- if product.type != blank -%}<div><dt>{{ 'products.product.specs_type' | t }}</dt><dd>{{ product.type | escape }}</dd></div>{%- endif -%}
               {%- if fish_list != blank -%}<div><dt>{{ 'products.product.specs_fish' | t }}</dt><dd>{{ fish_list }}</dd></div>{%- endif -%}
+              {%- capture spec_weight -%}{% render 'product-weight', product: product, kind: 'weight' %}{%- endcapture -%}
+              {%- capture spec_cast -%}{% render 'product-weight', product: product, kind: 'cast' %}{%- endcapture -%}
+              {%- if spec_cast != blank -%}<div><dt>{{ 'products.product.specs_cast' | t }}</dt><dd>{{ spec_cast }}</dd></div>{%- endif -%}
+              {%- if spec_weight != blank -%}<div><dt>{{ 'products.product.specs_weight' | t }}</dt><dd>{{ spec_weight }}</dd></div>{%- endif -%}
               {%- for option in product.options_with_values -%}
                 {%- assign on = option.name | downcase -%}
                 {%- if on contains 'farbe' or on contains 'color' -%}

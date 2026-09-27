@@ -160,7 +160,8 @@
       {
         "type": "url",
         "id": "social_instagram",
-        "label": "Instagram"
+        "label": "Instagram",
+        "default": "https://www.instagram.com/koederdepot/"
       },
       {
         "type": "url",

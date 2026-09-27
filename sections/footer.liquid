@@ -11,15 +11,7 @@
       {%- if section.settings.text != blank -%}
         <p class="footer__text">{{ section.settings.text | escape }}</p>
       {%- endif -%}
-      <ul class="footer__social" role="list">
-        {%- assign networks = 'instagram,facebook,youtube,tiktok' | split: ',' -%}
-        {%- for net in networks -%}
-          {%- assign key = 'social_' | append: net -%}
-          {%- if settings[key] != blank -%}
-            <li><a class="icon-btn" href="{{ settings[key] }}" target="_blank" rel="noopener" aria-label="{{ net | capitalize }}">{% render 'icon', name: net %}</a></li>
-          {%- endif -%}
-        {%- endfor -%}
-      </ul>
+      {% render 'social-links', class: 'footer__social' %}
     </div>
 
     {%- for block in section.blocks -%}

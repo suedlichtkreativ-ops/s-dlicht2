@@ -4,8 +4,8 @@
     <h1 class="h1" style="max-width:20ch">{{ article.title | escape }}</h1>
   </div>
   {%- if article.image -%}
-    <div class="media" style="--ratio:16/9;border:var(--border);margin-bottom:2.5rem">
-      {% render 'image', image: article.image, sizes: '100vw', loading: 'eager', alt: article.image.alt %}
+    <div class="media article__image" style="--ratio:16/9;border:var(--border);margin-bottom:2.5rem">
+      {% render 'image', image: article.image, sizes: '(min-width: 1100px) 1040px, 100vw', loading: 'eager', alt: article.image.alt %}
     </div>
   {%- endif -%}
   <div class="rte lead">{{ article.content }}</div>

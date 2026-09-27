@@ -1,0 +1,59 @@
+{%- comment -%}
+  Prints a product's weight or casting weight as plain text (nothing if unknown).
+  Params: product, kind ('weight' | 'cast').
+  weight: metafield custom.gewicht, else the range from the "… | Gewicht" option values (e.g. "4,2 cm | 6 g").
+  cast:   metafield custom.wurfgewicht (rods), else custom.wurfgewicht_bis.
+{%- endcomment -%}
+{%- liquid
+  assign done = false
+  if kind == 'cast'
+    assign done = true
+    assign cast = product.metafields.custom.wurfgewicht.value | default: product.metafields.custom.wurfgewicht_bis.value
+    if cast != blank
+      echo cast | join: ', '
+    endif
+  elsif product.metafields.custom.gewicht != blank
+    assign done = true
+    echo product.metafields.custom.gewicht.value
+  endif
+  assign min_w = 999999
+  assign max_w = 0
+  assign min_s = ''
+  assign max_s = ''
+  for option in product.options_with_values
+    if done
+      break
+    endif
+    assign on = option.name | downcase
+    unless on contains 'gewicht'
+      continue
+    endunless
+    for value in option.values
+      assign parts = value | split: '|'
+      for part in parts
+        assign part_s = part | strip
+        assign tail = part_s | slice: -2, 2
+        if tail == ' g'
+          assign num = part_s | remove: ' g' | replace: ',', '.' | times: 1.0
+          if num < min_w
+            assign min_w = num
+            assign min_s = part_s
+          endif
+          if num > max_w
+            assign max_w = num
+            assign max_s = part_s
+          endif
+        endif
+      endfor
+    endfor
+  endfor
+  if done == false and max_s != blank
+    assign min_s = min_s | replace: '.', ','
+    assign max_s = max_s | replace: '.', ','
+    if min_s == max_s
+      echo max_s
+    else
+      echo min_s | remove: ' g' | append: '–' | append: max_s
+    endif
+  endif
+-%}

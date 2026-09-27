@@ -1012,13 +1012,33 @@
           "url": "/collections/bundles",
           "unterpunkte": [
             {
-              "titel": "Starter Bundle",
-              "url": "/collections/starter-bundle",
+              "titel": "Starter-Bundle Allround-Einstieg",
+              "url": "/products/starter-bundle-allround",
               "unterpunkte": []
             },
             {
-              "titel": "Hecht Bundle",
-              "url": "/collections/hecht-bundle",
+              "titel": "Hecht-Köder-Set",
+              "url": "/products/hecht-koeder-set",
+              "unterpunkte": []
+            },
+            {
+              "titel": "Zander-Köder-Set",
+              "url": "/products/zander-koeder-set",
+              "unterpunkte": []
+            },
+            {
+              "titel": "Barsch-Köder-Set",
+              "url": "/products/barsch-koeder-set",
+              "unterpunkte": []
+            },
+            {
+              "titel": "Forellen-Köder-Set",
+              "url": "/products/forellen-koeder-set",
+              "unterpunkte": []
+            },
+            {
+              "titel": "Köder-Finder",
+              "url": "/pages/koeder-finder",
               "unterpunkte": []
             }
           ]

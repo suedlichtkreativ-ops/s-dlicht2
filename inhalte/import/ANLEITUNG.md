@@ -86,6 +86,15 @@ In Shopify: **Produkte → Kollektionen → Kollektion erstellen**, Typ „Autom
 
 Bundles (`bundles`, `starter-bundle`, `hecht-bundle`) bleiben manuelle Kollektionen. Solange sie leer sind, blendet das Theme sie im Menü automatisch aus.
 
+## Gewicht und Wurfgewicht (Metafelder)
+
+Vor dem Import unter Einstellungen → Benutzerdefinierte Daten → Produkte zwei Metafeld-Definitionen anlegen (Typ „Einzeiliger Text“):
+
+- `custom.gewicht` – „Gewicht“ (z. B. „197 g“, „232–234 g“)
+- `custom.wurfgewicht` – „Wurfgewicht“ (z. B. „8–37 g“)
+
+Die Import-Datei füllt sie für 14 Produkte aus den vorhandenen Beschreibungen (`gewichte.json`). Bei Ködern liest das Theme das Gewicht direkt aus der Variante „Größe | Gewicht“; dafür ist kein Metafeld nötig. Fehlende Angaben stehen in `inhalte/offen.md`.
+
 ## Produkttypen
 
 Die Import-Datei nutzt lesbare deutsche Produkttypen in der Einzahl, passend zum Menü (z. B. „Metal Jig“ statt „Metal jig“, „Blinker“ statt „Spoons“, „Spinnrute“ statt „Spinnruten“). Die Zuordnung alt → neu steht in `struktur-neu.json` unter `produkttypen`. Die Regeln oben verwenden schon die neuen Namen.

@@ -50,7 +50,8 @@
     "continue": "Weiter stöbern"
   },
   "footer": {
-    "payment": "Zahlungsarten"
+    "payment": "Zahlungsarten",
+    "social": "Social Media"
   },
   "store": {
     "address": "Adresse",
@@ -129,7 +130,10 @@
         "other": "{{ count }} Farben"
       },
       "prev_media": "Vorheriges Bild",
-      "next_media": "Nächstes Bild"
+      "next_media": "Nächstes Bild",
+      "specs_weight": "Gewicht",
+      "specs_cast": "Wurfgewicht",
+      "cast_short": "Wurfgewicht {{ weight }}"
     }
   },
   "cart": {

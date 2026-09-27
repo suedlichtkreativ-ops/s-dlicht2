@@ -82,10 +82,15 @@
     </h3>
     {%- if product != blank and settings.card_show_meta -%}
       {%- if product.type != blank or color_count > 1 -%}
+        {%- capture card_weight -%}{% render 'product-weight', product: product, kind: 'weight' %}{%- endcapture -%}
+        {%- capture card_cast -%}{% render 'product-weight', product: product, kind: 'cast' %}{%- endcapture -%}
         <p class="card__meta">
-          {{- product.type | escape -}}
-          {%- if product.type != blank and color_count > 1 %} · {% endif -%}
-          {%- if color_count > 1 -%}{{ 'products.product.colors' | t: count: color_count }}{%- endif -%}
+          {%- assign meta_parts = '' -%}
+          {%- if product.type != blank -%}{%- assign meta_parts = meta_parts | append: product.type | append: '§' -%}{%- endif -%}
+          {%- if card_cast != blank -%}{%- assign cast_label = 'products.product.cast_short' | t: weight: card_cast -%}{%- assign meta_parts = meta_parts | append: cast_label | append: '§' -%}
+          {%- elsif card_weight != blank -%}{%- assign meta_parts = meta_parts | append: card_weight | append: '§' -%}{%- endif -%}
+          {%- if color_count > 1 -%}{%- assign colors_label = 'products.product.colors' | t: count: color_count -%}{%- assign meta_parts = meta_parts | append: colors_label | append: '§' -%}{%- endif -%}
+          {{- meta_parts | split: '§' | join: ' · ' | escape -}}
         </p>
       {%- endif -%}
     {%- endif -%}

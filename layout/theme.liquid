@@ -66,6 +66,8 @@
 
     <script>
       window.theme = {
+        currency: {{ cart.currency.iso_code | default: shop.currency | json }},
+        locale: {{ request.locale.iso_code | json }},
         routes: {
           root: {{ routes.root_url | json }},
           cartAdd: {{ routes.cart_add_url | json }},

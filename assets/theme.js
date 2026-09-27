@@ -730,6 +730,32 @@
       return checked ? checked.value : null;
     });
 
+    // Update price, sale price, add button and SKU right away from the variant data;
+    // the section refresh below then brings the server-rendered details (stock, pickup).
+    const money = (cents) => new Intl.NumberFormat(theme.locale || 'de', { style: 'currency', currency: theme.currency || 'EUR' }).format(cents / 100);
+    const showVariant = (variant) => {
+      $$('[data-refresh="price"] .price', root).forEach((box) => {
+        const current = $('.price__current', box);
+        if (current) current.textContent = money(variant.price);
+        const onSale = variant.compare_at_price && variant.compare_at_price > variant.price;
+        box.classList.toggle('price--sale', !!onSale);
+        let was = $('s', box);
+        if (onSale) {
+          if (!was) { was = document.createElement('s'); current.after(was); }
+          was.textContent = money(variant.compare_at_price);
+        } else if (was) was.remove();
+      });
+      const bar = $('[data-refresh="bar-price"]', root);
+      if (bar) bar.textContent = money(variant.price);
+      const sku = $('[data-refresh="sku"]', root);
+      if (sku && variant.sku) sku.textContent = variant.sku;
+      const btn = $('[data-add-button]', root);
+      if (btn) {
+        btn.disabled = !variant.available;
+        $('.btn__label', btn).textContent = variant.available ? theme.strings.addToCart : theme.strings.soldOut;
+      }
+    };
+
     const refresh = async (variant) => {
       if (controller) controller.abort();
       controller = new AbortController();
@@ -817,6 +843,7 @@
           return;
         }
         idInput.value = variant.id;
+        showVariant(variant);
         if (root.hasAttribute('data-product-section')) {
           const url = new URL(window.location.href);
           url.searchParams.set('variant', variant.id);
