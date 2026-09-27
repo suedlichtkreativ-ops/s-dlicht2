@@ -44,6 +44,25 @@ Erledigt (Details in `umstellung.md`): Produkte, Fotos, Farbnamen, Kategorien un
 9. [ ] **Datenschutzerklärung** um Newsletter und Cookies ergänzen lassen (IT-Recht Kanzlei).
 10. [x] Abholzeit „innerhalb von 24 Stunden“ bestätigt.
 
+### Checkout im Köderdepot-Design (entschieden 27.09.2026)
+
+Die Schnittstelle darf das Checkout-Design nur bei Shopify Plus ändern; im Basic-Tarif geht es im Admin: **Einstellungen → Checkout → Anpassen** (Checkout-Editor) → Zahnrad „Einstellungen“:
+
+| Einstellung | Wert |
+|---|---|
+| Logo | `LOGOKOeDER.png` (liegt schon unter Inhalte → Dateien), Größe „Mittel“, Position links |
+| Hintergrund Hauptbereich | `#FFFFFF` |
+| Hintergrund Bestellübersicht | `#F4F4F1` (Papier) |
+| Akzentfarbe (Links, Auswahl) | `#0D0D0D` (Tinte) |
+| Schaltflächen | `#FFCC00` (Signalgelb), Text schwarz |
+| Schriftart Überschriften und Text | **Archivo** |
+| Eckenradius | keiner / eckig (wie im Shop) |
+
+Das gilt automatisch auch für die Shopify-Anmeldeseite. Mit **klassischen Kundenkonten** (siehe Punkt 5) nutzt der Shop für Anmeldung und Registrierung aber ohnehin die eigene, gestaltete Seite.
+
+- [ ] **Shopname** auf „Köderdepot“ ändern (Einstellungen → Allgemein → Shopname; steht im Checkout und in Kunden-E-Mails).
+- [x] Abholort umbenannt in „Köderdepot Landsberg“, Adresse ohne Doppelung (27.09.2026).
+
 - [x] **Sonderangebote:** entschieden 27.09.2026: weglassen.
 
 ## C. Später
