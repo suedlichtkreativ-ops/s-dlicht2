@@ -35,16 +35,16 @@ Erledigt (Details in `umstellung.md`): Produkte, Fotos, Farbnamen, Kategorien un
 **Nur ihr im Admin – in dieser Reihenfolge:**
 1. [ ] **Theme veröffentlichen:** Onlineshop → Themes → „Köderdepot 2026 (Südlicht)“ → Veröffentlichen.
 2. [ ] **Versand** (Einstellungen → Versand und Zustellung → Allgemeines Versandprofil → Deutschland): „Standard“ auf **4,99 €**, kostenlosen Versand auf **ab 59 €** Bestellwert. Die Schnittstelle übernimmt das nicht.
-3. [ ] **Sperrgut** (gleiche Seite → „Benutzerdefiniertes Versandprofil erstellen“, Name „Sperrgut“): alle 11 Angelruten hinzufügen, Deutschland **9,99 €**.
+3. [x] **Sperrgut**: erledigt (eigenes Profil, 11 Ruten, 9,99 €).
 4. [ ] **Rechtstexte** (Einstellungen → Richtlinien): Inhalte aus `rechtliches/impressum.html`, `agb.html`, `widerrufsbelehrung.html`, `datenschutz.html`, `versand.html` einfügen (HTML-Ansicht „<>“). Die Schnittstelle darf das nicht.
 5. [ ] **Kundenkonten auf „klassisch“** (Einstellungen → Kundenkonten).
 6. [ ] **Barzahlung bei Abholung** (Einstellungen → Zahlungen → Manuelle Zahlungsmethoden).
 7. [ ] **Double-Opt-in und Cookie-Banner** (Einstellungen → Kundendatenschutz).
 8. [ ] App **„EU Widerruf Button“** auf der Widerruf-Seite (App-Block im Editor).
 9. [ ] **Datenschutzerklärung** um Newsletter und Cookies ergänzen lassen (IT-Recht Kanzlei).
-10. [ ] Abholzeit prüfen: eingestellt ist „in der Regel innerhalb von 24 Stunden bereit“ (Einstellungen → Versand und Zustellung → Abholung vor Ort).
+10. [x] Abholzeit „innerhalb von 24 Stunden“ bestätigt.
 
-- [ ] **Sonderangebote:** Der alte Menüpunkt zeigt auf eine leere Archiv-Kollektion (`sale`). Im neuen Menü weggelassen. Soll es eine Sale-Kollektion geben?
+- [x] **Sonderangebote:** entschieden 27.09.2026: weglassen.
 
 ## C. Später
 

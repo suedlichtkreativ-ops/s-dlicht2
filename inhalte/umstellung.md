@@ -45,11 +45,12 @@ Noch offen vor dem Umschalten: siehe `offen.md`, Abschnitt „Vor Go-live zu ent
 | Menü `kd-hauptmenue` | Bundles mit 5 Unterpunkten |
 | Rabatte | WILLKOMMEN10 und Köder-Box 3/5/8 aktiv seit 27.09.2026 |
 | Abholung vor Ort | aktiviert (Standort Schwaighofstraße 18 h, „in der Regel innerhalb von 24 Stunden bereit“, Hinweistext mit Abholzeiten) |
+| Sperrgut | Eigenes Versandprofil „Sperrgut (Angelruten)“: 11 Ruten, Deutschland 9,99 €, getrennt vom übrigen Versand (Entscheidung 27.09.2026). Texte auf Produktseiten, FAQ, Versandseite und `rechtliches/versand.html` angepasst. Die Rute im Starter-Bundle wird über die Bestandteile als Sperrgut berechnet |
 | Grundpreis | Preis pro Meter bei Uferleine, Silberleine, Vorratsleine, Grünklinge (31 Varianten) |
 | Theme | im Shop identisch mit dem Repo (Prüfsummen verglichen) |
 
 Nicht über die Schnittstelle möglich (→ „Nur ihr im Admin“ in `offen.md`):
-- **Versandpreise:** Shopify übernimmt Änderungen am Versandprofil per Schnittstelle nicht (Anfrage wird bestätigt, ändert aber nichts). Aktuell noch: 5,99 €, kostenlos ab 150 €.
+- **Versandpreise im Allgemeinen Profil:** Shopify übernimmt Änderungen an diesem (alten) Profil per Schnittstelle nicht (Anfrage wird bestätigt, ändert aber nichts). Aktuell noch: 5,99 €, kostenlos ab 150 €. Neue Profile anlegen funktioniert (Sperrgut).
 - **Rechtstexte:** fehlende Berechtigung (`write_legal_policies`). Die fertigen Texte liegen in `rechtliches/*.html`, die bisherigen in `backup/richtlinien-vor-umstellung/`.
 
 ## Rückweg

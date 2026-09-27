@@ -23,9 +23,9 @@
         "b3": {
           "type": "price",
           "settings": {
-            "label": "Sperrgut-Zuschlag",
-            "value": "+ 9,99 €",
-            "note": "für Angelruten ab 115 cm Transportmaß oder Sendungen ab 30 kg, zusätzlich zum Versand"
+            "label": "Sperrgut (Angelruten)",
+            "value": "9,99 €",
+            "note": "für Angelruten ab 115 cm Transportmaß, getrennt vom übrigen Versand berechnet"
           }
         },
         "b4": {
