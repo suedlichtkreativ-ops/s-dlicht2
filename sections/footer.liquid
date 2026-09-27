@@ -55,6 +55,15 @@
         {%- endfor -%}
       </ul>
     {%- endif -%}
+    {%- if section.settings.badge_link != blank -%}
+      {%- comment -%} Seal of the provider of the legal texts (e.g. "AGB by IT-Recht Kanzlei"). {%- endcomment -%}
+      <a class="legal-badge" href="{{ section.settings.badge_link }}" target="_blank" rel="noopener" data-legal-badge>
+        {%- if section.settings.badge_image_url != blank -%}
+          <img src="{{ section.settings.badge_image_url | escape }}" alt="{{ section.settings.badge_text | escape }}" height="36" loading="lazy" data-legal-badge-img>
+        {%- endif -%}
+        <span class="legal-badge__text"{% if section.settings.badge_image_url != blank %} hidden{% endif %}>{{ section.settings.badge_text | escape }}</span>
+      </a>
+    {%- endif -%}
     {%- if section.settings.show_payment and shop.enabled_payment_types.size > 0 -%}
       <ul class="payment-icons" role="list" aria-label="{{ 'footer.payment' | t }}">
         {%- for type in shop.enabled_payment_types -%}
@@ -72,7 +81,11 @@
   "settings": [
     { "type": "text", "id": "text", "label": "Kurztext", "default": "Angelköder und Tackle aus Landsberg am Lech. Versand innerhalb Deutschlands, Abholung vor Ort." },
     { "type": "link_list", "id": "legal_menu", "label": "Rechtliches-Menü", "info": "Impressum, Datenschutz, AGB, Widerruf, Versand." },
-    { "type": "checkbox", "id": "show_payment", "label": "Zahlungsarten anzeigen", "default": true }
+    { "type": "checkbox", "id": "show_payment", "label": "Zahlungsarten anzeigen", "default": true },
+    { "type": "header", "content": "Siegel Rechtstexte" },
+    { "type": "url", "id": "badge_link", "label": "Link", "info": "Leer lassen, um das Siegel auszublenden.", "default": "https://www.it-recht-kanzlei.de/" },
+    { "type": "text", "id": "badge_image_url", "label": "Bild-Adresse des Siegels", "info": "Vom Anbieter der Rechtstexte (Mandantenbereich). Ohne Bild erscheint der Text.", "default": "https://www.it-recht-kanzlei.de/logo/Copyright-Logo_AGB.png?i=6adfc-5157e-39c7-907d-1" },
+    { "type": "text", "id": "badge_text", "label": "Text", "default": "AGB by IT-Recht Kanzlei" }
   ],
   "blocks": [
     {

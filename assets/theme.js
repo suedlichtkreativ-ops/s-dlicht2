@@ -435,6 +435,19 @@
     // Copy a discount code
   });
 
+  /* ---------- Legal-text seal: fall back to its text when the provider's image can't load ---------- */
+  $$('[data-legal-badge-img], #itkanzlei_img_copyright').forEach((img) => {
+    const fallback = () => {
+      const t = $('.legal-badge__text', img.parentElement);
+      if (t) { img.hidden = true; t.hidden = false; return; }
+      const span = document.createElement('span');
+      span.className = 'legal-badge__text';
+      span.textContent = img.alt;
+      img.replaceWith(span);
+    };
+    if (img.complete && !img.naturalWidth) fallback(); else img.addEventListener('error', fallback, { once: true });
+  });
+
   /* ---------- Copy discount codes (hero slide, welcome pop-up) ---------- */
   document.addEventListener('click', async (e) => {
     const btn = e.target.closest('[data-copy]');

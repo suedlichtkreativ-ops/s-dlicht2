@@ -1,0 +1,40 @@
+# Rechtstexte aus dem alten Shop
+
+Stand der Übernahme: 27.09.2026, per Lesezugriff aus „Köderdepot neu“. Die Texte sind **wörtlich** übernommen (HTML, so wie sie in Shopify hinterlegt sind). Nichts wurde umformuliert.
+
+| Datei | Shopify-Richtlinie | Stand im alten Shop |
+|---|---|---|
+| `impressum.html` | Impressum | 27.08.2026 |
+| `agb.html` | AGB (Nutzungsbedingungen) | 27.08.2026 |
+| `widerrufsbelehrung.html` | Widerrufsrecht (inkl. Muster-Widerrufsformular) | 27.08.2026 |
+| `datenschutz.html` | Datenschutzerklärung | 27.08.2026 |
+| `versand.html` | Versand | 21.09.2026 |
+
+Eine lesbare Fassung aller Texte steht zusätzlich in `inhalte/richtlinien.md`.
+
+## So kommen sie in den neuen Shop
+
+1. Shopify-Admin → Einstellungen → Richtlinien.
+2. Pro Richtlinie den Inhalt der passenden Datei einfügen (im Editor auf „<>“ / HTML umschalten, damit Überschriften und Tabelle erhalten bleiben).
+3. Menü „Kundeninfo“ (Footer, Rechtliches) mit diesen Einträgen anlegen: Über uns, AGB, Widerrufsbelehrung, Datenschutz, Impressum, Widerruf (Seite `widerruf-formular`). Link-Typ jeweils „Richtlinien“ bzw. „Seiten“. Das Theme zeigt das Menü im Footer an; die Richtlinien-Seiten sind im Theme-Design gestaltet.
+
+## Siegel „AGB by IT-Recht Kanzlei“
+
+- In AGB, Widerrufsbelehrung und Datenschutz steht am Ende der Copyright-Block der IT-Recht Kanzlei (Logo + Link). Er ist in den Dateien enthalten und bleibt beim Einfügen erhalten.
+- Zusätzlich zeigt das Theme das Siegel in der Fußzeile (Footer → „Siegel Rechtstexte“: Link, Bild-Adresse, Text). Das Bild wird vom Server der IT-Recht Kanzlei geladen; lädt es nicht, erscheint der Text „AGB by IT-Recht Kanzlei“.
+
+## Widerrufsbutton (App)
+
+Die Seite „Widerruf“ (`/pages/widerruf-formular`) nutzt im alten Shop die App **EU Widerruf Button** (Formular mit Bestellsuche). Im neuen Shop die App installieren, der Seite die Vorlage `page.widerruf` geben und im Editor den App-Block „form-inline“ einfügen. Die Vorlage liegt im Theme bereit.
+
+## Beim Abgleich aufgefallen – bitte klären
+
+- **Selbstabholung:** AGB 5.5 sagt „Selbstabholung ist aus logistischen Gründen nicht möglich.“ Die Versandrichtlinie (21.09.2026) und der Shop bieten aber „Abholung im Geschäft, kostenlos“ an. Einer der beiden Texte muss angepasst werden, sonst widersprechen sich AGB und Angebot.
+- **Kauf auf Rechnung:** Die gelbe Leiste wirbt mit „Kauf auf Rechnung möglich“. In AGB und Datenschutz stehen nur PayPal, Shopify Payments, Apple Pay, Google Pay und Kreditkarte (Stripe). Wenn Rechnungskauf z. B. über PayPal „Später bezahlen“ läuft, ist die Aussage gedeckt; sonst den Hinweis aus der Leiste nehmen.
+- **E-Mail-Adresse:** Impressum, Widerruf nennen `info@köderdepot.de` (technisch als `info@xn--kderdepot-07a.de` gespeichert, wird so auch angezeigt). Versandseite, Footer und FAQ nutzen `info@koederdepot.de`. Bitte eine Adresse festlegen und überall gleich schreiben; im Impressum am besten in lesbarer Form.
+- **Anschrift:** Rechtstexte „Schwaighof Straße 18 H“, Footer/Abholung im Theme „Schwaighofstraße 18 h“. Bitte die amtliche Schreibweise nennen, dann gleichen wir an.
+- **Datenschutz fehlt für Newsletter und Cookies:** Die Datenschutzerklärung behandelt Website-Besuch, Kontakt, Bestellung und Zahlungsdienste, aber nicht Newsletter (Anmeldung im Pop-up, Double-Opt-in, Shopify Email) und nicht Cookies/Cookie-Banner. Bitte beim Rechtstexte-Anbieter ergänzen lassen, bevor das Pop-up live geht.
+- **Sperrgut:** Versandrichtlinie: 9,99 € Zuschlag für Ruten ab 115 cm Transportmaß oder Sendungen ab 30 kg. In Shopify muss das als eigene Versandrate (Versandprofil für Ruten) eingerichtet sein, damit der Checkout es korrekt berechnet.
+- **Versanddienstleister:** Versandrichtlinie nennt DPD. Die gelbe Leiste sagte „Schnell geliefert mit DHL“ – im Theme auf DPD korrigiert.
+
+Rechtlich verbindlich prüfen kann das nur euer Rechtstexte-Anbieter bzw. eine Kanzlei.

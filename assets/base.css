@@ -717,6 +717,10 @@ input, textarea { caret-color: var(--ink); }
 .footer__bottom a:hover { color: var(--white); text-decoration: underline; }
 .payment-icons { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 .payment-icons svg { width: 2.4rem; height: auto; }
+.legal-badge { display: inline-flex; align-items: center; min-height: 2.75rem; padding: 0.25rem 0.625rem; background: var(--paper); color: var(--ink); font-size: 0.8125rem; font-weight: 650; text-decoration: none; }
+.legal-badge img { display: block; height: 2.25rem; width: auto; }
+.legal-badge:hover { background: var(--white); }
+.legal-badge__text[hidden], .legal-badge img[hidden] { display: none; }
 
 /* ==========================================================================
    Collection page
@@ -1136,6 +1140,20 @@ input, textarea { caret-color: var(--ink); }
 @media (prefers-reduced-motion: reduce) {
   .welcome.is-open .welcome__lure, .welcome.is-open .welcome__line { animation: none; }
 }
+
+.apps-section { padding-bottom: clamp(3rem, 6vw, 5rem); }
+.apps-section:empty { display: none; }
+
+/* Shopify policy pages (/policies/…): Impressum, AGB, Widerruf, Datenschutz, Versand */
+.shopify-policy__container { max-width: 72ch; margin-inline: auto; padding: clamp(2rem, 5vw, 4rem) var(--gutter) clamp(3rem, 6vw, 5rem); }
+.shopify-policy__title h1 { font-size: clamp(2.25rem, 6vw, 3.5rem); font-weight: 860; font-stretch: 62%; text-transform: uppercase; line-height: 0.95; margin-bottom: 1.5rem; }
+.shopify-policy__body { line-height: 1.65; overflow-wrap: anywhere; }
+.shopify-policy__body :is(h2, h3, h4) { margin: 2em 0 0.5em; font-size: 1.3125rem; font-weight: 750; font-stretch: 80%; line-height: 1.2; }
+.shopify-policy__body p, .shopify-policy__body li { margin-block: 0.6em; }
+.shopify-policy__body :is(ul, ol) { padding-left: 1.25rem; }
+.shopify-policy__body a { text-decoration: underline; text-underline-offset: 3px; overflow-wrap: anywhere; }
+.shopify-policy__body table { width: 100%; border-collapse: collapse; margin-block: 1rem; font-variant-numeric: tabular-nums; }
+.shopify-policy__body :is(td, th) { border: var(--hairline); padding: 0.5rem 0.75rem; text-align: left; vertical-align: top; }
 
 /* Free shipping progress */
 .ship { display: grid; gap: 0.5rem; }

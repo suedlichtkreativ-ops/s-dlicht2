@@ -1,0 +1,15 @@
+{%- comment -%} Holds app blocks, e.g. the "EU Widerruf Button" form on the withdrawal page. {%- endcomment -%}
+<div class="page-width apps-section">
+  {%- for block in section.blocks -%}
+    {% render block %}
+  {%- endfor -%}
+</div>
+
+{% schema %}
+{
+  "name": "Apps",
+  "tag": "section",
+  "blocks": [{ "type": "@app" }],
+  "presets": [{ "name": "Apps" }]
+}
+{% endschema %}

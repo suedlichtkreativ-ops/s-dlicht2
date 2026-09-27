@@ -33,6 +33,7 @@ Stand 26.09.2026, nach dem Auslesen des Shopify-Stores „Köderdepot neu“. Am
 - **Social Media:** Instagram-Link im Live-Theme ist nur ein Platzhalter „#“. Echte Profile fehlen.
 - **Bundles:** Die Kollektionen „Bundles“, „Starter Bundle“ und „Hecht Bundle“ enthalten 0 Produkte. Es gibt die nicht gelisteten Produkte „Starter Set“ und „Combo Deal“ (siehe `produkte.json`). Welche Produkte gehören in welches Bundle?
 - **Neuheiten:** Kollektion „Neuheiten“ ist leer. Auf der Startseite steht deshalb „Bestseller“ (91 Produkte).
+- **Rechtstexte übernommen, 5 Widersprüche offen:** Siehe `inhalte/rechtliches/README.md` (Selbstabholung laut AGB ausgeschlossen, „Kauf auf Rechnung“ nicht in AGB, zwei E-Mail-Adressen, zwei Schreibweisen der Anschrift, Datenschutz ohne Newsletter/Cookies).
 - **Hero-Bild Topwater ohne Text:** Das alte Banner hatte „TOPWATER HECHT“, die Köderliste und einen Knopf eingebrannt. Die bereinigte Fassung liegt in `inhalte/bilder/hero-topwater-ohne-text.jpg`. Im neuen Shop unter Inhalte → Dateien mit genau diesem Namen hochladen, dann greift der Hero-Slide automatisch darauf zu.
 - **Grundpreis:** Schnüre (Uferleine, Silberleine, Vorratsleine) brauchen nach Preisangabenverordnung einen Preis pro Meter. In Shopify pro Variante unter „Grundpreis“ eintragen.
 - **Bildauflösung (Qualitätsprüfung 26.09.2026):**

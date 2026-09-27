@@ -1,0 +1,7 @@
+{
+  "sections": {
+    "main": { "type": "main-page", "settings": {} },
+    "app": { "type": "apps", "blocks": {}, "block_order": [] }
+  },
+  "order": ["main", "app"]
+}

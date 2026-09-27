@@ -1,0 +1,27 @@
+{
+  "impressum": {
+    "titel": "Impressum",
+    "typ": "LEGAL_NOTICE",
+    "datei": "impressum.html"
+  },
+  "datenschutz": {
+    "titel": "Datenschutzerklärung",
+    "typ": "PRIVACY_POLICY",
+    "datei": "datenschutz.html"
+  },
+  "widerrufsbelehrung": {
+    "titel": "Widerrufsrecht",
+    "typ": "REFUND_POLICY",
+    "datei": "widerrufsbelehrung.html"
+  },
+  "versand": {
+    "titel": "Versand",
+    "typ": "SHIPPING_POLICY",
+    "datei": "versand.html"
+  },
+  "agb": {
+    "titel": "AGB",
+    "typ": "TERMS_OF_SERVICE",
+    "datei": "agb.html"
+  }
+}
