@@ -5,9 +5,9 @@ Stand 27.09.2026. Mit eurer Freigabe ist die unsichtbare Vorbereitung im Live-St
 ## Vor Go-live zu entscheiden (Stand 27.09.2026 abends)
 
 - [ ] **Produktfotos freigeben:** Übersicht in `bilder/pruefung/` (vorher/nachher und alle 439).
-- [ ] **Kategorie-Texte:** 21 Menü-Kategorien haben im Shop keinen Einleitungstext (u. a. Köder, Hechtköder, Zanderköder, Barschköder, Forellenköder, Wobbler, Crankbaits, Jerkbaits, Popper, Swimbaits, Blinker, Angelruten, Wirbel, Bundles, Spinner, Metal Jigs, Tail Spinner, Gummiwürmer, Lösezangen, Zielfisch Forelle). **„Frösche & Topwater“ zeigt fälschlich den Gummifisch-Text.**
-- [ ] **Stahl-/Titanvorfach-Tipp** steht noch auf der Köderberatung (Hecht) und in den Bundles „Starter“ und „Hecht“ (Abschnitt „Für wen?“).
-- [ ] **Widerruf-Seite** spricht mit „Sie“, der restliche Shop mit „du“.
+- [ ] **Kategorie-Texte prüfen:** Entwürfe in `kategorie-texte.md` (gehen erst nach Freigabe in den Shop). Hintergrund: 21 Menü-Kategorien haben im Shop keinen Einleitungstext (u. a. Köder, Hechtköder, Zanderköder, Barschköder, Forellenköder, Wobbler, Crankbaits, Jerkbaits, Popper, Swimbaits, Blinker, Angelruten, Wirbel, Bundles, Spinner, Metal Jigs, Tail Spinner, Gummiwürmer, Lösezangen, Zielfisch Forelle). **„Frösche & Topwater“ zeigt fälschlich den Gummifisch-Text.**
+- [x] **Stahl-/Titanvorfach-Tipp** entfernt (Köderberatung Hecht, Bundles Starter und Hecht, FAQ „Anfänger“).
+- [x] **Widerruf-Seite** auf „du“ umgestellt (Widerrufsbelehrung der Kanzlei unverändert).
 
 ## A. Von euch zu klären oder zu liefern
 

@@ -22,7 +22,7 @@ So anlegen:
 6. Kollektion **„Bundles“** (Handle `bundles`, manuell) anlegen und die fünf Bundles hinzufügen. Die Startseite zeigt sie unter „Starter & Zielfisch-Sets“.
 7. Starter: Schnur liegt bei, wird **nicht** aufgespult (steht so in der Stückliste).
 
-Stahl-/Titanvorfach: wird nicht ins Sortiment aufgenommen (Entscheidung 27.09.2026). Die Bundles bleiben wie oben; der Hinweis „Vorfach beim Hechtangeln immer verwenden“ bleibt als Tipp stehen.
+Stahl-/Titanvorfach: wird nicht ins Sortiment aufgenommen und auch nicht mehr empfohlen (Entscheidungen 27.09.2026).
 
 ## Köder-Box (selbst zusammenstellen, Staffelrabatt)
 
