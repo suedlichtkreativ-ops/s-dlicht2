@@ -23,12 +23,6 @@
             "text": "Versandkostenfrei ab 100 € in DE"
           }
         },
-        "m4": {
-          "type": "message",
-          "settings": {
-            "text": "Kauf auf Rechnung möglich"
-          }
-        },
         "m5": {
           "type": "message",
           "settings": {
@@ -40,7 +34,6 @@
         "m1",
         "m2",
         "m3",
-        "m4",
         "m5"
       ],
       "settings": {

@@ -6,13 +6,9 @@ Stand 27.09.2026. Am Live-Shop „Köderdepot neu“ wurde nichts verändert: nu
 
 ### Entscheidungen
 
-- [ ] **Selbstabholung:** AGB 5.5 sagt „Selbstabholung ist nicht möglich“, Versandrichtlinie und Shop bieten „Abholung vor Ort, kostenlos“ an. Einen der beiden Texte anpassen. (`rechtliches/README.md`)
-- [ ] **Kauf auf Rechnung:** Die gelbe Leiste wirbt damit, AGB/Datenschutz nennen nur PayPal, Shopify Payments, Apple Pay, Google Pay, Kreditkarte. Läuft Rechnungskauf über PayPal „Später bezahlen“? Sonst den Hinweis aus der Leiste nehmen.
-- [ ] **E-Mail-Adresse:** Impressum/Widerruf `info@köderdepot.de` (technisch `info@xn--kderdepot-07a.de`), Footer/Versand/FAQ `info@koederdepot.de`. Eine Adresse festlegen.
-- [ ] **Schreibweise der Anschrift:** „Schwaighof Straße 18 H“ (Rechtstexte) oder „Schwaighofstraße 18 h“ (Theme)?
-- [ ] **Bedingungen für WILLKOMMEN10** (z. B. einmal pro Kunde, Mindestbestellwert?). Kommen ins Kleingedruckte des Pop-ups.
-- [ ] **Alte App-Bundles** „Starter Set“ und „Combo Deal“ (Easy Bundles, 0,00 €): Empfehlung, nicht übernehmen, die fünf neuen Bundles ersetzen sie.
-- [ ] **Telefonnummer** 0176 41450088 öffentlich im Footer zeigen? (steht bisher nur im Impressum)
+Alle entschieden am 27.09.2026 (siehe D). Offen ist nur noch:
+
+- [ ] **AGB 5.5** („Selbstabholung nicht möglich“) bei der IT-Recht Kanzlei ändern lassen, weil die Abholung bleibt. Dabei im Mandantenportal E-Mail `info@koederdepot.de` und Anschrift „Schwaighofstraße 18 h“ hinterlegen. (`rechtliches/README.md`)
 
 ### Fehlende Angaben
 
@@ -20,8 +16,7 @@ Stand 27.09.2026. Am Live-Shop „Köderdepot neu“ wurde nichts verändert: nu
 - [ ] **Gewichte:** Wurfgewicht Nachtjagdrute 2,4 m und Weitwurfrute Spinn 2,7 m; Eigengewicht Uferrolle 1500/2500, Stromjäger 2800/5800/12000, Lösezange Feingriff.
 - [ ] **Öffnungszeiten** für die Abholung (Zeile ist bis dahin ausgeblendet).
 - [ ] **Google-Maps-Link** für „Route planen“.
-- [ ] **Weitere Social-Profile** (Facebook, YouTube, TikTok)? Instagram ist verlinkt.
-- [ ] **Zwei FAQ-Antworten prüfen oder ersetzen** (meine Entwürfe): „Ich bin Anfänger – was brauche ich wirklich zum Start?“ und „Was ist der Unterschied zwischen Spinn- und Casting-Ruten?“
+- [ ] **TikTok-Link** (Profil-Adresse). Facebook und YouTube gibt es nicht.
 
 ### Bilder
 
@@ -29,21 +24,20 @@ Stand 27.09.2026. Am Live-Shop „Köderdepot neu“ wurde nichts verändert: nu
 - [ ] **Handy-Motiv des Anglers** (`…_99e322a9-….png`) liefert auf dem CDN einen Fehler (404).
 - [ ] **Größere Produktfotos** für Kompaktblitz (Bild 1 und 2, 600 px) und Silberstreif (Bild 2, 500 px).
 - [ ] **Titelbild Blog „Köderwahl“** ist nur 1200 px breit.
-- [ ] **Weg der Studio-Produktbilder** in den neuen Shop festlegen (ZIP hochladen oder nach dem Import austauschen).
 
 ## B. Beim Einrichten des neuen Shops (Checkliste)
 
 Reihenfolge und Details: `import/ANLEITUNG.md`, `bundles.md`, `rechtliches/README.md`.
 
 1. [ ] Metafeld-Definitionen `custom.gewicht` und `custom.wurfgewicht` anlegen (Einzeiliger Text).
-2. [ ] Produkte importieren: `import/produkte-shopify-import.csv` (91 Produkte, lesbare Farbnamen, deutsche Produkttypen, Kugelblitz als Jigkopf). Entwürfe (`entwuerfe-nicht-importieren.csv`) nicht importieren.
+2. [ ] Studio-Fotos aus `bilder/produkte/` unter Inhalte → Dateien hochladen, dann Produkte importieren: `import/produkte-shopify-import.csv` (91 Produkte, lesbare Farbnamen, deutsche Produkttypen, Kugelblitz als Jigkopf). Entwürfe (`entwuerfe-nicht-importieren.csv`) nicht importieren.
 3. [ ] Lagerbestände kurz vor dem Start abgleichen (CSV-Stand 26.09.2026).
 4. [ ] Kollektionen und Menüs laut Anleitung anlegen (inkl. „Bundles“ und Menüpunkt „Köder-Finder“).
 5. [ ] Seiten: „Köder-Finder“ (Vorlage `page.koeder-finder`), „Widerruf“ (Vorlage `page.widerruf` + App **EU Widerruf Button**).
 6. [ ] Rechtstexte unter Einstellungen → Richtlinien einfügen (`rechtliches/*.html`), Menü „Kundeninfo“ anlegen.
 7. [ ] Datenschutzerklärung ergänzen lassen (Newsletter, Cookies, später KI-Chat) – IT-Recht Kanzlei.
 8. [ ] App **Shopify Bundles**: 5 Bundles mit Bild und Vorlage anlegen, kein Vergleichspreis.
-9. [ ] Rabatte: WILLKOMMEN10; Köder-Box als 3 automatische Rabatte (Kollektion „Köder“, ab 3/5/8 Stück = 5/10/15 %, nicht kombinierbar).
+9. [ ] Rabatte: WILLKOMMEN10 (10 %, einmal pro Kunde, kein Mindestbestellwert, nicht kombinierbar); Köder-Box als 3 automatische Rabatte (Kollektion „Köder“, ab 3/5/8 Stück = 5/10/15 %, nicht kombinierbar).
 10. [ ] Double-Opt-in für E-Mail-Marketing, Shopify-Email-Automation „Willkommen neue Abonnenten“ mit dem Code, Cookie-Banner (Einstellungen → Kundendatenschutz). Bis dahin das Pop-up im Editor ausschalten.
 11. [ ] Abholung vor Ort am Standort aktivieren (sonst keine Option an der Kasse).
 12. [ ] Versandprofil Sperrgut: 9,99 € für Ruten ab 115 cm / Sendungen ab 30 kg.
@@ -67,3 +61,12 @@ Reihenfolge und Details: `import/ANLEITUNG.md`, `bundles.md`, `rechtliches/READM
 - Menülinks auf die richtigen Kategorien (Gummifische, Twister & Grubs, Spinner, Spinnerbaits).
 - Farbnamen lesbar („Red Phantom Head“ statt „red-phantom-head“).
 - Preise wechseln mit jeder Variante (539 Varianten geprüft); Gewicht/Wurfgewicht auf Karten und Produktseiten.
+- **Entscheidungen 27.09.2026:**
+  - Abholung vor Ort bleibt (AGB 5.5 wird geändert, siehe A).
+  - „Kauf auf Rechnung“ aus der gelben Leiste entfernt; Produktseite: „Sicher zahlen mit PayPal & Karte“.
+  - E-Mail überall `info@koederdepot.de`, Anschrift „Schwaighofstraße 18 h“ (auch in Impressum, Widerruf, Datenschutz).
+  - WILLKOMMEN10: einmal pro Kunde, kein Mindestbestellwert, nicht mit Bundle-/Köder-Box-Rabatt kombinierbar (steht im Pop-up).
+  - Alte App-Bundles „Starter Set“ und „Combo Deal“ werden nicht übernommen.
+  - Telefon 0176 41450088 steht im Footer.
+  - FAQ-Antworten „Anfänger“ und „Spinn- oder Casting-Rute“ freigegeben.
+  - Studio-Fotos kommen mit dem CSV-Import (`bilder/produkte/`, Anleitung in `import/ANLEITUNG.md`).

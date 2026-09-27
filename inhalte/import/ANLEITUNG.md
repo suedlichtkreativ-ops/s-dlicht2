@@ -19,11 +19,23 @@ Stand 26.09.2026. Alle Daten wurden aus dem Store „Köderdepot neu“ nur gele
 - alle Produktbilder in der richtigen Reihenfolge und **pro Variante das passende Bild** (z. B. jede Köderfarbe mit ihrem Foto)
 - zusätzliche Tags `kategorie-koeder` und `zielfisch-hecht` / `-zander` / `-barsch` / `-forelle`, über die sich die Kollektionen automatisch füllen (siehe unten)
 
-Die Bilder werden beim Import direkt vom Shopify-CDN des alten Shops geladen. Der alte Shop muss dafür noch bestehen. Danach liegen die Bilder im neuen Shop und der alte kann geschlossen werden.
+### Bilder: neue Studio-Fotos
+
+Die CSV verweist auf die **neuen Studio-Fotos** (weißer Hintergrund, 1400 × 1400 px). Sie liegen in `inhalte/bilder/produkte/` (439 Dateien, zusammen 26 MB). Die Adressen in der CSV lauten
+
+`https://cdn.shopify.com/s/files/1/1021/1239/5606/files/<dateiname>.jpg`
+
+Das ist der Datei-Speicher des Stores „Köderdepot neu“. Deshalb **vor dem Import**:
+
+1. **Inhalte → Dateien → Dateien hochladen** → alle 439 JPGs aus `inhalte/bilder/produkte/` auswählen (Ordner öffnen, Strg/Cmd + A). Dateinamen nicht ändern.
+2. Stichprobe: eine Datei in Shopify anklicken, „Link kopieren“ und im Browser öffnen. Der Link muss mit `https://cdn.shopify.com/s/files/1/1021/1239/5606/files/` beginnen und auf denselben Dateinamen enden.
+   - Heißt die Datei in Shopify anders (z. B. `…-0_1.jpg`), gab es den Namen schon. Dann die alte Datei löschen und neu hochladen.
+   - Wird der Shop in einem **anderen** Store aufgebaut, beginnt der Link mit einer anderen Nummer. Dann in der CSV mit „Suchen und Ersetzen“ `1021/1239/5606` durch die neue Nummer ersetzen (Datei als CSV UTF-8 speichern).
+3. Erst dann importieren. Shopify lädt die Bilder beim Import von diesen Adressen und legt sie an den Produkten ab.
 
 ## Schritte im neuen Shop
 
-1. **Produkte → Importieren** → `produkte-shopify-import.csv` wählen → Vorschau prüfen → Import starten. Dauer: ein paar Minuten, Shopify schickt eine E-Mail, wenn es fertig ist.
+1. **Studio-Fotos hochladen** (siehe oben), dann **Produkte → Importieren** → `produkte-shopify-import.csv` wählen → Vorschau prüfen → Import starten. Dauer: ein paar Minuten, Shopify schickt eine E-Mail, wenn es fertig ist.
 2. **Kollektionen anlegen** nach der Liste unten. Titel und Handle genau so übernehmen, dann stimmen die Links in Menüs und Theme.
 3. **Navigation** nach `inhalte/navigation.json` anlegen (Hauptmenü `main-menu`, Footer `footer-kategorie`, `shop-service`, `kundeninfo`).
 4. **Lagerbestand prüfen**: Die Bestände sind eine Momentaufnahme vom 26.09.2026. Kurz vor dem Start gleicht ihr sie mit dem alten Shop ab.
