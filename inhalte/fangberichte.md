@@ -56,7 +56,7 @@ Unter jedem Bericht und auf der Übersicht steht „Zeig uns deinen Fang“: Kun
 
 ## Bericht 3: Forelle am Bach
 
-- Foto: **fehlt noch als Datei** – bitte nach `inhalte/bilder/` hochladen (das Bild mit der Forelle an der Holzbrücke), ich bereite es als `bilder/faenge/fang-forelle-bach-1.jpg` auf.
+- Foto: `bilder/faenge/fang-forelle-bach-1.jpg` (Titelbild)
 - Fischart: Forelle · Angelmethode: Spinnfischen (Empfehlung) · keine weiteren Angaben
 - Ausrüstung: nicht bekannt → **Passende Ausrüstung** (`custom.empfehlung`): Leichtblitz (Spinner), Feinschwimmer (Wobbler), Zartläufer (Crankbait), Allroundrute Spinn 2,1 m, Uferrolle 1500, Grünklinge
 - Text: „Keine Messlatte, kein Protokoll – nur ein breites Grinsen und eine schöne Forelle. Zu diesem Fang haben wir keine genauen Angaben mehr. Wenn wir heute an so einem Bach losziehen, dann leicht: kurze Spinnrute, kleine Rolle, dünne Schnur und kleine Köder, die gegen die Strömung laufen.“
@@ -64,8 +64,17 @@ Unter jedem Bericht und auf der Übersicht steht „Zeig uns deinen Fang“: Kun
 
 ## Bericht 4: Wels
 
-- Foto: **fehlt noch als Datei** – bitte nach `inhalte/bilder/` hochladen (Wels im Garten), ich bereite es als `bilder/faenge/fang-wels-1.jpg` auf. Tipp: Im Hintergrund sind Straße und Häuser zu sehen – ich schneide das Bild so zu, dass der Ort nicht erkennbar ist.
+- Foto: `bilder/faenge/fang-wels-1.jpg` (Titelbild) – zugeschnitten, Straße und Nachbarhäuser entfernt bzw. unscharf.
 - Fischart: Wels · keine weiteren Angaben
 - Ausrüstung: nicht bekannt → **Passende Ausrüstung** (`custom.empfehlung`): Großräuber (Swimbait), Kraftklinge (Wobbler), Kraftrute Spinn 2,44 m, Stromjäger 5800, Silberleine, Kraftzange 28 cm
 - Text: „Ein Wels wie aus dem Bilderbuch – leider ohne Maßband und Notizen, genaue Angaben zu diesem Fang haben wir nicht mehr. Wer gezielt auf Wels geht, braucht kräftiges Gerät: eine starke Rute, eine große Rolle mit belastbarer geflochtener Schnur und große Köder, die Druck machen.“
+- Die Person auf dem Foto ist gut zu erkennen: bitte deren Einverständnis einholen.
+
+## Bericht 5: Kapitaler Hecht aus dem Archiv
+
+- Foto: **fehlt noch als Datei** (Hecht am Wehr) – bitte als Anhang schicken, wird `bilder/faenge/fang-hecht-archiv-1.jpg`.
+- Fischart: Hecht · keine weiteren Angaben
+- Ausrüstung: nicht bekannt → **Passende Ausrüstung** (`custom.empfehlung`): Großräuber (Swimbait), Schwerläufer (Jerkbait), Kraftrute Spinn 2,44 m, Stromjäger 2800, Silberleine, Kraftzange 28 cm
+- Text: „Ein kapitaler Hecht aus unserem Archiv. Genaue Angaben zu diesem Fang haben wir nicht mehr. Für Hechte dieser Größe: eine kräftige Spinnrute, belastbare geflochtene Schnur, große Köder – und immer ein Stahl- oder Titanvorfach.“
+- Hinweis: Im Hintergrund ist ein markantes Wehr zu sehen. Wenn der Ort geheim bleiben soll, schneide ich das Foto enger zu.
 - Die Person auf dem Foto ist gut zu erkennen: bitte deren Einverständnis einholen.
