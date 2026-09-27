@@ -1497,3 +1497,7 @@ a.advice-contact__way:hover { background: var(--ink); color: var(--white); }
 .suedlicht-logo { width: auto; height: 3rem; }
 .credit:hover, .credit:focus-visible { color: var(--white); }
 .credit:hover .suedlicht-logo { color: var(--signal); }
+.catch-card__placeholder { position: absolute; inset: 0; display: grid; place-items: center; color: #3a3a36; }
+.catch-card__placeholder .fish { width: 70%; height: auto; opacity: 0.6; }
+.catch__photo--empty { display: grid; place-items: center; color: #3a3a36; }
+.catch__photo--empty .fish { width: 70%; height: auto; opacity: 0.6; }

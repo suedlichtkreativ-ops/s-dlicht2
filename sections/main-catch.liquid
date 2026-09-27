@@ -22,6 +22,9 @@
   <div class="page-width catch__grid">
     <div class="catch__media">
       <ul class="catch__photos" role="list" data-catch-photos>
+        {%- if article.image == blank and photos == blank -%}
+          <li class="catch__photo catch__photo--empty" aria-hidden="true">{% render 'fish-icon', name: fish %}</li>
+        {%- endif -%}
         {%- if article.image -%}
           <li class="catch__photo">{% render 'image', image: article.image, sizes: '(min-width: 990px) 34rem, 88vw', widths: '480, 720, 960, 1200', loading: 'eager', alt: article.title %}</li>
         {%- endif -%}

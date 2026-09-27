@@ -13,6 +13,8 @@
   <span class="catch-card__media">
     {%- if article.image -%}
       {% render 'image', image: article.image, sizes: '(min-width: 1200px) 22rem, (min-width: 750px) 40vw, 80vw', widths: '360, 540, 720, 900', alt: article.title %}
+    {%- else -%}
+      <span class="catch-card__placeholder" aria-hidden="true">{% render 'fish-icon', name: fish %}</span>
     {%- endif -%}
     {%- if fish != blank -%}
       <span class="catch-card__badge">{% render 'fish-icon', name: fish %}<span>{{ fish | escape }}{% if length != blank %} · {{ length }} cm{% endif %}</span></span>
