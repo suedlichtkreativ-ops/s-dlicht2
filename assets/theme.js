@@ -1122,5 +1122,30 @@
     });
   }
 
+  /* ---------- Account form: show password, welcome offer carried from the hero price tag ---------- */
+  const auth = $('[data-auth]');
+  if (auth) {
+    auth.addEventListener('click', (e) => {
+      const eye = e.target.closest('[data-pw-toggle]');
+      if (!eye) return;
+      const input = document.getElementById(eye.getAttribute('aria-controls'));
+      const show = input.type === 'password';
+      input.type = show ? 'text' : 'password';
+      eye.setAttribute('aria-pressed', String(show));
+    });
+    const welcomeReturn = auth.dataset.welcomeReturn;
+    const fromOffer = new URLSearchParams(window.location.search).has('willkommen');
+    if (welcomeReturn && fromOffer) {
+      // Login only applies the code when the visitor came from the offer; keep the flag on tab switches.
+      const ret = $('[data-auth-return]', auth);
+      if (ret) ret.value = welcomeReturn;
+      const offer = $('[data-auth-offer]', auth);
+      if (offer) offer.hidden = false;
+      $$('[data-auth-tab]', auth).forEach((a) => { a.href += (a.href.includes('?') ? '&' : '?') + 'willkommen'; });
+    }
+    const errors = $('[data-auth-errors]', auth);
+    if (errors) errors.focus();
+  }
+
   markLoaded();
 })();

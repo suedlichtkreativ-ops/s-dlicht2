@@ -37,12 +37,13 @@ Reihenfolge und Details: `import/ANLEITUNG.md`, `bundles.md`, `rechtliches/READM
 6. [ ] Rechtstexte unter Einstellungen → Richtlinien einfügen (`rechtliches/*.html`), Menü „Kundeninfo“ anlegen.
 7. [ ] Datenschutzerklärung ergänzen lassen (Newsletter, Cookies, später KI-Chat) – IT-Recht Kanzlei.
 8. [ ] App **Shopify Bundles**: 5 Bundles mit Bild und Vorlage anlegen, kein Vergleichspreis.
-9. [ ] Rabatte: WILLKOMMEN10 (10 %, einmal pro Kunde, kein Mindestbestellwert, nicht kombinierbar); Köder-Box als 3 automatische Rabatte (Kollektion „Köder“, ab 3/5/8 Stück = 5/10/15 %, nicht kombinierbar).
+9. [ ] Rabatte: WILLKOMMEN10 (10 %, einmal pro Kunde, kein Mindestbestellwert, nicht kombinierbar, Berechtigung: Kundensegment „noch keine Bestellung“, damit nur Neukunden mit Konto ihn nutzen können); Köder-Box als 3 automatische Rabatte (Kollektion „Köder“, ab 3/5/8 Stück = 5/10/15 %, nicht kombinierbar).
 10. [ ] Double-Opt-in für E-Mail-Marketing, Shopify-Email-Automation „Willkommen neue Abonnenten“ mit dem Code, Cookie-Banner (Einstellungen → Kundendatenschutz). Bis dahin das Pop-up im Editor ausschalten.
 11. [ ] Abholung vor Ort am Standort aktivieren (sonst keine Option an der Kasse).
 12. [ ] Versandprofil Sperrgut: 9,99 € für Ruten ab 115 cm / Sendungen ab 30 kg.
 13. [ ] Grundpreis pro Meter bei Uferleine, Silberleine, Vorratsleine.
-14. [ ] Dateien hochladen: `bilder/hero-topwater-ohne-text.jpg` (genau dieser Name), Bundle-Bilder aus `bilder/bundles/`.
+14. [ ] Dateien hochladen: `bilder/hero-topwater-ohne-text.jpg`, `bilder/hero-kurzlaeufer.jpg`, `bilder/hero-kurzlaeufer-mobile.jpg` (genau diese Namen), Bundle-Bilder aus `bilder/bundles/`.
+15. [ ] **Kundenkonten auf „klassisch“ stellen** (Einstellungen → Kundenkonten). Nur dann nutzt der Shop die eigene Registrierungs-/Login-Seite mit Name, Newsletter-Häkchen und automatischem 10-%-Rabatt. Mit den „neuen Kundenkonten“ (Login per Einmalcode) zeigt Shopify seine eigene Seite, dann den Pop-up-Modus im Editor auf „Per E-Mail nach Newsletter-Anmeldung“ stellen.
 
 ## C. Später
 

@@ -2,13 +2,26 @@
   Welcome discount pop-up. Opens once per visitor after a short delay (remembered in the browser)
   and only after the cookie banner has been answered; darkens the page.
   mode "email": newsletter sign-up (customer form); Shopify Email sends the code after double opt-in.
+  mode "account": invites to sign up; after registration the code is put into the cart (see main-account-form).
   mode "code": shows the code to copy, "apply in cart" uses Shopify's /discount/<code> link.
 {%- endcomment -%}
 {%- liquid
   assign code = section.settings.code | strip
   assign apply_url = routes.root_url | append: 'discount/' | append: code | replace: '//', '/'
 -%}
-{%- if section.settings.enabled and section.settings.mode == 'email' or section.settings.enabled and code != blank -%}
+{%- liquid
+  assign show_popup = false
+  if section.settings.enabled
+    if section.settings.mode == 'account'
+      unless customer
+        assign show_popup = true
+      endunless
+    elsif section.settings.mode == 'email' or code != blank
+      assign show_popup = true
+    endif
+  endif
+-%}
+{%- if show_popup -%}
   <div class="drawer drawer--modal welcome" id="Welcome" data-drawer="welcome" data-welcome data-delay="{{ section.settings.delay }}" data-days="{{ section.settings.days }}" aria-hidden="true">
     <button type="button" class="drawer__backdrop" data-drawer-close tabindex="-1" aria-label="{{ 'general.close' | t }}"></button>
     <div class="drawer__panel welcome__panel" role="dialog" aria-modal="true" aria-labelledby="WelcomeTitle" aria-describedby="WelcomeText" tabindex="-1">
@@ -68,6 +81,14 @@
             </div>
             {%- if state != blank -%}<span hidden data-welcome-state="{{ state }}"></span>{%- endif -%}
           {%- endform -%}
+        {%- elsif section.settings.mode == 'account' -%}
+          {%- if section.settings.text_account != blank -%}
+            <p class="welcome__text" id="WelcomeText">{{ section.settings.text_account | escape }}</p>
+          {%- endif -%}
+          <div class="welcome__actions">
+            <a class="btn btn--full" href="{{ routes.account_register_url }}?willkommen">{{ section.settings.account_label | escape }}</a>
+            <a class="welcome__later" href="{{ routes.account_login_url }}?willkommen">{{ 'customer.auth.have_account' | t }} {{ 'customer.login.title' | t }}</a>
+          </div>
         {%- else -%}
           {%- if section.settings.text_code != blank -%}
             <p class="welcome__text" id="WelcomeText">{{ section.settings.text_code | escape }}</p>
@@ -100,11 +121,15 @@
   "settings": [
     { "type": "checkbox", "id": "enabled", "label": "Pop-up anzeigen", "default": true },
     { "type": "select", "id": "mode", "label": "Rabattcode", "options": [
+      { "value": "account", "label": "Nach Registrierung automatisch im Warenkorb" },
       { "value": "email", "label": "Per E-Mail nach Newsletter-Anmeldung" },
       { "value": "code", "label": "Direkt im Pop-up zeigen" }
-    ], "default": "email", "info": "Per E-Mail: in Shopify Double-Opt-in einschalten und unter Shopify Email eine Willkommens-Automation mit dem Code anlegen." },
+    ], "default": "account", "info": "Registrierung: braucht klassische Kundenkonten (Einstellungen → Kundenkonten). Per E-Mail: in Shopify Double-Opt-in einschalten und unter Shopify Email eine Willkommens-Automation mit dem Code anlegen." },
     { "type": "text", "id": "highlight", "label": "Große Zeile", "default": "10 % Rabatt" },
     { "type": "text", "id": "heading", "label": "Überschrift", "default": "auf deine erste Bestellung" },
+    { "type": "header", "content": "Nach Registrierung" },
+    { "type": "textarea", "id": "text_account", "label": "Text", "default": "Leg dir ein Kundenkonto an. Direkt danach liegt dein Rabatt im Warenkorb, beim Newsletter entscheidest du selbst." },
+    { "type": "text", "id": "account_label", "label": "Button", "default": "Konto anlegen & 10 % sichern" },
     { "type": "header", "content": "Per E-Mail" },
     { "type": "textarea", "id": "text", "label": "Text", "default": "Melde dich für unseren Newsletter an, dann schicken wir dir deinen Code per E-Mail." },
     { "type": "text", "id": "submit_label", "label": "Button", "default": "10 % sichern" },

@@ -262,6 +262,21 @@
       "phone": "Telefon",
       "set_default": "Als Standardadresse festlegen",
       "save": "Adresse speichern"
+    },
+    "auth": {
+      "eyebrow": "Kundenkonto",
+      "perk_discount_note": "automatisch im Warenkorb, direkt nach der Registrierung.",
+      "perk_orders": "Bestellungen und Sendungsstatus jederzeit im Blick.",
+      "perk_checkout": "Adressen gespeichert, schneller zur Kasse – auch bei Abholung vor Ort.",
+      "perk_news": "Auf Wunsch: Neuheiten und Fangtipps aus Landsberg.",
+      "offer": "Direkt nach der Registrierung liegt dein Willkommensrabatt von 10 % im Warenkorb.",
+      "offer_login": "Nach der Anmeldung legen wir dir den Willkommensrabatt von 10 % in den Warenkorb. Gilt für die erste Bestellung.",
+      "show_password": "Passwort anzeigen",
+      "hide_password": "Passwort verbergen",
+      "password_hint": "Mindestens 8 Zeichen.",
+      "newsletter": "Newsletter abonnieren.",
+      "legal": "Wie wir deine Daten verarbeiten, steht in unserer",
+      "have_account": "Schon ein Konto?"
     }
   },
   "faq": {

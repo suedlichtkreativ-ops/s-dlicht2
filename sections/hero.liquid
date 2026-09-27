@@ -65,10 +65,39 @@
               endif
             -%}
             {%- if lure_src -%}
-              {%- assign lure_product = block.settings.lure_product -%}
-              <a class="hero__lure{% if forloop.first %} is-active{% endif %}" data-lure href="{% if lure_product != blank %}{{ lure_product.url }}{% else %}{{ block.settings.button_link | default: routes.all_products_collection_url }}{% endif %}"{% unless forloop.first %} tabindex="-1" aria-hidden="true"{% endunless %}>
-                <img src="{{ lure_src }}" alt="" width="640" height="200" loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">
-                <span class="visually-hidden">{% if lure_product != blank %}{{ lure_product.title | escape }}{% else %}{{ block.settings.button_label | escape }}{% endif %}</span>
+              {%- liquid
+                assign lure_product = block.settings.lure_product
+                assign lure_style = block.settings.lure_style | default: 'lure'
+                assign lure_label = block.settings.lure_label
+                if block.settings.lure_link != blank
+                  assign lure_href = block.settings.lure_link
+                elsif lure_style == 'tag'
+                  comment
+                    Price tag: new visitors go to sign-up (the code lands in the cart afterwards),
+                    customers who are already logged in get the code straight into the cart.
+                  endcomment
+                  assign tag_code = block.settings.code | default: 'WILLKOMMEN10'
+                  if customer
+                    assign lure_href = routes.root_url | append: 'discount/' | append: tag_code | append: '?redirect=' | append: routes.cart_url
+                  else
+                    assign lure_href = routes.account_register_url | append: '?willkommen'
+                  endif
+                elsif lure_product != blank
+                  assign lure_href = lure_product.url
+                else
+                  assign lure_href = block.settings.button_link | default: routes.all_products_collection_url
+                endif
+                if lure_label == blank
+                  if lure_product != blank
+                    assign lure_label = lure_product.title
+                  else
+                    assign lure_label = block.settings.button_label
+                  endif
+                endif
+              -%}
+              <a class="hero__lure{% if lure_style != 'lure' %} hero__lure--top hero__lure--{{ lure_style }}{% endif %}{% if forloop.first %} is-active{% endif %}" data-lure href="{{ lure_href }}"{% unless forloop.first %} tabindex="-1" aria-hidden="true"{% endunless %}>
+                <img src="{{ lure_src }}" alt="" width="640" height="{% if lure_style == 'lure' %}200{% elsif lure_style == 'tag' %}1040{% else %}512{% endif %}" loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">
+                <span class="visually-hidden">{{ lure_label | escape }}</span>
               </a>
             {%- endif -%}
           {%- endfor -%}
@@ -203,7 +232,18 @@
         { "type": "header", "content": "Köder an der Angelschnur" },
         { "type": "image_picker", "id": "lure_image", "label": "Köder-Bild", "info": "Freigestelltes PNG, Kopf (Öse) nach links. Er hängt am Snap." },
         { "type": "text", "id": "lure_asset", "label": "Köder aus dem Theme", "info": "Wird genutzt, wenn kein Bild gewählt ist. Mitgeliefert: lure-fernlaeufer.png, lure-oberflaechenblitz.png, lure-kurzlaeufer.png, lure-rasselminnow.png" },
-        { "type": "product", "id": "lure_product", "label": "Köder-Produkt", "info": "Ein Klick auf den Köder öffnet dieses Produkt." }
+        { "type": "product", "id": "lure_product", "label": "Köder-Produkt", "info": "Ein Klick auf den Köder öffnet dieses Produkt." },
+        {
+          "type": "select", "id": "lure_style", "label": "Was hängt an der Schnur?", "default": "lure",
+          "options": [
+            { "value": "lure", "label": "Köder (hängt am Kopf)" },
+            { "value": "box", "label": "Köderkiste (hängt am Griff)" },
+            { "value": "tag", "label": "Preisschild (Klick führt zur Registrierung)" }
+          ],
+          "info": "Köderkiste: lure-koederkiste.png. Preisschild: lure-preisschild-10.png. Beim Preisschild landet der Rabattcode dieser Folie nach der Registrierung im Warenkorb."
+        },
+        { "type": "url", "id": "lure_link", "label": "Link (optional)", "info": "Überschreibt das Ziel, z. B. „Alle Produkte“ für die Köderkiste." },
+        { "type": "text", "id": "lure_label", "label": "Beschriftung für Screenreader (optional)" }
       ]
     }
   ],
