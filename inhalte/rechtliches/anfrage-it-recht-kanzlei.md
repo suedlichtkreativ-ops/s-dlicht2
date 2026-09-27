@@ -9,7 +9,7 @@ Shop: koederdepot.de (Shopify, Basic-Tarif), Inhaber Julius Strobl, Köderdepot.
 ## 2. AGB
 - **Selbstabholung** ist möglich und kostenlos (Abholzeiten 09:00–17:00 Uhr, nach Vereinbarung früher oder später). Ziffer 5.5 haben wir selbst ergänzt, bitte offiziell aufnehmen.
 - **Zahlungsarten** an den tatsächlichen Stand anpassen: PayPal, Shopify Payments (Kredit-/Debitkarte, Apple Pay, Google Pay, **Klarna**), **Barzahlung bei Abholung**. Bitte prüfen, ob „Kreditkarte via Stripe“ (4.6) noch zutrifft.
-- **Liefergebiet**: Deutschland (4,99 €, ab 59 € versandkostenfrei), EU (13,99 €), weitere Länder (19,99 €: CH, GB, NO, US, CA, AU, JP u. a.). Bitte bestätigen, ob die Texte den Verkauf ins Ausland abdecken.
+- **Liefergebiet**: nur Deutschland (4,99 €, ab 59 € versandkostenfrei) sowie Selbstabholung in Landsberg am Lech.
 - **Sperrgut**: Angelruten ab 115 cm Transportmaß werden als Sperrgut für 9,99 € versandt.
 
 ## 3. Datenschutzerklärung ergänzen um
