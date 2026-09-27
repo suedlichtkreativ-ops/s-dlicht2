@@ -23,7 +23,7 @@
           <p class="cart-item__meta">{{ item.selling_plan_allocation.selling_plan.name }}</p>
         {%- endif -%}
         {%- for discount in item.line_level_discount_allocations -%}
-          <p class="cart-item__meta">{{ discount.discount_application.title }} (−{{ discount.amount | money }})</p>
+          <p class="cart-item__meta">{{ discount.discount_application.title }} (−{{ discount.amount | money_without_currency | append: ' €' }})</p>
         {%- endfor -%}
         <div class="cart-item__row">
           <div class="qty qty--sm" data-qty>
@@ -33,10 +33,10 @@
           </div>
           <div class="price">
             {%- if item.original_line_price != item.final_line_price -%}
-              <span class="price__current" style="color:var(--alert)">{{ item.final_line_price | money }}</span>
-              <s>{{ item.original_line_price | money }}</s>
+              <span class="price__current" style="color:var(--alert)">{{ item.final_line_price | money_without_currency | append: ' €' }}</span>
+              <s>{{ item.original_line_price | money_without_currency | append: ' €' }}</s>
             {%- else -%}
-              {{ item.final_line_price | money }}
+              {{ item.final_line_price | money_without_currency | append: ' €' }}
             {%- endif -%}
           </div>
         </div>

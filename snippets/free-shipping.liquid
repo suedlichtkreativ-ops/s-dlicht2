@@ -13,7 +13,7 @@
   <div class="ship" data-ship-progress="{{ pct }}">
     <p class="ship__text">
       {%- if remaining > 0 -%}
-        {%- assign amount = remaining | money -%}
+        {%- assign amount = remaining | money_without_currency | append: ' €' -%}
         {{ 'cart.free_shipping_left' | t | replace: '[amount]', amount }}
       {%- else -%}
         {% render 'icon', name: 'check', class: 'icon--sm' %}{{ 'cart.free_shipping_reached' | t }}

@@ -74,7 +74,7 @@
       <div data-refresh="price">
         {% render 'price', product: product, target: current_variant, class: 'product__price' %}
         <p class="product__tax">
-          {{ 'products.product.tax_included' | t }}
+          {{ 'products.product.tax_included' | t -}}
           {%- if shop.shipping_policy.body != blank %}, <a href="{{ shop.shipping_policy.url }}">{{ 'products.product.shipping' | t }}</a>{%- else %} {{ 'products.product.plus_shipping' | t }}{%- endif -%}
         </p>
       </div>
@@ -220,7 +220,7 @@
   <div class="buy-bar" data-buy-bar aria-hidden="true">
     <div class="buy-bar__title">
       <span>{{ product.title | escape }}</span>
-      <span class="price" data-refresh="bar-price">{{ current_variant.price | money }}</span>
+      <span class="price" data-refresh="bar-price">{{ current_variant.price | money_without_currency | append: ' €' }}</span>
     </div>
     <button type="button" class="btn" data-buy-bar-button tabindex="-1">{{ 'products.product.add_to_cart' | t }}</button>
   </div>

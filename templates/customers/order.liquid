@@ -7,13 +7,13 @@
     <thead><tr><th>{{ 'customer.order.product' | t }}</th><th>{{ 'customer.order.quantity' | t }}</th><th>{{ 'customer.order.total' | t }}</th></tr></thead>
     <tbody>
       {%- for line_item in order.line_items -%}
-        <tr><td>{{ line_item.title | link_to: line_item.product.url }}</td><td>{{ line_item.quantity }}</td><td class="price">{{ line_item.final_line_price | money }}</td></tr>
+        <tr><td>{{ line_item.title | link_to: line_item.product.url }}</td><td>{{ line_item.quantity }}</td><td class="price">{{ line_item.final_line_price | money_without_currency | append: ' €' }}</td></tr>
       {%- endfor -%}
     </tbody>
     <tfoot>
-      <tr><td colspan="2">{{ 'cart.subtotal' | t }}</td><td class="price">{{ order.line_items_subtotal_price | money }}</td></tr>
-      {%- for shipping_method in order.shipping_methods -%}<tr><td colspan="2">{{ shipping_method.title }}</td><td class="price">{{ shipping_method.price | money }}</td></tr>{%- endfor -%}
-      <tr><th colspan="2">{{ 'customer.order.total' | t }}</th><th class="price">{{ order.total_price | money }}</th></tr>
+      <tr><td colspan="2">{{ 'cart.subtotal' | t }}</td><td class="price">{{ order.line_items_subtotal_price | money_without_currency | append: ' €' }}</td></tr>
+      {%- for shipping_method in order.shipping_methods -%}<tr><td colspan="2">{{ shipping_method.title }}</td><td class="price">{{ shipping_method.price | money_without_currency | append: ' €' }}</td></tr>{%- endfor -%}
+      <tr><th colspan="2">{{ 'customer.order.total' | t }}</th><th class="price">{{ order.total_price | money_without_currency | append: ' €' }}</th></tr>
     </tfoot>
   </table>
   <div class="form-grid form-grid--2">

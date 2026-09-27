@@ -8,7 +8,7 @@
       <form class="cart-summary" action="{{ routes.cart_url }}" method="post">
         {% render 'free-shipping' %}
         {% render 'koeder-box' %}
-        <div class="cart-totals"><span>{{ 'cart.subtotal' | t }}</span><span class="price">{{ cart.total_price | money }}</span></div>
+        <div class="cart-totals"><span>{{ 'cart.subtotal' | t }}</span><span class="price">{{ cart.total_price | money_without_currency | append: ' €' }}</span></div>
         <p class="cart-note">{{ 'cart.taxes_shipping' | t }}</p>
         {%- if settings.cart_note_pickup != blank -%}<p class="cart-note">{{ settings.cart_note_pickup }}</p>{%- endif -%}
         {%- if section.settings.show_note -%}

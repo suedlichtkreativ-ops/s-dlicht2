@@ -13,7 +13,7 @@
   <body>
     <main class="page-width" style="padding-block:4rem;display:grid;gap:1.5rem;justify-items:start;max-width:40rem">
       <h1 class="h2">{{ 'gift_card.title' | t }}</h1>
-      <p class="display" style="font-size:4rem"><span class="slant">{{ gift_card.balance | money }}</span></p>
+      <p class="display" style="font-size:4rem"><span class="slant">{{ gift_card.balance | money_without_currency | append: ' €' }}</span></p>
       {%- if gift_card.expired or gift_card.enabled == false -%}
         <p class="form-message form-message--error">{{ 'gift_card.expired' | t }}</p>
       {%- endif -%}

@@ -111,7 +111,7 @@
         {%- endif -%}
       </div>
     {%- else -%}
-      <div class="price">{{ 1999 | money }}</div>
+      <div class="price">{{ 1999 | money_without_currency | append: ' €' }}</div>
     {%- endif -%}
   </div>
 

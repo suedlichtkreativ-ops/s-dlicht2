@@ -60,6 +60,7 @@ Die Schnittstelle darf das Checkout-Design nur bei Shopify Plus ändern; im Basi
 
 Das gilt automatisch auch für die Shopify-Anmeldeseite. Mit **klassischen Kundenkonten** (siehe Punkt 5) nutzt der Shop für Anmeldung und Registrierung aber ohnehin die eigene, gestaltete Seite.
 
+- [ ] **Währungsformat** für Kasse und E-Mails: Einstellungen → Allgemein → Shop-Standardeinstellungen → Währungsanzeige → „Formatierung ändern“: alle vier Felder auf `{{amount_with_comma_separator}} €` bzw. `{{amount_with_comma_separator}} EUR` (Zahl vor dem €). Im Theme ist das schon umgestellt.
 - [ ] **Shopname** auf „Köderdepot“ ändern (Einstellungen → Allgemein → Shopname; steht im Checkout und in Kunden-E-Mails).
 - [x] Abholort umbenannt in „Köderdepot Landsberg“, Adresse ohne Doppelung (27.09.2026).
 
