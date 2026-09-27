@@ -8,13 +8,14 @@
   assign source = section.settings.collection
   assign fishes = 'hecht,zander,barsch,forelle' | split: ','
 -%}
-<section class="finder" data-finder data-max="{{ section.settings.max }}" aria-labelledby="FinderTitle-{{ section.id }}"
+<section class="finder" id="finder" data-finder data-max="{{ section.settings.max }}" aria-labelledby="FinderTitle-{{ section.id }}"
   data-t-exact="{{ 'finder.exact' | t }}" data-t-exact-one="{{ 'finder.exact_one' | t }}" data-t-close="{{ 'finder.close' | t }}"
   data-t-why="{{ 'finder.why' | t }}" data-t-lucky="{{ 'finder.lucky_result' | t }}">
   <div class="page-width">
     <div class="finder__head">
       <h2 class="finder__title display" id="FinderTitle-{{ section.id }}">{{ section.settings.heading | escape }}</h2>
       {%- if section.settings.text != blank -%}<p class="finder__text">{{ section.settings.text | escape }}</p>{%- endif -%}
+      {%- if section.settings.advice_link != blank -%}<a class="text-link finder__advice" href="{{ section.settings.advice_link }}">{{ 'finder.advice_link' | t }}</a>{%- endif -%}
     </div>
 
     {%- if source != blank and source.products_count > 0 -%}
@@ -90,6 +91,7 @@
     { "type": "text", "id": "heading", "label": "Überschrift", "default": "Welcher Köder passt zu dir?" },
     { "type": "textarea", "id": "text", "label": "Text", "default": "Drei kurze Fragen, dann zeigen wir dir die passenden Köder aus unserem Sortiment. Oder du lässt dich mit dem Glücksgriff überraschen." },
     { "type": "collection", "id": "collection", "label": "Köder aus Kollektion", "info": "Empfohlen: „Köder“. Die Zuordnung läuft über die Produkt-Tags (z. B. Hechtköder, Topwater, Jiggen, Rassel)." },
+    { "type": "url", "id": "advice_link", "label": "Link zur Köderberatung", "info": "Auf der Startseite: Seite „Köderberatung“. Auf der Köderberatung selbst leer lassen." },
     { "type": "range", "id": "max", "label": "Vorschläge", "min": 3, "max": 12, "step": 1, "default": 6 }
   ],
   "presets": [{ "name": "Köder-Finder" }]

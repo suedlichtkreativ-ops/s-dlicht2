@@ -37,6 +37,9 @@
       {%- if show_box -%}
         <p class="box-note">{% render 'icon', name: 'cart-plus', class: 'icon--sm' %}{{ 'box.note' | t: t1: settings.box_t1_qty, p1: settings.box_t1_pct, t2: settings.box_t2_qty, p2: settings.box_t2_pct, t3: settings.box_t3_qty, p3: settings.box_t3_pct }}</p>
       {%- endif -%}
+      {%- if show_box and settings.advice_link != blank -%}
+        <p class="advice-cta advice-cta--slim">{% render 'icon', name: 'chat', class: 'icon--sm' %}<strong>{{ 'advice.cta_title' | t }}</strong><a class="text-link" href="{{ settings.advice_link }}">{{ 'advice.cta_link' | t }}</a></p>
+      {%- endif -%}
       {%- if collection.description != blank and section.settings.show_description -%}
         {%- liquid
           assign intro_full = collection.description | strip_html | strip

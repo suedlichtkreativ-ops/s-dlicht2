@@ -1147,5 +1147,16 @@
     if (errors) errors.focus();
   }
 
+  /* ---------- Fangbericht: step through the photos ---------- */
+  $$('[data-catch-photos]').forEach((list) => {
+    const nav = list.parentElement.querySelector('.catch__nav');
+    if (!nav) return;
+    nav.addEventListener('click', (e) => {
+      const btn = e.target.closest('[data-catch-step]');
+      if (!btn) return;
+      list.scrollBy({ left: Number(btn.dataset.catchStep) * list.clientWidth, behavior: reducedMotion.matches ? 'auto' : 'smooth' });
+    });
+  });
+
   markLoaded();
 })();

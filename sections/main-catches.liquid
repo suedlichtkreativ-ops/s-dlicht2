@@ -1,0 +1,26 @@
+{%- comment -%} Blog "Fangberichte" (template blog.fangberichte): all catches as upright photo tiles. {%- endcomment -%}
+<section class="section catches catches--page">
+  <div class="page-width">
+    <div class="catches__head">
+      {%- assign heading = section.settings.heading | default: blog.title -%}
+      <h1 class="section-title display">{% render 'slant-words', text: heading %}</h1>
+      {%- if section.settings.text != blank -%}<p class="muted advice__intro">{{ section.settings.text | escape }}</p>{%- endif -%}
+    </div>
+    {%- paginate blog.articles by 12 -%}
+      <ul class="catches__grid" role="list">
+        {%- for article in blog.articles -%}<li>{% render 'catch-card', article: article %}</li>{%- endfor -%}
+      </ul>
+      {%- if paginate.pages > 1 -%}{% render 'pagination', paginate: paginate %}{%- endif -%}
+    {%- endpaginate -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Fangberichte",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Überschrift", "default": "Unsere Fänge" },
+    { "type": "textarea", "id": "text", "label": "Text", "default": "Aus der Praxis: was wir gefangen haben und womit. Jeder Köder und jede Rute aus den Berichten gibt es bei uns im Shop." }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,25 @@
+{%- comment -%}
+  One catch as an upright photo tile (Fangberichte blog, "Frisch gefangen" on the home page).
+  Param: article. Facts come from article metafields custom.fisch, custom.laenge_cm, custom.ausruestung (first product = lure).
+{%- endcomment -%}
+{%- liquid
+  assign m = article.metafields.custom
+  assign fish = m.fisch.value | default: m.fisch
+  assign length = m.laenge_cm.value | default: m.laenge_cm
+  assign gear = m.ausruestung.value
+  assign lure = gear.first
+-%}
+<a class="catch-card" href="{{ article.url }}">
+  <span class="catch-card__media">
+    {%- if article.image -%}
+      {% render 'image', image: article.image, sizes: '(min-width: 1200px) 22rem, (min-width: 750px) 40vw, 80vw', widths: '360, 540, 720, 900', alt: article.title %}
+    {%- endif -%}
+    {%- if fish != blank -%}
+      <span class="catch-card__badge">{% render 'fish-icon', name: fish %}<span>{{ fish | escape }}{% if length != blank %} · {{ length }} cm{% endif %}</span></span>
+    {%- endif -%}
+  </span>
+  <span class="catch-card__body">
+    <span class="catch-card__title">{{ article.title | escape }}</span>
+    {%- if lure != blank -%}<span class="catch-card__lure">{{ 'catches.lure' | t }} {{ lure.title | remove: 'Köderdepot ' | escape }}</span>{%- endif -%}
+  </span>
+</a>

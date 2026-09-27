@@ -1,0 +1,66 @@
+{%- comment -%}
+  Köderberatung by target fish: one card per fish with advice, the lure types that work (collection chips),
+  a link to all lures for that fish and the matching set.
+{%- endcomment -%}
+<section class="section advice-fish" id="zielfisch">
+  <div class="page-width">
+    <h2 class="section-title display">{% render 'slant-words', text: section.settings.heading %}</h2>
+    {%- if section.settings.text != blank -%}<p class="muted advice__intro">{{ section.settings.text | escape }}</p>{%- endif -%}
+    <div class="advice-fish__grid">
+      {%- for block in section.blocks -%}
+        {%- assign c = block.settings.collection -%}
+        <article class="advice-fish__card" {{ block.shopify_attributes }}>
+          <header class="advice-fish__head">
+            <span class="advice-fish__disc" aria-hidden="true">{% render 'fish-icon', name: block.settings.species %}</span>
+            <h3 class="advice-fish__title display">{{ block.settings.title | escape }}</h3>
+          </header>
+          <div class="advice-fish__text rte">{{ block.settings.text }}</div>
+          {%- if block.settings.tip != blank -%}<p class="advice-fish__tip"><strong>{{ 'advice.tip' | t }}</strong> {{ block.settings.tip | escape }}</p>{%- endif -%}
+          <p class="advice-fish__label">{{ 'advice.lure_types' | t }}</p>
+          <ul class="advice-fish__chips" role="list">
+            {%- for i in (1..5) -%}
+              {%- assign key = 'type_' | append: i -%}
+              {%- assign t = block.settings[key] -%}
+              {%- if t != blank -%}<li><a class="chip" href="{{ t.url }}">{{ t.title | escape }}</a></li>{%- endif -%}
+            {%- endfor -%}
+          </ul>
+          <div class="advice-fish__links">
+            {%- if c != blank -%}<a class="btn btn--full" href="{{ c.url }}">{{ 'advice.all_for' | t: fish: block.settings.title }}</a>{%- endif -%}
+            {%- if block.settings.bundle != blank -%}<a class="text-link" href="{{ block.settings.bundle.url }}">{{ 'advice.bundle' | t: title: block.settings.bundle.title }}</a>{%- endif -%}
+          </div>
+        </article>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Köderberatung: Zielfisch",
+  "max_blocks": 6,
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Überschrift", "default": "Nach Zielfisch" },
+    { "type": "text", "id": "text", "label": "Text", "default": "Jeder Räuber jagt anders. So findest du den passenden Einstieg." }
+  ],
+  "blocks": [
+    {
+      "type": "fish", "name": "Zielfisch",
+      "settings": [
+        { "type": "select", "id": "species", "label": "Fisch-Symbol", "default": "hecht", "options": [
+          { "value": "hecht", "label": "Hecht" }, { "value": "zander", "label": "Zander" }, { "value": "barsch", "label": "Barsch" }, { "value": "forelle", "label": "Forelle" } ] },
+        { "type": "text", "id": "title", "label": "Name", "default": "Hecht" },
+        { "type": "richtext", "id": "text", "label": "Beratung" },
+        { "type": "text", "id": "tip", "label": "Tipp (optional)" },
+        { "type": "collection", "id": "type_1", "label": "Köderart 1" },
+        { "type": "collection", "id": "type_2", "label": "Köderart 2" },
+        { "type": "collection", "id": "type_3", "label": "Köderart 3" },
+        { "type": "collection", "id": "type_4", "label": "Köderart 4" },
+        { "type": "collection", "id": "type_5", "label": "Köderart 5" },
+        { "type": "collection", "id": "collection", "label": "Alle Köder für diesen Fisch" },
+        { "type": "product", "id": "bundle", "label": "Passendes Set" }
+      ]
+    }
+  ],
+  "presets": [{ "name": "Köderberatung: Zielfisch" }]
+}
+{% endschema %}

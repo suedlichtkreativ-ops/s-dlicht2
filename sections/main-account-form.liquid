@@ -17,7 +17,10 @@
 -%}
 <section class="auth" data-auth data-welcome-return="{{ welcome_return }}">
   <div class="page-width auth__grid">
-    <aside class="auth__aside on-dark">
+    <aside class="auth__aside on-dark{% if section.settings.image != blank %} auth__aside--image{% endif %}">
+      {%- if section.settings.image != blank -%}
+        <div class="auth__bg" aria-hidden="true">{{ section.settings.image | image_url: width: 900 | image_tag: widths: '450, 675, 900', sizes: '(min-width: 990px) 30rem, 100vw', alt: '', loading: 'lazy' }}</div>
+      {%- endif -%}
       <p class="auth__eyebrow">{{ 'customer.auth.eyebrow' | t }}</p>
       <h2 class="auth__title display">{% render 'slant-words', text: section.settings.heading %}</h2>
       {%- if section.settings.text != blank -%}<p class="auth__lead">{{ section.settings.text | escape }}</p>{%- endif -%}
@@ -112,6 +115,7 @@
   "settings": [
     { "type": "text", "id": "heading", "label": "Überschrift", "default": "Dein Konto. Dein erster Fang." },
     { "type": "textarea", "id": "text", "label": "Text", "default": "Einmal anlegen, schneller bestellen und den Willkommensrabatt direkt mitnehmen." },
+    { "type": "image_picker", "id": "image", "label": "Hintergrundbild links", "info": "Wird stark abgedunkelt. Hochformat passt gut." },
     { "type": "text", "id": "code", "label": "Willkommens-Rabattcode", "default": "WILLKOMMEN10", "info": "Wird nach der Registrierung automatisch in den Warenkorb gelegt. Muss unter Rabatte angelegt sein (einmal pro Kunde). Leer lassen schaltet das aus." },
     { "type": "text", "id": "perk_discount", "label": "Vorteil Rabatt", "default": "10 % auf deine erste Bestellung," },
     { "type": "textarea", "id": "newsletter_text", "label": "Text Newsletter-Häkchen", "default": "Neue Köder, Fangtipps und Aktionen per E-Mail. Du bestätigst die Anmeldung per Link und kannst dich jederzeit abmelden." },

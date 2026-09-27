@@ -1,0 +1,26 @@
+{%- comment -%} Köderberatung: personal advice by mail, phone, Instagram or in the shop. Contact data from theme settings. {%- endcomment -%}
+<section class="section advice-contact" id="beratung">
+  <div class="page-width advice-contact__box">
+    <div>
+      <h2 class="section-title display">{% render 'slant-words', text: section.settings.heading %}</h2>
+      {%- if section.settings.text != blank -%}<p class="advice-contact__text">{{ section.settings.text | escape }}</p>{%- endif -%}
+    </div>
+    <ul class="advice-contact__ways" role="list">
+      {%- if settings.store_email != blank -%}<li><a class="advice-contact__way" href="mailto:{{ settings.store_email }}">{% render 'icon', name: 'mail' %}<span><strong>{{ 'advice.write' | t }}</strong>{{ settings.store_email }}</span></a></li>{%- endif -%}
+      {%- if settings.store_phone != blank -%}<li><a class="advice-contact__way" href="tel:{{ settings.store_phone | remove: ' ' | remove: '/' }}">{% render 'icon', name: 'phone' %}<span><strong>{{ 'advice.call' | t }}</strong>{{ settings.store_phone }}</span></a></li>{%- endif -%}
+      {%- if settings.social_instagram != blank -%}<li><a class="advice-contact__way" href="{{ settings.social_instagram }}" target="_blank" rel="noopener">{% render 'icon', name: 'instagram' %}<span><strong>{{ 'advice.instagram' | t }}</strong>@koederdepot</span></a></li>{%- endif -%}
+      {%- if settings.store_address != blank -%}<li><span class="advice-contact__way">{% render 'icon', name: 'store' %}<span><strong>{{ 'advice.visit' | t }}</strong>{{ settings.store_address | newline_to_br | replace: '<br />', ', ' }}</span></span></li>{%- endif -%}
+    </ul>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Köderberatung: Persönlich",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Überschrift", "default": "Lieber persönlich?" },
+    { "type": "textarea", "id": "text", "label": "Text", "default": "Schreib uns, was du fischen willst: Gewässer, Zielfisch, deine Rute. Wir sagen dir, womit wir es selbst probieren würden." }
+  ],
+  "presets": [{ "name": "Köderberatung: Persönlich" }]
+}
+{% endschema %}

@@ -27,10 +27,15 @@
         "specs": {
           "type": "specs",
           "settings": {}
+        },
+        "advice": {
+          "type": "advice",
+          "settings": {}
         }
       },
       "block_order": [
         "usps",
+        "advice",
         "specs",
         "description",
         "shipping"

@@ -1,0 +1,44 @@
+{%- comment -%}
+  Köderberatung: page head. Text left, one upright mood photo right (kept moderate in size: the photos are phone shots).
+{%- endcomment -%}
+<section class="advice-hero on-dark">
+  <div class="page-width advice-hero__grid{% if section.settings.image == blank %} advice-hero__grid--solo{% endif %}">
+    <div class="advice-hero__copy">
+      {%- if section.settings.eyebrow != blank -%}<p class="advice-hero__eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+      <h1 class="advice-hero__title display">{% render 'slant-words', text: section.settings.heading %}</h1>
+      {%- if section.settings.text != blank -%}<div class="advice-hero__text rte">{{ section.settings.text }}</div>{%- endif -%}
+      <div class="advice-hero__actions">
+        {%- if section.settings.button_label != blank -%}<a class="btn btn--slant" href="{{ section.settings.button_link | default: '#finder' }}">{{ section.settings.button_label | escape }}</a>{%- endif -%}
+        {%- if section.settings.button2_label != blank -%}<a class="btn btn--outline btn--slant" href="{{ section.settings.button2_link | default: '#beratung' }}">{{ section.settings.button2_label | escape }}</a>{%- endif -%}
+      </div>
+      <ul class="advice-hero__jump" role="list">
+        <li><a href="#finder">{{ 'advice.jump_finder' | t }}</a></li>
+        <li><a href="#zielfisch">{{ 'advice.jump_fish' | t }}</a></li>
+        <li><a href="#wassertiefe">{{ 'advice.jump_zone' | t }}</a></li>
+        <li><a href="#beratung">{{ 'advice.jump_contact' | t }}</a></li>
+      </ul>
+    </div>
+    {%- if section.settings.image != blank -%}
+      <figure class="advice-hero__media">
+        {{ section.settings.image | image_url: width: 900 | image_tag: widths: '450, 675, 900', sizes: '(min-width: 990px) 26rem, 70vw', alt: section.settings.image.alt, loading: 'eager', class: 'advice-hero__img' }}
+      </figure>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Köderberatung: Kopf",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Kleine Zeile", "default": "Köderberatung" },
+    { "type": "text", "id": "heading", "label": "Überschrift", "default": "Welcher Köder passt zu dir?" },
+    { "type": "richtext", "id": "text", "label": "Text" },
+    { "type": "image_picker", "id": "image", "label": "Bild (Hochformat)", "info": "Wird rechts in halber Breite gezeigt, nicht über die ganze Seite." },
+    { "type": "text", "id": "button_label", "label": "Button 1", "default": "Köder-Finder starten" },
+    { "type": "url", "id": "button_link", "label": "Link Button 1", "info": "Leer: springt zum Köder-Finder." },
+    { "type": "text", "id": "button2_label", "label": "Button 2", "default": "Persönlich fragen" },
+    { "type": "url", "id": "button2_link", "label": "Link Button 2", "info": "Leer: springt zur persönlichen Beratung." }
+  ],
+  "presets": [{ "name": "Köderberatung: Kopf" }]
+}
+{% endschema %}

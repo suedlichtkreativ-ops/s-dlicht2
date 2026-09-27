@@ -151,6 +151,20 @@
               {%- if block.settings.usp2 != blank -%}<li>{% render 'icon', name: 'check', class: 'icon--sm' %}{{ block.settings.usp2 | escape }}</li>{%- endif -%}
               {%- if block.settings.usp3 != blank -%}<li>{% render 'icon', name: 'check', class: 'icon--sm' %}{{ block.settings.usp3 | escape }}</li>{%- endif -%}
             </ul>
+          {%- when 'advice' -%}
+            {%- liquid
+              assign is_lure = false
+              assign box_handle = settings.box_collection.handle | default: settings.box_collection
+              for c in product.collections
+                if c.handle == box_handle
+                  assign is_lure = true
+                  break
+                endif
+              endfor
+            -%}
+            {%- if is_lure and settings.advice_link != blank -%}
+              <p class="advice-cta" {{ block.shopify_attributes }}>{% render 'icon', name: 'chat', class: 'icon--sm' %}<strong>{{ 'advice.cta_title' | t }}</strong><a class="text-link" href="{{ settings.advice_link }}">{{ 'advice.cta_link' | t }}</a></p>
+            {%- endif -%}
           {%- when 'specs' -%}
             {%- liquid
               assign fish_list = ''
@@ -243,6 +257,10 @@
       ]
     },
     { "type": "text", "name": "Text", "settings": [{ "type": "richtext", "id": "text", "label": "Text" }] },
+    {
+      "type": "advice", "name": "Hinweis Köderberatung", "limit": 1,
+      "settings": [{ "type": "paragraph", "content": "Erscheint nur bei Ködern (Kollektion der Köder-Box). Ziel: Theme-Einstellungen → Köder-Box → Seite Köderberatung." }]
+    },
     {
       "type": "usps", "name": "Vorteile", "limit": 1,
       "settings": [

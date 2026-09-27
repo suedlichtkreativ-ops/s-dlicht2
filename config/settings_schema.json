@@ -258,6 +258,16 @@
         "id": "box_t3_pct",
         "label": "Stufe 3: Rabatt in %",
         "default": 15
+      },
+      {
+        "type": "header",
+        "content": "Köderberatung"
+      },
+      {
+        "type": "url",
+        "id": "advice_link",
+        "label": "Seite Köderberatung",
+        "info": "Wird als Hinweis auf Köder-Kategorien und Köder-Produktseiten verlinkt. Leer lassen blendet den Hinweis aus."
       }
     ]
   }

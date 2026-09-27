@@ -1,6 +1,13 @@
 {
   "sections": {
-    "main": { "type": "main-account-form", "settings": {} }
+    "main": {
+      "type": "main-account-form",
+      "settings": {
+        "image": "shopify://shop_images/stimmung-boot-sonnenuntergang.jpg"
+      }
+    }
   },
-  "order": ["main"]
+  "order": [
+    "main"
+  ]
 }

@@ -18,6 +18,11 @@ Alle entschieden am 27.09.2026 (siehe D). Offen ist nur noch:
 - [ ] **Google-Maps-Link** für „Route planen“.
 - [ ] **TikTok-Link** (Profil-Adresse). Facebook und YouTube gibt es nicht.
 
+### Fangberichte & Köderberatung
+
+- [ ] **Fakten zu den zwei Fängen** (Länge, Gewicht, Gewässer, Datum, Geschichte; bei der Forelle auch Rute/Rolle/Schnur und Köderfarben). Liste in `fangberichte.md`.
+- [ ] **Texte der Köderberatung prüfen** (Zielfisch- und Wassertiefen-Tipps sind meine Entwürfe; der Einleitungstext stammt von eurer bisherigen Seite „Köderberatung“).
+
 ### Bilder
 
 - [ ] **Hero-Fotos in voller Größe** (mind. 2880 px breit): Angler 1983 px, Topwater 2400 px, 10 %-Motiv 1672 px, Kurzläufer nur 1254 px. Wirken auf Retina-Bildschirmen weich.
@@ -32,8 +37,8 @@ Reihenfolge und Details: `import/ANLEITUNG.md`, `bundles.md`, `rechtliches/READM
 1. [ ] Metafeld-Definitionen `custom.gewicht` und `custom.wurfgewicht` anlegen (Einzeiliger Text).
 2. [ ] Studio-Fotos aus `bilder/produkte/` unter Inhalte → Dateien hochladen, dann Produkte importieren: `import/produkte-shopify-import.csv` (91 Produkte, lesbare Farbnamen, deutsche Produkttypen, Kugelblitz als Jigkopf). Entwürfe (`entwuerfe-nicht-importieren.csv`) nicht importieren.
 3. [ ] Lagerbestände kurz vor dem Start abgleichen (CSV-Stand 26.09.2026).
-4. [ ] Kollektionen und Menüs laut Anleitung anlegen (inkl. „Bundles“ und Menüpunkt „Köder-Finder“).
-5. [ ] Seiten: „Köder-Finder“ (Vorlage `page.koeder-finder`), „Widerruf“ (Vorlage `page.widerruf` + App **EU Widerruf Button**).
+4. [ ] Kollektionen und Menüs laut Anleitung anlegen (inkl. „Bundles“, „Köderberatung“ mit Unterpunkten und „Fänge“).
+5. [ ] Seiten: der bestehenden Seite „Köderberatung“ (`/pages/koderberatung`) die Vorlage `page.koderberatung` geben; Blog „Fangberichte“ (Handle `fangberichte`) anlegen, „Widerruf“ (Vorlage `page.widerruf` + App **EU Widerruf Button**).
 6. [ ] Rechtstexte unter Einstellungen → Richtlinien einfügen (`rechtliches/*.html`), Menü „Kundeninfo“ anlegen.
 7. [ ] Datenschutzerklärung ergänzen lassen (Newsletter, Cookies, später KI-Chat) – IT-Recht Kanzlei.
 8. [ ] App **Shopify Bundles**: 5 Bundles mit Bild und Vorlage anlegen, kein Vergleichspreis.
@@ -42,7 +47,8 @@ Reihenfolge und Details: `import/ANLEITUNG.md`, `bundles.md`, `rechtliches/READM
 11. [ ] Abholung vor Ort am Standort aktivieren (sonst keine Option an der Kasse).
 12. [ ] Versandprofil Sperrgut: 9,99 € für Ruten ab 115 cm / Sendungen ab 30 kg.
 13. [ ] Grundpreis pro Meter bei Uferleine, Silberleine, Vorratsleine.
-14. [ ] Dateien hochladen: `bilder/hero-topwater-ohne-text.jpg`, `bilder/hero-kurzlaeufer.jpg`, `bilder/hero-kurzlaeufer-mobile.jpg` (genau diese Namen), Bundle-Bilder aus `bilder/bundles/`.
+14. [ ] Dateien hochladen: `bilder/hero-topwater-ohne-text.jpg`, `bilder/hero-kurzlaeufer.jpg`, `bilder/hero-kurzlaeufer-mobile.jpg`, `bilder/stimmung/*.jpg`, `bilder/faenge/*.jpg` (genau diese Namen), Bundle-Bilder aus `bilder/bundles/`.
+16. [ ] **Fangberichte**: Metafelder und die zwei Beiträge laut `fangberichte.md` anlegen.
 15. [ ] **Kundenkonten auf „klassisch“ stellen** (Einstellungen → Kundenkonten). Nur dann nutzt der Shop die eigene Registrierungs-/Login-Seite mit Name, Newsletter-Häkchen und automatischem 10-%-Rabatt. Mit den „neuen Kundenkonten“ (Login per Einmalcode) zeigt Shopify seine eigene Seite, dann den Pop-up-Modus im Editor auf „Per E-Mail nach Newsletter-Anmeldung“ stellen.
 
 ## C. Später

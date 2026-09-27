@@ -1,0 +1,7 @@
+{
+  "sections": {
+    "main": { "type": "main-catch", "settings": {} },
+    "gear": { "type": "catch-gear", "settings": {} }
+  },
+  "order": ["main", "gear"]
+}

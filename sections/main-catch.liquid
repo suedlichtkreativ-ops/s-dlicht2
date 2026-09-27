@@ -1,0 +1,57 @@
+{%- comment -%}
+  Fangbericht (template article.fangbericht): photos, facts and story of one catch.
+  Facts from article metafields custom.*: fisch, laenge_cm, gewicht_kg, gewaesser, bilder (list of files), ausruestung (list of products).
+  The gear is shown by the section "Fangbericht: Ausrüstung" below.
+{%- endcomment -%}
+{%- liquid
+  assign m = article.metafields.custom
+  assign fish = m.fisch.value | default: m.fisch
+  assign length = m.laenge_cm.value | default: m.laenge_cm
+  assign weight = m.gewicht_kg.value | default: m.gewicht_kg
+  assign water = m.gewaesser.value | default: m.gewaesser
+  assign gear = m.ausruestung.value
+  assign photos = m.bilder.value
+-%}
+<article class="catch">
+  <div class="page-width catch__grid">
+    <div class="catch__media">
+      <ul class="catch__photos" role="list" data-catch-photos>
+        {%- if article.image -%}
+          <li class="catch__photo">{% render 'image', image: article.image, sizes: '(min-width: 990px) 34rem, 88vw', widths: '480, 720, 960, 1200', loading: 'eager', alt: article.title %}</li>
+        {%- endif -%}
+        {%- for f in photos -%}
+          {%- assign img = f.preview_image | default: f -%}
+          <li class="catch__photo">{% render 'image', image: img, sizes: '(min-width: 990px) 34rem, 88vw', widths: '480, 720, 960, 1200', alt: article.title %}</li>
+        {%- endfor -%}
+      </ul>
+      {%- assign photo_count = photos.size | plus: 1 -%}
+      {%- if photo_count > 1 -%}
+        <div class="catch__nav">
+          <p class="catch__swipe">{{ 'catches.photos' | t: count: photo_count }}</p>
+          <button type="button" class="icon-btn catch__btn" data-catch-step="-1" aria-label="{{ 'products.product.prev_media' | t }}">{% render 'icon', name: 'chevron-left' %}</button>
+          <button type="button" class="icon-btn catch__btn" data-catch-step="1" aria-label="{{ 'products.product.next_media' | t }}">{% render 'icon', name: 'chevron-right' %}</button>
+        </div>
+      {%- endif -%}
+    </div>
+
+    <div class="catch__copy">
+      <p class="catch__eyebrow">{{ 'catches.eyebrow' | t }} · {{ article.published_at | time_tag: format: 'date' }}</p>
+      <h1 class="catch__title display">{{ article.title | escape }}</h1>
+      {%- if fish != blank or length != blank or weight != blank or water != blank or gear != blank -%}
+        <dl class="catch__facts">
+          {%- if fish != blank -%}<div><dt>{{ 'catches.fish' | t }}</dt><dd>{{ fish | escape }}</dd></div>{%- endif -%}
+          {%- if length != blank -%}<div><dt>{{ 'catches.length' | t }}</dt><dd>{{ length }} cm</dd></div>{%- endif -%}
+          {%- if weight != blank -%}<div><dt>{{ 'catches.weight' | t }}</dt><dd>{{ weight | replace: '.', ',' }} kg</dd></div>{%- endif -%}
+          {%- if water != blank -%}<div><dt>{{ 'catches.water' | t }}</dt><dd>{{ water | escape }}</dd></div>{%- endif -%}
+          {%- if gear.first != blank -%}<div><dt>{{ 'catches.lure_short' | t }}</dt><dd><a href="{{ gear.first.url }}">{{ gear.first.title | remove: 'Köderdepot ' | escape }}</a></dd></div>{%- endif -%}
+        </dl>
+      {%- endif -%}
+      <div class="rte catch__story">{{ article.content }}</div>
+      {%- if gear != blank -%}<a class="btn btn--slant catch__to-gear" href="#ausruestung">{{ 'catches.to_gear' | t }}</a>{%- endif -%}
+    </div>
+  </div>
+</article>
+
+{% schema %}
+{ "name": "Fangbericht", "settings": [] }
+{% endschema %}

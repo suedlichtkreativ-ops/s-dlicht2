@@ -311,7 +311,8 @@
     "lucky": "Glücksgriff",
     "lucky_result": "Dein Glücksgriff",
     "restart": "Neu starten",
-    "more": "Alle Köder für diesen Fisch"
+    "more": "Alle Köder für diesen Fisch",
+    "advice_link": "Mehr in der Köderberatung"
   },
   "box": {
     "name": "Köder-Box",
@@ -319,5 +320,37 @@
     "missing": "Noch {{ n }} Köder bis {{ pct }} %.",
     "max": "{{ pct }} % Rabatt auf deine Köder aktiv.",
     "note": "Köder-Box: {{ t1 }} Köder = {{ p1 }} %, {{ t2 }} Köder = {{ p2 }} %, {{ t3 }} Köder = {{ p3 }} % Rabatt. Wird automatisch abgezogen."
+  },
+  "advice": {
+    "jump_finder": "Köder-Finder",
+    "jump_fish": "Nach Zielfisch",
+    "jump_zone": "Nach Wassertiefe",
+    "jump_contact": "Persönliche Beratung",
+    "tip": "Tipp:",
+    "lure_types": "Bewährte Köderarten",
+    "all_for": "Alle Köder für {{ fish }}",
+    "bundle": "Oder gleich: {{ title }}",
+    "write": "Schreib uns",
+    "call": "Ruf an",
+    "instagram": "Frag auf Instagram",
+    "visit": "Komm vorbei",
+    "cta_title": "Unsicher, welcher Köder passt?",
+    "cta_text": "Unsere Köderberatung hilft nach Zielfisch und Wassertiefe weiter.",
+    "cta_link": "Zur Köderberatung"
+  },
+  "catches": {
+    "eyebrow": "Fangbericht",
+    "lure": "Köder:",
+    "lure_short": "Köder",
+    "fish": "Fisch",
+    "length": "Länge",
+    "weight": "Gewicht",
+    "water": "Gewässer",
+    "photos": {
+      "one": "1 Foto",
+      "other": "{{ count }} Fotos"
+    },
+    "to_gear": "Ausrüstung ansehen",
+    "all": "Alle Fänge ansehen"
   }
 }

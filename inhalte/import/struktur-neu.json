@@ -1035,18 +1035,38 @@
               "titel": "Forellen-Köder-Set",
               "url": "/products/forellen-koeder-set",
               "unterpunkte": []
-            },
-            {
-              "titel": "Köder-Finder",
-              "url": "/pages/koeder-finder",
-              "unterpunkte": []
             }
           ]
         },
         {
-          "titel": "FAQ",
-          "url": "/pages/faq",
-          "unterpunkte": []
+          "titel": "Köderberatung",
+          "url": "/pages/koderberatung",
+          "unterpunkte": [
+            {
+              "titel": "Köder-Finder",
+              "url": "/pages/koderberatung#finder"
+            },
+            {
+              "titel": "Nach Zielfisch",
+              "url": "/pages/koderberatung#zielfisch"
+            },
+            {
+              "titel": "Nach Wassertiefe",
+              "url": "/pages/koderberatung#wassertiefe"
+            },
+            {
+              "titel": "Persönliche Beratung",
+              "url": "/pages/koderberatung#beratung"
+            },
+            {
+              "titel": "FAQ",
+              "url": "/pages/faq"
+            }
+          ]
+        },
+        {
+          "titel": "Fänge",
+          "url": "/blogs/fangberichte"
         }
       ]
     },
@@ -1298,6 +1318,10 @@
       "titel": "Beratung & Kontakt",
       "punkte": [
         {
+          "titel": "Köderberatung",
+          "url": "/pages/koderberatung"
+        },
+        {
           "titel": "Support-Kontakt",
           "url": "/pages/contact",
           "typ": "PAGE"
@@ -1349,6 +1373,14 @@
       "handle": "shop-service",
       "titel": "Shop-Service",
       "punkte": [
+        {
+          "titel": "Köderberatung",
+          "url": "/pages/koderberatung"
+        },
+        {
+          "titel": "Fangberichte",
+          "url": "/blogs/fangberichte"
+        },
         {
           "titel": "Newsletter",
           "url": "/pages/newsletter",

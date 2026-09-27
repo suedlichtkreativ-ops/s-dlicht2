@@ -1,0 +1,29 @@
+{%- comment -%} Home page: "Frisch gefangen" – the latest catches from the Fangberichte blog as upright photo tiles. {%- endcomment -%}
+{%- assign b = section.settings.blog -%}
+{%- if b != blank and b.articles_count > 0 -%}
+  <section class="section catches">
+    <div class="page-width">
+      <div class="catches__head catches__head--row">
+        <h2 class="section-title display">{% render 'slant-words', text: section.settings.heading %}</h2>
+        <a class="btn btn--outline btn--slant" href="{{ b.url }}">{{ 'catches.all' | t }}</a>
+      </div>
+      {%- if section.settings.text != blank -%}<p class="muted advice__intro">{{ section.settings.text | escape }}</p>{%- endif -%}
+      <ul class="catches__grid catches__grid--row" role="list">
+        {%- for article in b.articles limit: section.settings.limit -%}<li>{% render 'catch-card', article: article %}</li>{%- endfor -%}
+      </ul>
+    </div>
+  </section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Frisch gefangen",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Überschrift", "default": "Frisch gefangen" },
+    { "type": "text", "id": "text", "label": "Text", "default": "Unsere Fänge aus der Praxis, mit dem Köder, der gebissen hat." },
+    { "type": "blog", "id": "blog", "label": "Blog", "info": "Blog „Fangberichte“" },
+    { "type": "range", "id": "limit", "label": "Anzahl", "min": 2, "max": 8, "step": 1, "default": 4 }
+  ],
+  "presets": [{ "name": "Frisch gefangen" }]
+}
+{% endschema %}

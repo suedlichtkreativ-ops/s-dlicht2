@@ -1,0 +1,163 @@
+{
+  "sections": {
+    "hero": {
+      "type": "advice-hero",
+      "settings": {
+        "eyebrow": "Köderberatung",
+        "heading": "Welcher Köder passt zu dir?",
+        "text": "<p>Nicht jeder Köder passt zu jeder Situation. Bei der Auswahl spielen Zielfisch, Jahreszeit, Gewässerstruktur, Lauftiefe und Führungsstil eine wichtige Rolle.</p><p>Unsere Köderberatung soll dir helfen, schneller den passenden Bereich zu finden. Egal ob du nach Hechtködern, Zanderködern, Barschködern, Wobblern, Jigköpfen oder Gummifischen suchst: Entscheidend ist immer der konkrete Einsatzzweck.</p>",
+        "image": "shopify://shop_images/stimmung-daemmerung.jpg",
+        "button_label": "Köder-Finder starten",
+        "button2_label": "Persönlich fragen"
+      }
+    },
+    "finder": {
+      "type": "koeder-finder",
+      "settings": {
+        "heading": "In drei Fragen zum Köder",
+        "collection": "koder",
+        "max": 9
+      }
+    },
+    "fish": {
+      "type": "advice-fish",
+      "blocks": {
+        "hecht": {
+          "type": "fish",
+          "settings": {
+            "species": "hecht",
+            "title": "Hecht",
+            "text": "<p>Hechte jagen auf Sicht und reagieren auf Druck und Bewegung. Größere Köder ab etwa 10 cm sind der Standard, im Frühjahr und Herbst gern auffällig in Farbe und Lauf.</p>",
+            "tip": "Immer mit Stahl- oder Titanvorfach fischen. Hechtzähne durchtrennen normale Schnur.",
+            "collection": "hechtkoder",
+            "bundle": "hecht-koeder-set",
+            "type_1": "swimbait",
+            "type_2": "jerkbaits",
+            "type_3": "spinnerbait",
+            "type_4": "frosche",
+            "type_5": "gummifische"
+          }
+        },
+        "zander": {
+          "type": "fish",
+          "settings": {
+            "species": "zander",
+            "title": "Zander",
+            "text": "<p>Zander stehen meist tief, am Grund und an Kanten, und beißen oft vorsichtig. Der Klassiker ist der Gummifisch am Jigkopf, in Sprüngen über den Grund geführt. In der Dämmerung auch Wobbler im Mittelwasser.</p>",
+            "tip": "Schnur auf Spannung halten: Der Biss kommt oft in der Absinkphase.",
+            "collection": "zanderkoder",
+            "bundle": "zander-koeder-set",
+            "type_1": "gummifische",
+            "type_2": "jigkopfe",
+            "type_3": "creature-baits",
+            "type_4": "twister-grubs",
+            "type_5": "vibration-bait"
+          }
+        },
+        "barsch": {
+          "type": "fish",
+          "settings": {
+            "species": "barsch",
+            "title": "Barsch",
+            "text": "<p>Barsche jagen oft im Schwarm und sind neugierig. Kleine Köder zwischen 3 und 8 cm fangen am besten: Spinner, kleine Crankbaits, Twister oder Creature Baits.</p>",
+            "tip": "Wo einer beißt, stehen meist mehrere. Bleib an der Stelle.",
+            "collection": "barschkoder",
+            "bundle": "barsch-koeder-set",
+            "type_1": "spinner",
+            "type_2": "crankbaits",
+            "type_3": "twister-grubs",
+            "type_4": "creature-baits",
+            "type_5": "popper"
+          }
+        },
+        "forelle": {
+          "type": "fish",
+          "settings": {
+            "species": "forelle",
+            "title": "Forelle",
+            "text": "<p>Forellen mögen klares, kühles und sauerstoffreiches Wasser. Kleine Wobbler und Spinner, quer oder gegen die Strömung geführt, sind der sichere Einstieg.</p>",
+            "tip": "Leichte Rute und dünne Schnur bringen mehr Bisse.",
+            "collection": "forellenkoder",
+            "bundle": "forellen-koeder-set",
+            "type_1": "spinner",
+            "type_2": "wobbler",
+            "type_3": "crankbaits",
+            "type_4": "blinker"
+          }
+        }
+      },
+      "block_order": [
+        "hecht",
+        "zander",
+        "barsch",
+        "forelle"
+      ],
+      "settings": {
+        "heading": "Nach Zielfisch",
+        "text": "Jeder Räuber jagt anders. So findest du den passenden Einstieg."
+      }
+    },
+    "zones": {
+      "type": "advice-zones",
+      "blocks": {
+        "oben": {
+          "type": "zone",
+          "settings": {
+            "depth": "Oberfläche",
+            "title": "Oben",
+            "text": "<p>Morgens, abends, bei Windstille und über Kraut: Popper, Frösche und Buzzbaits. Der Biss ist zu sehen.</p>",
+            "type_1": "popper",
+            "type_2": "frosche",
+            "type_3": "buzzbaits"
+          }
+        },
+        "mitte": {
+          "type": "zone",
+          "settings": {
+            "depth": "Mittelwasser",
+            "title": "Mitte",
+            "text": "<p>Suchköder für viel Strecke: Wobbler, Crankbaits, Spinnerbaits und Spinner. Tempo und Lauftiefe so lange variieren, bis es beißt.</p>",
+            "type_1": "wobbler",
+            "type_2": "crankbaits",
+            "type_3": "spinnerbait",
+            "type_4": "spinner",
+            "type_5": "jerkbaits"
+          }
+        },
+        "grund": {
+          "type": "zone",
+          "settings": {
+            "depth": "Grund",
+            "title": "Unten",
+            "text": "<p>Wenn die Fische tief stehen, oft im Winter und bei großer Hitze: Gummifisch am Jigkopf, Creature Baits und Vibration Baits, in Sprüngen geführt.</p>",
+            "type_1": "gummifische",
+            "type_2": "jigkopfe",
+            "type_3": "creature-baits",
+            "type_4": "vibration-bait",
+            "type_5": "metal-jigs"
+          }
+        }
+      },
+      "block_order": [
+        "oben",
+        "mitte",
+        "grund"
+      ],
+      "settings": {
+        "heading": "Nach Wassertiefe",
+        "text": "Wo der Fisch steht, entscheidet über den Köder."
+      }
+    },
+    "contact": {
+      "type": "advice-contact",
+      "settings": {}
+    }
+  },
+  "order": [
+    "hero",
+    "finder",
+    "fish",
+    "zones",
+    "contact"
+  ]
+}

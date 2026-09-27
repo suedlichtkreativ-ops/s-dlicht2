@@ -236,7 +236,8 @@
       "type": "koeder-finder",
       "settings": {
         "collection": "koder",
-        "max": 6
+        "max": 6,
+        "advice_link": "shopify://pages/koderberatung"
       }
     },
     "bundles": {
@@ -246,6 +247,13 @@
         "collection": "bundles",
         "limit": 5,
         "white": true
+      }
+    },
+    "catches": {
+      "type": "catches",
+      "settings": {
+        "blog": "fangberichte",
+        "limit": 4
       }
     }
   },
@@ -257,6 +265,7 @@
     "bundles",
     "bundle",
     "tiles",
+    "catches",
     "blog",
     "statement",
     "store"
