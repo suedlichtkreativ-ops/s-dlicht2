@@ -39,7 +39,7 @@ Reihenfolge, am besten abends mit wenig Besuchern:
 
 1. **Produkte** (91): lesbare Farbnamen, deutsche Produkttypen, Metafelder Gewicht/Wurfgewicht, Studio-Fotos (ersetzen die alten Bilder).
 2. **Kollektionen**: Regeln der bestehenden Kollektionen auf die neuen Produkttypen umstellen (Liste in `import/ANLEITUNG.md`), die 5 neuen veröffentlichen. Die manuellen Kollektionen `koder`, `angelrute`, `rollen`, `forellenkoder`, `buzzbaits` lassen sich nicht auf automatisch umstellen, sie werden per Hand befüllt.
-3. **Seiten-Vorlagen**: Köderberatung → `koderberatung`, Zahlung → `zahlung`, Versand & Lieferung → `versand`, Über uns → `about`.
+3. ~~Seiten-Vorlagen~~ (bereits erledigt, siehe oben).
 4. **Veröffentlichen**: 5 Fangberichte, 5 Bundles (aktiv), Bundles als Unterpunkte ins Menü `kd-hauptmenue`.
 5. **Rabatte**: Startdatum auf den Starttag setzen.
 6. **Versand**: 4,99 €, ab 59 € kostenlos, Sperrgut 9,99 €; Abholung vor Ort aktivieren.
