@@ -21,7 +21,6 @@
       {%- if section.settings.image != blank -%}
         <div class="auth__bg" aria-hidden="true">{{ section.settings.image | image_url: width: 900 | image_tag: widths: '450, 675, 900', sizes: '(min-width: 990px) 30rem, 100vw', alt: '', loading: 'lazy' }}</div>
       {%- endif -%}
-      <p class="auth__eyebrow">{{ 'customer.auth.eyebrow' | t }}</p>
       <h2 class="auth__title display">{% render 'slant-words', text: section.settings.heading %}</h2>
       {%- if section.settings.text != blank -%}<p class="auth__lead">{{ section.settings.text | escape }}</p>{%- endif -%}
       <ul class="auth__perks" role="list">

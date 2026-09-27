@@ -15,7 +15,7 @@
             "button_link": "shopify://collections/koder",
             "button2_label": "Abholung vor Ort",
             "button2_link": "",
-            "lure_asset": "lure-koederkiste.png",
+            "lure_asset": "lure-koederkiste.webp",
             "lure_style": "box",
             "lure_link": "shopify://collections/all",
             "lure_label": "Gesamtes Sortiment ansehen"
@@ -32,7 +32,7 @@
             "button_link": "shopify://collections/popper",
             "button2_label": "Froschköder",
             "button2_link": "shopify://collections/frosche",
-            "lure_asset": "lure-oberflaechenblitz.png",
+            "lure_asset": "lure-oberflaechenblitz.webp",
             "lure_product": "koederdepot-oberflaechenblitz"
           }
         },
@@ -47,7 +47,7 @@
             "button_link": "shopify://products/koederdepot-kurzlaeufer",
             "button2_label": "Alle Swimbaits",
             "button2_link": "shopify://collections/swimbait",
-            "lure_asset": "lure-kurzlaeufer.png",
+            "lure_asset": "lure-kurzlaeufer.webp",
             "lure_product": "koederdepot-kurzlaeufer",
             "image_mobile": "shopify://shop_images/hero-kurzlaeufer-mobile.jpg"
           }
@@ -63,7 +63,7 @@
             "signup_label": "10 % sichern",
             "button_label": "Konto anlegen & 10 % sichern",
             "button_link": "/account/register?willkommen",
-            "lure_asset": "lure-preisschild-10.png",
+            "lure_asset": "lure-preisschild-10.webp",
             "lure_style": "tag",
             "lure_label": "10 % Willkommensrabatt: Konto anlegen",
             "button2_label": "Köder entdecken",

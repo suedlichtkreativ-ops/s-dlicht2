@@ -36,7 +36,7 @@ Reihenfolge und Details: `import/ANLEITUNG.md`, `bundles.md`, `rechtliches/READM
 9. [ ] Rabatte: WILLKOMMEN10 (10 %, einmal pro Kunde, kein Mindestbestellwert, nicht kombinierbar, Berechtigung: Kundensegment „noch keine Bestellung“, damit nur Neukunden mit Konto ihn nutzen können); Köder-Box als 3 automatische Rabatte (Kollektion „Köder“, ab 3/5/8 Stück = 5/10/15 %, nicht kombinierbar).
 10. [ ] Double-Opt-in für E-Mail-Marketing (Newsletter-Häkchen bei der Registrierung), Cookie-Banner (Einstellungen → Kundendatenschutz). Bis dahin das Pop-up im Editor ausschalten.
 11. [ ] Abholung vor Ort am Standort aktivieren (sonst keine Option an der Kasse).
-12. [ ] Versandprofil Sperrgut: 9,99 € für Ruten ab 115 cm / Sendungen ab 30 kg.
+12. [ ] Versand: Standard 4,99 €, **kostenlos ab 59 €** (Einstellungen → Versand, Bedingung Bestellwert ≥ 59 €); Versandprofil Sperrgut: 9,99 € für Ruten ab 115 cm / Sendungen ab 30 kg. Versandrichtlinie aus `rechtliches/versand.html` (bereits auf 59 € angepasst) einfügen.
 13. [ ] Grundpreis pro Meter bei Uferleine, Silberleine, Vorratsleine.
 14. [ ] Dateien hochladen: `bilder/hero-topwater-ohne-text.jpg`, `bilder/hero-kurzlaeufer.jpg`, `bilder/hero-kurzlaeufer-mobile.jpg`, `bilder/hero-angler-mobile.jpg`, `bilder/stimmung/*.jpg`, `bilder/faenge/*.jpg` (genau diese Namen), Bundle-Bilder aus `bilder/bundles/`.
 15. [ ] **Kundenkonten auf „klassisch“ stellen** (Einstellungen → Kundenkonten). Nur dann nutzt der Shop die eigene Registrierungs-/Login-Seite mit Name, Newsletter-Häkchen und automatischem 10-%-Rabatt. Mit den „neuen Kundenkonten“ (Login per Einmalcode) zeigt Shopify seine eigene Seite, dann den Pop-up-Modus im Editor auf „Per E-Mail nach Newsletter-Anmeldung“ stellen.
@@ -77,3 +77,4 @@ Reihenfolge und Details: `import/ANLEITUNG.md`, `bundles.md`, `rechtliches/READM
 - **Gestrichen:** Stahl-/Titanvorfach (kommt nicht ins Sortiment) und die fehlenden Gewichte (gibt es nicht; die Zeilen bleiben bei diesen Produkten einfach leer).
 - **Handy-Motiv des Anglers** neu aus dem Desktop-Foto zugeschnitten (`bilder/hero-angler-mobile.jpg`), das alte war defekt.
 - **Seiten fertig:** Zahlung (PayPal, Karte, Apple/Google Pay, bar bei Abholung), Versandkosten & Lieferung, Newsletter (ca. 1× im Monat, Neuheiten & Aktionen), Über uns („Unser Versprechen“), Support-Kontakt, Widerruf mit PDF-Formular zum Ausfüllen. Instagram bleibt als Link.
+- **Versandkostenfrei ab 59 €** (vorher 100 €) überall angepasst: Ansage-Leiste, Produktseiten, Bundles, FAQ, Versandseite, Warenkorb-Fortschritt, Versandrichtlinie.

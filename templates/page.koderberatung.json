@@ -3,7 +3,6 @@
     "hero": {
       "type": "advice-hero",
       "settings": {
-        "eyebrow": "Köderberatung",
         "heading": "Welcher Köder passt zu dir?",
         "text": "<p>Nicht jeder Köder passt zu jeder Situation. Bei der Auswahl spielen Zielfisch, Jahreszeit, Gewässerstruktur, Lauftiefe und Führungsstil eine wichtige Rolle.</p><p>Unsere Köderberatung soll dir helfen, schneller den passenden Bereich zu finden. Egal ob du nach Hechtködern, Zanderködern, Barschködern, Wobblern, Jigköpfen oder Gummifischen suchst: Entscheidend ist immer der konkrete Einsatzzweck.</p>",
         "image": "shopify://shop_images/stimmung-daemmerung.jpg",

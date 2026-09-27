@@ -5,7 +5,6 @@
 <section class="info-page newsletter-page">
   <div class="page-width newsletter-page__grid">
     <div>
-      <p class="info-page__eyebrow">{{ 'newsletter.eyebrow' | t }}</p>
       <h1 class="page-title display">{% render 'slant-words', text: section.settings.heading %}</h1>
       {%- if section.settings.text != blank -%}<p class="lead newsletter-page__lead">{{ section.settings.text | escape }}</p>{%- endif -%}
       <ul class="auth__perks newsletter-page__perks" role="list">

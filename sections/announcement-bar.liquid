@@ -1,5 +1,5 @@
 {%- if section.blocks.size > 0 -%}
-  <div class="announcement" data-announcement data-interval="{{ section.settings.interval }}">
+  <div class="announcement" role="region" aria-label="{{ 'general.announcements' | t }}" data-announcement data-interval="{{ section.settings.interval }}">
     <ul class="page-width announcement__list" role="list">
       {%- for block in section.blocks -%}
         <li {{ block.shopify_attributes }}>

@@ -144,7 +144,7 @@
         "id": "free_shipping_threshold",
         "label": "Versandkostenfrei ab (€)",
         "info": "0 blendet die Fortschrittsanzeige aus.",
-        "default": 100
+        "default": 59
       },
       {
         "type": "text",

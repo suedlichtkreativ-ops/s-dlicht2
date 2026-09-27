@@ -445,6 +445,13 @@
       span.textContent = img.alt;
       img.replaceWith(span);
     };
+    // Footer seal: its text stays until the image has really loaded (no empty box while it loads or when it fails).
+    const shown = () => { if (!img.naturalWidth) return; const t = $('.legal-badge__text', img.parentElement); if (t) t.hidden = true; img.hidden = false; };
+    if (img.hasAttribute('data-legal-badge-img')) {
+      img.loading = 'eager';
+      if (img.complete) shown(); else img.addEventListener('load', shown, { once: true });
+      return;
+    }
     if (img.complete && !img.naturalWidth) fallback(); else img.addEventListener('error', fallback, { once: true });
   });
 

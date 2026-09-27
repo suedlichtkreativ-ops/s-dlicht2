@@ -21,7 +21,7 @@
 <article class="catch">
   <div class="page-width catch__grid">
     <div class="catch__media">
-      <ul class="catch__photos" role="list" data-catch-photos>
+      <ul class="catch__photos" role="list" data-catch-photos tabindex="0" aria-label="{{ 'catches.photos_label' | t: title: article.title }}">
         {%- if article.image == blank and photos == blank -%}
           <li class="catch__photo catch__photo--empty" aria-hidden="true">{% render 'fish-icon', name: fish %}</li>
         {%- endif -%}
@@ -44,8 +44,8 @@
     </div>
 
     <div class="catch__copy">
-      <p class="catch__eyebrow">{{ 'catches.eyebrow' | t }} · {{ article.published_at | time_tag: format: 'date' }}</p>
       <h1 class="catch__title display">{{ article.title | escape }}</h1>
+      <p class="catch__meta">{{ 'catches.eyebrow' | t }} vom {{ article.published_at | time_tag: format: 'date' }}</p>
       <section class="catch__details" aria-labelledby="CatchDetails">
         <h2 class="catch__details-title" id="CatchDetails">{{ 'catches.details' | t }}</h2>
         <dl class="catch__facts">

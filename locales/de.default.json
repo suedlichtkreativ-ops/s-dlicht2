@@ -9,7 +9,8 @@
     "previous": "Vorherige Seite",
     "next": "Nächste Seite",
     "page": "Seite {{ page }}",
-    "tagged": "Schlagwort „{{ tags }}“"
+    "tagged": "Schlagwort „{{ tags }}“",
+    "announcements": "Hinweise"
   },
   "accessibility": {
     "skip_to_content": "Zum Inhalt springen"
@@ -357,7 +358,8 @@
     "details": "Details zu diesem Fang",
     "method": "Angelmethode",
     "caught_at": "Fangzeit",
-    "region": "Region"
+    "region": "Region",
+    "photos_label": "Fotos zu {{ title }}, mit den Pfeiltasten blättern"
   },
   "date_formats": {
     "month_year": "%B %Y"

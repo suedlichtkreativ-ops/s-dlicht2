@@ -72,7 +72,7 @@ Unter jedem Bericht und auf der Übersicht steht „Zeig uns deinen Fang“: Kun
 
 ## Bericht 5: Kapitaler Hecht aus dem Archiv
 
-- Foto: **fehlt noch als Datei** (Hecht am Wehr) – bitte als Anhang schicken, wird `bilder/faenge/fang-hecht-archiv-1.jpg`.
+- Foto: `bilder/faenge/fang-hecht-archiv-1.jpg` (Titelbild)
 - Fischart: Hecht · keine weiteren Angaben
 - Ausrüstung: nicht bekannt → **Passende Ausrüstung** (`custom.empfehlung`): Großräuber (Swimbait), Schwerläufer (Jerkbait), Kraftrute Spinn 2,44 m, Stromjäger 2800, Silberleine, Kraftzange 28 cm
 - Text: „Ein kapitaler Hecht aus unserem Archiv. Genaue Angaben zu diesem Fang haben wir nicht mehr. Für Hechte dieser Größe: eine kräftige Spinnrute, belastbare geflochtene Schnur, große Köder – und immer ein Stahl- oder Titanvorfach.“
