@@ -264,5 +264,32 @@
   "bundle": {
     "saving": "Du sparst",
     "compared": "gegenüber Einzelkauf ({{ total }})"
+  },
+  "finder": {
+    "q_fish": "Auf welchen Fisch gehst du?",
+    "q_zone": "Wo steht der Fisch gerade?",
+    "q_style": "Wie fischst du am liebsten?",
+    "zone_top": "An der Oberfläche",
+    "zone_top_hint": "Popper, Frösche, Topwater",
+    "zone_shallow": "Flach & am Kraut",
+    "zone_shallow_hint": "Flachwasser, Krautkanten, Seerosen",
+    "zone_deep": "Tief & am Grund",
+    "zone_deep_hint": "Jiggen, Texas- und Carolina-Rig",
+    "style_reel": "Werfen & einkurbeln",
+    "style_reel_hint": "Suchköder für viel Strecke",
+    "style_jig": "Zupfen & jiggen",
+    "style_jig_hint": "Stop & Go, Jerken, Finesse",
+    "style_loud": "Laut & auffällig",
+    "style_loud_hint": "Rassel, Vibration, Druckwelle",
+    "any": "Weiß ich nicht / egal",
+    "back": "Zurück",
+    "exact": "[count] Köder passen genau zu deiner Auswahl.",
+    "exact_one": "1 Köder passt genau zu deiner Auswahl.",
+    "close": "Keine genaue Übereinstimmung. Das sind die besten Köder für deinen Zielfisch.",
+    "why": "Passt: [reasons]",
+    "lucky": "Glücksgriff",
+    "lucky_result": "Dein Glücksgriff",
+    "restart": "Neu starten",
+    "more": "Alle Köder für diesen Fisch"
   }
 }

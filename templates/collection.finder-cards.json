@@ -1,0 +1,5 @@
+{
+  "layout": false,
+  "sections": { "cards": { "type": "finder-cards", "settings": {} } },
+  "order": ["cards"]
+}

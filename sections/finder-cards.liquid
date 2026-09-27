@@ -1,0 +1,15 @@
+{%- comment -%}
+  Product cards for the Köder-Finder, fetched on demand via /collections/<handle>?view=finder-cards
+  so the home page stays light. Uses templates/collection.finder-cards.json (no layout).
+{%- endcomment -%}
+<ul data-finder-cards>
+  {%- paginate collection.products by 100 -%}
+    {%- for product in collection.products -%}
+      {% render 'finder-item', product: product, index: forloop.index0 %}
+    {%- endfor -%}
+  {%- endpaginate -%}
+</ul>
+
+{% schema %}
+{ "name": "Köder-Finder Karten", "settings": [] }
+{% endschema %}

@@ -1155,6 +1155,67 @@ input, textarea { caret-color: var(--ink); }
 .shopify-policy__body table { width: 100%; border-collapse: collapse; margin-block: 1rem; font-variant-numeric: tabular-nums; }
 .shopify-policy__body :is(td, th) { border: var(--hairline); padding: 0.5rem 0.75rem; text-align: left; vertical-align: top; }
 
+/* Köder-Finder */
+.finder [hidden] { display: none !important; }
+.finder { padding-block: clamp(3.5rem, 8vw, 6rem); background: var(--paper); border-top: var(--border); }
+.finder__head { display: grid; gap: 0.75rem; max-width: 40rem; margin-bottom: clamp(1.75rem, 4vw, 2.5rem); }
+.finder__title { font-size: clamp(2.5rem, 6vw, 4.25rem); line-height: 0.95; }
+.finder__text { color: var(--muted); font-size: 1.0625rem; line-height: 1.5; max-width: 52ch; }
+.finder__form { max-width: 56rem; }
+.finder__step { border: 0; padding: 0; margin: 0; min-width: 0; }
+.finder__step.is-active { animation: settle 420ms var(--ease-out) both; }
+.finder__q { display: flex; align-items: baseline; gap: 0.75rem; padding: 0; margin-bottom: 1.25rem; font-size: clamp(1.375rem, 3vw, 1.75rem); font-weight: 750; font-stretch: 80%; line-height: 1.15; }
+.finder__q:focus { outline: none; }
+.finder__num { font-size: 0.875rem; font-weight: 700; font-stretch: 100%; color: var(--muted); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.finder__options { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 12.5rem), 1fr)); gap: 0.75rem; }
+.finder__options--fish { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.finder__option {
+  position: relative; display: grid; gap: 0.25rem; align-content: start; min-height: 4.5rem; padding: 1rem 1.125rem;
+  background: var(--white); border: var(--border); cursor: pointer;
+  transition: background-color var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out);
+}
+.finder__option input { position: absolute; opacity: 0; pointer-events: none; }
+.finder__option:hover { background: #fffbe6; }
+.finder__option:active { transform: translateY(1px); }
+.finder__option:has(input:checked) { background: var(--signal); }
+.finder__option:has(input:focus-visible) { outline: 3px solid var(--ink); outline-offset: 3px; }
+.finder__label { font-weight: 750; font-size: 1.0625rem; line-height: 1.2; }
+.finder__hint { color: var(--muted); font-size: 0.875rem; line-height: 1.35; }
+.finder__option:has(input:checked) .finder__hint { color: var(--ink); }
+.finder__option--fish { justify-items: center; text-align: center; padding: 1rem 0.5rem 0.875rem; gap: 0.625rem; }
+.finder__disc { display: grid; place-items: center; width: min(100%, 6.5rem); aspect-ratio: 1; border-radius: 50%; background: var(--ink); color: var(--white); transition: background-color var(--dur-base) var(--ease-out); }
+.finder__disc .fish { width: 88%; height: auto; transition: filter var(--dur-base) var(--ease-out), transform 600ms var(--ease-out); }
+.finder__option--fish:hover .finder__disc .fish { transform: translateX(4%) rotate(-3deg); }
+.finder__option--fish:has(input:checked) { background: var(--white); }
+.finder__option--fish:has(input:checked) .finder__disc { background: var(--signal); }
+.finder__option--fish:has(input:checked) .fish--drawing { filter: invert(1); }
+.finder__option--fish .finder__label { font-size: 1.125rem; font-stretch: 80%; text-transform: uppercase; }
+.finder__nav { margin-top: 1rem; min-height: 2.75rem; }
+.finder__back { display: inline-flex; align-items: center; gap: 0.35rem; min-height: 2.75rem; padding: 0; background: none; border: 0; font-weight: 650; text-decoration: underline; text-underline-offset: 3px; }
+.finder__result { display: grid; gap: 1.5rem; }
+.finder__result-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; }
+.finder__summary { font-size: clamp(1.25rem, 2.6vw, 1.5rem); font-weight: 750; font-stretch: 80%; line-height: 1.2; max-width: 36ch; }
+.finder__summary:focus { outline: none; }
+.finder__actions { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem 1.5rem; }
+.finder__restart { min-height: 2.75rem; padding: 0; background: none; border: 0; font-weight: 650; text-decoration: underline; text-underline-offset: 3px; }
+
+.finder__item { display: grid; gap: 0.5rem; align-content: start; animation: settle 480ms var(--ease-out) both; }
+.finder__why { justify-self: start; padding: 0.25rem 0.5rem; background: var(--ink); color: var(--white); font-size: 0.8125rem; font-weight: 650; line-height: 1.3; }
+.finder__stage { justify-self: start; display: grid; width: min(100%, 19rem); padding: 1rem; background: var(--ink); color: var(--white); }
+.finder__slot { aspect-ratio: 1; background: var(--white); border: 2px solid var(--signal); overflow: hidden; }
+.finder__slot img { width: 100%; height: 100%; object-fit: cover; }
+.finder__stage.is-landed .finder__slot { display: none; }
+.finder__winner .finder__item { animation: bump 460ms var(--ease-out) both; color: var(--ink); background: var(--paper); padding: 0.75rem; }
+.finder__winner .finder__why { background: var(--signal); color: var(--ink); }
+.finder__more { justify-self: start; }
+@media (max-width: 749px) {
+  .finder__options--fish { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .finder__stage { width: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .finder__step.is-active, .finder__item, .finder__winner .finder__item { animation: none; }
+}
+
 /* Free shipping progress */
 .ship { display: grid; gap: 0.5rem; }
 .ship__text { display: flex; align-items: center; gap: 0.4rem; font-size: 0.9375rem; font-weight: 650; }

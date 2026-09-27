@@ -1,0 +1,5 @@
+{%- comment -%} One lure in the Köder-Finder (hidden until ranked). Param: product, index. {%- endcomment -%}
+<li class="finder__item" hidden data-index="{{ index }}" data-tags="{{ product.tags | join: '|' | downcase | escape }}">
+  <p class="finder__why" data-finder-why></p>
+  {% render 'product-card', product: product %}
+</li>

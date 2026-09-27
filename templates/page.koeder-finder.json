@@ -1,0 +1,14 @@
+{
+  "sections": {
+    "finder": {
+      "type": "koeder-finder",
+      "settings": {
+        "collection": "koder",
+        "max": 9
+      }
+    }
+  },
+  "order": [
+    "finder"
+  ]
+}

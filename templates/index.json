@@ -226,11 +226,19 @@
         "white": true,
         "blog": "neuigkeiten"
       }
+    },
+    "finder": {
+      "type": "koeder-finder",
+      "settings": {
+        "collection": "koder",
+        "max": 6
+      }
     }
   },
   "order": [
     "hero",
     "zielfisch",
+    "finder",
     "featured",
     "bundle",
     "tiles",

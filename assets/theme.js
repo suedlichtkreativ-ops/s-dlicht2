@@ -845,6 +845,128 @@
     }
   });
 
+  /* ---------- Köder-Finder: rank lures by tags, explain the match, "Glücksgriff" draws one ---------- */
+  $$('[data-finder]').forEach((finder) => {
+    const form = $('[data-finder-form]', finder);
+    const result = $('[data-finder-result]', finder);
+    if (!form || !result) return;
+    const steps = $$('[data-step]', form);
+    const back = $('[data-finder-back]', form);
+    const summary = $('[data-finder-summary]', finder);
+    const grid = $('[data-finder-grid]', finder);
+    let items = [];
+    let loading;
+    const loadCards = () => {
+      if (!loading) {
+        loading = fetch(grid.dataset.src)
+          .then((res) => { if (!res.ok) throw new Error(res.status); return res.text(); })
+          .then((html) => {
+            const doc = new DOMParser().parseFromString(html, 'text/html');
+            grid.replaceChildren(...$$('.finder__item', doc).map((li) => document.importNode(li, true)));
+            items = $$('.finder__item', grid).map((li) => ({ li, tags: li.dataset.tags.split('|'), index: +li.dataset.index }));
+          })
+          .catch((err) => { loading = null; throw err; });
+      }
+      return loading;
+    };
+    const stage = $('[data-finder-stage]', finder);
+    const slot = $('[data-finder-slot]', finder);
+    const winnerBox = $('[data-finder-winner]', finder);
+    const more = $('[data-finder-more]', finder);
+    const max = parseInt(finder.dataset.max, 10) || 6;
+    let current = 0;
+    let ranked = [];
+
+    const choice = (name) => {
+      const input = $(`input[name="${name}"]:checked`, form);
+      if (!input || !input.dataset.tags) return null;
+      return { tags: input.dataset.tags.split('|'), label: input.dataset.label, url: input.dataset.url };
+    };
+    const hits = (item, pick) => pick && pick.tags.some((t) => item.tags.includes(t));
+
+    const showStep = (n, focus = true) => {
+      current = n;
+      steps.forEach((step, i) => { step.hidden = i !== n; step.classList.toggle('is-active', i === n); });
+      back.hidden = n === 0;
+      form.hidden = false;
+      result.hidden = true;
+      if (focus) $('legend', steps[n]).focus({ preventScroll: true });
+    };
+    $$('legend', form).forEach((l) => l.setAttribute('tabindex', '-1'));
+
+    const render = async () => {
+      try { await loadCards(); } catch (_) { window.location.href = more.href; return; }
+      const fish = choice('fish');
+      const zone = choice('zone');
+      const style = choice('style');
+      const wanted = (zone ? 1 : 0) + (style ? 1 : 0);
+      ranked = items
+        .filter((it) => !fish || hits(it, fish))
+        .map((it) => {
+          const matched = [hits(it, zone) && zone.label, hits(it, style) && style.label].filter(Boolean);
+          const reasons = matched.length ? matched : [fish && fish.label].filter(Boolean);
+          return { ...it, reasons, score: (hits(it, zone) ? 1 : 0) + (hits(it, style) ? 1 : 0) };
+        })
+        .sort((a, b) => b.score - a.score || a.index - b.index);
+      const exact = ranked.filter((it) => it.score === wanted).length;
+      items.forEach((it) => { it.li.hidden = true; it.li.style.order = ''; });
+      ranked.slice(0, max).forEach((it, i) => {
+        it.li.hidden = false;
+        it.li.style.order = i;
+        $('[data-finder-why]', it.li).textContent = finder.dataset.tWhy.replace('[reasons]', it.reasons.join(' · '));
+        markLoaded(it.li);
+      });
+      summary.textContent = exact === 0 ? finder.dataset.tClose
+        : exact === 1 ? finder.dataset.tExactOne : finder.dataset.tExact.replace('[count]', exact);
+      if (fish && fish.url) more.href = fish.url;
+      stage.hidden = true;
+      form.hidden = true;
+      result.hidden = false;
+      summary.focus({ preventScroll: true });
+      finder.scrollIntoView({ behavior: reducedMotion.matches ? 'auto' : 'smooth', block: 'start' });
+    };
+
+    form.addEventListener('change', (e) => {
+      if (!e.target.matches('input[type="radio"]')) return;
+      loadCards().catch(() => {});
+      // Short pause so the chosen option visibly locks in before the next question.
+      setTimeout(() => (current < steps.length - 1 ? showStep(current + 1) : render()), reducedMotion.matches ? 0 : 220);
+    });
+    back.addEventListener('click', () => showStep(Math.max(0, current - 1)));
+    $('[data-finder-restart]', finder).addEventListener('click', () => { form.reset(); showStep(0); });
+
+    // Glücksgriff: shuffle through the matching lures like a slot reel, slowing down, then land on one.
+    $('[data-finder-lucky]', finder).addEventListener('click', () => {
+      if (!ranked.length) return;
+      const candidates = ranked.filter((it) => it.score === ranked[0].score);
+      const winner = candidates[Math.floor(Math.random() * candidates.length)];
+      const imgOf = (it) => { const img = $('.card__img-main, .card__media img', it.li); return img ? img.currentSrc || img.src : ''; };
+      stage.hidden = false;
+      winnerBox.replaceChildren();
+      stage.classList.remove('is-landed');
+      const land = () => {
+        slot.src = imgOf(winner);
+        stage.classList.add('is-landed');
+        const card = winner.li.cloneNode(true);
+        card.hidden = false;
+        card.style.order = '';
+        $('[data-finder-why]', card).textContent = `${finder.dataset.tLucky} · ${winner.reasons.join(' · ')}`;
+        winnerBox.replaceChildren(card);
+        markLoaded(card);
+      };
+      if (reducedMotion.matches || candidates.length < 2) { land(); return; }
+      let delay = 60;
+      let n = 0;
+      const spin = () => {
+        slot.src = imgOf(candidates[n++ % candidates.length]);
+        delay *= 1.16;
+        if (delay < 420) setTimeout(spin, delay); else land();
+      };
+      spin();
+      stage.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    });
+  });
+
   /* ---------- Product recommendations ---------- */
   $$('[data-related]').forEach(async (el) => {
     if (el.querySelector('.grid')) return;
