@@ -12,8 +12,11 @@
       "logo": "shopify://shop_images/LOGOKOeDER.png",
       "favicon": "shopify://shop_images/LOGOKOeDER.png",
       "box_collection": "koder",
-      "social_instagram": "https://www.instagram.com/koederdepot/",
-      "advice_link": "shopify://pages/koderberatung"
+      "social_instagram": "https://www.instagram.com/koderdepot/",
+      "advice_link": "shopify://pages/koderberatung",
+      "store_map_url": "https://www.google.com/maps/place//data=!4m2!3m1!1s0x479c238115d3695f:0xba4be3cf3d1dfa3f",
+      "social_tiktok": "https://www.tiktok.com/@kderdepot",
+      "store_hours": "09:00 – 17:00 Uhr\nNach Vereinbarung auch früher oder später"
     }
   }
 }

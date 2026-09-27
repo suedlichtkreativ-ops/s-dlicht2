@@ -1,7 +1,21 @@
 {
   "sections": {
-    "main": { "type": "main-catch", "settings": {} },
-    "gear": { "type": "catch-gear", "settings": {} }
+    "main": {
+      "type": "main-catch",
+      "settings": {}
+    },
+    "gear": {
+      "type": "catch-gear",
+      "settings": {}
+    },
+    "share": {
+      "type": "catch-share",
+      "settings": {}
+    }
   },
-  "order": ["main", "gear"]
+  "order": [
+    "main",
+    "gear",
+    "share"
+  ]
 }

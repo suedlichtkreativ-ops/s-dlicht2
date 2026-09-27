@@ -8,7 +8,7 @@
     <ul class="advice-contact__ways" role="list">
       {%- if settings.store_email != blank -%}<li><a class="advice-contact__way" href="mailto:{{ settings.store_email }}">{% render 'icon', name: 'mail' %}<span><strong>{{ 'advice.write' | t }}</strong>{{ settings.store_email }}</span></a></li>{%- endif -%}
       {%- if settings.store_phone != blank -%}<li><a class="advice-contact__way" href="tel:{{ settings.store_phone | remove: ' ' | remove: '/' }}">{% render 'icon', name: 'phone' %}<span><strong>{{ 'advice.call' | t }}</strong>{{ settings.store_phone }}</span></a></li>{%- endif -%}
-      {%- if settings.social_instagram != blank -%}<li><a class="advice-contact__way" href="{{ settings.social_instagram }}" target="_blank" rel="noopener">{% render 'icon', name: 'instagram' %}<span><strong>{{ 'advice.instagram' | t }}</strong>@koederdepot</span></a></li>{%- endif -%}
+      {%- if settings.social_instagram != blank -%}<li><a class="advice-contact__way" href="{{ settings.social_instagram }}" target="_blank" rel="noopener">{% render 'icon', name: 'instagram' %}<span><strong>{{ 'advice.instagram' | t }}</strong>{% render 'instagram-handle' %}</span></a></li>{%- endif -%}
       {%- if settings.store_address != blank -%}<li><span class="advice-contact__way">{% render 'icon', name: 'store' %}<span><strong>{{ 'advice.visit' | t }}</strong>{{ settings.store_address | newline_to_br | replace: '<br />', ', ' }}</span></span></li>{%- endif -%}
     </ul>
   </div>

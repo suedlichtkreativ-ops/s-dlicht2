@@ -20,7 +20,7 @@
         <div class="store__fact"><dt>{{ 'store.address' | t }}</dt><dd>{{ settings.store_address }}</dd></div>
       {%- endif -%}
       {%- if settings.store_hours != blank -%}
-        <div class="store__fact"><dt>{{ 'store.hours' | t }}</dt><dd>{{ settings.store_hours }}</dd></div>
+        <div class="store__fact"><dt>{{ 'store.hours' | t }}</dt><dd>{{ settings.store_hours | escape | newline_to_br }}</dd></div>
       {%- endif -%}
       {%- if section.settings.pickup_text != blank -%}
         <div class="store__fact"><dt>{{ 'store.pickup' | t }}</dt><dd>{{ section.settings.pickup_text }}</dd></div>

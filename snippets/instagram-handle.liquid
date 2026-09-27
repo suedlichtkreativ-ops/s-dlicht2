@@ -1,0 +1,4 @@
+{%- comment -%} Prints "@handle" from an Instagram URL (default: the shop's profile from theme settings). Param: url (optional). {%- endcomment -%}
+{%- assign ig_url = url | default: settings.social_instagram -%}
+{%- assign ig_handle = ig_url | split: 'instagram.com/' | last | split: '/' | first | split: '?' | first -%}
+{%- if ig_handle != blank -%}@{{ ig_handle }}{%- endif -%}

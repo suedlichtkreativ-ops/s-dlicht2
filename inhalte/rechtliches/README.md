@@ -29,7 +29,7 @@ Die Seite „Widerruf“ (`/pages/widerruf-formular`) nutzt im alten Shop die Ap
 
 ## Beim Abgleich aufgefallen – entschieden am 27.09.2026
 
-- **Selbstabholung:** bleibt (kostenlos in Landsberg). AGB 5.5 („Selbstabholung ist aus logistischen Gründen nicht möglich.“) widerspricht dem und **muss bei der IT-Recht Kanzlei geändert werden**. In `agb.html` steht bis dahin noch der alte Wortlaut – den Text nicht selbst umschreiben, sondern den aktualisierten Text der Kanzlei einfügen.
+- **Selbstabholung:** bleibt (kostenlos in Landsberg). AGB 5.5 habe ich in `agb.html` selbst angepasst (Abholung möglich, Adresse, Abholzeiten 09:00–17:00 Uhr bzw. nach Vereinbarung); die Versandseite nennt dieselben Angaben. **Achtung:** Der Text stammt von der IT-Recht Kanzlei. Eine eigene Änderung fällt nicht unter deren Haftung/Update-Service und wird beim nächsten automatischen Update überschrieben. Sicherer: Im Mandantenportal „Selbstabholung möglich“ einstellen, dann liefert die Kanzlei eine passende Fassung.
 - **Kauf auf Rechnung:** Hinweis aus der gelben Leiste entfernt. Auf der Produktseite steht jetzt „Sicher zahlen mit PayPal & Karte“.
 - **E-Mail-Adresse:** überall `info@koederdepot.de`. In Impressum, Widerruf und Datenschutz ersetzt. Bitte auch im Mandantenportal der IT-Recht Kanzlei so hinterlegen, sonst kommt beim nächsten Update die alte Adresse zurück.
 - **Anschrift:** überall „Schwaighofstraße 18 h“. In den Rechtstexten ersetzt, ebenfalls im Mandantenportal anpassen.

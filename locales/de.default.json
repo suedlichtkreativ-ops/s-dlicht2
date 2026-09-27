@@ -55,7 +55,7 @@
   },
   "store": {
     "address": "Adresse",
-    "hours": "Öffnungszeiten",
+    "hours": "Abholzeiten",
     "pickup": "Abholung",
     "contact": "Kontakt",
     "route": "Route planen",
@@ -351,6 +351,9 @@
       "other": "{{ count }} Fotos"
     },
     "to_gear": "Ausrüstung ansehen",
-    "all": "Alle Fänge ansehen"
+    "all": "Alle Fänge ansehen",
+    "angler": "Gefangen von",
+    "on_instagram": "Auf Instagram ansehen",
+    "tag_us": "Markiere uns:"
   }
 }

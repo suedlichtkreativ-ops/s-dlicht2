@@ -1436,7 +1436,6 @@ a.advice-contact__way:hover { background: var(--ink); color: var(--white); }
 .catch__facts dd { font-weight: 750; font-size: 1.125rem; margin-top: 0.15rem; }
 .catch__facts dd a { text-decoration: underline; text-decoration-color: var(--signal); text-underline-offset: 3px; }
 .catch__story { margin-top: 1.75rem; font-size: 1.0625rem; }
-.catch__to-gear { margin-top: 2rem; }
 .catch-gear { background: var(--white); border-top: var(--border); }
 .catch-gear__grid { margin-top: 2rem; }
 .catch-gear__back { margin-top: 2rem; }
@@ -1451,3 +1450,12 @@ a.advice-contact__way:hover { background: var(--ink); color: var(--white); }
 .catch__photos::-webkit-scrollbar { display: none; }
 .catch__btn { border: var(--border); background: var(--white); }
 .catch__btn:hover { background: var(--signal); }
+.catch__actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 2rem; }
+.catch-share__box { display: grid; gap: 1.25rem; align-items: center; padding: clamp(1.5rem, 4vw, 2.5rem); background: var(--ink); color: var(--white); }
+@media (min-width: 990px) { .catch-share__box { grid-template-columns: auto 1fr auto; gap: 2rem; } }
+.catch-share__icon { display: grid; place-items: center; width: 4rem; height: 4rem; background: var(--signal); color: var(--ink); }
+.catch-share__icon .icon { width: 2rem; height: 2rem; }
+.catch-share__title { font-size: clamp(1.75rem, 3.5vw, 2.5rem); line-height: 0.95; }
+.catch-share__text { margin-top: 0.6rem; color: #d6d6d0; max-width: 60ch; }
+.catch-share__text strong { color: var(--signal); }
+.catch-share__btn { justify-self: start; }

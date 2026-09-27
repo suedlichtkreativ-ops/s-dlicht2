@@ -1,6 +1,7 @@
 {%- comment -%}
   Fangbericht (template article.fangbericht): photos, facts and story of one catch.
-  Facts from article metafields custom.*: fisch, laenge_cm, gewicht_kg, gewaesser, bilder (list of files), ausruestung (list of products).
+  Facts from article metafields custom.*: fisch, laenge_cm, gewicht_kg, gewaesser, angler (name or @instagram),
+  instagram (link to the post), bilder (list of files), ausruestung (list of products).
   The gear is shown by the section "Fangbericht: Ausrüstung" below.
 {%- endcomment -%}
 {%- liquid
@@ -11,6 +12,8 @@
   assign water = m.gewaesser.value | default: m.gewaesser
   assign gear = m.ausruestung.value
   assign photos = m.bilder.value
+  assign angler = m.angler.value | default: m.angler
+  assign ig_post = m.instagram.value | default: m.instagram
 -%}
 <article class="catch">
   <div class="page-width catch__grid">
@@ -37,17 +40,26 @@
     <div class="catch__copy">
       <p class="catch__eyebrow">{{ 'catches.eyebrow' | t }} · {{ article.published_at | time_tag: format: 'date' }}</p>
       <h1 class="catch__title display">{{ article.title | escape }}</h1>
-      {%- if fish != blank or length != blank or weight != blank or water != blank or gear != blank -%}
+      {%- if fish != blank or length != blank or weight != blank or water != blank or gear != blank or angler != blank -%}
         <dl class="catch__facts">
           {%- if fish != blank -%}<div><dt>{{ 'catches.fish' | t }}</dt><dd>{{ fish | escape }}</dd></div>{%- endif -%}
           {%- if length != blank -%}<div><dt>{{ 'catches.length' | t }}</dt><dd>{{ length }} cm</dd></div>{%- endif -%}
           {%- if weight != blank -%}<div><dt>{{ 'catches.weight' | t }}</dt><dd>{{ weight | replace: '.', ',' }} kg</dd></div>{%- endif -%}
           {%- if water != blank -%}<div><dt>{{ 'catches.water' | t }}</dt><dd>{{ water | escape }}</dd></div>{%- endif -%}
+          {%- if angler != blank -%}
+            <div><dt>{{ 'catches.angler' | t }}</dt><dd>
+              {%- assign first_char = angler | slice: 0 -%}
+              {%- if first_char == '@' -%}<a href="https://www.instagram.com/{{ angler | remove_first: '@' | strip }}/" target="_blank" rel="noopener">{{ angler | escape }}</a>{%- else -%}{{ angler | escape }}{%- endif -%}
+            </dd></div>
+          {%- endif -%}
           {%- if gear.first != blank -%}<div><dt>{{ 'catches.lure_short' | t }}</dt><dd><a href="{{ gear.first.url }}">{{ gear.first.title | remove: 'Köderdepot ' | escape }}</a></dd></div>{%- endif -%}
         </dl>
       {%- endif -%}
       <div class="rte catch__story">{{ article.content }}</div>
-      {%- if gear != blank -%}<a class="btn btn--slant catch__to-gear" href="#ausruestung">{{ 'catches.to_gear' | t }}</a>{%- endif -%}
+      <div class="catch__actions">
+        {%- if gear != blank -%}<a class="btn btn--slant" href="#ausruestung">{{ 'catches.to_gear' | t }}</a>{%- endif -%}
+        {%- if ig_post != blank -%}<a class="btn btn--outline btn--slant" href="{{ ig_post }}" target="_blank" rel="noopener">{% render 'icon', name: 'instagram', class: 'icon--sm' %} {{ 'catches.on_instagram' | t }}</a>{%- endif -%}
+      </div>
     </div>
   </div>
 </article>

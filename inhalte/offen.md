@@ -6,21 +6,13 @@ Stand 27.09.2026. Am Live-Shop „Köderdepot neu“ wurde nichts verändert: nu
 
 ### Entscheidungen
 
-Alle entschieden am 27.09.2026 (siehe D). Offen ist nur noch:
+Alle entschieden (siehe D). Empfehlung:
 
-- [ ] **AGB 5.5** („Selbstabholung nicht möglich“) bei der IT-Recht Kanzlei ändern lassen, weil die Abholung bleibt. Dabei im Mandantenportal E-Mail `info@koederdepot.de` und Anschrift „Schwaighofstraße 18 h“ hinterlegen. (`rechtliches/README.md`)
-
-### Fehlende Angaben
-
-- [ ] **Stahl-/Titanvorfach** fürs Sortiment: Name, Preis, Bild. Danach kommt es in Starter-Bundle und Hecht-Set, Preise werden neu berechnet. (`bundles.md`)
-- [ ] **Gewichte:** Wurfgewicht Nachtjagdrute 2,4 m und Weitwurfrute Spinn 2,7 m; Eigengewicht Uferrolle 1500/2500, Stromjäger 2800/5800/12000, Lösezange Feingriff.
-- [ ] **Öffnungszeiten** für die Abholung (Zeile ist bis dahin ausgeblendet).
-- [ ] **Google-Maps-Link** für „Route planen“.
-- [ ] **TikTok-Link** (Profil-Adresse). Facebook und YouTube gibt es nicht.
+- [ ] **AGB 5.5** habe ich selbst angepasst (`rechtliches/agb.html`). Empfehlung: im Mandantenportal der IT-Recht Kanzlei trotzdem „Selbstabholung möglich“, E-Mail `info@koederdepot.de` und Anschrift „Schwaighofstraße 18 h“ hinterlegen, sonst überschreibt das nächste Kanzlei-Update die Änderung. (`rechtliches/README.md`)
 
 ### Fangberichte & Köderberatung
 
-- [ ] **Fakten zu den zwei Fängen** (Länge, Gewicht, Gewässer, Datum, Geschichte; bei der Forelle auch Rute/Rolle/Schnur und Köderfarben). Liste in `fangberichte.md`.
+- [ ] **Fakten zu den zwei Fängen** (Länge, Gewicht, Gewässer, Datum, Geschichte, wer gefangen hat bzw. dessen @Instagram, Link zum Instagram-Post; bei der Forelle auch Rute/Rolle/Schnur und Köderfarben). Liste in `fangberichte.md`.
 - [ ] **Texte der Köderberatung prüfen** (Zielfisch- und Wassertiefen-Tipps sind meine Entwürfe; der Einleitungstext stammt von eurer bisherigen Seite „Köderberatung“).
 
 ### Bilder
@@ -78,3 +70,6 @@ Reihenfolge und Details: `import/ANLEITUNG.md`, `bundles.md`, `rechtliches/READM
   - FAQ-Antworten „Anfänger“ und „Spinn- oder Casting-Rute“ freigegeben.
   - Studio-Fotos kommen mit dem CSV-Import (`bilder/produkte/`, Anleitung in `import/ANLEITUNG.md`).
 - **Umgesetzt 27.09.2026 (Nachmittag):** Köderkiste und Preisschild „−10 %“ im Hero, Kurzläufer-Hintergrund aus echten Kurzläufern, Registrierung/Login mit Willkommensrabatt, Köderberatung als eigene Seite und überall verlinkt, Fangberichte-Blog mit Ausrüstung, alle 439 Produktfotos nachgeschärft.
+- **Google-Profil** (Route planen) und **TikTok** `@kderdepot` verlinkt; **Instagram** korrigiert auf `@koderdepot` (vorher falsch `koederdepot`); Fänge mit Instagram-Markierung („Zeig uns deinen Fang“, „Gefangen von @…“, Link zum Post).
+- **Abholzeiten** 09:00–17:00 Uhr, nach Vereinbarung auch früher oder später (Footer, Kontakt, Laden-Abschnitt, AGB 5.5, Versandseite); **Route planen** führt zum Google-Maps-Eintrag.
+- **Gestrichen:** Stahl-/Titanvorfach (kommt nicht ins Sortiment) und die fehlenden Gewichte (gibt es nicht; die Zeilen bleiben bei diesen Produkten einfach leer).

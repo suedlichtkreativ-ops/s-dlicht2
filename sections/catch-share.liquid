@@ -1,0 +1,28 @@
+{%- comment -%}
+  Fänge: invite anglers to tag the shop on Instagram with their catch. Uses the Instagram profile from theme settings.
+{%- endcomment -%}
+{%- if settings.social_instagram != blank -%}
+  <section class="section catch-share">
+    <div class="page-width catch-share__box">
+      <span class="catch-share__icon" aria-hidden="true">{% render 'icon', name: 'instagram' %}</span>
+      <div class="catch-share__copy">
+        <h2 class="catch-share__title display">{% render 'slant-words', text: section.settings.heading %}</h2>
+        {%- capture handle -%}{% render 'instagram-handle' %}{%- endcapture -%}
+        {%- assign strong = '<strong>' | append: handle | append: '</strong>' -%}
+        <p class="catch-share__text">{{ section.settings.text | escape | replace: '[handle]', strong }}</p>
+      </div>
+      <a class="btn btn--slant catch-share__btn" href="{{ settings.social_instagram }}" target="_blank" rel="noopener">{{ 'catches.tag_us' | t }} {% render 'instagram-handle' %}</a>
+    </div>
+  </section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Fänge: Instagram",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Überschrift", "default": "Zeig uns deinen Fang" },
+    { "type": "textarea", "id": "text", "label": "Text", "info": "[handle] wird durch euren Instagram-Namen ersetzt.", "default": "Markiere [handle] auf deinem Fangfoto oder in deiner Story und schreib dazu, welcher Köder gebissen hat. Die schönsten Fänge zeigen wir hier." }
+  ],
+  "presets": [{ "name": "Fänge: Instagram" }]
+}
+{% endschema %}

@@ -161,7 +161,7 @@
         "type": "url",
         "id": "social_instagram",
         "label": "Instagram",
-        "default": "https://www.instagram.com/koederdepot/"
+        "default": "https://www.instagram.com/koderdepot/"
       },
       {
         "type": "url",

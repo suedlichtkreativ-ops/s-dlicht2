@@ -12,10 +12,14 @@ Einstellungen → Benutzerdefinierte Daten → Blogbeiträge → Definition hinz
 | Länge (cm) | `custom.laenge_cm` | Ganzzahl |
 | Gewicht (kg) | `custom.gewicht_kg` | Dezimalzahl |
 | Gewässer | `custom.gewaesser` | Einzeiliger Text |
+| Gefangen von | `custom.angler` | Einzeiliger Text – Name oder Instagram-Name mit @ (z. B. `@koderdepot`), dann wird er verlinkt |
+| Instagram-Beitrag | `custom.instagram` | URL – Link zum Post, erscheint als Button „Auf Instagram ansehen“ |
 | Weitere Fotos | `custom.bilder` | Datei (Liste), nur Bilder |
 | Ausrüstung | `custom.ausruestung` | Produkt (Liste) – **erstes Produkt = der Köder** |
 
 Leere Felder werden im Bericht einfach nicht angezeigt.
+
+Unter jedem Bericht und auf der Übersicht steht „Zeig uns deinen Fang“: Kunden sollen @koderdepot auf ihrem Fangfoto markieren. Markierte Fänge von Kunden legt ihr als neuen Bericht an (mit Einverständnis), „Gefangen von“ = deren @Name, „Instagram-Beitrag“ = Link zum Post.
 
 ## Neuer Fang (jedes Mal)
 
@@ -29,7 +33,7 @@ Leere Felder werden im Bericht einfach nicht angezeigt.
 - Fisch: Hecht
 - Ausrüstung: Tiefenschwinger (Köder), Kraftrute Spinn 2,44 m, Stromjäger 2800, Silberleine, Snap-Set
 - Text (Entwurf): „Dieser Hecht hat auf den Tiefenschwinger gebissen. Gefischt haben wir mit der Kraftrute Spinn 2,44 m und der Stromjäger 2800, bespult mit Silberleine. Der Köder hing am Snap aus unserem Snap-Set.“
-- **Offen:** Länge, Gewicht, Gewässer, Datum, ggf. Farbe des Tiefenschwingers, kurze Geschichte zum Fang.
+- **Offen:** Länge, Gewicht, Gewässer, Datum, ggf. Farbe des Tiefenschwingers, kurze Geschichte zum Fang, wer gefangen hat (Name oder @Instagram), Link zum Instagram-Post falls vorhanden.
 
 ## Bericht 2: Forellen auf Kompaktblitz und Silberflucht
 
@@ -37,4 +41,4 @@ Leere Felder werden im Bericht einfach nicht angezeigt.
 - Fisch: Forelle
 - Ausrüstung: Kompaktblitz (Köder), Silberflucht
 - Text (Entwurf): „Diese Forellen haben auf Kompaktblitz und Silberflucht gebissen.“
-- **Offen:** Länge, Gewässer, Datum, Rute/Rolle/Schnur, Farben der Köder, Name des Anglers (falls genannt werden soll), kurze Geschichte.
+- **Offen:** Länge, Gewässer, Datum, Rute/Rolle/Schnur, Farben der Köder, wer gefangen hat (Name oder @Instagram, falls genannt werden soll), Link zum Instagram-Post falls vorhanden, kurze Geschichte.

@@ -1,6 +1,16 @@
 {
   "sections": {
-    "main": { "type": "main-catches", "settings": {} }
+    "main": {
+      "type": "main-catches",
+      "settings": {}
+    },
+    "share": {
+      "type": "catch-share",
+      "settings": {}
+    }
   },
-  "order": ["main"]
+  "order": [
+    "main",
+    "share"
+  ]
 }

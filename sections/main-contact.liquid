@@ -35,7 +35,7 @@
     </div>
     <dl class="store__facts">
       {%- if settings.store_address != blank -%}<div class="store__fact"><dt>{{ 'store.address' | t }}</dt><dd>{{ settings.store_address }}</dd></div>{%- endif -%}
-      {%- if settings.store_hours != blank -%}<div class="store__fact"><dt>{{ 'store.hours' | t }}</dt><dd>{{ settings.store_hours }}</dd></div>{%- endif -%}
+      {%- if settings.store_hours != blank -%}<div class="store__fact"><dt>{{ 'store.hours' | t }}</dt><dd>{{ settings.store_hours | escape | newline_to_br }}</dd></div>{%- endif -%}
       {%- if settings.store_phone != blank -%}<div class="store__fact"><dt>{{ 'contact.phone' | t }}</dt><dd><a href="tel:{{ settings.store_phone | remove: ' ' | remove: '/' }}">{{ settings.store_phone }}</a></dd></div>{%- endif -%}
       {%- if settings.store_email != blank -%}<div class="store__fact"><dt>{{ 'contact.email' | t }}</dt><dd><a href="mailto:{{ settings.store_email }}">{{ settings.store_email }}</a></dd></div>{%- endif -%}
     </dl>

@@ -26,7 +26,7 @@
             </ul>
           {%- when 'store' -%}
             <p class="footer__text">{{ settings.store_address }}</p>
-            {%- if settings.store_hours != blank -%}<p class="footer__text" style="margin-top:.75rem">{{ settings.store_hours }}</p>{%- endif -%}
+            {%- if settings.store_hours != blank -%}<p class="footer__text" style="margin-top:.75rem">{{ settings.store_hours | escape | newline_to_br }}</p>{%- endif -%}
             <ul class="footer__links" role="list" style="margin-top:.75rem">
               {%- if settings.store_phone != blank -%}<li><a href="tel:{{ settings.store_phone | remove: ' ' | remove: '/' }}">{{ settings.store_phone }}</a></li>{%- endif -%}
               {%- if settings.store_email != blank -%}<li><a href="mailto:{{ settings.store_email }}">{{ settings.store_email }}</a></li>{%- endif -%}
