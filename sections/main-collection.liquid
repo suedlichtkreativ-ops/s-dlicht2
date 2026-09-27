@@ -18,6 +18,25 @@
       </nav>
       <h1 class="collection-hero__title page-title display">{% render 'slant-words', text: collection.title %}</h1>
       {% render 'subnav', collection: collection, menu: section.settings.menu %}
+      {%- liquid
+        assign box = settings.box_collection
+        assign show_box = false
+        if settings.box_enabled and box != blank
+          if collection.handle == box.handle
+            assign show_box = true
+          else
+            for c in collection.products.first.collections
+              if c.handle == box.handle
+                assign show_box = true
+                break
+              endif
+            endfor
+          endif
+        endif
+      -%}
+      {%- if show_box -%}
+        <p class="box-note">{% render 'icon', name: 'cart-plus', class: 'icon--sm' %}{{ 'box.note' | t: t1: settings.box_t1_qty, p1: settings.box_t1_pct, t2: settings.box_t2_qty, p2: settings.box_t2_pct, t3: settings.box_t3_qty, p3: settings.box_t3_pct }}</p>
+      {%- endif -%}
       {%- if collection.description != blank and section.settings.show_description -%}
         {%- liquid
           assign intro_full = collection.description | strip_html | strip

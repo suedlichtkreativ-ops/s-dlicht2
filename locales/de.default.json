@@ -291,5 +291,12 @@
     "lucky_result": "Dein Glücksgriff",
     "restart": "Neu starten",
     "more": "Alle Köder für diesen Fisch"
+  },
+  "box": {
+    "name": "Köder-Box",
+    "active": "{{ pct }} % Rabatt aktiv.",
+    "missing": "Noch {{ n }} Köder bis {{ pct }} %.",
+    "max": "{{ pct }} % Rabatt auf deine Köder aktiv.",
+    "note": "Köder-Box: {{ t1 }} Köder = {{ p1 }} %, {{ t2 }} Köder = {{ p2 }} %, {{ t3 }} Köder = {{ p3 }} % Rabatt. Wird automatisch abgezogen."
   }
 }

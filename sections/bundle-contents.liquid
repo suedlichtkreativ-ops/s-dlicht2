@@ -6,7 +6,16 @@
   assign items_total = 0
   for block in section.blocks
     if block.settings.product != blank
-      assign line = block.settings.product.price | times: block.settings.quantity
+      assign item_price = block.settings.product.price
+      if block.settings.variant != blank
+        for v in block.settings.product.variants
+          if v.title contains block.settings.variant
+            assign item_price = v.price
+            break
+          endif
+        endfor
+      endif
+      assign line = item_price | times: block.settings.quantity
       assign items_total = items_total | plus: line
     endif
   endfor
@@ -36,25 +45,46 @@
 
     <ol class="bundle__items" role="list">
       {%- for block in section.blocks -%}
-        {%- assign p = block.settings.product -%}
+        {%- liquid
+          assign p = block.settings.product
+          assign item_price = p.price
+          if p != blank and block.settings.variant != blank
+            for v in p.variants
+              if v.title contains block.settings.variant
+                assign item_price = v.price
+                break
+              endif
+            endfor
+          endif
+        -%}
         <li class="bundle__item" {{ block.shopify_attributes }}>
           <span class="bundle__qty">{{ block.settings.quantity }}×</span>
           <span class="media media--white">
-            {%- if p.featured_image -%}
-              {% render 'image', image: p.featured_image, sizes: '96px', widths: '96, 192', alt: '' %}
+            {%- if p.featured_media -%}
+              {% render 'image', image: p.featured_media.preview_image, sizes: '96px', widths: '96, 192', alt: '' %}
             {%- else -%}
               {{ 'product-1' | placeholder_svg_tag: 'placeholder-svg' }}
             {%- endif -%}
           </span>
           <span class="bundle__info">
             {%- if p != blank -%}
-              <a class="bundle__title" href="{{ p.url }}">{{ p.title | escape }}</a>
+              {%- liquid
+                assign item_title = p.title
+                if settings.card_strip_vendor and settings.card_title_prefix != blank
+                  assign vendor_prefix = settings.card_title_prefix | strip | append: ' '
+                  assign title_start = p.title | slice: 0, vendor_prefix.size
+                  if title_start == vendor_prefix
+                    assign item_title = p.title | remove_first: vendor_prefix
+                  endif
+                endif
+              -%}
+              <a class="bundle__title" href="{{ p.url }}">{{ item_title | escape }}</a>
             {%- else -%}
               <span class="bundle__title">{{ block.settings.fallback_title | default: 'Produkt wählen' | escape }}</span>
             {%- endif -%}
             {%- if block.settings.note != blank -%}<span class="muted">{{ block.settings.note | escape }}</span>{%- endif -%}
           </span>
-          {%- if p != blank -%}<span class="price">{{ p.price | times: block.settings.quantity | money }}</span>{%- endif -%}
+          {%- if p != blank -%}<span class="price">{{ item_price | times: block.settings.quantity | money }}</span>{%- endif -%}
         </li>
       {%- endfor -%}
     </ol>
@@ -77,6 +107,7 @@
       "settings": [
         { "type": "product", "id": "product", "label": "Produkt" },
         { "type": "number", "id": "quantity", "label": "Anzahl", "default": 1 },
+        { "type": "text", "id": "variant", "label": "Variante", "info": "Teil des Variantennamens, z. B. „10 g“ oder „0,148 mm“. Bestimmt den Einzelpreis." },
         { "type": "text", "id": "note", "label": "Hinweis", "info": "z. B. „10–40 g Wurfgewicht“" },
         { "type": "text", "id": "fallback_title", "label": "Name, solange kein Produkt gewählt ist" }
       ]

@@ -1,0 +1,451 @@
+{
+  "hinweis": "Feste Bundles mit 10 % Nachlass. Preise aus inhalte/produkte.json (Stand Export). Anlegen mit der App „Shopify Bundles“; Vorlage je Bundle siehe Feld vorlage.",
+  "bundles": [
+    {
+      "handle": "starter-bundle-allround",
+      "titel": "Starter-Bundle Allround-Einstieg",
+      "zielfisch": [
+        "Barsch",
+        "Zander",
+        "Hecht"
+      ],
+      "kurz": "Alles für den Start ins Spinnfischen: Rute, Rolle, Schnur, vier Köder-Techniken und das wichtigste Zubehör.",
+      "fuer_wen": "Für Einsteiger, die mit dem Spinnfischen auf Barsch, Zander und kleinere Hechte anfangen. Beim Hechtangeln immer ein Stahlvorfach verwenden.",
+      "teile": [
+        {
+          "produkt": "Allroundrute Spinn 2,1 m",
+          "handle": "koederdepot-allroundrute-spinn-2-1-m",
+          "variante": "Default Title",
+          "sku": "CS-SR-210-0837",
+          "menge": 1,
+          "einzelpreis": 59.49,
+          "hinweis": "Power M, für Gummi und Wobbler"
+        },
+        {
+          "produkt": "Uferrolle 2500",
+          "handle": "koederdepot-uferrolle-2500",
+          "variante": "Default Title",
+          "sku": "KD-RL-CD-2500-RCG",
+          "menge": 1,
+          "einzelpreis": 42.49,
+          "hinweis": "Stationärrolle, passt zur Rute"
+        },
+        {
+          "produkt": "Grünklinge",
+          "handle": "koederdepot-gruenklinge",
+          "variante": "0,148 mm | 150 m | 11,0 kg",
+          "sku": "KD-BR-SC-148-150",
+          "menge": 1,
+          "einzelpreis": 10.99,
+          "hinweis": "Geflochten, 150 m, liegt bei (nicht aufgespult)"
+        },
+        {
+          "produkt": "Naturkopf",
+          "handle": "koederdepot-naturkopf",
+          "variante": "10 g | 10 St.",
+          "sku": "TK-JC-000-100",
+          "menge": 1,
+          "einzelpreis": 8.39,
+          "hinweis": "10 Jigköpfe für die Gummifische"
+        },
+        {
+          "produkt": "Krabbler",
+          "handle": "koederdepot-krabbler",
+          "variante": "midnight-silver / 7 cm | 2,3 g | 20 St.",
+          "sku": "SF-FS-07-23-MS",
+          "menge": 1,
+          "einzelpreis": 5.49,
+          "hinweis": "Gummifisch 7 cm, 20 Stück"
+        },
+        {
+          "produkt": "Schlängler",
+          "handle": "koederdepot-schlaengler",
+          "variante": "frosted-pearl / 12 cm | 3 g | 10 St.",
+          "sku": "SF-CS-12-3-FP",
+          "menge": 1,
+          "einzelpreis": 4.49,
+          "hinweis": "Twister 12 cm, 10 Stück"
+        },
+        {
+          "produkt": "Rasselminnow",
+          "handle": "koederdepot-rasselminnow",
+          "variante": "river-camouflage / 6 cm | 6 g",
+          "sku": "SF-PD-060-060-RC",
+          "menge": 1,
+          "einzelpreis": 7.49,
+          "hinweis": "Wobbler zum Einkurbeln"
+        },
+        {
+          "produkt": "Krautkönig",
+          "handle": "koederdepot-krautkoenig",
+          "variante": "hot-gillfire / 9 cm | 12 g",
+          "sku": "SF-SL-090-12-HG",
+          "menge": 1,
+          "einzelpreis": 6.99,
+          "hinweis": "Spinnerbait, hängt kaum im Kraut"
+        },
+        {
+          "produkt": "Snap-Set",
+          "handle": "koederdepot-snap-set",
+          "variante": "1 | 40mm",
+          "sku": "KD-TS-01-40MM",
+          "menge": 1,
+          "einzelpreis": 2.49,
+          "hinweis": "Köderwechsel ohne Knoten"
+        },
+        {
+          "produkt": "Feingriff",
+          "handle": "koederdepot-feingriff",
+          "variante": "16 cm",
+          "sku": "KD-AC-HF-160",
+          "menge": 1,
+          "einzelpreis": 12.99,
+          "hinweis": "Lösezange"
+        }
+      ],
+      "einzelwert": 161.3,
+      "nachlass_prozent": 10,
+      "bundle_preis": 145.17,
+      "vorlage": "product.bundle-starter"
+    },
+    {
+      "handle": "hecht-koeder-set",
+      "titel": "Hecht-Köder-Set",
+      "zielfisch": [
+        "Hecht"
+      ],
+      "kurz": "Sechs erprobte Hechtköder für Oberfläche, Mittelwasser und Kraut, dazu die lange Lösezange.",
+      "fuer_wen": "Für alle mit eigener Hechtrute. Ein Stahl- oder Titanvorfach gehört beim Hechtangeln immer dazu.",
+      "teile": [
+        {
+          "produkt": "Großpfeil",
+          "handle": "koederdepot-grosspfeil",
+          "variante": "pearl-fade / 13,5 cm | 28 g",
+          "sku": "HF-MJ-135-280-PF",
+          "menge": 1,
+          "einzelpreis": 10.99,
+          "hinweis": "Swimbait 13,5 cm"
+        },
+        {
+          "produkt": "Langklinge",
+          "handle": "koederdepot-langklinge",
+          "variante": "toxic-jungle / 12 cm | 18,5 g",
+          "sku": "SF-RS-120-185-TJ",
+          "menge": 1,
+          "einzelpreis": 9.99,
+          "hinweis": "Wobbler 12 cm"
+        },
+        {
+          "produkt": "Schwerläufer",
+          "handle": "koederdepot-schwerlaeufer",
+          "variante": "neon-perch-riot / 12 cm | 20 g",
+          "sku": "SF-RR-120-200-NP",
+          "menge": 1,
+          "einzelpreis": 9.99,
+          "hinweis": "Jerkbait 12 cm"
+        },
+        {
+          "produkt": "Doppelklinge",
+          "handle": "koederdepot-doppelklinge",
+          "variante": "blue-nightfall / 12 cm | 18 g",
+          "sku": "SF-VB-12-095-BN",
+          "menge": 1,
+          "einzelpreis": 7.99,
+          "hinweis": "Spinnerbait"
+        },
+        {
+          "produkt": "Seerosenkönig",
+          "handle": "koederdepot-seerosenkoenig",
+          "variante": "lime-slash / 9 cm | 13 g",
+          "sku": "SF-FG-090-13-LS",
+          "menge": 1,
+          "einzelpreis": 7.49,
+          "hinweis": "Froschköder für Seerosenfelder"
+        },
+        {
+          "produkt": "Blattviber",
+          "handle": "koederdepot-blattviber",
+          "variante": "flame-pike / 4,4 cm | 13,6 g",
+          "sku": "SF-IP-044-136-FP",
+          "menge": 1,
+          "einzelpreis": 6.49,
+          "hinweis": "Vibration-Bait"
+        },
+        {
+          "produkt": "Kraftzange 28 cm",
+          "handle": "koederdepot-kraftzange-28-cm",
+          "variante": "Default Title",
+          "sku": "KD-AC-SG-280-350",
+          "menge": 1,
+          "einzelpreis": 15.49,
+          "hinweis": "Lange Lösezange"
+        },
+        {
+          "produkt": "Snap-Set",
+          "handle": "koederdepot-snap-set",
+          "variante": "1 | 40mm",
+          "sku": "KD-TS-01-40MM",
+          "menge": 1,
+          "einzelpreis": 2.49,
+          "hinweis": ""
+        }
+      ],
+      "einzelwert": 70.92,
+      "nachlass_prozent": 10,
+      "bundle_preis": 63.83,
+      "vorlage": "product.bundle-hecht"
+    },
+    {
+      "handle": "zander-koeder-set",
+      "titel": "Zander-Köder-Set",
+      "zielfisch": [
+        "Zander"
+      ],
+      "kurz": "Gummi, Vibration und Metall für die Kante: sechs Zanderköder plus passende Jigköpfe.",
+      "fuer_wen": "Für alle, die gezielt auf Zander jiggen oder faulenzen wollen.",
+      "teile": [
+        {
+          "produkt": "Krabbler",
+          "handle": "koederdepot-krabbler",
+          "variante": "midnight-silver / 7 cm | 2,3 g | 20 St.",
+          "sku": "SF-FS-07-23-MS",
+          "menge": 1,
+          "einzelpreis": 5.49,
+          "hinweis": "Gummifisch 7 cm, 20 Stück"
+        },
+        {
+          "produkt": "Krebskönig",
+          "handle": "koederdepot-krebskoenig",
+          "variante": "molten-craw-1 / 7,5 cm | 3,5 g | 10 St.",
+          "sku": "SF-CL-075-35-MC",
+          "menge": 1,
+          "einzelpreis": 4.49,
+          "hinweis": "Krebs-Imitat, 10 Stück"
+        },
+        {
+          "produkt": "Schlängler",
+          "handle": "koederdepot-schlaengler",
+          "variante": "frosted-pearl / 12 cm | 3 g | 10 St.",
+          "sku": "SF-CS-12-3-FP",
+          "menge": 1,
+          "einzelpreis": 4.49,
+          "hinweis": "Twister 12 cm, 10 Stück"
+        },
+        {
+          "produkt": "Kleinviber",
+          "handle": "koederdepot-kleinviber",
+          "variante": "river-pike / 4,5 cm | 5,2 g",
+          "sku": "SF-BR-045-052-RP",
+          "menge": 1,
+          "einzelpreis": 4.99,
+          "hinweis": "Vibration-Bait"
+        },
+        {
+          "produkt": "Tiefenjäger",
+          "handle": "koederdepot-tiefenjaeger",
+          "variante": "prism-vortex / 5 cm | 10 g",
+          "sku": "KD-SF-PB-50-10-PV",
+          "menge": 1,
+          "einzelpreis": 6.99,
+          "hinweis": "Metal Jig"
+        },
+        {
+          "produkt": "Flussläufer",
+          "handle": "koederdepot-flusslaeufer",
+          "variante": "lime-tiger / 5,5 cm | 11,4 g",
+          "sku": "SF-RC-55-114-LT",
+          "menge": 1,
+          "einzelpreis": 8.49,
+          "hinweis": "Crankbait"
+        },
+        {
+          "produkt": "Naturkopf",
+          "handle": "koederdepot-naturkopf",
+          "variante": "14 g | 10 St.",
+          "sku": "TK-JC-000-140",
+          "menge": 1,
+          "einzelpreis": 8.49,
+          "hinweis": "10 Jigköpfe"
+        },
+        {
+          "produkt": "Snap-Set",
+          "handle": "koederdepot-snap-set",
+          "variante": "1 | 40mm",
+          "sku": "KD-TS-01-40MM",
+          "menge": 1,
+          "einzelpreis": 2.49,
+          "hinweis": ""
+        }
+      ],
+      "einzelwert": 45.92,
+      "nachlass_prozent": 10,
+      "bundle_preis": 41.33,
+      "vorlage": "product.bundle-zander"
+    },
+    {
+      "handle": "barsch-koeder-set",
+      "titel": "Barsch-Köder-Set",
+      "zielfisch": [
+        "Barsch"
+      ],
+      "kurz": "Kleine Crankbaits, Twister, Spinner und Blinker: sechs Barschköder plus leichte Jigköpfe.",
+      "fuer_wen": "Für leichtes Spinnfischen auf Barsch am See und am Fluss.",
+      "teile": [
+        {
+          "produkt": "Zwergkönig",
+          "handle": "koederdepot-zwergkoenig",
+          "variante": "midnight-holo-vein / 3,5 cm | 3,7 g",
+          "sku": "SF-TR-035-037-MH",
+          "menge": 1,
+          "einzelpreis": 6.99,
+          "hinweis": "Crankbait 3,5 cm"
+        },
+        {
+          "produkt": "Feinschwimmer",
+          "handle": "koederdepot-feinschwimmer",
+          "variante": "aqua-prism / 4,8 cm | 4 g",
+          "sku": "ST-MD-048-040-AP",
+          "menge": 1,
+          "einzelpreis": 6.99,
+          "hinweis": "Wobbler 4,8 cm"
+        },
+        {
+          "produkt": "Mikroblitz",
+          "handle": "koederdepot-mikroblitz",
+          "variante": "cherry-reactor / 6 cm | 2 g | 20 St.",
+          "sku": "SF-CS-06-02-CR",
+          "menge": 1,
+          "einzelpreis": 6.1,
+          "hinweis": "Twister, 20 Stück"
+        },
+        {
+          "produkt": "Panzerfunke",
+          "handle": "koederdepot-panzerfunke",
+          "variante": "green-pepper-flash / 8 cm | 3 g | 10 St.",
+          "sku": "SF-RM-08-03-GP",
+          "menge": 1,
+          "einzelpreis": 4.49,
+          "hinweis": "Creature Bait, 10 Stück"
+        },
+        {
+          "produkt": "Leichtblitz",
+          "handle": "koederdepot-leichtblitz",
+          "variante": "gold-mint-pulse / 3,5 cm | 12,2 g",
+          "sku": "SF-FC-035-122-GM",
+          "menge": 1,
+          "einzelpreis": 3.49,
+          "hinweis": "Spinner"
+        },
+        {
+          "produkt": "Silberflucht",
+          "handle": "koederdepot-silberflucht",
+          "variante": "silver-strike / 4 cm | 5 g",
+          "sku": "SF-FS-040-005-SS",
+          "menge": 1,
+          "einzelpreis": 3.49,
+          "hinweis": "Blinker 4 cm"
+        },
+        {
+          "produkt": "Naturkopf",
+          "handle": "koederdepot-naturkopf",
+          "variante": "5 g | 10 St.",
+          "sku": "TK-JC-000-050",
+          "menge": 1,
+          "einzelpreis": 7.99,
+          "hinweis": "10 Jigköpfe"
+        },
+        {
+          "produkt": "Snap-Set",
+          "handle": "koederdepot-snap-set",
+          "variante": "1 | 40mm",
+          "sku": "KD-TS-01-40MM",
+          "menge": 1,
+          "einzelpreis": 2.49,
+          "hinweis": ""
+        }
+      ],
+      "einzelwert": 42.03,
+      "nachlass_prozent": 10,
+      "bundle_preis": 37.83,
+      "vorlage": "product.bundle-barsch"
+    },
+    {
+      "handle": "forellen-koeder-set",
+      "titel": "Forellen-Köder-Set",
+      "zielfisch": [
+        "Forelle"
+      ],
+      "kurz": "Sechs kleine Wobbler und Crankbaits für Forelle, Barsch und Döbel.",
+      "fuer_wen": "Für leichtes Spinnfischen an Bach, Fluss und Forellensee.",
+      "teile": [
+        {
+          "produkt": "Zartläufer",
+          "handle": "koederdepot-zartlaeufer",
+          "variante": "rainbow-river-dot / 5,8 cm | 3,9 g",
+          "sku": "SF-SG-058-039-RR",
+          "menge": 1,
+          "einzelpreis": 6.99,
+          "hinweis": "Crankbait, sinkend"
+        },
+        {
+          "produkt": "Feinklinge",
+          "handle": "koederdepot-feinklinge",
+          "variante": "emerald-shad / 5,5 cm | 4,7 g",
+          "sku": "SF-MP-055-047-ES",
+          "menge": 1,
+          "einzelpreis": 6.99,
+          "hinweis": "Crankbait mit Rassel"
+        },
+        {
+          "produkt": "Silberfunke",
+          "handle": "koederdepot-silberfunke",
+          "variante": "amber-craw / 4,3 cm | 5,5 g",
+          "sku": "SF-RR-043-055-AC",
+          "menge": 1,
+          "einzelpreis": 7.49,
+          "hinweis": "Crankbait"
+        },
+        {
+          "produkt": "Rasselminnow",
+          "handle": "koederdepot-rasselminnow",
+          "variante": "river-camouflage / 6 cm | 6 g",
+          "sku": "SF-PD-060-060-RC",
+          "menge": 1,
+          "einzelpreis": 7.49,
+          "hinweis": "Wobbler 6 cm"
+        },
+        {
+          "produkt": "Feinschwimmer",
+          "handle": "koederdepot-feinschwimmer",
+          "variante": "aqua-prism / 4,8 cm | 4 g",
+          "sku": "ST-MD-048-040-AP",
+          "menge": 1,
+          "einzelpreis": 6.99,
+          "hinweis": "Wobbler 4,8 cm"
+        },
+        {
+          "produkt": "Barschhappen",
+          "handle": "koederdepot-barschhappen",
+          "variante": "amber-craw-flash / 4,2 cm | 6 g",
+          "sku": "SF-MR-042-060-AC",
+          "menge": 1,
+          "einzelpreis": 6.99,
+          "hinweis": "Crankbait 4,2 cm"
+        },
+        {
+          "produkt": "Snap-Set",
+          "handle": "koederdepot-snap-set",
+          "variante": "1 | 40mm",
+          "sku": "KD-TS-01-40MM",
+          "menge": 1,
+          "einzelpreis": 2.49,
+          "hinweis": ""
+        }
+      ],
+      "einzelwert": 45.43,
+      "nachlass_prozent": 10,
+      "bundle_preis": 40.89,
+      "vorlage": "product.bundle-forelle"
+    }
+  ]
+}

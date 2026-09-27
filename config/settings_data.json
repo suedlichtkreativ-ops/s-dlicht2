@@ -10,7 +10,8 @@
       "cart_type": "drawer",
       "free_shipping_threshold": 100,
       "logo": "shopify://shop_images/LOGOKOeDER.png",
-      "favicon": "shopify://shop_images/LOGOKOeDER.png"
+      "favicon": "shopify://shop_images/LOGOKOeDER.png",
+      "box_collection": "koder"
     }
   }
 }

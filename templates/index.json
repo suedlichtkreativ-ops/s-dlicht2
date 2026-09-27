@@ -233,6 +233,15 @@
         "collection": "koder",
         "max": 6
       }
+    },
+    "bundles": {
+      "type": "featured-collection",
+      "settings": {
+        "heading": "Starter & Zielfisch-Sets",
+        "collection": "bundles",
+        "limit": 5,
+        "white": true
+      }
     }
   },
   "order": [
@@ -240,6 +249,7 @@
     "zielfisch",
     "finder",
     "featured",
+    "bundles",
     "bundle",
     "tiles",
     "blog",

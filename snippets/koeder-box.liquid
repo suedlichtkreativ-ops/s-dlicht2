@@ -1,0 +1,76 @@
+{%- comment -%}
+  Köder-Box: progress toward the quantity discount tiers for lures (theme settings "Köder-Box").
+  The discount itself comes from Shopify automatic discounts with the same tiers; this only shows the way there.
+  Counts the quantity of cart lines whose product is in the box collection.
+{%- endcomment -%}
+{%- liquid
+  assign box = settings.box_collection
+  assign count = 0
+  if settings.box_enabled == false or box == blank
+    assign box_off = true
+  endif
+  for line in cart.items
+    for c in line.product.collections
+      if c.handle == box.handle
+        assign count = count | plus: line.quantity
+        break
+      endif
+    endfor
+  endfor
+  assign t1 = settings.box_t1_qty | default: 3
+  assign t2 = settings.box_t2_qty | default: 5
+  assign t3 = settings.box_t3_qty | default: 8
+  assign active_pct = 0
+  assign next_qty = t1
+  assign next_pct = settings.box_t1_pct
+  if count >= t3
+    assign active_pct = settings.box_t3_pct
+    assign next_qty = 0
+  elsif count >= t2
+    assign active_pct = settings.box_t2_pct
+    assign next_qty = t3
+    assign next_pct = settings.box_t3_pct
+  elsif count >= t1
+    assign active_pct = settings.box_t1_pct
+    assign next_qty = t2
+    assign next_pct = settings.box_t2_pct
+  endif
+  assign fill = count | times: 100 | divided_by: t3
+  if fill > 100
+    assign fill = 100
+  endif
+-%}
+{%- if box_off != true and count > 0 -%}
+  <div class="box-progress" data-box-count="{{ count }}">
+    <p class="box-progress__text">
+      <span class="box-progress__name">{{ 'box.name' | t }}</span>
+      {%- if next_qty > 0 -%}
+        {%- assign missing = next_qty | minus: count -%}
+        {%- if active_pct > 0 -%}{{ 'box.active' | t: pct: active_pct }} {% endif -%}
+        {{ 'box.missing' | t: n: missing, pct: next_pct }}
+      {%- else -%}
+        {% render 'icon', name: 'check', class: 'icon--sm' %}{{ 'box.max' | t: pct: active_pct }}
+      {%- endif -%}
+    </p>
+    <div class="box-progress__track" aria-hidden="true">
+      <span class="box-progress__fill" style="width: {{ fill }}%"></span>
+      {%- for q in (1..3) -%}
+        {%- liquid
+          case q
+            when 1
+              assign tq = t1
+              assign tp = settings.box_t1_pct
+            when 2
+              assign tq = t2
+              assign tp = settings.box_t2_pct
+            else
+              assign tq = t3
+              assign tp = settings.box_t3_pct
+          endcase
+          assign pos = tq | times: 100 | divided_by: t3
+        -%}
+        <span class="box-progress__tick{% if count >= tq %} is-reached{% endif %}" style="left: {{ pos }}%"><span>{{ tq }} = {{ tp }} %</span></span>
+      {%- endfor -%}
+    </div>
+  </div>
+{%- endif -%}

@@ -203,5 +203,61 @@
         "default": true
       }
     ]
+  },
+  {
+    "name": "Köder-Box",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "Zeigt im Warenkorb, wie viele Köder bis zur nächsten Rabattstufe fehlen. Die Rabatte selbst in Shopify unter Rabatte als automatische Rabatte mit denselben Stufen anlegen (Kollektion, Mindestmenge)."
+      },
+      {
+        "type": "checkbox",
+        "id": "box_enabled",
+        "label": "Köder-Box anzeigen",
+        "default": true
+      },
+      {
+        "type": "collection",
+        "id": "box_collection",
+        "label": "Kollektion der Köder"
+      },
+      {
+        "type": "number",
+        "id": "box_t1_qty",
+        "label": "Stufe 1: ab Anzahl",
+        "default": 3
+      },
+      {
+        "type": "number",
+        "id": "box_t1_pct",
+        "label": "Stufe 1: Rabatt in %",
+        "default": 5
+      },
+      {
+        "type": "number",
+        "id": "box_t2_qty",
+        "label": "Stufe 2: ab Anzahl",
+        "default": 5
+      },
+      {
+        "type": "number",
+        "id": "box_t2_pct",
+        "label": "Stufe 2: Rabatt in %",
+        "default": 10
+      },
+      {
+        "type": "number",
+        "id": "box_t3_qty",
+        "label": "Stufe 3: ab Anzahl",
+        "default": 8
+      },
+      {
+        "type": "number",
+        "id": "box_t3_pct",
+        "label": "Stufe 3: Rabatt in %",
+        "default": 15
+      }
+    ]
   }
 ]
