@@ -746,17 +746,66 @@
       }
     };
 
-    const scrollToMedia = (mediaId) => {
-      const item = $(`[data-media-id="${mediaId}"]`, root);
-      const list = $('[data-gallery-list]', root);
-      if (!item || !list) return;
-      if (list.scrollWidth > list.clientWidth) {
-        list.scrollTo({ left: item.offsetLeft - list.offsetLeft, behavior: reducedMotion.matches ? 'auto' : 'smooth' });
-      } else if (item !== list.firstElementChild) {
-        list.prepend(item);
-        markLoaded(item);
+    // Gallery slider: one image at a time, thumbnails, counter; follows the chosen colour.
+    const list = $('[data-gallery-list]', root);
+    const slides = list ? Array.from(list.children) : [];
+    const thumbs = $$('[data-thumb]', root);
+    const counter = $('[data-gallery-index]', root);
+    const prev = $('[data-gallery-prev]', root);
+    const next = $('[data-gallery-next]', root);
+    let active = 0;
+    const setActive = (i) => {
+      active = i;
+      thumbs.forEach((t, ti) => t.setAttribute('aria-current', ti === i ? 'true' : 'false'));
+      if (counter) counter.textContent = i + 1;
+      if (prev) prev.disabled = i === 0;
+      if (next) next.disabled = i === slides.length - 1;
+      const thumb = thumbs[i];
+      if (thumb) {
+        const strip = thumb.closest('[data-gallery-thumbs]');
+        const li = thumb.parentElement;
+        if (li.offsetLeft < strip.scrollLeft || li.offsetLeft + li.offsetWidth > strip.scrollLeft + strip.clientWidth) {
+          strip.scrollTo({ left: li.offsetLeft - strip.clientWidth / 2 + li.offsetWidth / 2, behavior: reducedMotion.matches ? 'auto' : 'smooth' });
+        }
       }
     };
+    const goTo = (i, smooth = true) => {
+      if (!list || !slides[i]) return;
+      list.scrollTo({ left: slides[i].offsetLeft - list.offsetLeft, behavior: smooth && !reducedMotion.matches ? 'smooth' : 'auto' });
+      setActive(i);
+    };
+    const scrollToMedia = (mediaId) => {
+      const i = slides.findIndex((li) => li.dataset.mediaId === String(mediaId));
+      if (i >= 0 && i !== active) goTo(i);
+    };
+    if (list && slides.length > 1) {
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => { if (entry.isIntersecting) setActive(slides.indexOf(entry.target)); });
+      }, { root: list, threshold: 0.6 });
+      slides.forEach((li) => io.observe(li));
+      if (prev) prev.addEventListener('click', () => goTo(Math.max(0, active - 1)));
+      if (next) next.addEventListener('click', () => goTo(Math.min(slides.length - 1, active + 1)));
+      list.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight') { e.preventDefault(); goTo(Math.min(slides.length - 1, active + 1)); }
+        if (e.key === 'ArrowLeft') { e.preventDefault(); goTo(Math.max(0, active - 1)); }
+      });
+      thumbs.forEach((t, ti) => t.addEventListener('click', () => {
+        goTo(ti);
+        // A colour's own picture was chosen: select that colour too.
+        const mediaId = slides[ti].dataset.mediaId;
+        const match = variants.find((v) => v.featured_media && String(v.featured_media.id) === mediaId);
+        if (match && picker) {
+          let changed = null;
+          $$('fieldset', picker).forEach((fs, oi) => {
+            const input = $$('input', fs).find((inp) => inp.value === match.options[oi]);
+            if (input && !input.checked) { input.checked = true; changed = input; }
+          });
+          if (changed) changed.dispatchEvent(new Event('change', { bubbles: true }));
+        }
+      }));
+      const start = parseInt($('[data-gallery]', root).dataset.start, 10) || 0;
+      if (start) requestAnimationFrame(() => goTo(start, false)); else setActive(0);
+    }
 
     if (picker) {
       picker.addEventListener('change', () => {
@@ -776,24 +825,6 @@
         if (variant.featured_media) scrollToMedia(variant.featured_media.id);
         refresh(variant);
       });
-    }
-
-    // Gallery dots follow horizontal scroll on mobile.
-    const list = $('[data-gallery-list]', root);
-    const dots = $$('[data-gallery-dots] button', root);
-    if (list && dots.length) {
-      const io = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) return;
-          const index = Array.from(list.children).indexOf(entry.target);
-          dots.forEach((d, i) => d.setAttribute('aria-current', i === index ? 'true' : 'false'));
-        });
-      }, { root: list, threshold: 0.6 });
-      Array.from(list.children).forEach((c) => io.observe(c));
-      dots.forEach((dot, i) => dot.addEventListener('click', () => {
-        const target = list.children[i];
-        list.scrollTo({ left: target.offsetLeft - list.offsetLeft, behavior: reducedMotion.matches ? 'auto' : 'smooth' });
-      }));
     }
 
     // Sticky buy bar when the main button leaves the viewport (mobile).

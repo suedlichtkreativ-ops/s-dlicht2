@@ -127,7 +127,9 @@
       "colors": {
         "one": "{{ count }} Farbe",
         "other": "{{ count }} Farben"
-      }
+      },
+      "prev_media": "Vorheriges Bild",
+      "next_media": "Nächstes Bild"
     }
   },
   "cart": {
