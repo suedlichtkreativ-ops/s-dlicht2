@@ -33,7 +33,9 @@
       ],
       "settings": {
         "legal_menu": "kundeninfo",
-        "text": "Angelköder und Tackle aus Landsberg am Lech. Versand innerhalb Deutschlands, Abholung vor Ort."
+        "text": "Angelköder und Tackle aus Landsberg am Lech. Versand innerhalb Deutschlands, Abholung vor Ort.",
+        "badge_link": "https://www.it-recht-kanzlei.de/",
+        "credit_link": "https://www.suedlicht-studio.de"
       }
     }
   },

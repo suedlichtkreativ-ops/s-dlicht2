@@ -51,7 +51,7 @@
       {%- comment -%} Seal of the provider of the legal texts (e.g. "AGB by IT-Recht Kanzlei"). {%- endcomment -%}
       <a class="legal-badge" href="{{ section.settings.badge_link }}" target="_blank" rel="noopener" data-legal-badge>
         {%- if section.settings.badge_image_url != blank -%}
-          <img src="{{ section.settings.badge_image_url | escape }}" alt="{{ section.settings.badge_text | escape }}" height="36" loading="lazy" hidden data-legal-badge-img>
+          <img src="{{ section.settings.badge_image_url | escape }}" alt="{{ section.settings.badge_text | escape }}" width="120" height="36" loading="lazy" hidden data-legal-badge-img>
         {%- endif -%}
         <span class="legal-badge__text">{{ section.settings.badge_text | escape }}</span>
       </a>
@@ -84,13 +84,13 @@
     { "type": "link_list", "id": "legal_menu", "label": "Rechtliches-Menü", "info": "Impressum, Datenschutz, AGB, Widerruf, Versand." },
     { "type": "checkbox", "id": "show_payment", "label": "Zahlungsarten anzeigen", "default": true },
     { "type": "header", "content": "Siegel Rechtstexte" },
-    { "type": "url", "id": "badge_link", "label": "Link", "info": "Leer lassen, um das Siegel auszublenden.", "default": "https://www.it-recht-kanzlei.de/" },
+    { "type": "url", "id": "badge_link", "label": "Link", "info": "Leer lassen, um das Siegel auszublenden." },
     { "type": "text", "id": "badge_image_url", "label": "Bild-Adresse des Siegels", "info": "Vom Anbieter der Rechtstexte (Mandantenbereich). Ohne Bild erscheint der Text.", "default": "https://www.it-recht-kanzlei.de/logo/Copyright-Logo_AGB.png?i=6adfc-5157e-39c7-907d-1" },
     { "type": "text", "id": "badge_text", "label": "Text", "default": "AGB by IT-Recht Kanzlei" },
     { "type": "header", "content": "Webdesign-Vermerk" },
     { "type": "checkbox", "id": "credit_show", "label": "Vermerk anzeigen", "default": true },
     { "type": "text", "id": "credit_text", "label": "Text", "default": "Gestaltet und umgesetzt von" },
-    { "type": "url", "id": "credit_link", "label": "Link", "default": "https://www.suedlicht-studio.de" }
+    { "type": "url", "id": "credit_link", "label": "Link" }
   ],
   "blocks": [
     {

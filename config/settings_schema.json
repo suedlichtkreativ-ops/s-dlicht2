@@ -160,8 +160,7 @@
       {
         "type": "url",
         "id": "social_instagram",
-        "label": "Instagram",
-        "default": "https://www.instagram.com/koderdepot/"
+        "label": "Instagram"
       },
       {
         "type": "url",
