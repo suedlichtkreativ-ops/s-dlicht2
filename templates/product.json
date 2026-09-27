@@ -40,7 +40,9 @@
         "description",
         "shipping"
       ],
-      "settings": {}
+      "settings": {
+        "menu": "kd-hauptmenue"
+      }
     },
     "related": {
       "type": "related-products",

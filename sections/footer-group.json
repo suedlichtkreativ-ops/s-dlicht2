@@ -9,7 +9,7 @@
           "type": "menu",
           "settings": {
             "heading": "Zielfisch",
-            "menu": "footer-kategorie"
+            "menu": "kd-footer-kategorie"
           }
         },
         "b2": {
@@ -22,7 +22,7 @@
           "type": "menu",
           "settings": {
             "heading": "Shop-Service",
-            "menu": "shop-service"
+            "menu": "kd-shop-service"
           }
         }
       },

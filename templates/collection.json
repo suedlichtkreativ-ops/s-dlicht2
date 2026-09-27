@@ -1,4 +1,13 @@
 {
-  "sections": { "main": { "type": "main-collection", "settings": {} } },
-  "order": ["main"]
+  "sections": {
+    "main": {
+      "type": "main-collection",
+      "settings": {
+        "menu": "kd-hauptmenue"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
 }

@@ -1,6 +1,6 @@
 # Offene Punkte
 
-Stand 27.09.2026. Am Live-Shop „Köderdepot neu“ wurde nichts verändert: nur lesende Abfragen, kein Theme-Upload, keine Einstellungen. Details zu einzelnen Themen stehen in den verlinkten Dateien.
+Stand 27.09.2026. Mit eurer Freigabe ist die unsichtbare Vorbereitung im Live-Store erledigt (Theme unveröffentlicht, Inhalte als Entwurf/geplant). Am sichtbaren Shop hat sich nichts geändert. Stand und nächste Schritte: `umstellung.md`. Details zu einzelnen Themen stehen in den verlinkten Dateien.
 
 ## A. Von euch zu klären oder zu liefern
 
@@ -23,6 +23,8 @@ Alle entschieden (siehe D). Empfehlung:
 
 ## B. Beim Einrichten des neuen Shops (Checkliste)
 
+Erledigt (Phase 1): 1, 4 (neue Kollektionen und Menüs), 5 (Blog), 8, 9 (geplant), 14, 16, 18. Der Rest gehört zum Umschalten (Phase 2).
+
 Reihenfolge und Details: `import/ANLEITUNG.md`, `bundles.md`, `rechtliches/README.md`.
 
 1. [ ] Metafeld-Definitionen `custom.gewicht` und `custom.wurfgewicht` anlegen (Einzeiliger Text).
@@ -44,6 +46,8 @@ Reihenfolge und Details: `import/ANLEITUNG.md`, `bundles.md`, `rechtliches/READM
 17. [ ] **Seiten-Vorlagen zuweisen:** Zahlung → `page.zahlung`, Versand & Lieferung → `page.versand`, Newsletter → `page.newsletter`, Über uns → `page.about`, Kontakt → `page.contact`, Widerruf → `page.widerruf`. Menü „Shop-Service“: „Versandkosten“ auf `/pages/versand-lieferung`.
 18. [ ] **Widerrufsformular** `rechtliches/widerrufsformular.pdf` unter Inhalte → Dateien hochladen (genau dieser Name); die Widerruf-Seite verlinkt es automatisch.
 19. [ ] **Barzahlung bei Abholung** als manuelle Zahlungsart anlegen (Einstellungen → Zahlungen → Manuelle Zahlungsmethoden), nur für Abholung.
+
+- [ ] **Sonderangebote:** Der alte Menüpunkt zeigt auf eine leere Archiv-Kollektion (`sale`). Im neuen Menü weggelassen. Soll es eine Sale-Kollektion geben?
 
 ## C. Später
 

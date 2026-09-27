@@ -30,6 +30,8 @@ Unter jedem Bericht und auf der Übersicht steht „Zeig uns deinen Fang“: Kun
 2. Titel (z. B. „Hecht auf Tiefenschwinger“), Text, Titelbild (Hochformat).
 3. Unten bei den Metafeldern: Fisch, Länge, Gewicht, Gewässer, weitere Fotos, Ausrüstung (Köder zuerst).
 
+Alle fünf Berichte sind im Shop angelegt (unveröffentlicht, siehe `umstellung.md`).
+
 ## Bericht 1: Hecht 90 cm auf Tiefenschwinger
 
 - Fotos: `bilder/faenge/fang-hecht-1.jpg` (Titelbild), `fang-hecht-2.jpg`, `fang-hecht-3.jpg`
@@ -75,6 +77,6 @@ Unter jedem Bericht und auf der Übersicht steht „Zeig uns deinen Fang“: Kun
 - Foto: `bilder/faenge/fang-hecht-archiv-1.jpg` (Titelbild)
 - Fischart: Hecht · keine weiteren Angaben
 - Ausrüstung: nicht bekannt → **Passende Ausrüstung** (`custom.empfehlung`): Großräuber (Swimbait), Schwerläufer (Jerkbait), Kraftrute Spinn 2,44 m, Stromjäger 2800, Silberleine, Kraftzange 28 cm
-- Text: „Ein kapitaler Hecht aus unserem Archiv. Genaue Angaben zu diesem Fang haben wir nicht mehr. Für Hechte dieser Größe: eine kräftige Spinnrute, belastbare geflochtene Schnur, große Köder – und immer ein Stahl- oder Titanvorfach.“
+- Text: „Ein kapitaler Hecht aus unserem Archiv. Genaue Angaben zu diesem Fang haben wir nicht mehr. Für Hechte dieser Größe: eine kräftige Spinnrute, eine große Rolle, belastbare geflochtene Schnur und große Köder.“
 - Hinweis: Im Hintergrund ist ein markantes Wehr zu sehen. Wenn der Ort geheim bleiben soll, schneide ich das Foto enger zu.
 - Die Person auf dem Foto ist gut zu erkennen: bitte deren Einverständnis einholen.
