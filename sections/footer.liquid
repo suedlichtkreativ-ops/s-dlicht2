@@ -64,6 +64,15 @@
       </ul>
     {%- endif -%}
   </div>
+
+  {%- if section.settings.credit_show -%}
+    <div class="page-width footer__credit">
+      <a class="credit" href="{{ section.settings.credit_link | default: '#' }}" target="_blank" rel="noopener">
+        <span class="credit__text">{{ section.settings.credit_text | escape }}</span>
+        {% render 'suedlicht-logo' %}
+      </a>
+    </div>
+  {%- endif -%}
 </footer>
 
 {% schema %}
@@ -77,7 +86,11 @@
     { "type": "header", "content": "Siegel Rechtstexte" },
     { "type": "url", "id": "badge_link", "label": "Link", "info": "Leer lassen, um das Siegel auszublenden.", "default": "https://www.it-recht-kanzlei.de/" },
     { "type": "text", "id": "badge_image_url", "label": "Bild-Adresse des Siegels", "info": "Vom Anbieter der Rechtstexte (Mandantenbereich). Ohne Bild erscheint der Text.", "default": "https://www.it-recht-kanzlei.de/logo/Copyright-Logo_AGB.png?i=6adfc-5157e-39c7-907d-1" },
-    { "type": "text", "id": "badge_text", "label": "Text", "default": "AGB by IT-Recht Kanzlei" }
+    { "type": "text", "id": "badge_text", "label": "Text", "default": "AGB by IT-Recht Kanzlei" },
+    { "type": "header", "content": "Webdesign-Vermerk" },
+    { "type": "checkbox", "id": "credit_show", "label": "Vermerk anzeigen", "default": true },
+    { "type": "text", "id": "credit_text", "label": "Text", "default": "Gestaltet und umgesetzt von" },
+    { "type": "url", "id": "credit_link", "label": "Link", "default": "https://www.suedlicht-studio.de" }
   ],
   "blocks": [
     {

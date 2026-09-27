@@ -726,7 +726,7 @@ input, textarea { caret-color: var(--ink); }
 .social-link:hover span { text-decoration: underline; text-underline-offset: 3px; }
 .footer__social { margin-top: 0.5rem; }
 .footer__social .social-link:hover { color: var(--signal); }
-.footer__bottom { border-top: 1px solid #333; padding-block: 1.25rem calc(1.25rem + env(safe-area-inset-bottom)); display: flex; flex-wrap: wrap; gap: 0.75rem 2rem; justify-content: space-between; font-size: 0.875rem; color: #b8b8b0; }
+.footer__bottom { border-top: 1px solid #333; padding-block: 1.25rem; display: flex; flex-wrap: wrap; gap: 0.75rem 2rem; justify-content: space-between; font-size: 0.875rem; color: #b8b8b0; }
 .footer__bottom ul { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; }
 .footer__bottom a { text-decoration: none; }
 .footer__bottom a:hover { color: var(--white); text-decoration: underline; }
@@ -1489,3 +1489,11 @@ a.advice-contact__way:hover { background: var(--ink); color: var(--white); }
 .newsletter-page__perks li { color: var(--ink); }
 .newsletter-page__perks .icon { color: var(--ink); }
 .newsletter-page__box { display: grid; gap: 1rem; padding: clamp(1.5rem, 4vw, 2.5rem); background: var(--white); border: var(--border); }
+
+/* Web design credit: quiet, last line of the page */
+.footer__credit { display: flex; justify-content: center; padding-block: 1rem calc(1.25rem + env(safe-area-inset-bottom)); border-top: 1px solid #222; }
+.credit { display: inline-flex; align-items: center; gap: 0.75rem; color: #8a8a84; text-decoration: none; font-size: 0.8125rem; letter-spacing: 0.04em; transition: color 200ms var(--ease-out); }
+.credit__text { font-style: italic; }
+.suedlicht-logo { width: auto; height: 3rem; }
+.credit:hover, .credit:focus-visible { color: var(--white); }
+.credit:hover .suedlicht-logo { color: var(--signal); }
