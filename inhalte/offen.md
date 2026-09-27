@@ -49,7 +49,6 @@ Reihenfolge und Details: `import/ANLEITUNG.md`, `bundles.md`, `rechtliches/READM
 13. [ ] Grundpreis pro Meter bei Uferleine, Silberleine, Vorratsleine.
 14. [ ] Dateien hochladen: `bilder/hero-topwater-ohne-text.jpg`, `bilder/hero-kurzlaeufer.jpg`, `bilder/hero-kurzlaeufer-mobile.jpg`, `bilder/stimmung/*.jpg`, `bilder/faenge/*.jpg` (genau diese Namen), Bundle-Bilder aus `bilder/bundles/`.
 15. [ ] **Kundenkonten auf „klassisch“ stellen** (Einstellungen → Kundenkonten). Nur dann nutzt der Shop die eigene Registrierungs-/Login-Seite mit Name, Newsletter-Häkchen und automatischem 10-%-Rabatt. Mit den „neuen Kundenkonten“ (Login per Einmalcode) zeigt Shopify seine eigene Seite, dann den Pop-up-Modus im Editor auf „Per E-Mail nach Newsletter-Anmeldung“ stellen.
-
 16. [ ] **Fangberichte**: Metafelder und die zwei Beiträge laut `fangberichte.md` anlegen.
 
 ## C. Später
