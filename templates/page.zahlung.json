@@ -1,0 +1,62 @@
+{
+  "sections": {
+    "main": {
+      "type": "info-page",
+      "blocks": {
+        "b1": {
+          "type": "card",
+          "settings": {
+            "icon": "check",
+            "title": "PayPal",
+            "text": "<p>Bezahle bequem mit deinem PayPal-Konto. Wenn PayPal es dir anbietet, auch mit „Später bezahlen“.</p>"
+          }
+        },
+        "b2": {
+          "type": "card",
+          "settings": {
+            "icon": "check",
+            "title": "Kredit- und Debitkarte",
+            "text": "<p>Visa und Mastercard. Der Betrag wird mit der Bestellung fällig.</p>"
+          }
+        },
+        "b3": {
+          "type": "card",
+          "settings": {
+            "icon": "check",
+            "title": "Apple Pay & Google Pay",
+            "text": "<p>Mit einem Klick bezahlen, direkt auf dem Handy oder im Browser.</p>"
+          }
+        },
+        "b4": {
+          "type": "card",
+          "settings": {
+            "icon": "store",
+            "title": "Bar bei Abholung",
+            "text": "<p>Du holst deine Bestellung in Landsberg ab? Dann kannst du auch vor Ort bar bezahlen.</p>"
+          }
+        },
+        "b5": {
+          "type": "note",
+          "settings": {
+            "text": "<p>Welche Zahlungsarten dir für deine Bestellung zur Verfügung stehen, siehst du direkt im Checkout. Die Übertragung deiner Daten ist verschlüsselt.</p>",
+            "link_label": "Fragen? Schreib uns",
+            "link": "/pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5"
+      ],
+      "settings": {
+        "eyebrow": "Shop-Service"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

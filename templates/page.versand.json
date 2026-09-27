@@ -1,0 +1,91 @@
+{
+  "sections": {
+    "main": {
+      "type": "info-page",
+      "blocks": {
+        "b1": {
+          "type": "price",
+          "settings": {
+            "label": "Standardversand",
+            "value": "4,99 €",
+            "note": "pro Bestellung innerhalb Deutschlands, mit DPD"
+          }
+        },
+        "b2": {
+          "type": "price",
+          "settings": {
+            "label": "Ab 100 € Bestellwert",
+            "value": "0,00 €",
+            "note": "Wir übernehmen die Versandkosten.",
+            "highlight": true
+          }
+        },
+        "b3": {
+          "type": "price",
+          "settings": {
+            "label": "Sperrgut-Zuschlag",
+            "value": "+ 9,99 €",
+            "note": "für Angelruten ab 115 cm Transportmaß oder Sendungen ab 30 kg, zusätzlich zum Versand"
+          }
+        },
+        "b4": {
+          "type": "price",
+          "settings": {
+            "label": "Abholung in Landsberg",
+            "value": "kostenlos",
+            "note": "Schwaighofstraße 18 h, 09:00–17:00 Uhr, nach Vereinbarung auch früher oder später"
+          }
+        },
+        "b5": {
+          "type": "card",
+          "settings": {
+            "icon": "truck",
+            "title": "Lieferzeit",
+            "text": "<p>Nach Zahlungseingang bereiten wir deine Bestellung schnellstmöglich vor. Mit DPD ist sie in der Regel in 2–4 Werktagen bei dir.</p>"
+          }
+        },
+        "b6": {
+          "type": "card",
+          "settings": {
+            "icon": "mail",
+            "title": "Versandbestätigung",
+            "text": "<p>Sobald dein Paket bei DPD ist, bekommst du eine Versandbestätigung, wenn verfügbar mit Sendungsverfolgung.</p>"
+          }
+        },
+        "b7": {
+          "type": "card",
+          "settings": {
+            "icon": "clock",
+            "title": "Verzögerungen",
+            "text": "<p>In Einzelfällen kann es länger dauern, etwa bei hohem Paketaufkommen, an Feiertagen oder bei extremem Wetter.</p>"
+          }
+        },
+        "b8": {
+          "type": "note",
+          "settings": {
+            "text": "<p>Alle Details stehen in unseren <a href=\"/policies/shipping-policy\">Versandbedingungen</a>. Fragen zur Lieferung beantworten wir gern.</p>",
+            "link_label": "Support kontaktieren",
+            "link": "/pages/contact"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5",
+        "b6",
+        "b7",
+        "b8"
+      ],
+      "settings": {
+        "eyebrow": "Shop-Service",
+        "heading": "Versandkosten & Lieferung"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

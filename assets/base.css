@@ -1461,3 +1461,31 @@ a.advice-contact__way:hover { background: var(--ink); color: var(--white); }
 .catch-share__text { margin-top: 0.6rem; color: #d6d6d0; max-width: 60ch; }
 .catch-share__text strong { color: var(--signal); }
 .catch-share__btn { justify-self: start; }
+
+/* ---------- Info pages (Zahlung, Versandkosten, Newsletter, Widerruf) ---------- */
+.info-page { padding-bottom: clamp(3rem, 6vw, 5rem); }
+.info-page__eyebrow { font-weight: 750; font-size: 0.8125rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem; }
+.info-page__intro { margin-top: 1.25rem; }
+.info-page__grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); }
+.info-price { display: grid; gap: 0.35rem; align-content: start; padding: 1.5rem; background: var(--white); border: var(--border); }
+.info-price--highlight { background: var(--signal); }
+.info-price__label { font-weight: 750; font-size: 0.8125rem; letter-spacing: 0.06em; text-transform: uppercase; }
+.info-price__value { font-size: clamp(2.25rem, 4vw, 3rem); line-height: 1; }
+.info-price__note { font-size: 0.9375rem; color: var(--muted); }
+.info-price--highlight .info-price__note { color: var(--ink); }
+.info-card { display: grid; gap: 0.6rem; align-content: start; padding: 1.5rem; background: var(--white); border: var(--border); }
+.info-card__icon { display: grid; place-items: center; width: 2.75rem; height: 2.75rem; background: var(--ink); color: var(--signal); }
+.info-card__title { font-weight: 750; font-stretch: 85%; font-size: 1.25rem; line-height: 1.15; }
+.info-card__text { font-size: 0.975rem; }
+.info-note { grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: center; justify-content: space-between; padding: 1.25rem 1.5rem; background: var(--ink); color: var(--white); }
+.info-note .rte { max-width: 60ch; }
+.info-note .rte a { color: var(--signal); }
+.file-download { padding-bottom: 2.5rem; }
+.newsletter-page { padding-top: clamp(2rem, 5vw, 4rem); }
+.newsletter-page__grid { display: grid; gap: clamp(2rem, 5vw, 4rem); align-items: start; }
+@media (min-width: 990px) { .newsletter-page__grid { grid-template-columns: 1fr 1fr; } }
+.newsletter-page__lead { margin-top: 1.25rem; max-width: 46ch; }
+.newsletter-page__perks { margin-top: 1.5rem; }
+.newsletter-page__perks li { color: var(--ink); }
+.newsletter-page__perks .icon { color: var(--ink); }
+.newsletter-page__box { display: grid; gap: 1rem; padding: clamp(1.5rem, 4vw, 2.5rem); background: var(--white); border: var(--border); }

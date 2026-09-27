@@ -361,5 +361,9 @@
   },
   "date_formats": {
     "month_year": "%B %Y"
+  },
+  "newsletter": {
+    "eyebrow": "Newsletter",
+    "offer": "Neu hier? 10 % auf deine erste Bestellung gibt es mit einem Kundenkonto:"
   }
 }

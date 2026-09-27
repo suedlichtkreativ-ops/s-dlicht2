@@ -1,7 +1,22 @@
 {
   "sections": {
-    "main": { "type": "main-page", "settings": {} },
-    "app": { "type": "apps", "blocks": {}, "block_order": [] }
+    "main": {
+      "type": "main-page",
+      "settings": {}
+    },
+    "download": {
+      "type": "file-download",
+      "settings": {}
+    },
+    "app": {
+      "type": "apps",
+      "blocks": {},
+      "block_order": []
+    }
   },
-  "order": ["main", "app"]
+  "order": [
+    "main",
+    "download",
+    "app"
+  ]
 }

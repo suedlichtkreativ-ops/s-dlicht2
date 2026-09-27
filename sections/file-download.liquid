@@ -1,0 +1,27 @@
+{%- comment -%} A file from Shopify "Inhalte → Dateien" to download, e.g. the withdrawal form as PDF. {%- endcomment -%}
+{%- if section.settings.file != blank -%}
+  <section class="file-download">
+    <div class="page-width">
+      <div class="info-note">
+        <div class="rte">
+          <p><strong>{{ section.settings.heading | escape }}</strong></p>
+          {%- if section.settings.text != blank -%}{{ section.settings.text }}{%- endif -%}
+        </div>
+        <a class="btn btn--slant" href="{{ section.settings.file | file_url }}" download>{% render 'icon', name: 'package', class: 'icon--sm' %} {{ section.settings.button | escape }}</a>
+      </div>
+    </div>
+  </section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Datei zum Download",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "Überschrift", "default": "Muster-Widerrufsformular als PDF" },
+    { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Zum Ausfüllen am Computer oder zum Ausdrucken. Ausgefüllt per E-Mail an uns senden oder per Post schicken.</p>" },
+    { "type": "text", "id": "file", "label": "Dateiname", "default": "widerrufsformular.pdf", "info": "Datei unter Inhalte → Dateien hochladen, genau mit diesem Namen." },
+    { "type": "text", "id": "button", "label": "Button", "default": "PDF herunterladen" }
+  ],
+  "presets": [{ "name": "Datei zum Download" }]
+}
+{% endschema %}

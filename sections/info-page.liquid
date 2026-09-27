@@ -1,0 +1,73 @@
+{%- comment -%}
+  Info page (Zahlung, Versandkosten, Newsletter …): title, intro and a grid of blocks.
+  Blocks: price (big value, e.g. shipping costs), card (icon + title + text), note (full-width hint with optional link).
+  Intro falls back to the page text from Shopify.
+{%- endcomment -%}
+{%- assign heading = section.settings.heading | default: page.title -%}
+<section class="info-page">
+  <div class="page-width">
+    <div class="page-head">
+      {%- if section.settings.eyebrow != blank -%}<p class="info-page__eyebrow">{{ section.settings.eyebrow | escape }}</p>{%- endif -%}
+      <h1 class="page-head__title page-title display">{% render 'slant-words', text: heading %}</h1>
+      {%- if section.settings.intro != blank -%}
+        <div class="rte lead info-page__intro">{{ section.settings.intro }}</div>
+      {%- elsif page.content != blank -%}
+        <div class="rte lead info-page__intro">{{ page.content }}</div>
+      {%- endif -%}
+    </div>
+
+    <div class="info-page__grid">
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'price' -%}
+            <div class="info-price{% if block.settings.highlight %} info-price--highlight{% endif %}" {{ block.shopify_attributes }}>
+              <p class="info-price__label">{{ block.settings.label | escape }}</p>
+              <p class="info-price__value display">{{ block.settings.value | escape }}</p>
+              {%- if block.settings.note != blank -%}<p class="info-price__note">{{ block.settings.note | escape }}</p>{%- endif -%}
+            </div>
+          {%- when 'card' -%}
+            <div class="info-card" {{ block.shopify_attributes }}>
+              {%- if block.settings.icon != 'none' -%}<span class="info-card__icon" aria-hidden="true">{% render 'icon', name: block.settings.icon %}</span>{%- endif -%}
+              <h2 class="info-card__title">{{ block.settings.title | escape }}</h2>
+              <div class="rte info-card__text">{{ block.settings.text }}</div>
+            </div>
+          {%- when 'note' -%}
+            <div class="info-note" {{ block.shopify_attributes }}>
+              <div class="rte">{{ block.settings.text }}</div>
+              {%- if block.settings.link_label != blank -%}<a class="btn btn--slant" href="{{ block.settings.link }}">{{ block.settings.link_label | escape }}</a>{%- endif -%}
+            </div>
+        {%- endcase -%}
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Info-Seite",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Kleine Zeile" },
+    { "type": "text", "id": "heading", "label": "Überschrift", "info": "Leer: Titel der Seite." },
+    { "type": "richtext", "id": "intro", "label": "Einleitung", "info": "Leer: Text der Seite aus Shopify." }
+  ],
+  "blocks": [
+    { "type": "price", "name": "Preis", "settings": [
+      { "type": "text", "id": "label", "label": "Bezeichnung", "default": "Standardversand" },
+      { "type": "text", "id": "value", "label": "Wert", "default": "4,99 €" },
+      { "type": "text", "id": "note", "label": "Hinweis" },
+      { "type": "checkbox", "id": "highlight", "label": "Hervorheben (gelb)", "default": false } ] },
+    { "type": "card", "name": "Karte", "settings": [
+      { "type": "select", "id": "icon", "label": "Symbol", "default": "check", "options": [
+        { "value": "none", "label": "Keins" }, { "value": "check", "label": "Haken" }, { "value": "truck", "label": "Versand" }, { "value": "store", "label": "Laden" },
+        { "value": "clock", "label": "Uhr" }, { "value": "mail", "label": "E-Mail" }, { "value": "package", "label": "Paket" }, { "value": "tag", "label": "Preisschild" },
+        { "value": "return", "label": "Rücksendung" }, { "value": "chat", "label": "Nachricht" }, { "value": "phone", "label": "Telefon" }, { "value": "pin", "label": "Ort" } ] },
+      { "type": "text", "id": "title", "label": "Überschrift", "default": "Überschrift" },
+      { "type": "richtext", "id": "text", "label": "Text" } ] },
+    { "type": "note", "name": "Hinweis", "settings": [
+      { "type": "richtext", "id": "text", "label": "Text" },
+      { "type": "text", "id": "link_label", "label": "Button" },
+      { "type": "url", "id": "link", "label": "Link" } ] }
+  ],
+  "presets": [{ "name": "Info-Seite" }]
+}
+{% endschema %}

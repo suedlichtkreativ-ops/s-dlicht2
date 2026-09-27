@@ -1,14 +1,59 @@
 {
   "sections": {
     "main": {
-      "type": "main-page",
-      "settings": {}
-    },
-    "story": {
-      "type": "image-with-text",
+      "type": "info-page",
+      "blocks": {
+        "b1": {
+          "type": "card",
+          "settings": {
+            "icon": "check",
+            "title": "Praxis statt Masse",
+            "text": "<p>Wir führen keine beliebigen Massenprodukte ohne Bezug zur Praxis, sondern eine klare Auswahl für Raubfischangler auf Hecht, Zander, Barsch und Forelle.</p>"
+          }
+        },
+        "b2": {
+          "type": "card",
+          "settings": {
+            "icon": "tag",
+            "title": "Klare Produktinfos",
+            "text": "<p>Gewicht, Wurfgewicht, Farben, Einsatzbereich: verständlich aufbereitet, damit du schnell findest, was zu deinem Wasser passt.</p>"
+          }
+        },
+        "b3": {
+          "type": "card",
+          "settings": {
+            "icon": "chat",
+            "title": "Beratung, die weiterhilft",
+            "text": "<p>Unsicher, welcher Köder passt? Unsere <a href=\"/pages/koderberatung\">Köderberatung</a> hilft weiter – oder du schreibst uns direkt.</p>"
+          }
+        },
+        "b4": {
+          "type": "card",
+          "settings": {
+            "icon": "store",
+            "title": "Aus Landsberg am Lech",
+            "text": "<p>Versand mit DPD in ganz Deutschland oder kostenlose Abholung vor Ort in Landsberg.</p>"
+          }
+        },
+        "b5": {
+          "type": "note",
+          "settings": {
+            "text": "<p>Was wir selbst damit fangen, zeigen wir in unseren Fangberichten und auf Instagram.</p>",
+            "link_label": "Zu den Fängen",
+            "link": "/blogs/fangberichte"
+          }
+        }
+      },
+      "block_order": [
+        "b1",
+        "b2",
+        "b3",
+        "b4",
+        "b5"
+      ],
       "settings": {
-        "heading": "Von Anglern für Angler",
-        "white": true
+        "eyebrow": "Über uns",
+        "heading": "Unser Versprechen"
       }
     },
     "store": {
@@ -18,7 +63,6 @@
   },
   "order": [
     "main",
-    "story",
     "store"
   ]
 }
