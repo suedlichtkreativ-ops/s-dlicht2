@@ -19,7 +19,8 @@
     </div>
     {%- if section.settings.image != blank -%}
       <figure class="advice-hero__media">
-        {{ section.settings.image | image_url: width: 900 | image_tag: widths: '450, 675, 900', sizes: '(min-width: 990px) 26rem, 70vw', alt: section.settings.image.alt, loading: 'eager', class: 'advice-hero__img' }}
+        {%- capture hero_img -%}{{ section.settings.image | image_url: width: 900 | image_tag: widths: '450, 675, 900', sizes: '(min-width: 990px) 26rem, 70vw', alt: section.settings.image.alt, loading: 'eager', class: 'advice-hero__img' }}{%- endcapture -%}
+        {%- if hero_img contains ' alt=' -%}{{ hero_img }}{%- else -%}{{ hero_img | replace_first: '<img ', '<img alt="" ' }}{%- endif -%}
       </figure>
     {%- endif -%}
   </div>

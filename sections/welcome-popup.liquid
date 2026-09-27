@@ -86,8 +86,8 @@
             <p class="welcome__text" id="WelcomeText">{{ section.settings.text_account | escape }}</p>
           {%- endif -%}
           <div class="welcome__actions">
-            <a class="btn btn--full" href="{{ routes.account_register_url }}?willkommen">{{ section.settings.account_label | escape }}</a>
-            <a class="welcome__later" href="{{ routes.account_login_url }}?willkommen">{{ 'customer.auth.have_account' | t }} {{ 'customer.login.title' | t }}</a>
+            <a class="btn btn--full" href="{{ routes.account_register_url }}{% if routes.account_register_url contains '?' %}&amp;{% else %}?{% endif %}willkommen">{{ section.settings.account_label | escape }}</a>
+            <a class="welcome__later" href="{{ routes.account_login_url }}{% if routes.account_login_url contains '?' %}&amp;{% else %}?{% endif %}willkommen">{{ 'customer.auth.have_account' | t }} {{ 'customer.login.title' | t }}</a>
           </div>
         {%- else -%}
           {%- if section.settings.text_code != blank -%}

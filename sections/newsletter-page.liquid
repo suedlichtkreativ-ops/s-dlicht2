@@ -31,7 +31,7 @@
         {%- endif -%}
       {%- endform -%}
       {%- unless customer -%}
-        <p class="auth__offer newsletter-page__offer">{% render 'icon', name: 'tag', class: 'icon--sm' %}<span>{{ 'newsletter.offer' | t }} <a class="text-link" href="{{ routes.account_register_url }}?willkommen">{{ 'customer.register.title' | t }}</a></span></p>
+        <p class="auth__offer newsletter-page__offer">{% render 'icon', name: 'tag', class: 'icon--sm' %}<span>{{ 'newsletter.offer' | t }} <a class="text-link" href="{{ routes.account_register_url }}{% if routes.account_register_url contains '?' %}&amp;{% else %}?{% endif %}willkommen">{{ 'customer.register.title' | t }}</a></span></p>
       {%- endunless -%}
     </div>
   </div>

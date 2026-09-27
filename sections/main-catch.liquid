@@ -64,7 +64,7 @@
           {%- endif -%}
         </dl>
       </section>
-      <div class="rte catch__story">{{ article.content }}</div>
+      <div class="rte catch__story">{{ article.content | replace: '<h1', '<h2' | replace: '</h1>', '</h2>' }}</div>
       <div class="catch__actions">
         {%- if gear != blank or suggest != blank -%}<a class="btn btn--slant" href="#ausruestung">{{ 'catches.to_gear' | t }}</a>{%- endif -%}
         {%- if ig_post != blank -%}<a class="btn btn--outline btn--slant" href="{{ ig_post }}" target="_blank" rel="noopener">{% render 'icon', name: 'instagram', class: 'icon--sm' %} {{ 'catches.on_instagram' | t }}</a>{%- endif -%}

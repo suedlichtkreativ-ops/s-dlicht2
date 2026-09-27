@@ -80,7 +80,11 @@
                   if customer
                     assign lure_href = routes.root_url | append: 'discount/' | append: tag_code | append: '?redirect=' | append: routes.cart_url
                   else
-                    assign lure_href = routes.account_register_url | append: '?willkommen'
+                    if routes.account_register_url contains '?'
+                      assign lure_href = routes.account_register_url | append: '&willkommen'
+                    else
+                      assign lure_href = routes.account_register_url | append: '?willkommen'
+                    endif
                   endif
                 elsif lure_product != blank
                   assign lure_href = lure_product.url

@@ -14,6 +14,7 @@
     assign priority = 'auto'
   endif
 -%}
+{%- capture img_tag -%}
 {{
   image
   | image_url: width: 2000
@@ -26,3 +27,6 @@
     alt: alt_text,
     onload: "this.classList.add('is-loaded')"
 }}
+{%- endcapture -%}
+{%- comment -%} Shopify drops an empty alt; decorative images still need alt="" {%- endcomment -%}
+{%- if img_tag contains ' alt=' -%}{{ img_tag }}{%- else -%}{{ img_tag | replace_first: '<img ', '<img alt="" ' }}{%- endif -%}
