@@ -12,13 +12,12 @@ Alle entschieden (siehe D). Empfehlung:
 
 ### Fangberichte & Köderberatung
 
-- [ ] **Fakten zu den zwei Fängen** (Länge, Gewicht, Gewässer, Datum, Geschichte, wer gefangen hat bzw. dessen @Instagram, Link zum Instagram-Post; bei der Forelle auch Rute/Rolle/Schnur und Köderfarben). Liste in `fangberichte.md`.
+- [ ] **Fangberichte (optional):** beide fertig. Wer mag, ergänzt bei den Forellen Länge, Datum und Köderfarben sowie bei beiden den Link zum Instagram-Post. (`fangberichte.md`)
 - [ ] **Texte der Köderberatung prüfen** (Zielfisch- und Wassertiefen-Tipps sind meine Entwürfe; der Einleitungstext stammt von eurer bisherigen Seite „Köderberatung“).
 
 ### Bilder
 
 - [ ] **Hero-Fotos in voller Größe** (mind. 2880 px breit): Angler 1983 px, Topwater 2400 px, 10 %-Motiv 1672 px, Kurzläufer nur 1254 px. Wirken auf Retina-Bildschirmen weich.
-- [ ] **Handy-Motiv des Anglers** (`…_99e322a9-….png`) liefert auf dem CDN einen Fehler (404).
 - [ ] **Größere Produktfotos** für Kompaktblitz (Bild 1 und 2, 600 px) und Silberstreif (Bild 2, 500 px).
 - [ ] **Titelbild Blog „Köderwahl“** ist nur 1200 px breit.
 
@@ -39,7 +38,7 @@ Reihenfolge und Details: `import/ANLEITUNG.md`, `bundles.md`, `rechtliches/READM
 11. [ ] Abholung vor Ort am Standort aktivieren (sonst keine Option an der Kasse).
 12. [ ] Versandprofil Sperrgut: 9,99 € für Ruten ab 115 cm / Sendungen ab 30 kg.
 13. [ ] Grundpreis pro Meter bei Uferleine, Silberleine, Vorratsleine.
-14. [ ] Dateien hochladen: `bilder/hero-topwater-ohne-text.jpg`, `bilder/hero-kurzlaeufer.jpg`, `bilder/hero-kurzlaeufer-mobile.jpg`, `bilder/stimmung/*.jpg`, `bilder/faenge/*.jpg` (genau diese Namen), Bundle-Bilder aus `bilder/bundles/`.
+14. [ ] Dateien hochladen: `bilder/hero-topwater-ohne-text.jpg`, `bilder/hero-kurzlaeufer.jpg`, `bilder/hero-kurzlaeufer-mobile.jpg`, `bilder/hero-angler-mobile.jpg`, `bilder/stimmung/*.jpg`, `bilder/faenge/*.jpg` (genau diese Namen), Bundle-Bilder aus `bilder/bundles/`.
 15. [ ] **Kundenkonten auf „klassisch“ stellen** (Einstellungen → Kundenkonten). Nur dann nutzt der Shop die eigene Registrierungs-/Login-Seite mit Name, Newsletter-Häkchen und automatischem 10-%-Rabatt. Mit den „neuen Kundenkonten“ (Login per Einmalcode) zeigt Shopify seine eigene Seite, dann den Pop-up-Modus im Editor auf „Per E-Mail nach Newsletter-Anmeldung“ stellen.
 16. [ ] **Fangberichte**: Metafelder und die zwei Beiträge laut `fangberichte.md` anlegen.
 
@@ -73,3 +72,4 @@ Reihenfolge und Details: `import/ANLEITUNG.md`, `bundles.md`, `rechtliches/READM
 - **Google-Profil** (Route planen) und **TikTok** `@kderdepot` verlinkt; **Instagram** korrigiert auf `@koderdepot` (vorher falsch `koederdepot`); Fänge mit Instagram-Markierung („Zeig uns deinen Fang“, „Gefangen von @…“, Link zum Post).
 - **Abholzeiten** 09:00–17:00 Uhr, nach Vereinbarung auch früher oder später (Footer, Kontakt, Laden-Abschnitt, AGB 5.5, Versandseite); **Route planen** führt zum Google-Maps-Eintrag.
 - **Gestrichen:** Stahl-/Titanvorfach (kommt nicht ins Sortiment) und die fehlenden Gewichte (gibt es nicht; die Zeilen bleiben bei diesen Produkten einfach leer).
+- **Handy-Motiv des Anglers** neu aus dem Desktop-Foto zugeschnitten (`bilder/hero-angler-mobile.jpg`), das alte war defekt.

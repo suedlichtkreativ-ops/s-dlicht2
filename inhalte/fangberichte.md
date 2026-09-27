@@ -11,11 +11,14 @@ Einstellungen → Benutzerdefinierte Daten → Blogbeiträge → Definition hinz
 | Fisch | `custom.fisch` | Einzeiliger Text |
 | Länge (cm) | `custom.laenge_cm` | Ganzzahl |
 | Gewicht (kg) | `custom.gewicht_kg` | Dezimalzahl |
-| Gewässer | `custom.gewaesser` | Einzeiliger Text |
+| Angelmethode | `custom.methode` | Einzeiliger Text (z. B. Spinnfischen) |
+| Fangzeit | `custom.fangzeit` | Datum – angezeigt wird nur Monat und Jahr |
+| Region | `custom.region` | Einzeiliger Text – **nur die Region, nie das genaue Gewässer** (z. B. „Lech, Raum Augsburg“). Wichtig für Google und KI-Suche |
 | Gefangen von | `custom.angler` | Einzeiliger Text – Name oder Instagram-Name mit @ (z. B. `@koderdepot`), dann wird er verlinkt |
 | Instagram-Beitrag | `custom.instagram` | URL – Link zum Post, erscheint als Button „Auf Instagram ansehen“ |
 | Weitere Fotos | `custom.bilder` | Datei (Liste), nur Bilder |
 | Ausrüstung | `custom.ausruestung` | Produkt (Liste) – **erstes Produkt = der Köder** |
+| Passende Ausrüstung | `custom.empfehlung` | Produkt (Liste) – nur wenn nicht mehr bekannt ist, womit gefangen wurde; erscheint als „Passende Ausrüstung“ statt „Damit gefangen“ |
 
 Leere Felder werden im Bericht einfach nicht angezeigt.
 
@@ -27,18 +30,34 @@ Unter jedem Bericht und auf der Übersicht steht „Zeig uns deinen Fang“: Kun
 2. Titel (z. B. „Hecht auf Tiefenschwinger“), Text, Titelbild (Hochformat).
 3. Unten bei den Metafeldern: Fisch, Länge, Gewicht, Gewässer, weitere Fotos, Ausrüstung (Köder zuerst).
 
-## Bericht 1: Hecht auf Tiefenschwinger
+## Bericht 1: Hecht 90 cm auf Tiefenschwinger
 
 - Fotos: `bilder/faenge/fang-hecht-1.jpg` (Titelbild), `fang-hecht-2.jpg`, `fang-hecht-3.jpg`
-- Fisch: Hecht
+- Titel: **Hecht 90 cm auf Tiefenschwinger**
+- Fischart: Hecht · Größe: 90 · Gewicht: 6 · Angelmethode: Spinnfischen · Fangzeit: 26.07.2026 · Region: Lech, Raum Augsburg
 - Ausrüstung: Tiefenschwinger (Köder), Kraftrute Spinn 2,44 m, Stromjäger 2800, Silberleine, Snap-Set
-- Text (Entwurf): „Dieser Hecht hat auf den Tiefenschwinger gebissen. Gefischt haben wir mit der Kraftrute Spinn 2,44 m und der Stromjäger 2800, bespult mit Silberleine. Der Köder hing am Snap aus unserem Snap-Set.“
-- **Offen:** Länge, Gewicht, Gewässer, Datum, ggf. Farbe des Tiefenschwingers, kurze Geschichte zum Fang, wer gefangen hat (Name oder @Instagram), Link zum Instagram-Post falls vorhanden.
+- Text: „Ein Sommerabend Ende Juli am Lech im Raum Augsburg: Beim Spinnfischen schnappt sich dieser Hecht den Tiefenschwinger – 90 cm und 6 kg. Gefischt haben wir mit der Kraftrute Spinn 2,44 m und der Stromjäger 2800, bespult mit Silberleine. Der Köder hing am Snap aus unserem Snap-Set.“
+- Suchmaschinen-Titel: „Hecht 90 cm auf Tiefenschwinger – Fangbericht vom Lech bei Augsburg | Köderdepot“
+- Suchmaschinen-Beschreibung: „90 cm, 6 kg: Dieser Hecht biss beim Spinnfischen am Lech im Raum Augsburg auf den Tiefenschwinger. Rute, Rolle, Schnur und Köder aus dem Fang gibt es bei Köderdepot.“
+- Das genaue Gewässer wird bewusst nirgends genannt (auch nicht in Bildnamen oder Alt-Texten).
+- Gefangen von: `@koderdepot`
+- **Offen:** Link zum Instagram-Post, falls vorhanden.
 
 ## Bericht 2: Forellen auf Kompaktblitz und Silberflucht
 
 - Fotos: `bilder/faenge/fang-forelle-1.jpg` (Titelbild), `fang-forelle-2.jpg`
-- Fisch: Forelle
-- Ausrüstung: Kompaktblitz (Köder), Silberflucht
-- Text (Entwurf): „Diese Forellen haben auf Kompaktblitz und Silberflucht gebissen.“
-- **Offen:** Länge, Gewässer, Datum, Rute/Rolle/Schnur, Farben der Köder, wer gefangen hat (Name oder @Instagram, falls genannt werden soll), Link zum Instagram-Post falls vorhanden, kurze Geschichte.
+- Fischart: Forelle · Angelmethode: Spinnfischen · Region: Lech, Raum Landsberg · Gefangen von: `@koderdepot`
+- Ausrüstung: Kompaktblitz (Köder), Silberflucht, Allroundrute Spinn 2,1 m, Uferrolle 1500, Grünklinge
+- Text: „Forellen aus dem Lech im Raum Landsberg: gebissen haben sie auf Kompaktblitz und Silberflucht. Gefischt haben wir leicht mit der Allroundrute Spinn 2,1 m und der Uferrolle 1500, bespult mit Grünklinge.“
+- Suchmaschinen-Titel: „Forellen auf Kompaktblitz und Silberflucht – Fangbericht vom Lech bei Landsberg | Köderdepot“
+- Suchmaschinen-Beschreibung: „Forellen aus dem Lech im Raum Landsberg, gefangen beim Spinnfischen auf Kompaktblitz und Silberflucht. Rute, Rolle und Schnur aus dem Fang gibt es bei Köderdepot.“
+- Das genaue Gewässer/der Ort wird bewusst nicht genannt.
+- **Offen (optional):** Länge, Datum, Köderfarben, Link zum Instagram-Post.
+
+## Bericht 3: Forelle am Bach
+
+- Foto: **fehlt noch als Datei** – bitte nach `inhalte/bilder/` hochladen (das Bild mit der Forelle an der Holzbrücke), ich bereite es als `bilder/faenge/fang-forelle-bach-1.jpg` auf.
+- Fischart: Forelle · Angelmethode: Spinnfischen (Empfehlung) · keine weiteren Angaben
+- Ausrüstung: nicht bekannt → **Passende Ausrüstung** (`custom.empfehlung`): Leichtblitz (Spinner), Feinschwimmer (Wobbler), Zartläufer (Crankbait), Allroundrute Spinn 2,1 m, Uferrolle 1500, Grünklinge
+- Text: „Keine Messlatte, kein Protokoll – nur ein breites Grinsen und eine schöne Forelle. Zu diesem Fang haben wir keine genauen Angaben mehr. Wenn wir heute an so einem Bach losziehen, dann leicht: kurze Spinnrute, kleine Rolle, dünne Schnur und kleine Köder, die gegen die Strömung laufen.“
+- Die Person auf dem Foto ist gut zu erkennen: bitte deren Einverständnis einholen.

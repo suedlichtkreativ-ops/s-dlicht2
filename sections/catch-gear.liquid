@@ -1,10 +1,22 @@
-{%- comment -%} Fangbericht: the gear used for this catch as product cards (article metafield custom.ausruestung). {%- endcomment -%}
-{%- assign gear = article.metafields.custom.ausruestung.value -%}
+{%- comment -%}
+  Fangbericht: the gear used for this catch as product cards (article metafield custom.ausruestung).
+  If the gear isn't known any more, custom.empfehlung shows matching gear instead, clearly labelled as a suggestion.
+{%- endcomment -%}
+{%- liquid
+  assign gear = article.metafields.custom.ausruestung.value
+  assign heading = section.settings.heading
+  assign text = section.settings.text
+  if gear == blank
+    assign gear = article.metafields.custom.empfehlung.value
+    assign heading = section.settings.heading_suggest
+    assign text = section.settings.text_suggest
+  endif
+-%}
 {%- if gear != blank -%}
   <section class="section catch-gear" id="ausruestung">
     <div class="page-width">
-      <h2 class="section-title display">{% render 'slant-words', text: section.settings.heading %}</h2>
-      {%- if section.settings.text != blank -%}<p class="muted advice__intro">{{ section.settings.text | escape }}</p>{%- endif -%}
+      <h2 class="section-title display">{% render 'slant-words', text: heading %}</h2>
+      {%- if text != blank -%}<p class="muted advice__intro">{{ text | escape }}</p>{%- endif -%}
       <ul class="grid grid--4 catch-gear__grid" role="list">
         {%- for product in gear -%}
           <li>{% render 'product-card', product: product %}</li>
@@ -21,6 +33,8 @@
   "settings": [
     { "type": "text", "id": "heading", "label": "Überschrift", "default": "Damit gefangen" },
     { "type": "text", "id": "text", "label": "Text", "default": "Genau diese Ausrüstung war im Einsatz. Alles bei uns im Shop." },
+    { "type": "text", "id": "heading_suggest", "label": "Überschrift, wenn die Ausrüstung nicht bekannt ist", "default": "Passende Ausrüstung" },
+    { "type": "text", "id": "text_suggest", "label": "Text dazu", "default": "Womit genau gefangen wurde, wissen wir nicht mehr. So würden wir es heute angehen." },
     { "type": "checkbox", "id": "show_blog_link", "label": "Link zu allen Fängen", "default": true }
   ]
 }

@@ -342,10 +342,9 @@
     "eyebrow": "Fangbericht",
     "lure": "Köder:",
     "lure_short": "Köder",
-    "fish": "Fisch",
-    "length": "Länge",
+    "fish": "Fischart",
+    "length": "Größe",
     "weight": "Gewicht",
-    "water": "Gewässer",
     "photos": {
       "one": "1 Foto",
       "other": "{{ count }} Fotos"
@@ -354,6 +353,13 @@
     "all": "Alle Fänge ansehen",
     "angler": "Gefangen von",
     "on_instagram": "Auf Instagram ansehen",
-    "tag_us": "Markiere uns:"
+    "tag_us": "Markiere uns:",
+    "details": "Details zu diesem Fang",
+    "method": "Angelmethode",
+    "caught_at": "Fangzeit",
+    "region": "Region"
+  },
+  "date_formats": {
+    "month_year": "%B %Y"
   }
 }

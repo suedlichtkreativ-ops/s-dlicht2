@@ -1,6 +1,6 @@
 {%- comment -%}
   Fangbericht (template article.fangbericht): photos, facts and story of one catch.
-  Facts from article metafields custom.*: fisch, laenge_cm, gewicht_kg, gewaesser, angler (name or @instagram),
+  Facts from article metafields custom.*: fisch, laenge_cm, gewicht_kg, region (e.g. "Lech, Raum Augsburg" – never the exact water), methode, fangzeit (date), angler (name or @instagram),
   instagram (link to the post), bilder (list of files), ausruestung (list of products).
   The gear is shown by the section "Fangbericht: Ausrüstung" below.
 {%- endcomment -%}
@@ -9,8 +9,11 @@
   assign fish = m.fisch.value | default: m.fisch
   assign length = m.laenge_cm.value | default: m.laenge_cm
   assign weight = m.gewicht_kg.value | default: m.gewicht_kg
-  assign water = m.gewaesser.value | default: m.gewaesser
+  assign region = m.region.value | default: m.region
+  assign method = m.methode.value | default: m.methode
+  assign caught_at = m.fangzeit.value | default: m.fangzeit
   assign gear = m.ausruestung.value
+  assign suggest = m.empfehlung.value
   assign photos = m.bilder.value
   assign angler = m.angler.value | default: m.angler
   assign ig_post = m.instagram.value | default: m.instagram
@@ -40,29 +43,50 @@
     <div class="catch__copy">
       <p class="catch__eyebrow">{{ 'catches.eyebrow' | t }} · {{ article.published_at | time_tag: format: 'date' }}</p>
       <h1 class="catch__title display">{{ article.title | escape }}</h1>
-      {%- if fish != blank or length != blank or weight != blank or water != blank or gear != blank or angler != blank -%}
+      <section class="catch__details" aria-labelledby="CatchDetails">
+        <h2 class="catch__details-title" id="CatchDetails">{{ 'catches.details' | t }}</h2>
         <dl class="catch__facts">
           {%- if fish != blank -%}<div><dt>{{ 'catches.fish' | t }}</dt><dd>{{ fish | escape }}</dd></div>{%- endif -%}
           {%- if length != blank -%}<div><dt>{{ 'catches.length' | t }}</dt><dd>{{ length }} cm</dd></div>{%- endif -%}
           {%- if weight != blank -%}<div><dt>{{ 'catches.weight' | t }}</dt><dd>{{ weight | replace: '.', ',' }} kg</dd></div>{%- endif -%}
-          {%- if water != blank -%}<div><dt>{{ 'catches.water' | t }}</dt><dd>{{ water | escape }}</dd></div>{%- endif -%}
+          {%- if method != blank -%}<div><dt>{{ 'catches.method' | t }}</dt><dd>{{ method | escape }}</dd></div>{%- endif -%}
+          {%- if gear.first != blank -%}<div><dt>{{ 'catches.lure_short' | t }}</dt><dd><a href="{{ gear.first.url }}">{{ gear.first.title | remove: 'Köderdepot ' | escape }}</a></dd></div>{%- endif -%}
+          {%- if caught_at != blank -%}<div><dt>{{ 'catches.caught_at' | t }}</dt><dd>{{ caught_at | date: format: 'month_year' }}</dd></div>{%- endif -%}
+          {%- if region != blank -%}<div><dt>{{ 'catches.region' | t }}</dt><dd>{{ region | escape }}</dd></div>{%- endif -%}
           {%- if angler != blank -%}
             <div><dt>{{ 'catches.angler' | t }}</dt><dd>
               {%- assign first_char = angler | slice: 0 -%}
               {%- if first_char == '@' -%}<a href="https://www.instagram.com/{{ angler | remove_first: '@' | strip }}/" target="_blank" rel="noopener">{{ angler | escape }}</a>{%- else -%}{{ angler | escape }}{%- endif -%}
             </dd></div>
           {%- endif -%}
-          {%- if gear.first != blank -%}<div><dt>{{ 'catches.lure_short' | t }}</dt><dd><a href="{{ gear.first.url }}">{{ gear.first.title | remove: 'Köderdepot ' | escape }}</a></dd></div>{%- endif -%}
         </dl>
-      {%- endif -%}
+      </section>
       <div class="rte catch__story">{{ article.content }}</div>
       <div class="catch__actions">
-        {%- if gear != blank -%}<a class="btn btn--slant" href="#ausruestung">{{ 'catches.to_gear' | t }}</a>{%- endif -%}
+        {%- if gear != blank or suggest != blank -%}<a class="btn btn--slant" href="#ausruestung">{{ 'catches.to_gear' | t }}</a>{%- endif -%}
         {%- if ig_post != blank -%}<a class="btn btn--outline btn--slant" href="{{ ig_post }}" target="_blank" rel="noopener">{% render 'icon', name: 'instagram', class: 'icon--sm' %} {{ 'catches.on_instagram' | t }}</a>{%- endif -%}
       </div>
     </div>
   </div>
 </article>
+
+{%- comment -%} Article data for search engines and AI answers: fish, size and region, never the exact water. {%- endcomment -%}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": {{ article.title | json }},
+  "datePublished": {{ article.published_at | date: '%Y-%m-%d' | json }},
+  {%- if article.image %}"image": {{ article.image | image_url: width: 1200 | prepend: 'https:' | json }},{% endif %}
+  "author": { "@type": "Organization", "name": {{ shop.name | json }} },
+  "publisher": { "@type": "Organization", "name": {{ shop.name | json }} },
+  {%- assign about = fish -%}{%- if length != blank -%}{%- assign about = about | append: ' ' | append: length | append: ' cm' -%}{%- endif -%}
+  "about": {{ about | json }},
+  {%- if region != blank %}"contentLocation": { "@type": "Place", "name": {{ region | json }} },{% endif %}
+  "mentions": [{%- for p in gear -%}{ "@type": "Product", "name": {{ p.title | json }}, "url": {{ p.url | prepend: shop.url | json }} }{% unless forloop.last %},{% endunless %}{%- endfor -%}],
+  "articleBody": {{ article.content | strip_html | json }}
+}
+</script>
 
 {% schema %}
 { "name": "Fangbericht", "settings": [] }

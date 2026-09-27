@@ -1430,10 +1430,12 @@ a.advice-contact__way:hover { background: var(--ink); color: var(--white); }
 .catch__swipe { margin-top: 0.6rem; font-size: 0.875rem; color: var(--muted); }
 .catch__eyebrow { font-weight: 750; font-size: 0.8125rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); }
 .catch__title { font-size: clamp(2.5rem, 5vw, 4rem); line-height: 0.92; margin-top: 0.6rem; max-width: 14ch; }
-.catch__facts { display: flex; flex-wrap: wrap; margin-top: 1.75rem; border: var(--border); background: var(--white); }
-.catch__facts > div { flex: 1 1 8.5rem; padding: 0.8rem 1rem; box-shadow: 1px 0 0 var(--stone), 0 1px 0 var(--stone); }
-.catch__facts dt { font-size: 0.75rem; font-weight: 750; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
-.catch__facts dd { font-weight: 750; font-size: 1.125rem; margin-top: 0.15rem; }
+.catch__details { margin-top: 1.75rem; border: var(--border); background: var(--white); }
+.catch__details-title { padding: 0.8rem 1rem; font-size: 0.8125rem; font-weight: 750; letter-spacing: 0.08em; text-transform: uppercase; background: var(--ink); color: var(--white); }
+.catch__facts > div { display: flex; justify-content: space-between; gap: 1rem; padding: 0.75rem 1rem; }
+.catch__facts > div + div { border-top: 1px solid var(--stone); }
+.catch__facts dt { font-size: 0.8125rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); }
+.catch__facts dd { font-weight: 750; text-align: right; }
 .catch__facts dd a { text-decoration: underline; text-decoration-color: var(--signal); text-underline-offset: 3px; }
 .catch__story { margin-top: 1.75rem; font-size: 1.0625rem; }
 .catch-gear { background: var(--white); border-top: var(--border); }
