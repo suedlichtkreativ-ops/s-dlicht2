@@ -1,6 +1,6 @@
 # Umstellung im Live-Store „Köderdepot neu“
 
-Stand 27.09.2026. Phase 1 (unsichtbare Vorbereitung) ist **erledigt**. Am Live-Shop hat sich noch nichts geändert: Das alte Theme ist weiter aktiv, alles Neue ist unveröffentlicht, Entwurf oder geplant.
+Stand 27.09.2026, abends. Phase 1 und das Umschalten der Shop-Daten sind **erledigt**. Offen sind nur noch die Schritte, die ihr im Admin machen müsst (siehe `offen.md`, Abschnitt B), vor allem: **Theme veröffentlichen**.
 
 ## Phase 1 – erledigt (unsichtbar)
 
@@ -33,20 +33,28 @@ Unsichtbar für Besucher erledigt:
 
 Noch offen vor dem Umschalten: siehe `offen.md`, Abschnitt „Vor Go-live zu entscheiden“.
 
-## Phase 2 – Umschalten (sichtbar, in einem Rutsch)
+## Phase 2 – Umschalten (27.09.2026, abends) – erledigt über die Schnittstelle
 
-Reihenfolge, am besten abends mit wenig Besuchern:
+| Was | Stand |
+|---|---|
+| Produkte (91) | Deutsche Produkttypen, Zielfisch-/Kategorie-Tags ergänzt (nur hinzugefügt), Gewicht/Wurfgewicht, lesbare Farbnamen (2 Tippfehler korrigiert: „Ivory Darkeye“, „Green Fade“) |
+| Produktfotos | 439 neue Studio-Fotos an den Produkten, jede Farbvariante mit ihrem Foto (531 Varianten). Alte Bilder nur **abgehängt**, sie liegen weiter unter Inhalte → Dateien. Kontrolle: 0 Abweichungen |
+| Kategorien | 39 automatische Kategorien auf die neuen Produkttypen/Tags umgestellt; „Buzzbaits“ befüllt; „Forellenköder“ auf die Köder mit Zielfisch Forelle umgestellt (vorher: Flussläufer, Kleinviber, Kompaktblitz, Silberflucht, Tauchjäger, Tiefenjäger, Uferknall, Zitterklinge) |
+| Kategorie-Texte | 24 Einleitungen mit SEO-Titel/-Beschreibung (inkl. Korrektur „Frösche & Topwater“). Alte Texte: `backup/kollektionen-vor-umstellung-2026-09-27.jsonl` |
+| Veröffentlicht | 6 Kategorien (Gummifische, Gummiwürmer, Tail Spinner, Lösezangen, Zielfisch Forelle, Buzzbaits), 5 Bundles (aktiv), 5 Fangberichte |
+| Menü `kd-hauptmenue` | Bundles mit 5 Unterpunkten |
+| Rabatte | WILLKOMMEN10 und Köder-Box 3/5/8 aktiv seit 27.09.2026 |
+| Abholung vor Ort | aktiviert (Standort Schwaighofstraße 18 h, „in der Regel innerhalb von 24 Stunden bereit“, Hinweistext mit Abholzeiten) |
+| Grundpreis | Preis pro Meter bei Uferleine, Silberleine, Vorratsleine, Grünklinge (31 Varianten) |
+| Theme | im Shop identisch mit dem Repo (Prüfsummen verglichen) |
 
-1. **Produkte** (91): lesbare Farbnamen, deutsche Produkttypen, Metafelder Gewicht/Wurfgewicht, Studio-Fotos (ersetzen die alten Bilder).
-2. **Kollektionen**: Regeln der bestehenden Kollektionen auf die neuen Produkttypen umstellen (Liste in `import/ANLEITUNG.md`), die 5 neuen veröffentlichen. Die manuellen Kollektionen `koder`, `angelrute`, `rollen`, `forellenkoder`, `buzzbaits` lassen sich nicht auf automatisch umstellen, sie werden per Hand befüllt.
-3. ~~Seiten-Vorlagen~~ (bereits erledigt, siehe oben).
-4. **Veröffentlichen**: 5 Fangberichte, 5 Bundles (aktiv), Bundles als Unterpunkte ins Menü `kd-hauptmenue`.
-5. **Rabatte**: Startdatum auf den Starttag setzen.
-6. **Versand**: 4,99 €, ab 59 € kostenlos, Sperrgut 9,99 €; Abholung vor Ort aktivieren.
-7. **Rechtstexte** aus `rechtliches/*.html`.
-8. **Nur ihr im Admin:** Kundenkonten auf „klassisch“, Barzahlung bei Abholung, Double-Opt-in/Cookie-Banner, **Theme veröffentlichen** (die Schnittstelle sperrt das für mich).
+Nicht über die Schnittstelle möglich (→ „Nur ihr im Admin“ in `offen.md`):
+- **Versandpreise:** Shopify übernimmt Änderungen am Versandprofil per Schnittstelle nicht (Anfrage wird bestätigt, ändert aber nichts). Aktuell noch: 5,99 €, kostenlos ab 150 €.
+- **Rechtstexte:** fehlende Berechtigung (`write_legal_policies`). Die fertigen Texte liegen in `rechtliches/*.html`, die bisherigen in `backup/richtlinien-vor-umstellung/`.
 
 ## Rückweg
 
 - Theme: altes Theme wieder veröffentlichen (es bleibt unverändert erhalten).
-- Alles aus Phase 1 lässt sich im Admin löschen; Altes wurde weder geändert noch gelöscht.
+- Alles aus Phase 1 lässt sich im Admin löschen.
+- Produkte: alte Bilder liegen unter Inhalte → Dateien und lassen sich wieder anhängen; Produktdaten vorher: `backup/produkte-vor-umstellung-2026-09-27.jsonl`.
+- Kategorien: Regeln und Texte vorher: `backup/kollektionen-vor-umstellung-2026-09-27.jsonl`.

@@ -4,8 +4,8 @@ Stand 27.09.2026. Mit eurer Freigabe ist die unsichtbare Vorbereitung im Live-St
 
 ## Vor Go-live zu entscheiden (Stand 27.09.2026 abends)
 
-- [ ] **Produktfotos freigeben:** Übersicht in `bilder/pruefung/` (vorher/nachher und alle 439).
-- [ ] **Kategorie-Texte prüfen:** Entwürfe in `kategorie-texte.md` (gehen erst nach Freigabe in den Shop). Hintergrund: 21 Menü-Kategorien haben im Shop keinen Einleitungstext (u. a. Köder, Hechtköder, Zanderköder, Barschköder, Forellenköder, Wobbler, Crankbaits, Jerkbaits, Popper, Swimbaits, Blinker, Angelruten, Wirbel, Bundles, Spinner, Metal Jigs, Tail Spinner, Gummiwürmer, Lösezangen, Zielfisch Forelle). **„Frösche & Topwater“ zeigt fälschlich den Gummifisch-Text.**
+- [x] **Produktfotos freigegeben** und im Shop (27.09.2026).
+- [x] **Kategorie-Texte freigegeben** und im Shop (27.09.2026). Vorher: Entwürfe in `kategorie-texte.md` (gehen erst nach Freigabe in den Shop). Hintergrund: 21 Menü-Kategorien haben im Shop keinen Einleitungstext (u. a. Köder, Hechtköder, Zanderköder, Barschköder, Forellenköder, Wobbler, Crankbaits, Jerkbaits, Popper, Swimbaits, Blinker, Angelruten, Wirbel, Bundles, Spinner, Metal Jigs, Tail Spinner, Gummiwürmer, Lösezangen, Zielfisch Forelle). **„Frösche & Topwater“ zeigt fälschlich den Gummifisch-Text.**
 - [x] **Stahl-/Titanvorfach-Tipp** entfernt (Köderberatung Hecht, Bundles Starter und Hecht, FAQ „Anfänger“).
 - [x] **Widerruf-Seite** auf „du“ umgestellt (Widerrufsbelehrung der Kanzlei unverändert).
 
@@ -28,38 +28,21 @@ Alle entschieden (siehe D). Empfehlung:
 - [ ] **Größere Produktfotos** für Kompaktblitz (Bild 1 und 2, 600 px) und Silberstreif (Bild 2, 500 px).
 - [ ] **Titelbild Blog „Köderwahl“** ist nur 1200 px breit.
 
-## B. Umschalten (Checkliste, Stand 27.09.2026 abends)
+## B. Umschalten (Stand 27.09.2026, abends)
 
-Schon im Shop, unsichtbar (erledigt):
-- [x] Metafeld-Definitionen (13, u. a. `custom.gewicht`, `custom.wurfgewicht`)
-- [x] Dateien hochgeladen (Hero, Stimmung, Fänge, Bundle-Bilder, `widerrufsformular.pdf`)
-- [x] 5 neue Kollektionen (unveröffentlicht), 3 neue Menüs
-- [x] Blog „Fangberichte“ mit 5 Beiträgen (unveröffentlicht, mit Metafeldern)
-- [x] 5 Bundles als Entwurf, Bestandteile verknüpft
-- [x] Rabatte WILLKOMMEN10 und Köder-Box 3/5/8 (geplant ab 2030) und Kundensegment „Noch keine Bestellung“
-- [x] Seiten-Vorlagen: Köderberatung, Zahlung, Versand & Lieferung, Über uns
-- [x] Seiten- und Kategorietexte von Kopier-Resten bereinigt, Widerruf auf „du“
-- [x] Produkt-Backup, 439 Studio-Fotos neu belichtet (warten auf Freigabe)
+Erledigt (Details in `umstellung.md`): Produkte, Fotos, Farbnamen, Kategorien und Texte, Bundles, Fangberichte, Menü, Rabatte, Abholung vor Ort, Grundpreise.
 
-Beim Umschalten, von mir (erst nach „Online“):
-1. [ ] Produkte (91): Studio-Fotos, lesbare Farbnamen, deutsche Produkttypen, Gewicht/Wurfgewicht. Alte Bilder abhängen, nicht löschen.
-2. [ ] Lagerbestände abgleichen (CSV-Stand 26.09.2026).
-3. [ ] Kollektionsregeln auf die neuen Produkttypen umstellen, manuelle Kollektionen befüllen, 5 neue veröffentlichen.
-4. [ ] Kategorie-Texte eintragen (nach Freigabe, inkl. Korrektur „Frösche & Topwater“).
-5. [ ] Fangberichte veröffentlichen, Bundles aktiv schalten und ins Menü `kd-hauptmenue`.
-6. [ ] Rabatte: Startdatum auf den Starttag.
-7. [ ] Versand: 4,99 €, kostenlos ab 59 €, Sperrgut 9,99 € (Ruten ab 115 cm), Abholung vor Ort aktivieren.
-8. [ ] Rechtstexte unter Richtlinien (`rechtliches/*.html`).
-9. [ ] Vorlagen zuweisen: Newsletter → `page.newsletter`, Kontakt → `page.contact`, Widerruf → `page.widerruf`.
-10. [ ] Grundpreis pro Meter bei Uferleine, Silberleine, Vorratsleine.
-
-Nur ihr im Admin (die Schnittstelle erlaubt das nicht):
-11. [ ] Theme „Köderdepot 2026 (Südlicht)“ veröffentlichen.
-12. [ ] Kundenkonten auf „klassisch“ (Einstellungen → Kundenkonten).
-13. [ ] Barzahlung bei Abholung (Einstellungen → Zahlungen → Manuelle Zahlungsmethoden).
-14. [ ] Double-Opt-in und Cookie-Banner (Einstellungen → Kundendatenschutz).
-15. [ ] App „EU Widerruf Button“ für die Widerruf-Seite.
-16. [ ] Datenschutzerklärung ergänzen lassen (Newsletter, Cookies) – IT-Recht Kanzlei.
+**Nur ihr im Admin – in dieser Reihenfolge:**
+1. [ ] **Theme veröffentlichen:** Onlineshop → Themes → „Köderdepot 2026 (Südlicht)“ → Veröffentlichen.
+2. [ ] **Versand** (Einstellungen → Versand und Zustellung → Allgemeines Versandprofil → Deutschland): „Standard“ auf **4,99 €**, kostenlosen Versand auf **ab 59 €** Bestellwert. Die Schnittstelle übernimmt das nicht.
+3. [ ] **Sperrgut** (gleiche Seite → „Benutzerdefiniertes Versandprofil erstellen“, Name „Sperrgut“): alle 11 Angelruten hinzufügen, Deutschland **9,99 €**.
+4. [ ] **Rechtstexte** (Einstellungen → Richtlinien): Inhalte aus `rechtliches/impressum.html`, `agb.html`, `widerrufsbelehrung.html`, `datenschutz.html`, `versand.html` einfügen (HTML-Ansicht „<>“). Die Schnittstelle darf das nicht.
+5. [ ] **Kundenkonten auf „klassisch“** (Einstellungen → Kundenkonten).
+6. [ ] **Barzahlung bei Abholung** (Einstellungen → Zahlungen → Manuelle Zahlungsmethoden).
+7. [ ] **Double-Opt-in und Cookie-Banner** (Einstellungen → Kundendatenschutz).
+8. [ ] App **„EU Widerruf Button“** auf der Widerruf-Seite (App-Block im Editor).
+9. [ ] **Datenschutzerklärung** um Newsletter und Cookies ergänzen lassen (IT-Recht Kanzlei).
+10. [ ] Abholzeit prüfen: eingestellt ist „in der Regel innerhalb von 24 Stunden bereit“ (Einstellungen → Versand und Zustellung → Abholung vor Ort).
 
 - [ ] **Sonderangebote:** Der alte Menüpunkt zeigt auf eine leere Archiv-Kollektion (`sale`). Im neuen Menü weggelassen. Soll es eine Sale-Kollektion geben?
 
