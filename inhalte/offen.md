@@ -28,31 +28,38 @@ Alle entschieden (siehe D). Empfehlung:
 - [ ] **Größere Produktfotos** für Kompaktblitz (Bild 1 und 2, 600 px) und Silberstreif (Bild 2, 500 px).
 - [ ] **Titelbild Blog „Köderwahl“** ist nur 1200 px breit.
 
-## B. Beim Einrichten des neuen Shops (Checkliste)
+## B. Umschalten (Checkliste, Stand 27.09.2026 abends)
 
-Erledigt (Phase 1): 1, 4 (neue Kollektionen und Menüs), 5 (Blog), 8, 9 (geplant), 14, 16, 18. Der Rest gehört zum Umschalten (Phase 2).
+Schon im Shop, unsichtbar (erledigt):
+- [x] Metafeld-Definitionen (13, u. a. `custom.gewicht`, `custom.wurfgewicht`)
+- [x] Dateien hochgeladen (Hero, Stimmung, Fänge, Bundle-Bilder, `widerrufsformular.pdf`)
+- [x] 5 neue Kollektionen (unveröffentlicht), 3 neue Menüs
+- [x] Blog „Fangberichte“ mit 5 Beiträgen (unveröffentlicht, mit Metafeldern)
+- [x] 5 Bundles als Entwurf, Bestandteile verknüpft
+- [x] Rabatte WILLKOMMEN10 und Köder-Box 3/5/8 (geplant ab 2030) und Kundensegment „Noch keine Bestellung“
+- [x] Seiten-Vorlagen: Köderberatung, Zahlung, Versand & Lieferung, Über uns
+- [x] Seiten- und Kategorietexte von Kopier-Resten bereinigt, Widerruf auf „du“
+- [x] Produkt-Backup, 439 Studio-Fotos neu belichtet (warten auf Freigabe)
 
-Reihenfolge und Details: `import/ANLEITUNG.md`, `bundles.md`, `rechtliches/README.md`.
+Beim Umschalten, von mir (erst nach „Online“):
+1. [ ] Produkte (91): Studio-Fotos, lesbare Farbnamen, deutsche Produkttypen, Gewicht/Wurfgewicht. Alte Bilder abhängen, nicht löschen.
+2. [ ] Lagerbestände abgleichen (CSV-Stand 26.09.2026).
+3. [ ] Kollektionsregeln auf die neuen Produkttypen umstellen, manuelle Kollektionen befüllen, 5 neue veröffentlichen.
+4. [ ] Kategorie-Texte eintragen (nach Freigabe, inkl. Korrektur „Frösche & Topwater“).
+5. [ ] Fangberichte veröffentlichen, Bundles aktiv schalten und ins Menü `kd-hauptmenue`.
+6. [ ] Rabatte: Startdatum auf den Starttag.
+7. [ ] Versand: 4,99 €, kostenlos ab 59 €, Sperrgut 9,99 € (Ruten ab 115 cm), Abholung vor Ort aktivieren.
+8. [ ] Rechtstexte unter Richtlinien (`rechtliches/*.html`).
+9. [ ] Vorlagen zuweisen: Newsletter → `page.newsletter`, Kontakt → `page.contact`, Widerruf → `page.widerruf`.
+10. [ ] Grundpreis pro Meter bei Uferleine, Silberleine, Vorratsleine.
 
-1. [ ] Metafeld-Definitionen `custom.gewicht` und `custom.wurfgewicht` anlegen (Einzeiliger Text).
-2. [ ] Studio-Fotos aus `bilder/produkte/` unter Inhalte → Dateien hochladen, dann Produkte importieren: `import/produkte-shopify-import.csv` (91 Produkte, lesbare Farbnamen, deutsche Produkttypen, Kugelblitz als Jigkopf). Entwürfe (`entwuerfe-nicht-importieren.csv`) nicht importieren.
-3. [ ] Lagerbestände kurz vor dem Start abgleichen (CSV-Stand 26.09.2026).
-4. [ ] Kollektionen und Menüs laut Anleitung anlegen (inkl. „Bundles“, „Köderberatung“ mit Unterpunkten und „Fänge“).
-5. [ ] Seiten: der bestehenden Seite „Köderberatung“ (`/pages/koderberatung`) die Vorlage `page.koderberatung` geben; Blog „Fangberichte“ (Handle `fangberichte`) anlegen, „Widerruf“ (Vorlage `page.widerruf` + App **EU Widerruf Button**).
-6. [ ] Rechtstexte unter Einstellungen → Richtlinien einfügen (`rechtliches/*.html`), Menü „Kundeninfo“ anlegen.
-7. [ ] Datenschutzerklärung ergänzen lassen (Newsletter, Cookies, später KI-Chat) – IT-Recht Kanzlei.
-8. [ ] App **Shopify Bundles**: 5 Bundles mit Bild und Vorlage anlegen, kein Vergleichspreis.
-9. [ ] Rabatte: WILLKOMMEN10 (10 %, einmal pro Kunde, kein Mindestbestellwert, nicht kombinierbar, Berechtigung: Kundensegment „noch keine Bestellung“, damit nur Neukunden mit Konto ihn nutzen können); Köder-Box als 3 automatische Rabatte (Kollektion „Köder“, ab 3/5/8 Stück = 5/10/15 %, nicht kombinierbar).
-10. [ ] Double-Opt-in für E-Mail-Marketing (Newsletter-Häkchen bei der Registrierung), Cookie-Banner (Einstellungen → Kundendatenschutz). Bis dahin das Pop-up im Editor ausschalten.
-11. [ ] Abholung vor Ort am Standort aktivieren (sonst keine Option an der Kasse).
-12. [ ] Versand: Standard 4,99 €, **kostenlos ab 59 €** (Einstellungen → Versand, Bedingung Bestellwert ≥ 59 €); Versandprofil Sperrgut: 9,99 € für Ruten ab 115 cm / Sendungen ab 30 kg. Versandrichtlinie aus `rechtliches/versand.html` (bereits auf 59 € angepasst) einfügen.
-13. [ ] Grundpreis pro Meter bei Uferleine, Silberleine, Vorratsleine.
-14. [ ] Dateien hochladen: `bilder/hero-topwater-ohne-text.jpg`, `bilder/hero-kurzlaeufer.jpg`, `bilder/hero-kurzlaeufer-mobile.jpg`, `bilder/hero-angler-mobile.jpg`, `bilder/stimmung/*.jpg`, `bilder/faenge/*.jpg` (genau diese Namen), Bundle-Bilder aus `bilder/bundles/`.
-15. [ ] **Kundenkonten auf „klassisch“ stellen** (Einstellungen → Kundenkonten). Nur dann nutzt der Shop die eigene Registrierungs-/Login-Seite mit Name, Newsletter-Häkchen und automatischem 10-%-Rabatt. Mit den „neuen Kundenkonten“ (Login per Einmalcode) zeigt Shopify seine eigene Seite, dann den Pop-up-Modus im Editor auf „Per E-Mail nach Newsletter-Anmeldung“ stellen.
-16. [ ] **Fangberichte**: Metafelder und die zwei Beiträge laut `fangberichte.md` anlegen.
-17. [ ] **Seiten-Vorlagen zuweisen:** Zahlung → `page.zahlung`, Versand & Lieferung → `page.versand`, Newsletter → `page.newsletter`, Über uns → `page.about`, Kontakt → `page.contact`, Widerruf → `page.widerruf`. Menü „Shop-Service“: „Versandkosten“ auf `/pages/versand-lieferung`.
-18. [ ] **Widerrufsformular** `rechtliches/widerrufsformular.pdf` unter Inhalte → Dateien hochladen (genau dieser Name); die Widerruf-Seite verlinkt es automatisch.
-19. [ ] **Barzahlung bei Abholung** als manuelle Zahlungsart anlegen (Einstellungen → Zahlungen → Manuelle Zahlungsmethoden), nur für Abholung.
+Nur ihr im Admin (die Schnittstelle erlaubt das nicht):
+11. [ ] Theme „Köderdepot 2026 (Südlicht)“ veröffentlichen.
+12. [ ] Kundenkonten auf „klassisch“ (Einstellungen → Kundenkonten).
+13. [ ] Barzahlung bei Abholung (Einstellungen → Zahlungen → Manuelle Zahlungsmethoden).
+14. [ ] Double-Opt-in und Cookie-Banner (Einstellungen → Kundendatenschutz).
+15. [ ] App „EU Widerruf Button“ für die Widerruf-Seite.
+16. [ ] Datenschutzerklärung ergänzen lassen (Newsletter, Cookies) – IT-Recht Kanzlei.
 
 - [ ] **Sonderangebote:** Der alte Menüpunkt zeigt auf eine leere Archiv-Kollektion (`sale`). Im neuen Menü weggelassen. Soll es eine Sale-Kollektion geben?
 
