@@ -421,8 +421,8 @@ input, textarea { caret-color: var(--ink); }
 /* The copy spans the full width: let pointers through to the line, keep links and buttons live */
 .hero__inner { pointer-events: none; }
 .hero__inner a, .hero__inner button { pointer-events: auto; }
-.hero__title { font-size: clamp(3.75rem, min(16.5vw, 13svh), 13.5rem); max-width: 11ch; }
-.hero--slider .hero__title { font-size: clamp(3.25rem, min(14vw, 11.5svh), 11.5rem); max-width: none; }
+.hero__title { font-size: calc(clamp(3.75rem, min(16.5vw, 13svh), 13.5rem) * var(--title-fit, 1)); max-width: 11ch; }
+.hero--slider .hero__title { font-size: calc(clamp(3.25rem, min(14vw, 11.5svh), 11.5rem) * var(--title-fit, 1)); max-width: none; }
 .hero__line { display: block; overflow: hidden; padding-block: 0.14em 0.06em; margin-block: -0.14em -0.06em; }
 .hero__line-inner { display: block; }
 .hero__line-inner > span { display: inline-block; }

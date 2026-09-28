@@ -88,7 +88,7 @@
                   endif
                 endif
               -%}
-              <a class="hero__lure{% if lure_style != 'lure' %} hero__lure--top hero__lure--{{ lure_style }}{% endif %}{% if forloop.first %} is-active{% endif %}" data-lure href="{{ lure_href }}"{% unless forloop.first %} tabindex="-1" aria-hidden="true"{% endunless %}>
+              <a class="hero__lure{% if lure_style != 'lure' %} hero__lure--top hero__lure--{{ lure_style }}{% endif %}{% if forloop.first %} is-active{% endif %}" data-lure href="{{ lure_href }}"{% if lure_href contains '/discount/' %} data-drawer-open="welcome" aria-haspopup="dialog"{% endif %}{% unless forloop.first %} tabindex="-1" aria-hidden="true"{% endunless %}>
                 <img src="{{ lure_src }}" alt="" width="640" height="{% if lure_style == 'lure' %}200{% elsif lure_style == 'tag' %}1040{% else %}512{% endif %}" loading="{% if forloop.first %}eager{% else %}lazy{% endif %}">
                 <span class="visually-hidden">{{ lure_label | escape }}</span>
               </a>
@@ -152,7 +152,8 @@
           {%- if block.settings.button_label != blank or block.settings.button2_label != blank -%}
             <div class="hero__band">
               {%- if block.settings.button_label != blank -%}
-                <a class="btn btn--dark btn--slant" href="{{ block.settings.button_link | default: routes.all_products_collection_url }}">{{ block.settings.button_label | escape }}</a>
+                {%- assign button_href = block.settings.button_link | default: routes.all_products_collection_url -%}
+                <a class="btn btn--dark btn--slant" href="{{ button_href }}"{% if button_href contains '/discount/' %} data-drawer-open="welcome" aria-haspopup="dialog"{% endif %}>{{ block.settings.button_label | escape }}</a>
               {%- endif -%}
               {%- if block.settings.button2_label != blank -%}
                 <a class="btn btn--outline btn--slant" href="{{ block.settings.button2_link | default: '#laden' }}">{{ block.settings.button2_label | escape }}</a>

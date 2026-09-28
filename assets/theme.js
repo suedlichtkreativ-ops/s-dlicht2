@@ -68,7 +68,8 @@
 
   document.addEventListener('click', (e) => {
     const opener = e.target.closest('[data-drawer-open]');
-    if (opener) {
+    // A link keeps its own target when its drawer is not on the page (e.g. the welcome pop-up is switched off).
+    if (opener && $(`[data-drawer="${opener.dataset.drawerOpen}"]`)) {
       e.preventDefault();
       openDrawer(opener.dataset.drawerOpen, opener);
       return;
@@ -347,6 +348,42 @@
       }, 480);
     };
 
+    // Desktop: the line hangs to the right of the widest headline. The headline scales with the
+    // screen height and sits in the centred page column, so a fixed percentage put the lure over
+    // the words on wide 16:9 screens. If there is no room right of the words, the headline shrinks.
+    const wide = window.matchMedia('(min-width: 990px)');
+    const placeLine = () => {
+      if (!lineArt) return;
+      hero.style.removeProperty('--title-fit');
+      lineArt.style.removeProperty('left');
+      if (!wide.matches) return;
+      const box = hero.getBoundingClientRect();
+      const edge = (els) => els.reduce((max, el) => Math.max(max, el.getBoundingClientRect().right), 0);
+      const words = $$('.hero__line-inner > span', hero);
+      const titleLeft = words.length ? Math.min(...words.map((el) => el.getBoundingClientRect().left)) : 0;
+      const right = Math.max(edge(words), edge($$('.hero__text', hero))) - box.left;
+      const half = lures.reduce((max, l) => {
+        // Layout width, not the rotated box. A hanging lure swings up to ~35° sideways when it bites.
+        const w = ($('img', l) || l).offsetWidth;
+        return Math.max(max, l.classList.contains('hero__lure--top') ? w / 2 : w * 0.45);
+      }, 0);
+      const gap = 40;
+      const cap = box.width - half - 72; // keep clear of the scroll cue on the right
+      const need = right + half + gap;
+      const preset = (parseFloat(lineArt.style.getPropertyValue('--line-x')) || 52) / 100 * box.width;
+      if (need <= cap) { lineArt.style.left = `${Math.max(preset, need)}px`; return; }
+      const room = cap - half - gap - (titleLeft - box.left);
+      const used = right - (titleLeft - box.left);
+      hero.style.setProperty('--title-fit', Math.max(0.6, room / used).toFixed(3));
+      lineArt.style.left = `${cap}px`;
+    };
+    let placeFrame;
+    const queuePlace = () => { cancelAnimationFrame(placeFrame); placeFrame = requestAnimationFrame(placeLine); };
+    window.addEventListener('resize', queuePlace);
+    if (document.fonts && document.fonts.ready) document.fonts.ready.then(queuePlace);
+    $$('img', lineArt || hero).forEach((img) => { if (!img.complete) img.addEventListener('load', queuePlace, { once: true }); });
+    placeLine();
+
     const go = (index, { focusTab = false } = {}) => {
       if (!slides.length) return;
       const n = (index + slides.length) % slides.length;
@@ -479,7 +516,11 @@
     let seen = 0;
     try { seen = parseInt(localStorage.getItem(KEY), 10) || 0; } catch (_) { /* storage blocked */ }
     const remember = (ms = Date.now()) => { try { localStorage.setItem(KEY, String(ms)); } catch (_) { /* storage blocked */ } };
+    const shownRecently = () => {
+      try { return Date.now() - (parseInt(localStorage.getItem(KEY), 10) || 0) <= days * 864e5; } catch (_) { return false; }
+    };
     const show = () => {
+      if (shownRecently()) return; // opened from the price tag in the meantime
       // Never interrupt an open menu, cart or picker; try again shortly.
       if (activeDrawer) { setTimeout(show, 4000); return; }
       openDrawer('welcome', document.activeElement);
@@ -500,6 +541,9 @@
         setTimeout(() => { if (!done && !(window.Shopify.customerPrivacy)) go(); }, 4000);
       } else check();
     };
+
+    // Opened on purpose (price tag, hero button): don't pop it up again by itself later.
+    document.addEventListener('click', (e) => { if (e.target.closest('[data-drawer-open="welcome"]')) remember(); });
 
     const state = $('[data-welcome-state]', welcome);
     if (state) {
