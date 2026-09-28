@@ -184,6 +184,7 @@
               {%- if spec_cast != blank -%}<div><dt>{{ 'products.product.specs_cast' | t }}</dt><dd>{{ spec_cast }}</dd></div>{%- endif -%}
               {%- if spec_weight != blank -%}<div><dt>{{ 'products.product.specs_weight' | t }}</dt><dd>{{ spec_weight }}</dd></div>{%- endif -%}
               {%- for option in product.options_with_values -%}
+                {%- if product.has_only_default_variant -%}{%- break -%}{%- endif -%}
                 {%- assign on = option.name | downcase -%}
                 {%- if on contains 'farbe' or on contains 'color' -%}
                   <div><dt>{{ 'products.product.specs_colors' | t }}</dt><dd>{{ option.values.size }}</dd></div>
