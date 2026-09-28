@@ -80,3 +80,13 @@ Alle fünf Berichte sind im Shop angelegt (unveröffentlicht, siehe `umstellung.
 - Text: „Ein kapitaler Hecht aus unserem Archiv. Genaue Angaben zu diesem Fang haben wir nicht mehr. Für Hechte dieser Größe: eine kräftige Spinnrute, eine große Rolle, belastbare geflochtene Schnur und große Köder.“
 - Hinweis: Im Hintergrund ist ein markantes Wehr zu sehen. Wenn der Ort geheim bleiben soll, schneide ich das Foto enger zu.
 - Die Person auf dem Foto ist gut zu erkennen: bitte deren Einverständnis einholen.
+
+## Neu am 28.09.2026 (ohne Angaben, Texte ohne erfundene Details, „Passende Ausrüstung“ als Empfehlung)
+
+| Fang | Bilder | Empfehlung |
+|---|---|---|
+| **Hecht vom Boot** (`hecht-vom-boot`) | `fang-hecht-boot-1.jpg` (Titelbild), `fang-hecht-boot-2.jpg` | Allroundrute Baitcast 2,1 m, Allroundcaster, Silberleine, Kurzläufer, Schwerläufer, Kraftzange 28 cm |
+| **Regenbogenforelle vom Holzsteg** (`regenbogenforelle-vom-holzsteg`) | `fang-forelle-steg-1.jpg` | Allroundrute Spinn 2,1 m, Uferrolle 2500, Grünklinge, Silberflucht, Rasselminnow, Feingriff |
+| **Silberne Regenbogenforelle vom Ufer** (`silberne-regenbogenforelle-vom-ufer`) | `fang-forelle-ufer-1.jpg` | Weitwurfrute Spinn 2,4 m, Stromjäger 2800, Grünklinge, Kompaktblitz, Leichtblitz, Feinschwimmer |
+
+Reihenfolge im Blog: Hecht 90 cm, Forellen auf Kompaktblitz, **Hecht vom Boot, Forelle vom Holzsteg, Forelle vom Ufer**, Forelle am Bach, Wels, Kapitaler Hecht (ganz hinten). Wer Länge, Gewässer oder Köder nachliefert, dem baue ich die Angaben ein.
