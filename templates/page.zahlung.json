@@ -43,7 +43,7 @@
             "link": "/pages/contact"
           }
         },
-        "b6": {
+        "card_6CAQ8A": {
           "type": "card",
           "settings": {
             "icon": "check",
@@ -56,11 +56,14 @@
         "b1",
         "b2",
         "b3",
-        "b6",
+        "card_6CAQ8A",
         "b4",
         "b5"
       ],
-      "settings": {}
+      "settings": {
+        "heading": "",
+        "intro": ""
+      }
     }
   },
   "order": [
