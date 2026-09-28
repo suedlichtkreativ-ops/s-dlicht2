@@ -90,3 +90,12 @@ Alle fünf Berichte sind im Shop angelegt (unveröffentlicht, siehe `umstellung.
 | **Silberne Regenbogenforelle vom Ufer** (`silberne-regenbogenforelle-vom-ufer`) | `fang-forelle-ufer-1.jpg` | Weitwurfrute Spinn 2,4 m, Stromjäger 2800, Grünklinge, Kompaktblitz, Leichtblitz, Feinschwimmer |
 
 Reihenfolge im Blog: Hecht 90 cm, Forellen auf Kompaktblitz, **Hecht vom Boot, Forelle vom Holzsteg, Forelle vom Ufer**, Forelle am Bach, Wels, Kapitaler Hecht (ganz hinten). Wer Länge, Gewässer oder Köder nachliefert, dem baue ich die Angaben ein.
+
+## Neu am 28.09.2026 (abends)
+
+| Fang | Bild | Empfehlung |
+|---|---|---|
+| **Großer Hecht vom Ruderboot** (`grosser-hecht-vom-ruderboot`) | `fang-hecht-ruderboot-1.jpg` (Hochformat mit ganzem Foto; Original: `-original.jpg`) | Kraftrute Spinn 2,44 m, Stromjäger 5800, Silberleine, Großräuber, Gleitklinge, Kraftzange 28 cm |
+| **Hecht bei Sonne auf dem See** (`hecht-bei-sonne-auf-dem-see`) | `fang-hecht-sonne-1.jpg` (dito) | Weitwurfrute Spinn 2,4 m, Stromjäger 2800, Grünklinge, Blattviber, Schlankminnow, Kraftzange 28 cm |
+
+Querformat-Fotos: Die Vorlage schneidet auf Hochformat zu. Bis zur nächsten Theme-Veröffentlichung (Repo-Stand zeigt Querformat vollständig, `catch__photo--wide`) Titelbilder als Hochformat mit unscharfem Hintergrund anlegen.
