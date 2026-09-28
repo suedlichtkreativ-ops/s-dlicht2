@@ -26,11 +26,11 @@
           <li class="catch__photo catch__photo--empty" aria-hidden="true">{% render 'fish-icon', name: fish %}</li>
         {%- endif -%}
         {%- if article.image -%}
-          <li class="catch__photo">{% render 'image', image: article.image, sizes: '(min-width: 990px) 34rem, 88vw', widths: '480, 720, 960, 1200', loading: 'eager', alt: article.title %}</li>
+          <li class="catch__photo{% if article.image.aspect_ratio > 1.25 %} catch__photo--wide{% endif %}">{% render 'image', image: article.image, sizes: '(min-width: 990px) 34rem, 88vw', widths: '480, 720, 960, 1200', loading: 'eager', alt: article.title %}</li>
         {%- endif -%}
         {%- for f in photos -%}
           {%- assign img = f.preview_image | default: f -%}
-          <li class="catch__photo">{% render 'image', image: img, sizes: '(min-width: 990px) 34rem, 88vw', widths: '480, 720, 960, 1200', alt: article.title %}</li>
+          <li class="catch__photo{% if img.aspect_ratio > 1.25 %} catch__photo--wide{% endif %}">{% render 'image', image: img, sizes: '(min-width: 990px) 34rem, 88vw', widths: '480, 720, 960, 1200', alt: article.title %}</li>
         {%- endfor -%}
       </ul>
       {%- assign photo_count = photos.size | plus: 1 -%}
