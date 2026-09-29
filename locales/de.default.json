@@ -52,7 +52,8 @@
   },
   "footer": {
     "payment": "Zahlungsarten",
-    "social": "Social Media"
+    "social": "Social Media",
+    "cookie_settings": "Cookie-Einstellungen"
   },
   "store": {
     "address": "Adresse",

@@ -45,6 +45,8 @@
         {%- for link in section.settings.legal_menu.links -%}
           <li><a href="{{ link.url }}">{{ link.title | escape }}</a></li>
         {%- endfor -%}
+        {%- comment -%} Re-opens Shopify's cookie preferences; shown by theme.js once the banner script is there. {%- endcomment -%}
+        <li hidden data-cookie-settings-item><button type="button" class="footer__cookie" data-cookie-settings>{{ 'footer.cookie_settings' | t }}</button></li>
       </ul>
     {%- endif -%}
     {%- if section.settings.badge_link != blank -%}

@@ -735,6 +735,8 @@ input, textarea { caret-color: var(--ink); }
 .footer__bottom ul { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; }
 .footer__bottom a { display: inline-block; padding-block: 0.75rem; margin-block: -0.75rem; text-decoration: none; }
 .footer__bottom a:hover { color: var(--white); text-decoration: underline; }
+.footer__cookie { padding-block: 0.75rem; margin-block: -0.75rem; background: none; border: 0; color: inherit; font: inherit; cursor: pointer; }
+.footer__cookie:hover { color: var(--white); text-decoration: underline; }
 .payment-icons { display: flex; flex-wrap: wrap; gap: 0.4rem; }
 .payment-icons svg { width: 2.4rem; height: auto; }
 .legal-badge { display: inline-flex; align-items: center; min-height: 2.75rem; padding: 0.25rem 0.625rem; background: var(--paper); color: var(--ink); font-size: 0.8125rem; font-weight: 650; text-decoration: none; }

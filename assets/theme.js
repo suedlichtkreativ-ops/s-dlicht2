@@ -472,6 +472,18 @@
     // Copy a discount code
   });
 
+  /* ---------- Footer: re-open Shopify's cookie preferences ---------- */
+  const cookieBtn = $('[data-cookie-settings]');
+  if (cookieBtn) {
+    const ready = () => window.privacyBanner && typeof window.privacyBanner.showPreferences === 'function';
+    const reveal = () => { if (ready()) { cookieBtn.closest('[data-cookie-settings-item]').hidden = false; return true; } return false; };
+    if (!reveal()) {
+      let tries = 0;
+      const wait = setInterval(() => { tries += 1; if (reveal() || tries > 20) clearInterval(wait); }, 500);
+    }
+    cookieBtn.addEventListener('click', () => { if (ready()) window.privacyBanner.showPreferences(); });
+  }
+
   /* ---------- Legal-text seal: fall back to its text when the provider's image can't load ---------- */
   $$('[data-legal-badge-img], #itkanzlei_img_copyright').forEach((img) => {
     const fallback = () => {
@@ -527,13 +539,26 @@
       remember();
     };
     // Shopify's cookie banner comes first; the pop-up waits until the visitor has answered it.
+    // If the banner is due but never appears (blocked, script error), the pop-up must not wait forever.
     const afterConsent = (cb) => {
       let done = false;
       const go = () => { if (!done) { done = true; cb(); } };
+      const bannerVisible = () => {
+        const el = document.getElementById('shopify-pc__banner');
+        return !!(el && el.offsetParent !== null && getComputedStyle(el).visibility !== 'hidden');
+      };
       const check = () => {
         const privacy = window.Shopify && window.Shopify.customerPrivacy;
         if (privacy && typeof privacy.shouldShowBanner === 'function' && privacy.shouldShowBanner()) {
           document.addEventListener('visitorConsentCollected', go, { once: true });
+          let seen = false;
+          let tries = 0;
+          const watch = setInterval(() => {
+            tries += 1;
+            if (bannerVisible()) seen = true;
+            else if (seen || tries >= 8) { clearInterval(watch); go(); } // answered, or never shown
+            if (done) clearInterval(watch);
+          }, 1000);
         } else go();
       };
       if (window.Shopify && typeof window.Shopify.loadFeatures === 'function') {
@@ -550,6 +575,9 @@
       // Back from a sign-up without JavaScript (or after the spam check): show the result right away.
       openDrawer('welcome');
       if (state.dataset.welcomeState === 'success') remember(Date.now() + 3650 * 864e5);
+    } else if (/[?&]popup-test\b/.test(location.search)) {
+      // For checking the pop-up: koederdepot.de/?popup-test shows it right away, ignoring the 30-day memory.
+      setTimeout(() => openDrawer('welcome'), 800);
     } else if (Date.now() - seen > days * 864e5 && !document.body.classList.contains('template-cart')) {
       afterConsent(() => setTimeout(show, (parseFloat(welcome.dataset.delay) || 3) * 1000));
     }
