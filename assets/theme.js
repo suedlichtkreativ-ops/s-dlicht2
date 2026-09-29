@@ -520,11 +520,13 @@
     }
   });
 
-  /* ---------- Welcome pop-up: once per visitor, after a short delay and the cookie banner ---------- */
+  /* ---------- Welcome pop-up: right after the page loads (and the cookie banner), again after "days" once closed ---------- */
   const welcome = $('[data-welcome]');
   if (welcome) {
-    const KEY = 'kd-welcome';
-    const days = parseFloat(welcome.dataset.days) || 30;
+    // v2: new key so the pop-up also appears for visitors who only ever opened it from the price tag.
+    const KEY = 'kd-welcome-v2';
+    const days = parseFloat(welcome.dataset.days) || 7;
+    let openedByHand = false;
     let seen = 0;
     try { seen = parseInt(localStorage.getItem(KEY), 10) || 0; } catch (_) { /* storage blocked */ }
     const remember = (ms = Date.now()) => { try { localStorage.setItem(KEY, String(ms)); } catch (_) { /* storage blocked */ } };
@@ -532,7 +534,7 @@
       try { return Date.now() - (parseInt(localStorage.getItem(KEY), 10) || 0) <= days * 864e5; } catch (_) { return false; }
     };
     const show = () => {
-      if (shownRecently()) return; // opened from the price tag in the meantime
+      if (openedByHand || shownRecently()) return; // opened from the price tag in the meantime
       // Never interrupt an open menu, cart or picker; try again shortly.
       if (activeDrawer) { setTimeout(show, 4000); return; }
       openDrawer('welcome', document.activeElement);
@@ -567,8 +569,8 @@
       } else check();
     };
 
-    // Opened on purpose (price tag, hero button): don't pop it up again by itself later.
-    document.addEventListener('click', (e) => { if (e.target.closest('[data-drawer-open="welcome"]')) remember(); });
+    // Opened on purpose (price tag, hero button): don't pop it up again by itself on this page.
+    document.addEventListener('click', (e) => { if (e.target.closest('[data-drawer-open="welcome"]')) openedByHand = true; });
 
     const state = $('[data-welcome-state]', welcome);
     if (state) {
@@ -579,7 +581,7 @@
       // For checking the pop-up: koederdepot.de/?popup-test shows it right away, ignoring the 30-day memory.
       setTimeout(() => openDrawer('welcome'), 800);
     } else if (Date.now() - seen > days * 864e5 && !document.body.classList.contains('template-cart')) {
-      afterConsent(() => setTimeout(show, (parseFloat(welcome.dataset.delay) || 3) * 1000));
+      afterConsent(() => setTimeout(show, (parseFloat(welcome.dataset.delay) || 1) * 1000));
     }
 
     const form = $('[data-welcome-form]', welcome);

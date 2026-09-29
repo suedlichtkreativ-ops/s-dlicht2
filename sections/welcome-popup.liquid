@@ -1,5 +1,5 @@
 {%- comment -%}
-  Welcome discount pop-up. Opens once per visitor after a short delay (remembered in the browser)
+  Welcome discount pop-up. Opens right after the page loads (delay setting); once closed it stays away for "days" (remembered in the browser)
   and only after the cookie banner has been answered; darkens the page.
   mode "email": newsletter sign-up (customer form); Shopify Email sends the code after double opt-in.
   mode "account": invites to sign up; after registration the code is put into the cart (see main-account-form).
@@ -115,8 +115,8 @@
     { "type": "textarea", "id": "news_success", "label": "Newsletter: Text nach der Anmeldung", "default": "Bitte bestätige deine Anmeldung über den Link in der E-Mail, die wir dir gerade geschickt haben." },
     { "type": "header", "content": "Anzeige" },
     { "type": "text", "id": "note", "label": "Kleingedrucktes", "info": "Z. B. Bedingungen des Rabatts. Leer lassen, wenn es keine gibt.", "default": "Einmal pro Kunde, ohne Mindestbestellwert. Nicht mit Bundle- oder Köder-Box-Rabatt kombinierbar." },
-    { "type": "range", "id": "delay", "label": "Erscheint nach", "min": 1, "max": 20, "step": 1, "unit": "s", "default": 3 },
-    { "type": "range", "id": "days", "label": "Nach dem Schließen wieder zeigen nach", "min": 1, "max": 90, "step": 1, "unit": "d", "default": 30 }
+    { "type": "range", "id": "delay", "label": "Erscheint nach", "min": 1, "max": 20, "step": 1, "unit": "s", "default": 1 },
+    { "type": "range", "id": "days", "label": "Nach dem Schließen wieder zeigen nach", "min": 1, "max": 90, "step": 1, "unit": "d", "default": 7 }
   ]
 }
 {% endschema %}
