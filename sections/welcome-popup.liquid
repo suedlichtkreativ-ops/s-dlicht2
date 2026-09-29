@@ -38,49 +38,7 @@
           <span class="welcome__sub">{{ section.settings.heading | escape }}</span>
         </p>
         {%- if section.settings.mode == 'email' -%}
-          {%- form 'customer', id: 'WelcomeForm', class: 'welcome__form', novalidate: 'novalidate', data-welcome-form: '' -%}
-            {%- liquid
-              assign state = ''
-              if form.posted_successfully?
-                assign state = 'success'
-              elsif form.errors
-                assign state = 'error'
-              endif
-            -%}
-            <div class="welcome__step" data-welcome-step="form"{% if state == 'success' %} hidden{% endif %}>
-              {%- if section.settings.text != blank -%}
-                <p class="welcome__text" id="WelcomeText">{{ section.settings.text | escape }}</p>
-              {%- endif -%}
-              <input type="hidden" name="contact[tags]" value="newsletter,willkommen-popup">
-              <div class="welcome__field">
-                <label class="visually-hidden" for="WelcomeEmail">{{ 'welcome.email' | t }}</label>
-                <input type="email" id="WelcomeEmail" name="contact[email]" autocomplete="email" inputmode="email" required
-                  placeholder="{{ 'welcome.email' | t }}"{% if state == 'error' %} aria-invalid="true" aria-describedby="WelcomeError"{% endif %}>
-              </div>
-              <p class="welcome__error" id="WelcomeError" role="alert" data-welcome-error data-message="{{ 'welcome.error' | t }}"{% unless state == 'error' %} hidden{% endunless %}>
-                {%- if state == 'error' -%}{{ form.errors | default_errors }}{%- endif -%}
-              </p>
-              <button type="submit" class="btn btn--full">
-                {%- assign submit_label = section.settings.submit_label -%}
-                {%- if submit_label == blank -%}{%- assign submit_label = 'welcome.submit' | t -%}{%- endif -%}
-                <span class="btn__label">{{ submit_label | escape }}</span>
-                <span class="spinner" aria-hidden="true"></span>
-              </button>
-              <button type="button" class="welcome__later" data-drawer-close>{{ 'welcome.later' | t }}</button>
-              {%- if section.settings.consent != blank -%}
-                <p class="welcome__note">
-                  {{ section.settings.consent | escape }}
-                  {%- if shop.privacy_policy %} <a href="{{ shop.privacy_policy.url }}">{{ 'welcome.privacy' | t }}</a>{%- endif -%}
-                </p>
-              {%- endif -%}
-            </div>
-            <div class="welcome__step welcome__done" data-welcome-step="success" role="status"{% unless state == 'success' %} hidden{% endunless %}>
-              <p class="welcome__done-title">{% render 'icon', name: 'mail' %}{{ 'welcome.success_title' | t }}</p>
-              <p class="welcome__text">{{ section.settings.success_text | escape }}</p>
-              <button type="button" class="btn btn--full" data-drawer-close>{{ 'welcome.continue' | t }}</button>
-            </div>
-            {%- if state != blank -%}<span hidden data-welcome-state="{{ state }}"></span>{%- endif -%}
-          {%- endform -%}
+          {%- render 'welcome-form', text: section.settings.text, submit_label: section.settings.submit_label, consent: section.settings.consent, success_text: section.settings.success_text -%}
         {%- elsif section.settings.mode == 'account' -%}
           {%- if section.settings.text_account != blank -%}
             <p class="welcome__text" id="WelcomeText">{{ section.settings.text_account | escape }}</p>
@@ -104,11 +62,23 @@
               <span class="btn__label">{{ 'welcome.apply' | t }}</span>
               <span class="spinner" aria-hidden="true"></span>
             </a>
-            <button type="button" class="welcome__later" data-drawer-close>{{ 'welcome.later' | t }}</button>
           </div>
+          {%- if section.settings.note != blank -%}
+            <p class="welcome__note">{{ section.settings.note | escape }}</p>
+          {%- endif -%}
+
+          {%- if section.settings.news_show -%}
+            <div class="welcome__news">
+              <p class="welcome__news-title">{% render 'icon', name: 'mail', class: 'icon--sm' %}{{ section.settings.news_heading | escape }}</p>
+              {%- render 'welcome-form', text: section.settings.news_text, submit_label: section.settings.news_label, consent: section.settings.consent, success_text: section.settings.news_success, compact: true -%}
+            </div>
+          {%- endif -%}
         {%- endif -%}
-        {%- if section.settings.note != blank -%}
+        {%- if section.settings.note != blank and section.settings.mode != 'code' -%}
           <p class="welcome__note">{{ section.settings.note | escape }}</p>
+        {%- endif -%}
+        {%- if section.settings.mode == 'code' -%}
+          <button type="button" class="welcome__later" data-drawer-close>{{ 'welcome.later' | t }}</button>
         {%- endif -%}
       </div>
     </div>
@@ -138,6 +108,11 @@
     { "type": "header", "content": "Direkt im Pop-up" },
     { "type": "text", "id": "code", "label": "Rabattcode", "info": "Muss unter Rabatte in Shopify angelegt sein.", "default": "WILLKOMMEN10" },
     { "type": "textarea", "id": "text_code", "label": "Text", "default": "Schön, dass du da bist. Code kopieren oder mit einem Klick im Warenkorb hinterlegen." },
+    { "type": "checkbox", "id": "news_show", "label": "Newsletter-Anmeldung unter dem Code", "default": true },
+    { "type": "text", "id": "news_heading", "label": "Newsletter: Überschrift", "default": "Newsletter abonnieren" },
+    { "type": "textarea", "id": "news_text", "label": "Newsletter: Text", "default": "Neue Köder, Fangtipps vom Lech und Aktionen zuerst – etwa einmal im Monat." },
+    { "type": "text", "id": "news_label", "label": "Newsletter: Button", "default": "Anmelden" },
+    { "type": "textarea", "id": "news_success", "label": "Newsletter: Text nach der Anmeldung", "default": "Bitte bestätige deine Anmeldung über den Link in der E-Mail, die wir dir gerade geschickt haben." },
     { "type": "header", "content": "Anzeige" },
     { "type": "text", "id": "note", "label": "Kleingedrucktes", "info": "Z. B. Bedingungen des Rabatts. Leer lassen, wenn es keine gibt.", "default": "Einmal pro Kunde, ohne Mindestbestellwert. Nicht mit Bundle- oder Köder-Box-Rabatt kombinierbar." },
     { "type": "range", "id": "delay", "label": "Erscheint nach", "min": 1, "max": 20, "step": 1, "unit": "s", "default": 3 },

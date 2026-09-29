@@ -613,7 +613,9 @@
         $('[data-welcome-step="form"]', form).hidden = true;
         const done = $('[data-welcome-step="success"]', form);
         done.hidden = false;
-        $('button', done).focus();
+        const next = $('button', done);
+        if (next) next.focus();
+        else { done.tabIndex = -1; done.focus(); }
         remember(Date.now() + 3650 * 864e5);
       } catch (_) {
         form.submit();

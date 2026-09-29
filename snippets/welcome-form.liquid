@@ -1,0 +1,58 @@
+{%- comment -%}
+  Newsletter sign-up of the welcome pop-up (Shopify customer form, tags newsletter + willkommen-popup).
+  Params: text, submit_label, consent, success_text; compact: true puts field and button in one row
+  (used below the code in mode "code"). theme.js submits it without leaving the page.
+{%- endcomment -%}
+{%- form 'customer', id: 'WelcomeForm', class: 'welcome__form', novalidate: 'novalidate', data-welcome-form: '' -%}
+  {%- liquid
+    assign state = ''
+    if form.posted_successfully?
+      assign state = 'success'
+    elsif form.errors
+      assign state = 'error'
+    endif
+    assign label = submit_label
+    if label == blank
+      assign label = 'welcome.submit' | t
+    endif
+  -%}
+  <div class="welcome__step" data-welcome-step="form"{% if state == 'success' %} hidden{% endif %}>
+    {%- if text != blank -%}
+      <p class="welcome__text"{% unless compact %} id="WelcomeText"{% endunless %}>{{ text | escape }}</p>
+    {%- endif -%}
+    <input type="hidden" name="contact[tags]" value="newsletter,willkommen-popup">
+    <div class="welcome__field{% if compact %} welcome__field--inline{% endif %}">
+      <label class="visually-hidden" for="WelcomeEmail">{{ 'welcome.email' | t }}</label>
+      <input type="email" id="WelcomeEmail" name="contact[email]" autocomplete="email" inputmode="email" required
+        placeholder="{{ 'welcome.email' | t }}"{% if state == 'error' %} aria-invalid="true" aria-describedby="WelcomeError"{% endif %}>
+      {%- if compact -%}
+        <button type="submit" class="btn">
+          <span class="btn__label">{{ label | escape }}</span>
+          <span class="spinner" aria-hidden="true"></span>
+        </button>
+      {%- endif -%}
+    </div>
+    <p class="welcome__error" id="WelcomeError" role="alert" data-welcome-error data-message="{{ 'welcome.error' | t }}"{% unless state == 'error' %} hidden{% endunless %}>
+      {%- if state == 'error' -%}{{ form.errors | default_errors }}{%- endif -%}
+    </p>
+    {%- unless compact -%}
+      <button type="submit" class="btn btn--full">
+        <span class="btn__label">{{ label | escape }}</span>
+        <span class="spinner" aria-hidden="true"></span>
+      </button>
+      <button type="button" class="welcome__later" data-drawer-close>{{ 'welcome.later' | t }}</button>
+    {%- endunless -%}
+    {%- if consent != blank -%}
+      <p class="welcome__note">
+        {{ consent | escape }}
+        {%- if shop.privacy_policy %} <a href="{{ shop.privacy_policy.url }}">{{ 'welcome.privacy' | t }}</a>{%- endif -%}
+      </p>
+    {%- endif -%}
+  </div>
+  <div class="welcome__step welcome__done" data-welcome-step="success" role="status"{% unless state == 'success' %} hidden{% endunless %}>
+    <p class="welcome__done-title">{% render 'icon', name: 'mail' %}{{ 'welcome.success_title' | t }}</p>
+    <p class="welcome__text">{{ success_text | escape }}</p>
+    {%- unless compact -%}<button type="button" class="btn btn--full" data-drawer-close>{{ 'welcome.continue' | t }}</button>{%- endunless -%}
+  </div>
+  {%- if state != blank -%}<span hidden data-welcome-state="{{ state }}"></span>{%- endif -%}
+{%- endform -%}
