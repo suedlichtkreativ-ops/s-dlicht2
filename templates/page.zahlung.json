@@ -27,14 +27,6 @@
             "text": "<p>Mit einem Klick bezahlen, direkt auf dem Handy oder im Browser.</p>"
           }
         },
-        "b4": {
-          "type": "card",
-          "settings": {
-            "icon": "store",
-            "title": "Bar bei Abholung",
-            "text": "<p>Du holst deine Bestellung in Landsberg ab? Dann kannst du auch vor Ort bar bezahlen.</p>"
-          }
-        },
         "b5": {
           "type": "note",
           "settings": {
@@ -57,7 +49,6 @@
         "b2",
         "b3",
         "card_6CAQ8A",
-        "b4",
         "b5"
       ],
       "settings": {

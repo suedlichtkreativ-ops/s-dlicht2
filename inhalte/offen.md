@@ -38,7 +38,7 @@ Erledigt (Details in `umstellung.md`): Produkte, Fotos, Farbnamen, Kategorien un
 3. [x] **Sperrgut**: erledigt (eigenes Profil, 11 Ruten, 9,99 €).
 4. [ ] **Rechtstexte** (Einstellungen → Richtlinien): Inhalte aus `rechtliches/impressum.html`, `agb.html`, `widerrufsbelehrung.html`, `datenschutz.html`, `versand.html` einfügen (HTML-Ansicht „<>“). Die Schnittstelle darf das nicht.
 5. [x] **Kundenkonten:** klassische Konten bietet Shopify nicht mehr an. Stattdessen legen Pop-up, Preisschild und Newsletter-Seite den Code WILLKOMMEN10 direkt in den Warenkorb; der Rabatt gilt für alle Kunden, einmal pro Kunde.
-6. [ ] **Barzahlung bei Abholung** (Einstellungen → Zahlungen → Manuelle Zahlungsmethoden).
+6. [ ] **Barzahlung bei Abholung deaktivieren** (Entscheidung 29.09.2026: keine Barzahlung). Einstellungen → Zahlungen → Manuelle Zahlungsmethoden. Kachel auf der Seite „Zahlung“ ist in „Arbeitskopie 2“ entfernt.
 7. [x] **Double-Opt-in** erledigt; **Cookie-Banner** automatisiert, sichtbar in Deutschland (einziger Markt, daher vollständig). Alt: (Einstellungen → Kundendatenschutz). Einwilligung ist bisher nur für Deutschland Pflicht: für alle EU-/EWR-Länder einschalten (die Schnittstelle hat dafür keine Berechtigung).
 8. [x] App **„EU Widerruf Button“** installiert und auf der Seite „Widerruf“ eingesetzt (28.09.). Noch offen: im Theme-Editor auf der Seite „Widerruf“ den App-Block einsetzen (Werte in `templates/page.widerruf.json`).
 9. [ ] **Datenschutzerklärung** um Newsletter und Cookies ergänzen lassen (IT-Recht Kanzlei).
@@ -97,5 +97,5 @@ Das gilt automatisch auch für die Shopify-Anmeldeseite. Mit **klassischen Kunde
 - **Abholzeiten** 09:00–17:00 Uhr, nach Vereinbarung auch früher oder später (Footer, Kontakt, Laden-Abschnitt, AGB 5.5, Versandseite); **Route planen** führt zum Google-Maps-Eintrag.
 - **Gestrichen:** Stahl-/Titanvorfach (kommt nicht ins Sortiment) und die fehlenden Gewichte (gibt es nicht; die Zeilen bleiben bei diesen Produkten einfach leer).
 - **Handy-Motiv des Anglers** neu aus dem Desktop-Foto zugeschnitten (`bilder/hero-angler-mobile.jpg`), das alte war defekt.
-- **Seiten fertig:** Zahlung (PayPal, Karte, Apple/Google Pay, bar bei Abholung), Versandkosten & Lieferung, Newsletter (ca. 1× im Monat, Neuheiten & Aktionen), Über uns („Unser Versprechen“), Support-Kontakt, Widerruf mit PDF-Formular zum Ausfüllen. Instagram bleibt als Link.
+- **Seiten fertig:** Zahlung (PayPal, Karte, Apple/Google Pay, Klarna; keine Barzahlung), Versandkosten & Lieferung, Newsletter (ca. 1× im Monat, Neuheiten & Aktionen), Über uns („Unser Versprechen“), Support-Kontakt, Widerruf mit PDF-Formular zum Ausfüllen. Instagram bleibt als Link.
 - **Versandkostenfrei ab 59 €** (vorher 100 €) überall angepasst: Ansage-Leiste, Produktseiten, Bundles, FAQ, Versandseite, Warenkorb-Fortschritt, Versandrichtlinie.
