@@ -657,6 +657,21 @@
     });
   };
 
+  // Empty cart: confirm a code saved via /discount/<code> (Shopify keeps it in the "discount_code" cookie until a product is added).
+  const showSavedCode = (root = document) => {
+    const match = document.cookie.match(/(?:^|;\s*)discount_code=([^;]+)/);
+    if (!match) return;
+    let code = '';
+    try { code = decodeURIComponent(match[1]).split(',')[0].trim(); } catch (_) { return; }
+    if (!code) return;
+    $$('[data-cart-code]', root).forEach((note) => {
+      const value = $('[data-cart-code-value]', note);
+      if (value && !value.textContent.trim()) value.textContent = code;
+      note.hidden = false;
+    });
+  };
+  showSavedCode();
+
   const renderDrawer = (html) => {
     if (!html) return;
     const wrapper = document.getElementById('shopify-section-cart-drawer');
@@ -678,6 +693,7 @@
       requestAnimationFrame(() => requestAnimationFrame(() => { newBar.style.transition = ''; newBar.style.transform = target; }));
     }
     current.dataset.cartCount = fresh.dataset.cartCount;
+    showSavedCode(currentPanel);
     markLoaded(currentPanel);
     updateCount(parseInt(fresh.dataset.cartCount, 10) || 0);
     return wrapper;

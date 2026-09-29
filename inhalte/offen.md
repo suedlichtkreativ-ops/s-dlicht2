@@ -68,6 +68,10 @@ Das gilt automatisch auch für die Shopify-Anmeldeseite. Mit **klassischen Kunde
 
 ## C. Später
 
+- [ ] **Neue Bildserie Bundles + Kategorie-Kacheln** (Wunsch vom 29.09.2026, später fortsetzen): einheitlicher Look statt generischer Sonnenuntergänge – Draufsicht auf nassem, dunklem Bootsboden, warmes Streiflicht, Köderdepot-Gelb als Akzent. Entwürfe (Richtung passt laut euch): `bilder/entwuerfe/cover-hecht-set-entwurf.png`, `bilder/entwuerfe/kachel-koeder-entwurf.png`.
+  - 5 Bundle-Cover: Forellen-, Barsch-, Zander-, Hecht-Köder-Set jeweils mit dem Zielfisch + nachempfundenem Set-Inhalt + schwarz-gelber Karte (Logo + Setname); Starter-Bundle mit Rute, Rolle und Ködern. Cover wird Bild 1, das bisherige Set-Foto bleibt Bild 2.
+  - 4 Kacheln „Oder nach Ausrüstung“: Köder, Angelruten, Angelrollen, Angelzubehör im gleichen Look, oben Platz für die Überschrift.
+  - Ablauf: alle 9 vorab generieren, zeigen, erst nach Freigabe im Shop tauschen. Voraussetzung: Higgsfield-Guthaben aufladen (ca. 4 Credits, 0,5 pro Bild).
 - [ ] **KI-Chat** als Ergänzung zum Köder-Finder: Anthropic-Konto, kleiner Server, Datenschutz-Ergänzung, KI-Hinweis nach EU-KI-Verordnung.
 - [ ] **Aufräumen im alten Katalog** (Empfehlung): 24 leere/Archiv-Kollektionen, drei Kopien „Willkommen bei Köderdepot“, uneinheitliche Tags, Marke „juliusstrobl“ bei 4 Produkten, doppelte Artikelnummern (`SF-SR-070-085-GS`, `HF-TS-140-400-BD`), 4 Varianten ohne Artikelnummer. „globofilter…“ nicht löschen (App).
 - [ ] **Fremde Vorlagen-Bilder** in den Shop-Dateien löschen: `banner.png`, `banner1.jpg`, `banner2.jpg`, `homepage1–4.jpg`, `logo.jpg`.

@@ -25,6 +25,7 @@
     <div class="cart-empty" style="padding-bottom:5rem">
       <p class="h3">{{ 'cart.empty' | t }}</p>
       <p class="muted">{{ 'cart.empty_hint' | t }}</p>
+      {% render 'cart-code' %}
       <a class="btn" href="{{ routes.all_products_collection_url }}">{{ 'cart.continue' | t }}</a>
     </div>
   {%- endif -%}

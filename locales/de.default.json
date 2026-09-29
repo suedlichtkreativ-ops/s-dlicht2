@@ -145,6 +145,7 @@
     "empty": "Dein Warenkorb ist leer.",
     "empty_hint": "Stöber im Sortiment – nach Zielfisch oder Produktart.",
     "continue": "Zum Sortiment",
+    "code_saved_html": "Rabattcode {{ code }} ist gespeichert und wird automatisch abgezogen, sobald du einen Artikel in den Warenkorb legst.",
     "subtotal": "Zwischensumme",
     "taxes_shipping": "Inkl. MwSt., Versandkosten werden an der Kasse berechnet.",
     "checkout": "Zur Kasse",

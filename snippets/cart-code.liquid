@@ -1,0 +1,16 @@
+{%- comment -%}
+  Saved discount code in the empty cart (e.g. WILLKOMMEN10 via /discount/<code> from the pop-up or the hero price tag).
+  Shopify only applies it once a product is in the cart; this note confirms it is waiting there.
+  Filled from cart.discount_codes or, before a cart exists, by theme.js from the "discount_code" cookie.
+{%- endcomment -%}
+{%- liquid
+  assign code = ''
+  for d in cart.discount_codes
+    assign code = d.code
+  endfor
+  assign code_tag = code | escape | prepend: '<strong data-cart-code-value>' | append: '</strong>'
+-%}
+<p class="auth__offer cart-code" data-cart-code{% if code == blank %} hidden{% endif %}>
+  {%- render 'icon', name: 'tag', class: 'icon--sm' -%}
+  <span>{{ 'cart.code_saved_html' | t: code: code_tag }}</span>
+</p>
